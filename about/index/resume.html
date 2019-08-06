@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="enjoy life">
+    <meta name="keyword" content>
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="ZhangSaidong" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        ZhangSaidong&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://zsd.name/about/index/resume.html">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="../../css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('/images/lan_hug_xinyi.JPG')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    ZhangSaidong
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/archive/">archive</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/works/">works</a>
+                        </li>
+							
+						
+                    
+                        
+							
+								
+							
+						
+                    
+                        
+                    
+					
+					
+						<li>
+							<a href="../../about">About</a>
+						</li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+<style>
+
+    div {
+        float: inherit;
+    }
+
+    .person div {
+        padding-bottom: 2px;
+        width: 48%;
+        text-align: left;
+        font-size: 14pt;
+        display: inline-block;
+    }
+
+    .title {
+        margin-top: 10px;
+    }
+
+    .title * {
+        vertical-align: middle;
+        font-size: 14pt;
+    }
+
+    .title img {
+        width: 32px;
+    }
+
+    .work {
+        margin-left: 20px;
+        color: #b0b0b0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .line {
+        border: 1px solid #b0b0b0;
+        margin: 5px;
+    }
+    .head_line{
+        border: 2px solid #404040;
+        margin: 15px 0;
+    }
+
+    * {
+        font-size: 14px;
+    }
+
+    .work .left {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        width: 150px;
+        color: #b0b0b0;
+    }
+
+    .work .mid {
+        height: 100%;
+        border: 2px solid #b0b0b0;
+        display: inline-block;
+        position: absolute; /*自适应父标签高度使用*/
+    }
+
+    .work .middle {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+        color: #b0b0b0;
+    }
+
+    .work .right {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        width: 508px;
+        overflow: auto;
+        color: black;
+    }
+
+    .work .only {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px;
+        width: 95%;
+        overflow: auto;
+        color: black;
+        word-wrap: break-word;
+        text-indent: 2em;
+        font-weight: 300;
+    }
+
+    .work .right .detail {
+        word-wrap: break-word;
+        text-indent: 2em;
+        font-weight: 300;
+    }
+
+    .work .right .head {
+        font-size: 12pt;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .work .right .brief {
+        margin-bottom: 5px;
+    }
+
+</style>
+<div style="width: 720px;margin: 90px auto 5px;">
+    <div class="head_line"></div>
+    <div style="float: left; width: 100%;">
+        <div style="float: inherit;">
+            <img src="/images/xinyi.jpg"
+                 style="border-radius:50%;  width:192px;"/>
+        </div>
+        <div style="float: inherit;margin-left:25px; margin-top:20px;">
+            <div style="float: none;width: 500px;">
+                <div style="color:#003f3f;font-size:24pt;text-align: center;">张赛东/男/20岁</div>
+                <div style="margin-top: 10px; float: none;">
+                    <div class="person">
+                        <div>手机: 15674119605</div>
+                        <div>邮箱: 3440217568@qq.com</div>
+                    </div>
+                    <div class="person">
+                        <div>学历: 本科在读</div>
+                        <div>专业: 软件工程</div>
+                    </div>
+                    <div class="person">
+                        <div>在读学校: 湖南工业大学</div>
+                        <div>籍贯: 湖南耒阳</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+    <div>
+        <div class="title">
+            <img src="/images/about/教育经历.png">
+            <span>教育经历</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">2017/09 - 至今</div>
+                <div class="mid"></div>
+                <div class="right">湖南工业大学&nbsp;&nbsp;&nbsp;&nbsp;软件工程&nbsp;&nbsp;&nbsp;&nbsp;本科在读</div>
+            </div>
+            <div class="work">
+                <div class="left">获奖</div>
+                <div class="mid"></div>
+                <div class="right">2018年获湖南工业大学校级奖学金<br>
+                                   2019年获“互联网+”校级三等奖（任成员）<br>
+                                   2019年参与的两项大创项目皆获得省级立项(一项任队长、一项任成员)<br>
+                                   2019年获中国计算机设计大赛中南赛区省级一等奖（任队长）
+                </div>
+            </div>
+            <div class="work">
+                <div class="left">参与</div>
+                <div class="mid"></div>
+                <div class="right">2018年进入中国高校计算机大赛移动应用创新赛复赛（任队长，top200）
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="title">
+            <img src="/images/about/求职意向.png">
+            <span>求职意向</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">期望工作</div>
+                <div class="mid"></div>
+                <div class="right">iOS开发工程师</div>
+            </div>
+            <div class="work">
+                <div class="left">期望地点</div>
+                <div class="mid"></div>
+                <div class="right">北京、广州、杭州、南京、上海、深圳、厦门</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/工作经历.png">
+            <span>工作经历</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">2017/09 - 至今</div>
+                <div class="mid"></div>
+                <div class="right">
+                    <div class="head">公司: 马上就会有了</div>
+                    <div class="brief">职位: iOS开发工程师 | 工作性质: 实习 | 地点: 马上就会有了</div>
+                    <div class="detail">
+                        马上就会有了，敬请期待！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/专业技能.png">
+            <span>专业技能</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">外语能力</div>
+                <div class="mid"></div>
+                <div class="right">四级 443</div>
+            </div>
+
+            <div class="work">
+                <div class="left">编程技巧</div>
+                <div class="mid"></div>
+                <div class="right">
+                    <div class="brief">
+                        Java：
+                    </div>
+                    <div class="detail">
+                        熟练掌握Java开发多重框架--Spring、Spring MVC、MyBatis、Log4J、
+                        JUnit4等以及企业应用开发中的常用的Redis、Protobuf等技能，熟悉Netty的使用及原理，对Java并发编程有浓厚兴趣。
+                    </div>
+
+                    <div class="brief">
+                        Python：
+                    </div>
+                    <div class="detail">
+                        习惯使用Python进行快速原型开发，上线前数据验证等工作; 熟悉使用Scrapy进行数据抓取及数据分析工作。
+                    </div>
+
+                    <div class="brief">
+                        MySQL：
+                    </div>
+                    <div class="detail">
+                        熟悉常用的MySQL操作命令，能够编写多数业务场景下的SQL语句。
+                    </div>
+
+                    <div class="brief">
+                        Shell：
+                    </div>
+                    <div class="detail">
+                        能够熟练运用日常Linux命令，并编写简单的Shell脚本程序。
+                    </div>
+
+                    <div class="brief">
+                        其他：
+                    </div>
+                    <div class="detail">
+                        对JavaScript、PHP有一定经验；能够简单编写C/C++程序，但基础扎实；对Go语言有所接触。
+                    </div>
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="left">Github</div>
+                <div class="mid"></div>
+                <div class="right"><a href="https://github.com/adong666666">https://github.com/adong666666</a></div>
+            </div>
+
+            <div class="work">
+                <div class="left">Blog</div>
+                <div class="mid"></div>
+                <div class="right"><a href="https://zsd.name">https://zsd.name</a></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/项目经历.png">
+            <span>项目经历</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                <pre>2017.04 - 2017.06  轻量级分布式RPC框架  东南大学苏州研究院</pre>
+            </div>
+            <div class="only">
+                1. 学习和研究Dubbo框架，了解分布式RPC框架的原理;
+            </div>
+            <div class="only">
+                2. 使用Netty作为RPC框架的网络层传输基础，并且通过自定义网络传输协议实现高 效的网络数据传输;
+            </div>
+            <div class="only">
+                3. 使用ZooKeeper和Curator实现分布式服务发现功能;
+            </div>
+            <div class="only">
+                4. 实现了权重轮询、权重随机、一致性Hash三中负载均衡算法，用于服务端发现;
+            </div>
+            <div class="only">
+                5. 通过ThreadLocal、CAS、缓存行填充等技术提高框架性能;
+            </div>
+            <div class="only">
+                6. 使用ASM框架操纵字节码实现更高效的Java方法调用。
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/自我评价.png">
+            <span>自我评价</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                具有较好的自学能力，项目经验充实，与人沟通能力较强，有着很好的与人合作能力。
+            </div>
+            <div class="only">
+                现在的目标是成为一名优秀的Java开发工程师，主要从事服务器后端的开发工作。有着良好的服务端开发经验，熟悉Spring，MyBatis等框架，熟悉SOA的软件开发思想，面向RPC接口编程。熟悉Memcached/ Redis缓存数据库及数据存储容灾方案，了解rocketMq等消息队列的使用。
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/未来规划.png">
+            <span>未来规划</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                1. 本人的目标是成为一名优秀的架构师，尤其是在Java服务端及JVM优化等相关技术领域。
+            </div>
+            <div class="only">
+                2. 阅读Spring框架及Netty框架的源码，深入学习优秀的Java工程设计思想。
+            </div>
+            <div class="only">
+                3. 积极参与开源工作，希望能够为开源社区做贡献，能够编写有较多人使用的开源框架。
+            </div>
+        </div>
+    </div>
+    <div class="head_line"></div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/adong666666">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/adong666666">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; ZhangSaidong 2019
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="../../js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../../js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../../js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://zsd.name/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="/images/xinyi.jpg">
+</body>
+
+</html>
