@@ -158,38 +158,371 @@
 
 <!-- Main Content -->
 <style>
-    .intro-header .site-heading {
-        margin: 50px;
-    }
-    
-    header.intro-header {
-        background-image: url('/images/post-default.jpeg')
-    }
-    
-</style>
 
-<!-- Page Header -->
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>about</h1>
-                    <span class="subheading">张赛东</span>
+    div {
+        float: inherit;
+    }
+
+    .person div {
+        padding-bottom: 2px;
+        width: 48%;
+        text-align: left;
+        font-size: 14pt;
+        display: inline-block;
+    }
+
+    .title {
+        margin-top: 10px;
+    }
+
+    .title * {
+        vertical-align: middle;
+        font-size: 14pt;
+    }
+
+    .title img {
+        width: 32px;
+    }
+
+    .work {
+        margin-left: 20px;
+        color: #b0b0b0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .line {
+        border: 1px solid #b0b0b0;
+        margin: 5px;
+    }
+    .head_line{
+        border: 2px solid #404040;
+        margin: 15px 0;
+    }
+
+    * {
+        font-size: 14px;
+    }
+
+    .work .left {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        width: 150px;
+        color: #b0b0b0;
+    }
+
+    .work .mid {
+        height: 100%;
+        border: 2px solid #b0b0b0;
+        display: inline-block;
+        position: absolute; /*自适应父标签高度使用*/
+    }
+
+    .work .middle {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+        color: #b0b0b0;
+    }
+
+    .work .right {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        width: 508px;
+        overflow: auto;
+        color: black;
+    }
+
+    .work .only {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px;
+        width: 95%;
+        overflow: auto;
+        color: black;
+        word-wrap: break-word;
+        text-indent: 2em;
+        font-weight: 300;
+    }
+
+    .work .right .detail {
+        word-wrap: break-word;
+        text-indent: 2em;
+        font-weight: 300;
+    }
+
+    .work .right .head {
+        font-size: 12pt;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .work .right .brief {
+        margin-bottom: 5px;
+    }
+
+</style>
+<div style="width: 720px;margin: 90px auto 5px;">
+    <div class="head_line"></div>
+    <div style="float: left; width: 100%;">
+        <div style="float: inherit;">
+            <img src="/images/xinyi.jpg"
+                 style="border-radius:50%;  width:192px;"/>
+        </div>
+        <div style="float: inherit;margin-left:25px; margin-top:20px;">
+            <div style="float: none;width: 500px;">
+                <div style="color:#003f3f;font-size:24pt;text-align: center;">张赛东/男/21岁</div>
+                <div style="margin-top: 10px; float: none;">
+                    <div class="person">
+                        <div>手机: 15674119605</div>
+                        <div>邮箱: 3440217568@qq.com</div>
+                    </div>
+                    <div class="person">
+                        <div>学历: 本科在读</div>
+                        <div>专业: 软件工程</div>
+                    </div>
+                    <div class="person">
+                        <div>在读学校: 湖南工业大学</div>
+                        <div>籍贯: 湖南耒阳</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 目录列表 -->
-            
+    <div style="clear: both;"></div>
+    <div>
+        <div class="title">
+            <img src="/images/about/教育经历.png">
+            <span>教育经历</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">2017/09 - 至今</div>
+                <div class="mid"></div>
+                <div class="right">湖南工业大学&nbsp;&nbsp;&nbsp;&nbsp;软件工程&nbsp;&nbsp;&nbsp;&nbsp;本科在读</div>
+            </div>
+            <div class="work">
+                <div class="left">获奖</div>
+                <div class="mid"></div>
+                <div class="right">在校期间获湖南工业大学校级奖学金、校级奖项、校级荣誉若干<br>
+                                   2019年参与的两项大创项目皆获得省级立项<br>
+                                   2019年获中国高校计算机大赛人工智能创意赛华中赛区省级三等奖(全国top48)<br>
+                                   2019年获中国计算机设计大赛中南赛区省级一等奖、全国三等奖<br>
+                                   2019年获中国高校计算机大赛移动应用创新赛省级一等奖、全国二等奖(全国top12)<br>
+                                   2020年于湖南工业大学学报发表学术论文《基于ARKit技术的文物交互式相机App设计与实现》<br>
+                                   2020年成功为作品《基于AI和AR技术的文物交互式相机软件》申请软件著作权<br>
+                </div>
+            </div>
+            <div class="work">
+                <div class="left">参与</div>
+                <div class="mid"></div>
+                <div class="right">2018年进入中国高校计算机大赛移动应用创新赛复赛（全国top200）
+                </div>
+            </div>
         </div>
     </div>
+    <div>
+        <div class="title">
+            <img src="/images/about/求职意向.png">
+            <span>求职意向</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">期望工作</div>
+                <div class="mid"></div>
+                <div class="right">iOS开发工程师</div>
+            </div>
+            <div class="work">
+                <div class="left">期望地点</div>
+                <div class="mid"></div>
+                <div class="right">北京、广州、杭州、南京、上海、深圳、厦门</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/工作经历.png">
+            <span>工作经历</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">2017/09 - 至今</div>
+                <div class="mid"></div>
+                <div class="right">
+                    <div class="head">公司: 敬请期待</div>
+                    <div class="brief">职位: iOS开发工程师 | 工作性质: 实习 | 地点: 敬请期待</div>
+                    <div class="detail">
+                        敬请期待！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/专业技能.png">
+            <span>专业技能</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">外语能力</div>
+                <div class="mid"></div>
+                <div class="right">六级 495</div>
+            </div>
+
+            <div class="work">
+                <div class="left">编程技巧</div>
+                <div class="mid"></div>
+                <div class="right">
+                    <div class="brief">
+                        Swift：
+                    </div>
+                    <div class="detail">
+                        熟练Swift编程，阅读了许多Swift相关书籍，关注Swift语言和相关技术的发展，能够使用Swift进行实际项目的开发，对Swift编程有浓厚兴趣。
+                    </div>
+
+                    <div class="brief">
+                        Python：
+                    </div>
+                    <div class="detail">
+                        习惯使用Python进行快速原型开发，上线前数据验证等工作; 熟悉使用Scrapy进行数据抓取及数据分析工作; 熟悉使用Python进行图片或其他资源的爬取。
+                    </div>
+
+                    <div class="brief">
+                        MySQL：
+                    </div>
+                    <div class="detail">
+                        熟悉常用的MySQL操作命令，能够编写多数业务场景下的SQL语句。
+                    </div>
+
+                    <div class="brief">
+                        Shell：
+                    </div>
+                    <div class="detail">
+                        能够熟练运用日常Linux命令，并编写简单的Shell脚本程序。
+                    </div>
+
+                    <div class="brief">
+                        其他：
+                    </div>
+                    <div class="detail">
+                        对Java、JavaScript、C#有一定经验；能够编写C/C++程序，且基础扎实；对Go、PHP等语言有所接触。
+                    </div>
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="left">Github</div>
+                <div class="mid"></div>
+                <div class="right"><a target="_blank" rel="noopener" href="https://github.com/adong666666">https://github.com/adong666666</a></div>
+            </div>
+
+            <div class="work">
+                <div class="left">Blog</div>
+                <div class="mid"></div>
+                <div class="right"><a href="https://zsd.name">https://zsd.name</a></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/项目经历.png">
+            <span>项目经历</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                <pre>2018.04 - 至今  iOS开发  湖南省省级大学生创新实验室</pre>
+            </div>
+            <div class="only">
+                1. 学习和研究许多iOS相关的框架，将优秀的框架用于实际的项目开发;
+            </div>
+            <div class="only">
+                2. 使用SwiftLint规范代码，使自己拥有好的代码编写习惯;
+            </div>
+            <div class="only">
+                3. 使用Git进行代码托管，且方便团队成员之间的协同合作;
+            </div>
+            <div class="only">
+                4. 使用Cocopods对项目进行模块化，提高开发效率;
+            </div>
+            <div class="only">
+                5. 搭建项目的自动化测试工具，帮助提高团队效率;
+            </div>
+            <div class="only">
+                6. 对机器学习和增强现实等相关技术有一定的了解;
+            </div>
+            <div class="only">
+                7. 独立开发了一款基于AI和AR技术的文物交互式相机App且上架;
+            </div>
+            <div class="only">
+                8. 独立开发了若干个iOS软件，且对一些iOS项目进行过维护工作;
+            </div>
+            <div class="only">
+                9. 在校期间参与了若干个省级科研项目，发表论文一篇，申请软件著作权一份;
+            </div>
+            <div class="only">
+                10. 熟悉许多github上的iOS知名项目，具有一定的iOS开发能力;
+            </div>
+            <div class="only">
+                11. 将图像识别、目标检测、神经网络等机器学习技术运用到了实际开发中;
+            </div>
+            <div class="only">
+                12. 使用Python爬虫爬取网络上的图片，将爬取的图片整理成数据集，供机器学习模型训练使用。
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/自我评价.png">
+            <span>自我评价</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                具有较好的自学能力，项目经验充实，与人沟通能力较强，有着很好的与人合作能力。
+            </div>
+            <div class="only">
+                现在的目标是成为一名优秀的iOS开发工程师，主要从事移动应用开发的开发工作。有着良好的移动应用开发经验，熟悉Swift语言，熟悉多种有名的框架，熟悉软件开发思想。
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/未来规划.png">
+            <span>未来规划</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                1. 本人当下的目标是成为一名优秀的iOS开发工程师，尤其是在移动应用开发等相关技术领域。
+            </div>
+            <div class="only">
+                2. 阅读优秀iOS作品和框架的源码，深入学习优秀的iOS开发工程设计思想。
+            </div>
+            <div class="only">
+                3. 积极参与开源工作，希望能够为开源社区做贡献，能够编写有较多人使用的开源框架。
+            </div>
+        </div>
+    </div>
+    <div class="head_line"></div>
 </div>
 
 <!-- Footer -->
