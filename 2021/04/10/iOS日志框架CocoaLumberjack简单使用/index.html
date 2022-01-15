@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="enjoy life">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="ZhangSaidong" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        iOS日志框架CocoaLumberjack｜ZhangSaidong&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://zsd.name/2021/04/10/iOS日志框架CocoaLumberjack简单使用/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="../../../../css/blog-style.css">
+
+
+    <!-- Pygments Github CSS -->
+    
+<link rel="stylesheet" href="../../../../css/syntax.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('/images/lan_hug_xinyi.JPG')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    ZhangSaidong
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+								
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/archive/">archive</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/books/">books</a>
+                        </li>
+							
+						
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/works/">works</a>
+                        </li>
+							
+						
+                    
+                        
+                    
+					
+					
+						<li>
+							<a href="../../../../about">About</a>
+						</li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/post-default.jpeg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('/images/post-default.jpeg');
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>iOS日志框架CocoaLumberjack</h1>
+                    
+                    <span class="meta">
+                         作者 张赛东
+                        <span>
+                          日期 2021-04-10
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#iOS"
+                           title="iOS">iOS</a>
+                        
+                        <a class="tag" href="/tags/#framework"
+                           title="framework">framework</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            iOS日志框架CocoaLumberjack
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h1 id="iOS日志框架CocoaLumberjack"><a href="#iOS日志框架CocoaLumberjack" class="headerlink" title="iOS日志框架CocoaLumberjack"></a>iOS日志框架CocoaLumberjack</h1><p>========================<br>我使用了如下代码进行配置，只需在AppDelegate或SceneDelegate调用configDDLog即可（在其他某些文件配置也是可以的）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  configDDLog.swift</span><br><span class="line">&#x2F;&#x2F;  RunInto</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;  Created by 张赛东（手机：15674119605） on 2021&#x2F;4&#x2F;10.</span><br><span class="line">&#x2F;&#x2F;  Copyright © 2021 adong666666. All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">import Foundation</span><br><span class="line">import CocoaLumberjack</span><br><span class="line">&#x2F;**</span><br><span class="line"> 配置DDLog相关参数</span><br><span class="line"> *&#x2F;</span><br><span class="line">func configDDLog() &#123;</span><br><span class="line">&#x2F;&#x2F;    &#x2F;&#x2F;让日志只在debug时输出</span><br><span class="line">&#x2F;&#x2F;    #if DEBUG</span><br><span class="line">&#x2F;&#x2F;        defaultDebugLevel &#x3D; .Verbose</span><br><span class="line">&#x2F;&#x2F;    #else</span><br><span class="line">&#x2F;&#x2F;    dynamicLogLevel &#x3D; .off</span><br><span class="line">&#x2F;&#x2F;    #endif</span><br><span class="line">    &#x2F;&#x2F;添加发送日志语句到苹果的日志系统</span><br><span class="line">    DDLog.add(DDOSLogger.sharedInstance)</span><br><span class="line">    &#x2F;&#x2F;添加发送日志语句到Xcode控制台</span><br><span class="line">    &#x2F;&#x2F;DDLog.add(DDTTYLogger.sharedInstance!)</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;MARK: - 日志将会被保存到沙盒&#x2F;Library&#x2F;Caches&#x2F;Logs，这意味着可以上传至服务器</span><br><span class="line">    let fileLogger: DDFileLogger &#x3D; DDFileLogger() &#x2F;&#x2F; File Logger</span><br><span class="line">    fileLogger.rollingFrequency &#x3D; 60 * 60 * 24 &#x2F;&#x2F; 24 hours</span><br><span class="line">    fileLogger.logFileManager.maximumNumberOfLogFiles &#x3D; 7</span><br><span class="line">    DDLog.add(fileLogger)</span><br><span class="line">    log(fileLogger.currentLogFileInfo?.filePath)</span><br><span class="line">    </span><br><span class="line">&#x2F;&#x2F;    &#x2F;&#x2F;允许控制台带颜色</span><br><span class="line">&#x2F;&#x2F;    DDTTYLogger.sharedInstance?.colorsEnabled &#x3D; true</span><br><span class="line">&#x2F;&#x2F;    &#x2F;&#x2F;设置Info下为蓝色</span><br><span class="line">&#x2F;&#x2F;    DDTTYLogger.sharedInstance?.setForegroundColor(UIColor.blue, backgroundColor: UIColor.white, for: .info)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> 得到输出的字符串的格式</span><br><span class="line"></span><br><span class="line"> - parameter message:  日志消息的主题</span><br><span class="line"> - parameter file:     日志消息所在的文件，方便调试定位用</span><br><span class="line"> - parameter function: 日志消息所在的方法，方便调试定位用</span><br><span class="line"> - parameter line:     日志消息所在的方法中的行数，方便调试定位用</span><br><span class="line"></span><br><span class="line"> - returns: 返回输出的日志字符串</span><br><span class="line"> *&#x2F;</span><br><span class="line">private func getMessage(message: String, file: StaticString, function: StaticString, line: UInt ) -&gt; String &#123;</span><br><span class="line">    &#x2F;&#x2F;初始化需要返回的字符串</span><br><span class="line">    var returnMessage: String &#x3D; &quot;&quot;</span><br><span class="line">    &#x2F;&#x2F;通过file获取文件的名称</span><br><span class="line">    if let className &#x3D; file.description.components(separatedBy: CharacterSet.init(charactersIn: &quot;&#x2F;&quot;)).last &#123;</span><br><span class="line">        &#x2F;&#x2F;拼接字符串</span><br><span class="line">        returnMessage &#x3D; &quot;\n&quot; +</span><br><span class="line">                  &quot;className:\(className)\n&quot; +</span><br><span class="line">                  &quot; function:\(function)\n&quot; +</span><br><span class="line">                  &quot;      ine:\(line)\n&quot; +</span><br><span class="line">                  &quot;  message:\(message)&quot;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        &#x2F;&#x2F;拼接字符串</span><br><span class="line">        returnMessage &#x3D; &quot;\n&quot; +</span><br><span class="line">            &quot; function:\(function)\n&quot; +</span><br><span class="line">            &quot;      ine:\(line)\n&quot; +</span><br><span class="line">            &quot;  message:\(message)&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    return returnMessage</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line">   输出Info等级的日志消息</span><br><span class="line"> *&#x2F;</span><br><span class="line">public func logInfo(_ message: String, file: StaticString &#x3D; #file, function: StaticString &#x3D; #function, line: UInt &#x3D; #line) &#123;</span><br><span class="line">    DDLogInfo(getMessage(message: message, file: file, function: function, line: line))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> 输出Error等级的日志消息</span><br><span class="line"> *&#x2F;</span><br><span class="line">public func logError(_ message: String, file: StaticString &#x3D; #file, function: StaticString &#x3D; #function, line: UInt &#x3D; #line) &#123;</span><br><span class="line">    DDLogError(getMessage(message: message, file: file, function: function, line: line))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> 输出Debug等级的日志消息</span><br><span class="line"> *&#x2F;</span><br><span class="line">public func logDebug(_ message: String, file: StaticString &#x3D; #file, function: StaticString &#x3D; #function, line: UInt &#x3D; #line) &#123;</span><br><span class="line">    DDLogDebug(getMessage(message: message, file: file, function: function, line: line))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> 输出Warn等级的日志消息</span><br><span class="line"> *&#x2F;</span><br><span class="line">public func logWarn(_ message: String, file: StaticString &#x3D; #file, function: StaticString &#x3D; #function, line: UInt &#x3D; #line) &#123;</span><br><span class="line">    DDLogWarn(getMessage(message: message, file: file, function: function, line: line))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public func logVerbose(_ message: String, file: StaticString &#x3D; #file, function: StaticString &#x3D; #function, line: UInt &#x3D; #line) &#123;</span><br><span class="line">    DDLogVerbose(getMessage(message: message, file: file, function: function, line: line))</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>此外，我还引用了官方demo的一些代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Software License Agreement (BSD License)</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; Copyright (c) 2010-2021, Deusty, LLC</span><br><span class="line">&#x2F;&#x2F; All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; Redistribution and use of this software in source and binary forms,</span><br><span class="line">&#x2F;&#x2F; with or without modification, are permitted provided that the following conditions are met:</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; * Redistributions of source code must retain the above copyright notice,</span><br><span class="line">&#x2F;&#x2F;   this list of conditions and the following disclaimer.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; * Neither the name of Deusty nor the names of its contributors may be used</span><br><span class="line">&#x2F;&#x2F;   to endorse or promote products derived from this software without specific</span><br><span class="line">&#x2F;&#x2F;   prior written permission of Deusty, LLC.</span><br><span class="line"></span><br><span class="line">#if SWIFT_PACKAGE</span><br><span class="line">import CocoaLumberjack</span><br><span class="line">import CocoaLumberjackSwiftSupport</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Replacement for Swift&#39;s &#96;assert&#96; function that will output a log message even when assertions</span><br><span class="line"> * are disabled.</span><br><span class="line"> *</span><br><span class="line"> * - Parameters:</span><br><span class="line"> *   - condition: The condition to test. Unlike &#96;Swift.assert&#96;, &#96;condition&#96; is always evaluated,</span><br><span class="line"> *     even when assertions are disabled.</span><br><span class="line"> *   - message: A string to log (using &#96;DDLogError&#96;) if &#96;condition&#96; evaluates to &#96;false&#96;.</span><br><span class="line"> *     The default is an empty string.</span><br><span class="line"> *&#x2F;</span><br><span class="line">@inlinable</span><br><span class="line">public func DDAssert(_ condition: @autoclosure () -&gt; Bool, _ message: @autoclosure () -&gt; String &#x3D; &quot;&quot;, level: DDLogLevel &#x3D; .all, context: Int &#x3D; 0, file: StaticString &#x3D; #file, function: StaticString &#x3D; #function, line: UInt &#x3D; #line, tag: Any? &#x3D; nil, asynchronous async: Bool &#x3D; false, ddlog: DDLog &#x3D; DDLog.sharedInstance) &#123;</span><br><span class="line">    if !condition() &#123;</span><br><span class="line">        DDLogError(message(), level: level, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)</span><br><span class="line">        Swift.assertionFailure(message(), file: file, line: line)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Replacement for Swift&#39;s &#96;assertionFailure&#96; function that will output a log message even</span><br><span class="line"> * when assertions are disabled.</span><br><span class="line"> *</span><br><span class="line"> * - Parameters:</span><br><span class="line"> *   - message: A string to log (using &#96;DDLogError&#96;). The default is an empty string.</span><br><span class="line"> *&#x2F;</span><br><span class="line">@inlinable</span><br><span class="line">public func DDAssertionFailure(_ message: @autoclosure () -&gt; String &#x3D; &quot;&quot;, level: DDLogLevel &#x3D; .all, context: Int &#x3D; 0, file: StaticString &#x3D; #file, function: StaticString &#x3D; #function, line: UInt &#x3D; #line, tag: Any? &#x3D; nil, asynchronous async: Bool &#x3D; false, ddlog: DDLog &#x3D; DDLog.sharedInstance) &#123;</span><br><span class="line">    DDLogError(message(), level: level, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)</span><br><span class="line">    Swift.assertionFailure(message(), file: file, line: line)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Software License Agreement (BSD License)</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; Copyright (c) 2010-2021, Deusty, LLC</span><br><span class="line">&#x2F;&#x2F; All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; Redistribution and use of this software in source and binary forms,</span><br><span class="line">&#x2F;&#x2F; with or without modification, are permitted provided that the following conditions are met:</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; * Redistributions of source code must retain the above copyright notice,</span><br><span class="line">&#x2F;&#x2F;   this list of conditions and the following disclaimer.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; * Neither the name of Deusty nor the names of its contributors may be used</span><br><span class="line">&#x2F;&#x2F;   to endorse or promote products derived from this software without specific</span><br><span class="line">&#x2F;&#x2F;   prior written permission of Deusty, LLC.</span><br><span class="line"></span><br><span class="line">@_exported import CocoaLumberjack</span><br><span class="line">#if SWIFT_PACKAGE</span><br><span class="line">import CocoaLumberjackSwiftSupport</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">extension DDLogFlag &#123;</span><br><span class="line">    public static func from(_ logLevel: DDLogLevel) -&gt; DDLogFlag &#123;</span><br><span class="line">        return DDLogFlag(rawValue: logLevel.rawValue)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public init(_ logLevel: DDLogLevel) &#123;</span><br><span class="line">        self &#x3D; DDLogFlag(rawValue: logLevel.rawValue)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;&#x2F; Returns the log level, or the lowest equivalent.</span><br><span class="line">    public func toLogLevel() -&gt; DDLogLevel &#123;</span><br><span class="line">        if let ourValid &#x3D; DDLogLevel(rawValue: rawValue) &#123;</span><br><span class="line">            return ourValid</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            if contains(.verbose) &#123;</span><br><span class="line">                return .verbose</span><br><span class="line">            &#125; else if contains(.debug) &#123;</span><br><span class="line">                return .debug</span><br><span class="line">            &#125; else if contains(.info) &#123;</span><br><span class="line">                return .info</span><br><span class="line">            &#125; else if contains(.warning) &#123;</span><br><span class="line">                return .warning</span><br><span class="line">            &#125; else if contains(.error) &#123;</span><br><span class="line">                return .error</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return .off</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F; The log level that can dynamically limit log messages (vs. the static DDDefaultLogLevel). This log level will only be checked, if the message passes the &#96;DDDefaultLogLevel&#96;.</span><br><span class="line">public var dynamicLogLevel &#x3D; DDLogLevel.all</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F; Resets the &#96;dynamicLogLevel&#96; to &#96;.all&#96;.</span><br><span class="line">&#x2F;&#x2F;&#x2F; - SeeAlso: &#96;dynamicLogLevel&#96;</span><br><span class="line">@inlinable</span><br><span class="line">public func resetDynamicLogLevel() &#123;</span><br><span class="line">    dynamicLogLevel &#x3D; .all</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@available(*, deprecated, message: &quot;Please use dynamicLogLevel&quot;, renamed: &quot;dynamicLogLevel&quot;)</span><br><span class="line">public var defaultDebugLevel: DDLogLevel &#123;</span><br><span class="line">    get &#123;</span><br><span class="line">        return dynamicLogLevel</span><br><span class="line">    &#125;</span><br><span class="line">    set &#123;</span><br><span class="line">        dynamicLogLevel &#x3D; newValue</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@available(*, deprecated, message: &quot;Please use resetDynamicLogLevel&quot;, renamed: &quot;resetDynamicLogLevel&quot;)</span><br><span class="line">public func resetDefaultDebugLevel() &#123;</span><br><span class="line">    resetDynamicLogLevel()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F; If &#96;true&#96;, all logs (except errors) are logged asynchronously by default.</span><br><span class="line">public var asyncLoggingEnabled &#x3D; true</span><br><span class="line"></span><br><span class="line">@inlinable</span><br><span class="line">public func _DDLogMessage(_ message: @autoclosure () -&gt; Any,</span><br><span class="line">                          level: DDLogLevel,</span><br><span class="line">                          flag: DDLogFlag,</span><br><span class="line">                          context: Int,</span><br><span class="line">                          file: StaticString,</span><br><span class="line">                          function: StaticString,</span><br><span class="line">                          line: UInt,</span><br><span class="line">                          tag: Any?,</span><br><span class="line">                          asynchronous: Bool,</span><br><span class="line">                          ddlog: DDLog) &#123;</span><br><span class="line">    &#x2F;&#x2F; The &#96;dynamicLogLevel&#96; will always be checked here (instead of being passed in).</span><br><span class="line">    &#x2F;&#x2F; We cannot &quot;mix&quot; it with the &#96;DDDefaultLogLevel&#96;, because otherwise the compiler won&#39;t strip strings that are not logged.</span><br><span class="line">    if level.rawValue &amp; flag.rawValue !&#x3D; 0 &amp;&amp; dynamicLogLevel.rawValue &amp; flag.rawValue !&#x3D; 0 &#123;</span><br><span class="line">        &#x2F;&#x2F; Tell the DDLogMessage constructor to copy the C strings that get passed to it.</span><br><span class="line">        let logMessage &#x3D; DDLogMessage(message: String(describing: message()),</span><br><span class="line">                                      level: level,</span><br><span class="line">                                      flag: flag,</span><br><span class="line">                                      context: context,</span><br><span class="line">                                      file: String(describing: file),</span><br><span class="line">                                      function: String(describing: function),</span><br><span class="line">                                      line: line,</span><br><span class="line">                                      tag: tag,</span><br><span class="line">                                      options: [.copyFile, .copyFunction],</span><br><span class="line">                                      timestamp: nil)</span><br><span class="line">        ddlog.log(asynchronous: asynchronous, message: logMessage)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@inlinable</span><br><span class="line">public func DDLogDebug(_ message: @autoclosure () -&gt; Any,</span><br><span class="line">                       level: DDLogLevel &#x3D; .debug,</span><br><span class="line">                       context: Int &#x3D; 0,</span><br><span class="line">                       file: StaticString &#x3D; #file,</span><br><span class="line">                       function: StaticString &#x3D; #function,</span><br><span class="line">                       line: UInt &#x3D; #line,</span><br><span class="line">                       tag: Any? &#x3D; nil,</span><br><span class="line">                       asynchronous async: Bool &#x3D; asyncLoggingEnabled,</span><br><span class="line">                       ddlog: DDLog &#x3D; .sharedInstance) &#123;</span><br><span class="line">    _DDLogMessage(message(), level: level, flag: .debug, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@inlinable</span><br><span class="line">public func DDLogInfo(_ message: @autoclosure () -&gt; Any,</span><br><span class="line">                      level: DDLogLevel &#x3D; .info,</span><br><span class="line">                      context: Int &#x3D; 0,</span><br><span class="line">                      file: StaticString &#x3D; #file,</span><br><span class="line">                      function: StaticString &#x3D; #function,</span><br><span class="line">                      line: UInt &#x3D; #line,</span><br><span class="line">                      tag: Any? &#x3D; nil,</span><br><span class="line">                      asynchronous async: Bool &#x3D; asyncLoggingEnabled,</span><br><span class="line">                      ddlog: DDLog &#x3D; .sharedInstance) &#123;</span><br><span class="line">    _DDLogMessage(message(), level: level, flag: .info, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@inlinable</span><br><span class="line">public func DDLogWarn(_ message: @autoclosure () -&gt; Any,</span><br><span class="line">                      level: DDLogLevel &#x3D; DDLogLevel.warning,</span><br><span class="line">                      context: Int &#x3D; 0,</span><br><span class="line">                      file: StaticString &#x3D; #file,</span><br><span class="line">                      function: StaticString &#x3D; #function,</span><br><span class="line">                      line: UInt &#x3D; #line,</span><br><span class="line">                      tag: Any? &#x3D; nil,</span><br><span class="line">                      asynchronous async: Bool &#x3D; asyncLoggingEnabled,</span><br><span class="line">                      ddlog: DDLog &#x3D; .sharedInstance) &#123;</span><br><span class="line">    _DDLogMessage(message(), level: level, flag: .warning, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@inlinable</span><br><span class="line">public func DDLogVerbose(_ message: @autoclosure () -&gt; Any,</span><br><span class="line">                         level: DDLogLevel &#x3D; .verbose,</span><br><span class="line">                         context: Int &#x3D; 0,</span><br><span class="line">                         file: StaticString &#x3D; #file,</span><br><span class="line">                         function: StaticString &#x3D; #function,</span><br><span class="line">                         line: UInt &#x3D; #line,</span><br><span class="line">                         tag: Any? &#x3D; nil,</span><br><span class="line">                         asynchronous async: Bool &#x3D; asyncLoggingEnabled,</span><br><span class="line">                         ddlog: DDLog &#x3D; .sharedInstance) &#123;</span><br><span class="line">    _DDLogMessage(message(), level: level, flag: .verbose, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@inlinable</span><br><span class="line">public func DDLogError(_ message: @autoclosure () -&gt; Any,</span><br><span class="line">                       level: DDLogLevel &#x3D; .error,</span><br><span class="line">                       context: Int &#x3D; 0,</span><br><span class="line">                       file: StaticString &#x3D; #file,</span><br><span class="line">                       function: StaticString &#x3D; #function,</span><br><span class="line">                       line: UInt &#x3D; #line,</span><br><span class="line">                       tag: Any? &#x3D; nil,</span><br><span class="line">                       asynchronous async: Bool &#x3D; false,</span><br><span class="line">                       ddlog: DDLog &#x3D; .sharedInstance) &#123;</span><br><span class="line">    _DDLogMessage(message(), level: level, flag: .error, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;&#x2F; Returns a String of the current filename, without full path or extension.</span><br><span class="line">&#x2F;&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F;&#x2F; Analogous to the C preprocessor macro &#96;THIS_FILE&#96;.</span><br><span class="line">public func currentFileName(_ fileName: StaticString &#x3D; #file) -&gt; String &#123;</span><br><span class="line">    var str &#x3D; String(describing: fileName)</span><br><span class="line">    if let idx &#x3D; str.range(of: &quot;&#x2F;&quot;, options: .backwards)?.upperBound &#123;</span><br><span class="line">        str &#x3D; String(str[idx...])</span><br><span class="line">    &#125;</span><br><span class="line">    if let idx &#x3D; str.range(of: &quot;.&quot;, options: .backwards)?.lowerBound &#123;</span><br><span class="line">        str &#x3D; String(str[..&lt;idx])</span><br><span class="line">    &#125;</span><br><span class="line">    return str</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; swiftlint:disable identifier_name</span><br><span class="line">&#x2F;&#x2F; swiftlint doesn&#39;t like func names that begin with a capital letter - deprecated</span><br><span class="line">@available(*, deprecated, message: &quot;Please use currentFileName&quot;, renamed: &quot;currentFileName&quot;)</span><br><span class="line">public func CurrentFileName(_ fileName: StaticString &#x3D; #file) -&gt; String &#123;</span><br><span class="line">    return currentFileName(fileName)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Software License Agreement (BSD License)</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; Copyright (c) 2010-2021, Deusty, LLC</span><br><span class="line">&#x2F;&#x2F; All rights reserved.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; Redistribution and use of this software in source and binary forms,</span><br><span class="line">&#x2F;&#x2F; with or without modification, are permitted provided that the following conditions are met:</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; * Redistributions of source code must retain the above copyright notice,</span><br><span class="line">&#x2F;&#x2F;   this list of conditions and the following disclaimer.</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">&#x2F;&#x2F; * Neither the name of Deusty nor the names of its contributors may be used</span><br><span class="line">&#x2F;&#x2F;   to endorse or promote products derived from this software without specific</span><br><span class="line">&#x2F;&#x2F;   prior written permission of Deusty, LLC.</span><br><span class="line"></span><br><span class="line">#if canImport(Combine)</span><br><span class="line"></span><br><span class="line">import Combine</span><br><span class="line"></span><br><span class="line">#if SWIFT_PACKAGE</span><br><span class="line">import CocoaLumberjack</span><br><span class="line">import CocoaLumberjackSwiftSupport</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)</span><br><span class="line">extension DDLog &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * Creates a message publisher.</span><br><span class="line">     *</span><br><span class="line">     * The publisher will add and remove loggers as subscriptions are added and removed.</span><br><span class="line">     *</span><br><span class="line">     * The level that you provide here is a preemptive filter (for performance).</span><br><span class="line">     * That is, the level specified here will be used to filter out logMessages so that</span><br><span class="line">     * the logger is never even invoked for the messages.</span><br><span class="line">     *</span><br><span class="line">     * More information:</span><br><span class="line">     *    See -[DDLog addLogger:with:]</span><br><span class="line">     *</span><br><span class="line">     * - Parameter logLevel: preemptive filter of the message returned by the publisher. All levels are sent by default</span><br><span class="line">     * - Returns: A MessagePublisher that emits LogMessages filtered by the specified logLevel</span><br><span class="line">     **&#x2F;</span><br><span class="line">    public func messagePublisher(with logLevel: DDLogLevel &#x3D; .all) -&gt; MessagePublisher &#123;</span><br><span class="line">        return MessagePublisher(log: self, with: logLevel)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; MARK: - MessagePublisher</span><br><span class="line">    </span><br><span class="line">    @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)</span><br><span class="line">    public struct MessagePublisher: Combine.Publisher &#123;</span><br><span class="line"></span><br><span class="line">        public typealias Output &#x3D; DDLogMessage</span><br><span class="line">        public typealias Failure &#x3D; Never</span><br><span class="line"></span><br><span class="line">        private let log: DDLog</span><br><span class="line">        private let logLevel: DDLogLevel</span><br><span class="line"></span><br><span class="line">        public init(log: DDLog, with logLevel: DDLogLevel) &#123;</span><br><span class="line">            self.log &#x3D; log</span><br><span class="line">            self.logLevel &#x3D; logLevel</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public func receive&lt;S&gt;(subscriber: S) where S: Subscriber, S.Failure &#x3D;&#x3D; Failure, S.Input &#x3D;&#x3D; Output &#123;</span><br><span class="line"></span><br><span class="line">            let subscription &#x3D; Subscription(log: self.log, with: logLevel, subscriber: subscriber)</span><br><span class="line">            subscriber.receive(subscription: subscription)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; MARK: - Subscription</span><br><span class="line"></span><br><span class="line">    private final class Subscription&lt;S: Subscriber&gt;: NSObject, DDLogger, Combine.Subscription</span><br><span class="line">        where S.Input &#x3D;&#x3D; DDLogMessage &#123;</span><br><span class="line">        private var subscriber: S?</span><br><span class="line">        private weak var log: DDLog?</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;Not used but DDLogger requires it. The preferred way to achieve this is to use the &#96;map()&#96; Combine operator of the publisher.</span><br><span class="line">        &#x2F;&#x2F;ie:</span><br><span class="line">        &#x2F;&#x2F; DDLog.sharedInstance.messagePublisher()</span><br><span class="line">        &#x2F;&#x2F;     .map &#123; [format log message] &#125;</span><br><span class="line">        &#x2F;&#x2F;     .sink(receiveValue: &#123; [process log message] &#125;)</span><br><span class="line">        &#x2F;&#x2F;</span><br><span class="line">        var logFormatter: DDLogFormatter? &#x3D; nil</span><br><span class="line"></span><br><span class="line">        let combineIdentifier &#x3D; CombineIdentifier()</span><br><span class="line"></span><br><span class="line">        init(log: DDLog, with logLevel: DDLogLevel, subscriber: S) &#123;</span><br><span class="line"></span><br><span class="line">            self.subscriber &#x3D; subscriber</span><br><span class="line">            self.log &#x3D; log</span><br><span class="line"></span><br><span class="line">            super.init()</span><br><span class="line"></span><br><span class="line">            log.add(self, with: logLevel)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        func request(_ demand: Subscribers.Demand) &#123;</span><br><span class="line">            &#x2F;&#x2F;The log messages are endless until canceled, so we won&#39;t do any demand management.</span><br><span class="line">            &#x2F;&#x2F;Combine operators can be used to deal with it as needed.</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        func cancel() &#123;</span><br><span class="line">            self.log?.remove(self)</span><br><span class="line">            self.subscriber &#x3D; nil</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        func log(message logMessage: DDLogMessage) &#123;</span><br><span class="line">            _ &#x3D; self.subscriber?.receive(logMessage)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)</span><br><span class="line">extension Publisher where Output &#x3D;&#x3D; DDLogMessage &#123;</span><br><span class="line"></span><br><span class="line">    public func formatted(with formatter: DDLogFormatter) -&gt; Publishers.CompactMap&lt;Self, String&gt; &#123;</span><br><span class="line">        return compactMap &#123; formatter.format(message: $0) &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#endif</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2021/04/16/使用R.swift检查各种string文件的问题md/" data-toggle="tooltip" data-placement="top"
+                           title="使用R.swift检查各种string文件的问题">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2021/04/09/查看cocoapods中各个库的版本/" data-toggle="tooltip" data-placement="top"
+                           title="查看cocoapods中各个库的版本">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80NTc4MS8yMjI5Mg==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#iOS%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6CocoaLumberjack"><span class="toc-text">iOS日志框架CocoaLumberjack</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#iOS"
+                           title="iOS">iOS</a>
+                        
+                        <a class="tag" href="/tags/#framework"
+                           title="framework">framework</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <div style="margin-top: 20px;">
+                    <h5 class="text-center">FRIENDS</h5>
+                    <ul class="list-inline text-center">
+                        
+                        <li><a target="_blank" rel="noopener" href="https://segmentfault.com/u/yin_5bc870d095522">陈庆伟</a></li>
+                        
+                        <li><a target="_blank" rel="noopener" href="https://segmentfault.com/u/fanrui_5c052adaeef32">范瑞</a></li>
+                        
+                        <li><a target="_blank" rel="noopener" href="https://zanderwang.com/">汪小祯</a></li>
+                        
+                        <li><a target="_blank" rel="noopener" href="https://www.zhangchione.com">张驰</a></li>
+                        
+                        <li><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/5bc1057e34a7">周玉林</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+                o = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+        anchors.options = {
+            visible: 'always',
+            placement: 'right',
+            icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link {
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top: -0.1em;
+        }
+    }
+</style>
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/adong666666">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/adong666666">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; ZhangSaidong 2022
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="../../../../js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="../../../../js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="../../../../js/blog.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://zsd.name/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="/images/xinyi.jpg">
+</body>
+
+</html>

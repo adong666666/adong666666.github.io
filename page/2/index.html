@@ -327,18 +327,18 @@
 
 <div class="post-preview  "
      style="background-image: url('/images/post-default.jpeg')">
-    <a href="/2021/03/21/20210320Perfect部署到云服务器摘录/">
+    <a href="/2021/04/10/iOS日志框架CocoaLumberjack简单使用/">
         <h2 class="post-title">
-            Perfect部署到云服务器摘录
+            iOS日志框架CocoaLumberjack
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-21
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-10
         </p>
         
         <div class="post-content-preview">
             <p>
-                Perfect部署到云服务器摘录========================部署过程中我先用的下面的教程附链接:https://blog.csdn.net/z123sen/article/details/80248345
-遇到的第一个问题linux 下解压 tar.gz文件百度了之后，使用命..
+                iOS日志框架CocoaLumberjack========================我使用了如下代码进行配置，只需在AppDelegate或SceneDelegate调用configDDLog即可（在其他某些文件配置也是可以的）
+12345678910111213141516171819..
             </p>
         </div>
     </a>
@@ -351,17 +351,21 @@
 
 <div class="post-preview  "
      style="background-image: url('/images/post-default.jpeg')">
-    <a href="/2021/03/20/20210320git发布tag/">
+    <a href="/2021/04/09/查看cocoapods中各个库的版本/">
         <h2 class="post-title">
-            git发布tag
+            查看cocoapods中各个库的版本
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-20
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-09
         </p>
         
         <div class="post-content-preview">
             <p>
-                git发布tag========================有些命令行老是要找半天，这里记录下git发布tag举例来说，要发布一个3.3.0的tag ，就用git tag 3.3.0然后推送到远程仓库用git push origin 3.3.0，注意origin不能省略删除tag用git t..
+                查看cocoapods中各个库的版本========================
+记录一下
+1cat Podfile.lock
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445..
             </p>
         </div>
     </a>
@@ -374,17 +378,91 @@
 
 <div class="post-preview  "
      style="background-image: url('/images/post-default.jpeg')">
-    <a href="/2021/03/16/20210316Swift多线程/">
+    <a href="/2021/04/08/Zip使用/">
         <h2 class="post-title">
-            Swift多线程摘录
+            Zip使用
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-16
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-08
         </p>
         
         <div class="post-content-preview">
             <p>
-                Swift 多线程摘录========================
+                Zip使用========================
+感觉官方写得挺明白的
+123456789do &#123;    let filePath &#x3D; Bundle.main.url(forResource: &quot;file&quot;, withExtension: &qu..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview  "
+     style="background-image: url('/images/post-default.jpeg')">
+    <a href="/2021/04/08/iOSmlmodelc内部文件格式规范/">
+        <h2 class="post-title">
+            iOS mlmodelc内部文件格式规范
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-08
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                iOS mlmodelc内部文件格式规范========================尽量本地编译Core ML mlmodel，则得到的mlmodelc可以直接使用
+通过网络加载的Core ML mlmodel所编译而出的mlmodelc虽说内容一致，但格式不方便直接使用，而且……最重要的是..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview  "
+     style="background-image: url('/images/post-default.jpeg')">
+    <a href="/2021/04/06/iOS延时/">
+        <h2 class="post-title">
+            iOS延时
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-06
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                iOS延时========================
+今天我使用了这样一种延时，目的是等待文件下载完，返回与文件相关的数据，我试了各种多线程，后面发现这种延时有阻塞的味道，能有效地防止函数提前返回数据
+12345678while true &#123;    if let compiled..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview  "
+     style="background-image: url('/images/post-default.jpeg')">
+    <a href="/2021/04/05/iOS调试摘录/">
+        <h2 class="post-title">
+            iOS调试摘录
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-05
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                iOS调试摘录======================== po vo do 等调试命令可以了解下
 
 
             </p>
@@ -399,19 +477,19 @@
 
 <div class="post-preview  "
      style="background-image: url('/images/post-default.jpeg')">
-    <a href="/2021/03/01/README.en/">
+    <a href="/2021/04/04/iOS_Swift文件夹和文件操作/">
         <h2 class="post-title">
-            PodfileKit summarizes the common iOS (Swift) third-party frameworks on GitHub (cocoapods)
+            iOS_Swift文件夹和文件操作
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-01
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-04
         </p>
         
         <div class="post-content-preview">
             <p>
-                PodfileKit========================
-Easy Podfile !
-PodfileKit summarizes the common iOS (Swift) third-party frameworks on GitHub, and classifies the ..
+                iOS_Swift文件夹和文件操作========================
+首先获取app文件夹：(以下例子都在doucment文件夹下操作)
+1234let manager &#x3D; FileManager.defaultlet urls: [URL] &#x3D; manager..
             </p>
         </div>
     </a>
@@ -424,20 +502,67 @@ PodfileKit summarizes the common iOS (Swift) third-party frameworks on GitHub, a
 
 <div class="post-preview  "
      style="background-image: url('/images/post-default.jpeg')">
-    <a href="/2021/03/01/README/">
+    <a href="/2021/04/04/Swift字符串截取摘录/">
         <h2 class="post-title">
-            PodfileKit将github上常见的iOS(Swift)第三方框架进行了汇总，并且将框架进行了分类，为用户管理第三方框架提供了方便
+            Swift字符串截取摘录
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-03-01
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-04
         </p>
         
         <div class="post-content-preview">
             <p>
-                PodfileKit========================
-Easy Podfile !
-PodfileKit将github上常见的iOS(Swift)第三方框架进行了汇总，并且将框架进行了分类，为用户管理第三方框架提供了方便。
-github网址：https://github.com/..
+                Swift字符串截取摘录========================
+
+
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview  "
+     style="background-image: url('/images/post-default.jpeg')">
+    <a href="/2021/04/04/20210404Swift 解决URL或参数中含有中文/">
+        <h2 class="post-title">
+            Swift 解决URL或参数中含有中文（Swift URL编码）
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-04
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                Swift 解决URL或参数中含有中文（Swift URL编码）========================
+12let encodeURLStr &#x3D; urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryA..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview  "
+     style="background-image: url('/images/post-default.jpeg')">
+    <a href="/2021/04/04/20210404从网络下载文件到App/">
+        <h2 class="post-title">
+            从网络下载文件到App
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-04
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                从网络下载文件到App========================
+123456789101112131415161718192021222324252627282930313233343536373839404142434445func downloadModels(_ path: [St..
             </p>
         </div>
     </a>
@@ -457,6 +582,10 @@ github网址：https://github.com/..
         <a href="/">&larr; Newer Posts</a>
     </li>
     
+    
+    <li class="next">
+        <a href="/page/3/">Older Posts &rarr;</a>
+    </li>
     
 </ul>
 
@@ -534,12 +663,12 @@ github网址：https://github.com/..
                     
                     
                     <a href="/tags/#iOS" title="iOS"
-                       rel="11">iOS</a>
+                       rel="39">iOS</a>
                     
                     
                     
                     <a href="/tags/#framework" title="framework"
-                       rel="7">framework</a>
+                       rel="23">framework</a>
                     
                     
                     
@@ -549,7 +678,7 @@ github网址：https://github.com/..
                     
                     
                     <a href="/tags/#cocoapods" title="cocoapods"
-                       rel="2">cocoapods</a>
+                       rel="6">cocoapods</a>
                     
                     
                     
@@ -569,7 +698,7 @@ github网址：https://github.com/..
                     
                     
                     <a href="/tags/#carthage" title="carthage"
-                       rel="2">carthage</a>
+                       rel="5">carthage</a>
                     
                     
                     
@@ -594,27 +723,27 @@ github网址：https://github.com/..
                     
                     
                     <a href="/tags/#Swift" title="Swift"
-                       rel="1">Swift</a>
+                       rel="12">Swift</a>
                     
                     
                     
                     <a href="/tags/#server" title="server"
-                       rel="2">server</a>
+                       rel="4">server</a>
                     
                     
                     
                     <a href="/tags/#network" title="network"
-                       rel="3">network</a>
+                       rel="5">network</a>
                     
                     
                     
                     <a href="/tags/#软件测试" title="软件测试"
-                       rel="3">软件测试</a>
+                       rel="4">软件测试</a>
                     
                     
                     
                     <a href="/tags/#JSON" title="JSON"
-                       rel="2">JSON</a>
+                       rel="3">JSON</a>
                     
                     
                     
@@ -639,7 +768,47 @@ github网址：https://github.com/..
                     
                     
                     <a href="/tags/#博文" title="博文"
-                       rel="1">博文</a>
+                       rel="2">博文</a>
+                    
+                    
+                    
+                    <a href="/tags/#三维模型" title="三维模型"
+                       rel="1">三维模型</a>
+                    
+                    
+                    
+                    <a href="/tags/#file" title="file"
+                       rel="3">file</a>
+                    
+                    
+                    
+                    <a href="/tags/#zip" title="zip"
+                       rel="1">zip</a>
+                    
+                    
+                    
+                    <a href="/tags/#机器学习" title="机器学习"
+                       rel="1">机器学习</a>
+                    
+                    
+                    
+                    <a href="/tags/#time" title="time"
+                       rel="1">time</a>
+                    
+                    
+                    
+                    <a href="/tags/#Objective-C" title="Objective-C"
+                       rel="1">Objective-C</a>
+                    
+                    
+                    
+                    <a href="/tags/#doc" title="doc"
+                       rel="1">doc</a>
+                    
+                    
+                    
+                    <a href="/tags/#DataBase" title="DataBase"
+                       rel="1">DataBase</a>
                     
                     
                 </div>

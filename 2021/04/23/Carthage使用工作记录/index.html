@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="enjoy life">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="ZhangSaidong" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        Carthage使用工作记录｜ZhangSaidong&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://zsd.name/2021/04/23/Carthage使用工作记录/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="../../../../css/blog-style.css">
+
+
+    <!-- Pygments Github CSS -->
+    
+<link rel="stylesheet" href="../../../../css/syntax.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('/images/lan_hug_xinyi.JPG')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    ZhangSaidong
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+								
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/archive/">archive</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/books/">books</a>
+                        </li>
+							
+						
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/works/">works</a>
+                        </li>
+							
+						
+                    
+                        
+                    
+					
+					
+						<li>
+							<a href="../../../../about">About</a>
+						</li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/post-default.jpeg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('/images/post-default.jpeg');
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Carthage使用工作记录</h1>
+                    
+                    <span class="meta">
+                         作者 张赛东
+                        <span>
+                          日期 2021-04-23
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#iOS"
+                           title="iOS">iOS</a>
+                        
+                        <a class="tag" href="/tags/#framework"
+                           title="framework">framework</a>
+                        
+                        <a class="tag" href="/tags/#carthage"
+                           title="carthage">carthage</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Carthage使用工作记录
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h1 id="Carthage使用工作记录"><a href="#Carthage使用工作记录" class="headerlink" title="Carthage使用工作记录"></a>Carthage使用工作记录</h1><p>========================<br>主要是三点</p>
+<h2 id="1、写Cartfile"><a href="#1、写Cartfile" class="headerlink" title="1、写Cartfile"></a>1、写Cartfile</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">github &quot;SnapKit&#x2F;SnapKit&quot;                    ~&gt; 5.0</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h2 id="2、工程目录下命令行"><a href="#2、工程目录下命令行" class="headerlink" title="2、工程目录下命令行"></a>2、工程目录下命令行</h2><h3 id="生成framework"><a href="#生成framework" class="headerlink" title="生成framework"></a>生成framework</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update --platform iOS</span><br></pre></td></tr></table></figure>
+<h3 id="生成xcframework"><a href="#生成xcframework" class="headerlink" title="生成xcframework"></a>生成xcframework</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update --platform iOS --use-xcframeworks</span><br></pre></td></tr></table></figure>
+<h3 id="多平台"><a href="#多平台" class="headerlink" title="多平台"></a>多平台</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">carthage update --use-xcframeworks</span><br></pre></td></tr></table></figure>
+<h2 id="3、拖入工程"><a href="#3、拖入工程" class="headerlink" title="3、拖入工程"></a>3、拖入工程</h2><p>在工程目录下会生成一个Carthage文件，里面有个Build文件，其中可以找到生成的库</p>
+<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % cd &#x2F;Users&#x2F;zhangsaidong&#x2F;Desktop&#x2F;test</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro test % $ carthage update --platform iOS</span><br><span class="line">zsh: command not found: $</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro test % carthage update --platform iOS </span><br><span class="line">*** Fetching SnapKit</span><br><span class="line">*** Checking out SnapKit at &quot;5.0.1&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.LDPWAL.log</span><br><span class="line">*** Building scheme &quot;SnapKit&quot; in SnapKit.xcworkspace</span><br><span class="line">A shell task (&#x2F;usr&#x2F;bin&#x2F;xcrun lipo -create &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;SnapKit&#x2F;5.0.1&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;SnapKit&#x2F;IntermediateBuildFilesPath&#x2F;UninstalledProducts&#x2F;iphoneos&#x2F;SnapKit.framework&#x2F;SnapKit &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;SnapKit&#x2F;5.0.1&#x2F;Build&#x2F;Products&#x2F;Release-iphonesimulator&#x2F;SnapKit.framework&#x2F;SnapKit -output &#x2F;Users&#x2F;zhangsaidong&#x2F;Desktop&#x2F;test&#x2F;Carthage&#x2F;Build&#x2F;iOS&#x2F;SnapKit.framework&#x2F;SnapKit) failed with exit code 1:</span><br><span class="line">fatal error: &#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F;Toolchains&#x2F;XcodeDefault.xctoolchain&#x2F;usr&#x2F;bin&#x2F;lipo: &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;SnapKit&#x2F;5.0.1&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;SnapKit&#x2F;IntermediateBuildFilesPath&#x2F;UninstalledProducts&#x2F;iphoneos&#x2F;SnapKit.framework&#x2F;SnapKit and &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;SnapKit&#x2F;5.0.1&#x2F;Build&#x2F;Products&#x2F;Release-iphonesimulator&#x2F;SnapKit.framework&#x2F;SnapKit have the same architectures (arm64) and can&#39;t be in the same fat output file</span><br><span class="line"></span><br><span class="line">Building universal frameworks with common architectures is not possible. The device and simulator slices for &quot;SnapKit&quot; both build for: arm64</span><br><span class="line">Rebuild with --use-xcframeworks to create an xcframework bundle instead.</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro test % carthage update --platform iOS --use-xcframeworks</span><br><span class="line">*** Fetching SnapKit</span><br><span class="line">*** Checking out SnapKit at &quot;5.0.1&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.w2ACyI.log</span><br><span class="line">*** Building scheme &quot;SnapKit&quot; in SnapKit.xcworkspace</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro test % carthage update --use-xcframeworks</span><br><span class="line">*** Cloning RxSwift</span><br><span class="line">*** Checking out RxSwift at &quot;6.1.0&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.ZgiMrd.log</span><br><span class="line">*** Downloading RxSwift.framework binary at &quot;Ethan.1&quot;</span><br><span class="line">*** Building scheme &quot;RxBlocking&quot; in Rx.xcworkspace</span><br><span class="line">*** Building scheme &quot;RxRelay&quot; in Rx.xcworkspace</span><br><span class="line">*** Building scheme &quot;RxSwift&quot; in Rx.xcworkspace</span><br><span class="line">*** Building scheme &quot;RxCocoa&quot; in Rx.xcworkspace</span><br><span class="line">*** Building scheme &quot;RxTest&quot; in Rx.xcworkspace</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br></pre></td><td class="code"><pre><span class="line">Last login: Sat Apr 24 16:54:56 on ttys004</span><br><span class="line">c%                                                                              zhangsaidong@zhangsaidongs-MacBook-Pro ~ % cd &#x2F;Users&#x2F;zhangsaidong&#x2F;Desktop&#x2F;project&#x2F;CommonlyUsed&#x2F;RunInto-Apple&#x2F;RunInto&#x2F;RunInto</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % cd ..</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install</span><br><span class="line">Analyzing dependencies</span><br><span class="line">Downloading dependencies</span><br><span class="line">Removing Bagel</span><br><span class="line">Removing ResponseDetective</span><br><span class="line">Removing Reveal-SDK</span><br><span class="line">Generating Pods project</span><br><span class="line">Integrating client project</span><br><span class="line">Pod installation complete! There are 75 dependencies from the Podfile and 90 total pods installed.</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install</span><br><span class="line">Analyzing dependencies</span><br><span class="line">Downloading dependencies</span><br><span class="line">Generating Pods project</span><br><span class="line">Integrating client project</span><br><span class="line">Pod installation complete! There are 75 dependencies from the Podfile and 90 total pods installed.</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install</span><br><span class="line">Analyzing dependencies</span><br><span class="line">Downloading dependencies</span><br><span class="line">Generating Pods project</span><br><span class="line">Integrating client project</span><br><span class="line">Pod installation complete! There are 75 dependencies from the Podfile and 90 total pods installed.</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Fetching CocoaDebug</span><br><span class="line">A shell task (&#x2F;usr&#x2F;bin&#x2F;env git fetch --prune --quiet https:&#x2F;&#x2F;github.com&#x2F;CocoaDebug&#x2F;CocoaDebug.git refs&#x2F;tags&#x2F;*:refs&#x2F;tags&#x2F;* +refs&#x2F;heads&#x2F;*:refs&#x2F;heads&#x2F;* (launched in &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;dependencies&#x2F;CocoaDebug)) failed with exit code 128:</span><br><span class="line">error: RPC failed; curl 56 LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54</span><br><span class="line">fatal: the remote end hung up unexpectedly</span><br><span class="line">fatal: early EOF</span><br><span class="line">fatal: index-pack failed</span><br><span class="line"></span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Cloning CocoaDebug</span><br><span class="line">A shell task (&#x2F;usr&#x2F;bin&#x2F;env git clone --bare --quiet https:&#x2F;&#x2F;github.com&#x2F;CocoaDebug&#x2F;CocoaDebug.git &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;dependencies&#x2F;CocoaDebug) failed with exit code 128:</span><br><span class="line">error: RPC failed; curl 56 LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54</span><br><span class="line">fatal: the remote end hung up unexpectedly</span><br><span class="line">fatal: early EOF</span><br><span class="line">fatal: index-pack failed</span><br><span class="line"></span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Cloning TangramKit</span><br><span class="line">*** Checking out TangramKit at &quot;1.4.2&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.p4tLc5.log</span><br><span class="line">*** Building scheme &quot;TangramKit&quot; in TangramKit.xcodeproj</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install</span><br><span class="line">Analyzing dependencies</span><br><span class="line">Downloading dependencies</span><br><span class="line">Removing TangramKit</span><br><span class="line">Generating Pods project</span><br><span class="line">Integrating client project</span><br><span class="line">Pod installation complete! There are 73 dependencies from the Podfile and 88 total pods installed.</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install</span><br><span class="line">Analyzing dependencies</span><br><span class="line">Downloading dependencies</span><br><span class="line">Generating Pods project</span><br><span class="line">Integrating client project</span><br><span class="line">Pod installation complete! There are 73 dependencies from the Podfile and 88 total pods installed.</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Cloning CocoaDebug</span><br><span class="line">^C</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Fetching CocoaDebug</span><br><span class="line">^C</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Cloning SQLite.swift</span><br><span class="line">*** Checking out SQLite.swift at &quot;70fb7af324cb3170d921f135f0c84cbdb6487cc2&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.WCcwXI.log</span><br><span class="line">*** Building scheme &quot;SQLite tvOS&quot; in SQLite.xcodeproj</span><br><span class="line">*** Building scheme &quot;SQLite Mac&quot; in SQLite.xcodeproj</span><br><span class="line">*** Building scheme &quot;SQLite watchOS&quot; in SQLite.xcodeproj</span><br><span class="line">*** Building scheme &quot;SQLite iOS&quot; in SQLite.xcodeproj</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Cloning CocoaDebug</span><br><span class="line">^C</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Cloning Surge</span><br><span class="line">*** Checking out Surge at &quot;2.3.2&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.0VCdna.log</span><br><span class="line">*** Building scheme &quot;Surge-tvOS&quot; in Surge.xcworkspace</span><br><span class="line">*** Building scheme &quot;Surge-watchOS&quot; in Surge.xcworkspace</span><br><span class="line">*** Building scheme &quot;Surge-iOS&quot; in Surge.xcworkspace</span><br><span class="line">*** Building scheme &quot;Surge-macOS&quot; in Surge.xcworkspace</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Cloning InterfaceKit</span><br><span class="line">*** Checking out InterfaceKit at &quot;6c54d468ae1a5c45fc68d800c86e0edd728f913c&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.FScun9.log</span><br><span class="line">*** Building scheme &quot;InterfaceKit&quot; in InterfaceKit.xcworkspace</span><br><span class="line">Build Failed</span><br><span class="line">    Task failed with exit code 1:</span><br><span class="line">    &#x2F;usr&#x2F;bin&#x2F;xcrun dsymutil &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;6c54d468ae1a5c45fc68d800c86e0edd728f913c&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework&#x2F;InterfaceKit -o &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;6c54d468ae1a5c45fc68d800c86e0edd728f913c&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework.dSYM</span><br><span class="line"></span><br><span class="line">This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.FScun9.log</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Fetching InterfaceKit</span><br><span class="line">*** Checking out InterfaceKit at &quot;6c54d468ae1a5c45fc68d800c86e0edd728f913c&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.QqfIWe.log</span><br><span class="line">*** Building scheme &quot;InterfaceKit&quot; in InterfaceKit.xcworkspace</span><br><span class="line">Build Failed</span><br><span class="line">    Task failed with exit code 1:</span><br><span class="line">    &#x2F;usr&#x2F;bin&#x2F;xcrun dsymutil &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;6c54d468ae1a5c45fc68d800c86e0edd728f913c&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework&#x2F;InterfaceKit -o &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;6c54d468ae1a5c45fc68d800c86e0edd728f913c&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework.dSYM</span><br><span class="line"></span><br><span class="line">This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.QqfIWe.log</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % open &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Fetching InterfaceKit</span><br><span class="line">*** Checking out InterfaceKit at &quot;4c1d617d73bd40393e71741b39c9e2ead3c7572d&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.dM9GjZ.log</span><br><span class="line">*** Building scheme &quot;InterfaceKit&quot; in InterfaceKit.xcworkspace</span><br><span class="line">Build Failed</span><br><span class="line">    Task failed with exit code 1:</span><br><span class="line">    &#x2F;usr&#x2F;bin&#x2F;xcrun dsymutil &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework&#x2F;InterfaceKit -o &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework.dSYM</span><br><span class="line"></span><br><span class="line">This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.dM9GjZ.log</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks</span><br><span class="line">*** Fetching InterfaceKit</span><br><span class="line">*** Checking out InterfaceKit at &quot;4c1d617d73bd40393e71741b39c9e2ead3c7572d&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.XFquCD.log</span><br><span class="line">*** Building scheme &quot;InterfaceKit&quot; in InterfaceKit.xcworkspace</span><br><span class="line">Build Failed</span><br><span class="line">    Task failed with exit code 1:</span><br><span class="line">    &#x2F;usr&#x2F;bin&#x2F;xcrun dsymutil &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework&#x2F;InterfaceKit -o &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework.dSYM</span><br><span class="line"></span><br><span class="line">This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.XFquCD.log</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --no-use-binaries</span><br><span class="line">*** Fetching InterfaceKit</span><br><span class="line">^C</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --no-use-binaries</span><br><span class="line">*** Fetching InterfaceKit</span><br><span class="line">*** Checking out InterfaceKit at &quot;4c1d617d73bd40393e71741b39c9e2ead3c7572d&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.KPX9mF.log</span><br><span class="line">*** Building scheme &quot;InterfaceKit&quot; in InterfaceKit.xcworkspace</span><br><span class="line">A shell task (&#x2F;usr&#x2F;bin&#x2F;xcrun lipo -create &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;IntermediateBuildFilesPath&#x2F;UninstalledProducts&#x2F;iphoneos&#x2F;InterfaceKit.framework&#x2F;InterfaceKit &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Products&#x2F;Release-iphonesimulator&#x2F;InterfaceKit.framework&#x2F;InterfaceKit -output &#x2F;Users&#x2F;zhangsaidong&#x2F;Desktop&#x2F;project&#x2F;CommonlyUsed&#x2F;RunInto-Apple&#x2F;RunInto&#x2F;Carthage&#x2F;Build&#x2F;iOS&#x2F;InterfaceKit.framework&#x2F;InterfaceKit) failed with exit code 1:</span><br><span class="line">fatal error: &#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F;Toolchains&#x2F;XcodeDefault.xctoolchain&#x2F;usr&#x2F;bin&#x2F;lipo: &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;IntermediateBuildFilesPath&#x2F;UninstalledProducts&#x2F;iphoneos&#x2F;InterfaceKit.framework&#x2F;InterfaceKit and &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Products&#x2F;Release-iphonesimulator&#x2F;InterfaceKit.framework&#x2F;InterfaceKit have the same architectures (arm64) and can&#39;t be in the same fat output file</span><br><span class="line"></span><br><span class="line">Building universal frameworks with common architectures is not possible. The device and simulator slices for &quot;InterfaceKit&quot; both build for: arm64</span><br><span class="line">Rebuild with --use-xcframeworks to create an xcframework bundle instead.</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --no-use-binaries --use-xcframeworks</span><br><span class="line">*** Fetching InterfaceKit</span><br><span class="line">*** Checking out InterfaceKit at &quot;4c1d617d73bd40393e71741b39c9e2ead3c7572d&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.SrsXrV.log</span><br><span class="line">*** Building scheme &quot;InterfaceKit&quot; in InterfaceKit.xcworkspace</span><br><span class="line">Build Failed</span><br><span class="line">    Task failed with exit code 1:</span><br><span class="line">    &#x2F;usr&#x2F;bin&#x2F;xcrun dsymutil &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework&#x2F;InterfaceKit -o &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;4c1d617d73bd40393e71741b39c9e2ead3c7572d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework.dSYM</span><br><span class="line"></span><br><span class="line">This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.SrsXrV.log</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --no-use-binaries --use-xcframeworks</span><br><span class="line">*** Fetching InterfaceKit</span><br><span class="line">*** Checking out InterfaceKit at &quot;6fbe972cef5ec57adf09e90fb18abf178279f05d&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.ztpFGs.log</span><br><span class="line">*** Building scheme &quot;InterfaceKit&quot; in InterfaceKit.xcworkspace</span><br><span class="line">Build Failed</span><br><span class="line">    Task failed with exit code 1:</span><br><span class="line">    &#x2F;usr&#x2F;bin&#x2F;xcrun dsymutil &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;6fbe972cef5ec57adf09e90fb18abf178279f05d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework&#x2F;InterfaceKit -o &#x2F;Users&#x2F;zhangsaidong&#x2F;Library&#x2F;Caches&#x2F;org.carthage.CarthageKit&#x2F;DerivedData&#x2F;12.4_12D4e&#x2F;InterfaceKit&#x2F;6fbe972cef5ec57adf09e90fb18abf178279f05d&#x2F;Build&#x2F;Intermediates.noindex&#x2F;ArchiveIntermediates&#x2F;InterfaceKit&#x2F;BuildProductsPath&#x2F;Release-iphoneos&#x2F;InterfaceKit.framework.dSYM</span><br><span class="line"></span><br><span class="line">This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.ztpFGs.log</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks                  </span><br><span class="line">*** Fetching InterfaceKit</span><br><span class="line">*** Checking out InterfaceKit at &quot;55b358119d90ce36475caaefb052d0a83dc7e404&quot;</span><br><span class="line">*** xcodebuild output can be found in &#x2F;var&#x2F;folders&#x2F;6l&#x2F;1l7ck2ln26l__7d011xpj3q00000gn&#x2F;T&#x2F;carthage-xcodebuild.5gb46Q.log</span><br><span class="line">*** Building scheme &quot;InterfaceKit&quot; in InterfaceKit.xcworkspace</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % cd ..</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % git add .</span><br><span class="line">g%                                                                                                                                            zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % git commit -m &quot;fix&quot;</span><br><span class="line">[master 64157fda] fix</span><br><span class="line"> 9 files changed, 430 insertions(+), 419 deletions(-)</span><br><span class="line"> rewrite RunInto&#x2F;RunInto&#x2F;SwiftUI&#x2F;Home&#x2F;child&#x2F;Setting&#x2F;interface&#x2F;InterfaceView.swift (98%)</span><br><span class="line"> rewrite RunInto&#x2F;RunInto&#x2F;SwiftUI&#x2F;Home&#x2F;child&#x2F;Setting&#x2F;interface&#x2F;WCInterfaceView.swift (98%)</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % git push</span><br><span class="line">Enumerating objects: 53, done.</span><br><span class="line">Counting objects: 100% (53&#x2F;53), done.</span><br><span class="line">Delta compression using up to 16 threads</span><br><span class="line">Compressing objects: 100% (27&#x2F;27), done.</span><br><span class="line">Writing objects: 100% (28&#x2F;28), 364.31 KiB | 3.72 MiB&#x2F;s, done.</span><br><span class="line">Total 28 (delta 17), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (17&#x2F;17), completed with 16 local objects.</span><br><span class="line">To https:&#x2F;&#x2F;github.com&#x2F;adong666666&#x2F;RunInto-Apple.git</span><br><span class="line">   5dc30f04..64157fda  master -&gt; master</span><br><span class="line">zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % </span><br></pre></td></tr></table></figure>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2021/04/25/podspec示例/" data-toggle="tooltip" data-placement="top"
+                           title="podspec示例">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2021/04/23/Carthage使用摘录/" data-toggle="tooltip" data-placement="top"
+                           title="Carthage使用摘录">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80NTc4MS8yMjI5Mg==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Carthage%E4%BD%BF%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95"><span class="toc-text">Carthage使用工作记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%86%99Cartfile"><span class="toc-text">1、写Cartfile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="toc-text">2、工程目录下命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90framework"><span class="toc-text">生成framework</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90xcframework"><span class="toc-text">生成xcframework</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%B9%B3%E5%8F%B0"><span class="toc-text">多平台</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%8B%96%E5%85%A5%E5%B7%A5%E7%A8%8B"><span class="toc-text">3、拖入工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95"><span class="toc-text">记录</span></a></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#iOS"
+                           title="iOS">iOS</a>
+                        
+                        <a class="tag" href="/tags/#framework"
+                           title="framework">framework</a>
+                        
+                        <a class="tag" href="/tags/#carthage"
+                           title="carthage">carthage</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <div style="margin-top: 20px;">
+                    <h5 class="text-center">FRIENDS</h5>
+                    <ul class="list-inline text-center">
+                        
+                        <li><a target="_blank" rel="noopener" href="https://segmentfault.com/u/yin_5bc870d095522">陈庆伟</a></li>
+                        
+                        <li><a target="_blank" rel="noopener" href="https://segmentfault.com/u/fanrui_5c052adaeef32">范瑞</a></li>
+                        
+                        <li><a target="_blank" rel="noopener" href="https://zanderwang.com/">汪小祯</a></li>
+                        
+                        <li><a target="_blank" rel="noopener" href="https://www.zhangchione.com">张驰</a></li>
+                        
+                        <li><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/5bc1057e34a7">周玉林</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+                o = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+        anchors.options = {
+            visible: 'always',
+            placement: 'right',
+            icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link {
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top: -0.1em;
+        }
+    }
+</style>
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/adong666666">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/adong666666">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; ZhangSaidong 2022
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="../../../../js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="../../../../js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="../../../../js/blog.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://zsd.name/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="/images/xinyi.jpg">
+</body>
+
+</html>
