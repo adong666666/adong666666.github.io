@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="enjoy life">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="ZhangSaidong" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        ZhangSaidong&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://zsd.name/about/index/resume.html">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="../../css/blog-style.css">
+
+
+    <!-- Pygments Github CSS -->
+    
+<link rel="stylesheet" href="../../css/syntax.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('/images/lan_hug_xinyi.JPG')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    ZhangSaidong
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+								
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/archive/">archive</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/books/">books</a>
+                        </li>
+							
+						
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/works/">works</a>
+                        </li>
+							
+						
+                    
+                        
+                    
+					
+					
+						<li>
+							<a href="../../about">About</a>
+						</li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+<style>
+
+    div {
+        float: inherit;
+    }
+
+    .person div {
+        padding-bottom: 2px;
+        width: 48%;
+        text-align: left;
+        font-size: 14pt;
+        display: inline-block;
+    }
+
+    .title {
+        margin-top: 10px;
+    }
+
+    .title * {
+        vertical-align: middle;
+        font-size: 14pt;
+    }
+
+    .title img {
+        width: 32px;
+    }
+
+    .work {
+        margin-left: 20px;
+        color: #b0b0b0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .line {
+        border: 1px solid #b0b0b0;
+        margin: 5px;
+    }
+    .head_line{
+        border: 2px solid #404040;
+        margin: 15px 0;
+    }
+
+    * {
+        font-size: 14px;
+    }
+
+    .work .left {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        width: 150px;
+        color: #b0b0b0;
+    }
+
+    .work .mid {
+        height: 100%;
+        border: 2px solid #b0b0b0;
+        display: inline-block;
+        position: absolute; /*自适应父标签高度使用*/
+    }
+
+    .work .middle {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+        color: #b0b0b0;
+    }
+
+    .work .right {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        width: 508px;
+        overflow: auto;
+        color: black;
+    }
+
+    .work .only {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px;
+        width: 95%;
+        overflow: auto;
+        color: black;
+        word-wrap: break-word;
+        text-indent: 2em;
+        font-weight: 300;
+    }
+
+    .work .right .detail {
+        word-wrap: break-word;
+        text-indent: 2em;
+        font-weight: 300;
+    }
+
+    .work .right .head {
+        font-size: 12pt;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .work .right .brief {
+        margin-bottom: 5px;
+    }
+
+</style>
+<div style="width: 720px;margin: 90px auto 5px;">
+    <div class="head_line"></div>
+    <div style="float: left; width: 100%;">
+        <div style="float: inherit;">
+            <img src="/images/xinyi.jpg"
+                 style="border-radius:50%;  width:192px;"/>
+        </div>
+        <div style="float: inherit;margin-left:25px; margin-top:20px;">
+            <div style="float: none;width: 500px;">
+                <div style="color:#003f3f;font-size:24pt;text-align: center;">张赛东/男/21岁</div>
+                <div style="margin-top: 10px; float: none;">
+                    <div class="person">
+                        <div>手机: 15674119605</div>
+                        <div>邮箱: 3440217568@qq.com</div>
+                    </div>
+                    <div class="person">
+                        <div>微信: adongenjoylife</div>
+                        <div>QQ: 3440217568</div>
+                    </div>
+                    <div class="person">
+                        <div><a href="/certificate/undergraduate/学士学位证书.jpg"  style="font-size:14pt;">学历: 工学学士</a></div>
+                        <div><a href="/certificate/undergraduate/本科毕业证书.jpg"  style="font-size:14pt;">专业: 软件工程</a></div>
+                    </div>
+                    <div class="person">
+                        <div><a target="_blank" rel="noopener" href="http://www.hut.edu.cn/"  style="font-size:14pt;">毕业学校: 湖南工业大学</a></div>
+                        <div><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%80%92%E9%98%B3/235119?fr=aladdin"  style="font-size:14pt;">籍贯: 湖南耒阳</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+    <div>
+        <div class="title">
+            <img src="/images/about/教育经历.png">
+            <span>教育经历</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">2017/09 - 2021/06</div>
+                <div class="mid"></div>
+                <div class="right"><a target="_blank" rel="noopener" href="http://www.hut.edu.cn/">湖南工业大学</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/certificate/undergraduate/本科毕业证书.jpg">软件工程</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/certificate/undergraduate/学士学位证书.jpg">工学学士</a></div>
+            </div>
+            <div class="work">
+                <div class="left">获奖</div>
+                <div class="mid"></div>
+                <div class="right"><a href="/certificate/undergraduate/优秀毕业论文.jpg">在校期间获湖南工业大学校级优秀毕业论文(专业top2)</a>、奖学金、奖项、荣誉若干<br>
+                                   2019年参与的两项大创项目皆获得省级立项且于2021年结题<br>
+                                   <a href="/certificate/undergraduate/中国高校计算机大赛人工智能创意赛华中赛区省级三等奖.png">2019年获中国高校计算机大赛人工智能创意赛华中赛区省级三等奖</a><a target="_blank" rel="noopener" href="https://www.sohu.com/a/333259168_100021156">(全国top48)</a><br>
+                                   <a href="/certificate/undergraduate/中国计算机设计大赛中南赛区省级一等奖.png">2019年获中国计算机设计大赛中南赛区省级一等奖</a>、<a href="/certificate/undergraduate/中国计算机设计大赛全国三等奖.png">全国三等奖</a><br>
+                                   <a href="/certificate/undergraduate/中国高校计算机大赛省级一等奖.jpg">2019年获中国高校计算机大赛移动应用创新赛省级一等奖</a>、<a href="/certificate/undergraduate/中国高校计算机大赛全国二等奖.jpg">全国二等奖</a><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/wWnrsxSE0De2HNm9drSFCQ">(全国top12)</a><br>
+                                   <a target="_blank" rel="noopener" href="http://journals.hut.edu.cn:6688/zk/ch/reader/create_pdf.aspx?file_no=20200507&flag=1&journal_id=hngydxzrb&year_id=2020">2020年于湖南工业大学学报发表学术论文《基于ARKit技术的文物交互式相机App设计与实现》</a><br>
+                                   <a href="/certificate/undergraduate/软件著作权.png">2020年成功为作品《基于AI和AR技术的文物交互式相机软件》申请软件著作权</a><br>
+                </div>
+            </div>
+            <div class="work">
+                <div class="left">参与</div>
+                <div class="mid"></div>
+                <div class="right">2018年进入中国高校计算机大赛移动应用创新赛复赛（全国top200）
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="title">
+            <img src="/images/about/求职意向.png">
+            <span>求职意向</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">期望工作</div>
+                <div class="mid"></div>
+                <div class="right">iOS开发工程师</div>
+            </div>
+            <div class="work">
+                <div class="left">期望地点</div>
+                <div class="mid"></div>
+                <div class="right">北京、广州、杭州、南京、上海、深圳、厦门</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/工作经历.png">
+            <span>工作经历</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">2017/09 - 至今</div>
+                <div class="mid"></div>
+                <div class="right">
+                    <div class="head">公司: 敬请期待</div>
+                    <div class="brief">职位: iOS开发工程师 | 工作性质: 实习 | 地点: 敬请期待</div>
+                    <div class="detail">
+                        敬请期待！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/专业技能.png">
+            <span>专业技能</span>
+        </div>
+        <div class="line"></div>
+        <div>
+            <div class="work">
+                <div class="left">学术论文</div>
+                <div class="mid"></div>
+                <div class="right"><a target="_blank" rel="noopener" href="http://journals.hut.edu.cn:6688/zk/ch/reader/create_pdf.aspx?file_no=20200507&flag=1&journal_id=hngydxzrb&year_id=2020">http://journals.hut.edu.cn:6688/zk/ch/reader/create_pdf.aspx?file_no=20200507&flag=1&journal_id=hngydxzrb&year_id=2020</a></div>
+            </div>
+        
+            <div class="work">
+                <div class="left">外语能力</div>
+                <div class="mid"></div>
+                <div class="right"><a href="/certificate/undergraduate/六级证书带马赛克.png">英语六级 495</a></div>
+            </div>
+
+            <div class="work">
+                <div class="left">编程技巧</div>
+                <div class="mid"></div>
+                <div class="right">
+                    <div class="brief">
+                        Swift：
+                    </div>
+                    <div class="detail">
+                        熟练Swift编程，阅读了许多Swift相关书籍，关注Swift语言和相关技术的发展，能够使用Swift进行实际项目的开发，对Swift编程有浓厚兴趣。
+                    </div>
+
+                    <div class="brief">
+                        Python：
+                    </div>
+                    <div class="detail">
+                        习惯使用Python进行快速原型开发，上线前数据验证等工作; 熟悉使用Scrapy进行数据抓取及数据分析工作; 熟悉使用Python进行图片或其他资源的爬取。
+                    </div>
+
+                    <div class="brief">
+                        SQL：
+                    </div>
+                    <div class="detail">
+                        熟悉常用的SQL操作命令，能够编写多数业务场景下的SQL语句。
+                    </div>
+
+                    <div class="brief">
+                        Shell：
+                    </div>
+                    <div class="detail">
+                        能够熟练运用日常Linux命令，并编写简单的Shell脚本程序。
+                    </div>
+
+                    <div class="brief">
+                        其他：
+                    </div>
+                    <div class="detail">
+                        对Objective-C、Java、JavaScript、C#有一定经验；能够编写C/C++程序，且基础扎实；对汇编、Go、PHP、R、Perl、Groovy、Ruby、MATLAB、Kotlin、Dart等语言有所接触。
+                    </div>
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="left">交互设计</div>
+                <div class="mid"></div>
+                <div class="right">
+                    <div class="brief">
+                        素材处理：
+                    </div>
+                    <div class="detail">
+                        使用Adobe旗下的PhotoShop、Illustrator、Premiere、After Effects等软件进行项目的素材处理。
+                    </div>
+
+                    <div class="brief">
+                        原型设计：
+                    </div>
+                    <div class="detail">
+                        使用Sketch、Mockplus、Adobe XD、墨刀等软件进行项目的原型设计。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work">
+                <div class="left">Github</div>
+                <div class="mid"></div>
+                <div class="right"><a target="_blank" rel="noopener" href="https://github.com/adong666666">https://github.com/adong666666</a></div>
+            </div>
+
+            <div class="work">
+                <div class="left">博客</div>
+                <div class="mid"></div>
+                <div class="right"><a href="https://zsd.name">https://zsd.name</a></div>
+            </div>
+            
+            <div class="work">
+                <div class="left">开源框架</div>
+                <div class="mid"></div>
+                <div class="right"><a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit">https://github.com/adong666666/InterfaceKit</a></div>
+            </div>
+            
+            <div class="work">
+                <div class="left">Gitbook</div>
+                <div class="mid"></div>
+                <div class="right"><a target="_blank" rel="noopener" href="https://3440217568.gitbook.io/rxswift/">https://3440217568.gitbook.io/rxswift/</a></div>
+            </div>
+            
+            <div class="work">
+                <div class="left">Jazzy代码解释文档</div>
+                <div class="mid"></div>
+                <div class="right"><a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKitDoc">https://github.com/adong666666/InterfaceKitDoc</a></div>
+            </div>
+            
+            <div class="work">
+                <div class="left">App</div>
+                <div class="mid"></div>
+                <div class="right"><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/runinto-enjoy-ar-keep-moving/id1480828569">https://apps.apple.com/us/app/runinto-enjoy-ar-keep-moving/id1480828569</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/项目经历.png">
+            <span>项目经历</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                <pre>2018.04 - 2021.06  湖南省省级大学生创新实验室 移动应用开发组</pre>
+            </div>
+            <div class="only">
+                1. 学习和研究许多iOS相关的框架，将优秀的框架用于实际的项目开发;
+            </div>
+            <div class="only">
+                2. 使用SwiftLint规范代码，使自己拥有好的代码编写习惯;
+            </div>
+            <div class="only">
+                3. 使用Git进行代码托管，且方便团队成员之间的协同合作;
+            </div>
+            <div class="only">
+                4. 使用Cocopods对项目进行模块化，提高开发效率;
+            </div>
+            <div class="only">
+                5. 搭建项目的自动化测试工具，帮助提高团队效率;
+            </div>
+            <div class="only">
+                6. 对机器学习和增强现实等相关技术有一定的了解;
+            </div>
+            <div class="only">
+                7. 独立开发了一款基于AI和AR技术的文物交互式相机App且上架;
+            </div>
+            <div class="only">
+                8. 独立开发了若干个iOS软件，且对一些iOS项目进行过维护工作;
+            </div>
+            <div class="only">
+                9. 在校期间参与了若干个省级科研项目，发表论文一篇，申请软件著作权一份;
+            </div>
+            <div class="only">
+                10. 熟悉许多github上的iOS知名项目，具有一定的iOS开发能力;
+            </div>
+            <div class="only">
+                11. 将图像识别、目标检测、神经网络等机器学习技术运用到了实际开发中;
+            </div>
+            <div class="only">
+                12. 使用Python爬虫爬取网络上的图片，将爬取的图片整理成数据集，供机器学习模型训练使用;
+            </div>
+            <div class="only">
+                13. 使用Swift Perfect搭建服务器并成功部署至阿里云服务器，且公网能成功访问;
+            </div>
+            <div class="only">
+                14. 使用Hexo搭建个人博客并绑定至所购买的域名，且持续更新博文;
+            </div>
+            <div class="only">
+                15. 使用gitbook创建书籍并与github关联，且发布至个人博客;
+            </div>
+            <div class="only">
+                16. 在项目中合理使用SQLite.swift、Realm、Core Data等进行项目的数据库操作;
+            </div>
+            <div class="only">
+                17. 在项目中合理使用URLSession、Alamofire、Moya、RxAlamofire、SwiftyJSON、HandyJSON、ObjectMapper等处理网络请求与JSON解析;
+            </div>
+            <div class="only">
+                18. 在项目中合理使用RxSwift、RxCocoa、NSObject+Rx、RxGesture等进行函数响应式编程;
+            </div>
+            <div class="only">
+                19. 在项目中合理使用MVC、MVP、MVVM等开发模式;
+            </div>
+            <div class="only">
+                20. 在项目中使用URLSession等完成文件的下载，使用FileManager完成文件的解压、遍历、写入、移动等各种操作，且注重有关文件的清理工作（如压缩包清理）;
+            </div>
+            <div class="only">
+                21. 独立制作开源框架InterfaceKit，同时支持iOS、macOS、tvOS和watchOS全部四个平台，可通过CocoaPods、Carthage、Swift Package Manager和手动集成等多种多种方式进行安装。使用Jazzy为该框架生成代码解释文档。使用Github Action workflows对该框架进行持续集成且状态为passing。
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/自我评价.png">
+            <span>自我评价</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                具有较好的自学能力，项目经验充实，与人沟通能力较强，有着很好的与人合作能力。
+            </div>
+            <div class="only">
+                现在的目标是成为一名优秀的iOS开发工程师，主要从事移动应用开发的开发工作。有着良好的移动应用开发经验，熟悉Swift语言，熟悉多种有名的框架，熟悉软件开发思想。
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="title">
+            <img src="/images/about/未来规划.png">
+            <span>未来规划</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                1. 本人当下的目标是成为一名优秀的iOS开发工程师，尤其是在移动应用开发等相关技术领域。
+            </div>
+            <div class="only">
+                2. 阅读优秀iOS作品和框架的源码，深入学习优秀的iOS开发工程设计思想。
+            </div>
+            <div class="only">
+                3. 积极参与开源工作，希望能够为开源社区做贡献，能够编写有较多人使用的开源框架。
+            </div>
+            <div class="only">
+                4. 学习机器学习及增强现实等相关理论，并运用到实际开发之中。
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <div class="title">
+            <img src="/images/about/个人项目.png">
+            <span>个人项目</span>
+        </div>
+        <div class="line"></div>
+        <div class="work">
+            <div class="only">
+                <pre><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/runinto-enjoy-ar-keep-moving/id1480828569">RunInto AR文物交互式相机（已上架）</a></pre>
+            </div>
+            <div class="only">
+                • RunInto是一款基于ARKit增强现实、Core ML 机器学习和Metal高级3D图形渲染等技术开发的AR文物交互式相机App。本人独立完成其全部开发工作。
+            </div>
+            <div class="only">
+                • RunInto是一款基于iOS平台集文物识别与检测、文物3D建模和文物交互多功能于一体的App。
+            </div>
+            <div class="only">
+                • 系统能准确、高效地实现文物识别和检测、文物相关信息的获取、文物3D欣赏以及用户与文物之间的互动，为用户带来身临其境的体验，同时为文物爱好者鉴别和欣赏文物带来了极大的便利。
+            </div>
+            <div class="only">
+                • 系统严格按照软件工程的开发思想，经过反复的软件系统测试，最终实现了用户操作简单、系统运行稳定、数据访问安全、界面美观简洁的教育类移动应用。
+            </div>
+            <div class="only">
+                • 使用Python写出工具，完成图片数据集中文物位置信息的采集，且采集完成后生成JSON文件。将图片数据集和JSON文件投入Create ML中训练，在App中使用Core ML调用训练所生成的目标检测模型，从而实现对文物进行目标检测的功能。
+            </div>
+            <div class="only">
+                • 使用Xcode将dae格式的文物三维模型转换为scn格式以投入项目开发，使用ARKit实现文物三维模型的放置、移动、缩放、旋转等功能。
+            </div>
+            <div class="only">
+                • 使用URLSession从网络下载文物的三维模型，机器学习模型、图片等文件，通过FileManager、Zip等进行解压、移动、读取以实现各种资源文件在App中的使用，同时进行有关文件的清理。
+            </div>
+            <div class="only">
+                • 使用PhotoShop、Illustrator、Premiere、After Effects等软件进行项目的素材处理。使用墨刀进行项目的原型设计。
+            </div>
+            <div class="only">
+                • 获中国高校计算机大赛移动应用创新赛省级一等奖、全国二等奖。
+            </div>
+            <div class="only">
+                • 发表学术论文《基于ARKit技术的文物交互式相机App设计与实现》。
+            </div>
+            <div class="only">
+                • 取得软件著作权《基于AI和AR技术的文物交互式相机软件》。
+            </div>
+        </div>
+        
+        <div class="work">
+            <div class="only">
+                <pre><a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit">开源框架InterfaceKit</a></pre>
+            </div>
+            <div class="only">
+                • InterfaceKit旨在简便地实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口。
+            </div>
+            <div class="only">
+                • InterfaceKit同时支持iOS、macOS、tvOS和watchOS全部四个平台。
+            </div>
+            <div class="only">
+                • 可通过CocoaPods、Carthage、Swift Package Manager和手动集成等多种多种方式进行安装。
+            </div>
+            <div class="only">
+                • 使用Jazzy为该框架生成代码解释文档。
+            </div>
+            <div class="only">
+                • 使用Github Action workflows对该框架进行持续集成且状态为passing。
+            </div>
+            <div class="only">
+                • 所提供的示例代码，一套代码在iOS、macOS、tvOS和watchOS四个平台上运行。
+            </div>
+        </div>
+    </div>
+
+    <div class="head_line"></div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/adong666666">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/adong666666">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; ZhangSaidong 2022
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="../../js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="../../js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="../../js/blog.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://zsd.name/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="/images/xinyi.jpg">
+</body>
+
+</html>
