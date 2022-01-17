@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>张赛东的艺苑</title>
+  <icon>https://www.gravatar.com/avatar/91d0b0723847ce9f5e132c9f4cbcf706</icon>
+  <subtitle>碧云斜</subtitle>
+  <link href="https://zsd.name/atom.xml" rel="self"/>
+  
+  <link href="https://zsd.name/"/>
+  <updated>2022-01-16T12:23:27.625Z</updated>
+  <id>https://zsd.name/</id>
+  
+  <author>
+    <name>张赛东</name>
+    <email>3440217568@qq.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>动态规划之状态压缩</title>
+    <link href="https://zsd.name/2022/01/16/20220116-dong-tai-gui-hua-zhi-zhuang-tai-ya-suo/"/>
+    <id>https://zsd.name/2022/01/16/20220116-dong-tai-gui-hua-zhi-zhuang-tai-ya-suo/</id>
+    <published>2022-01-16T03:57:00.000Z</published>
+    <updated>2022-01-16T12:23:27.625Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;动态规划之状态压缩摘录&quot;&gt;&lt;a href=&quot;#动态规划之状态压缩摘录&quot; class=&quot;headerlink&quot; title=&quot;动态规划之状态压缩摘录&quot;&gt;&lt;/a&gt;动态规划之状态压缩摘录&lt;/h1&gt;&lt;p&gt;========================&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构与算法" scheme="https://zsd.name/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://zsd.name/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="动态规划" scheme="https://zsd.name/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="C++" scheme="https://zsd.name/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++标准库使用</title>
+    <link href="https://zsd.name/2022/01/06/20220106c-biao-zhun-ku-shi-yong/"/>
+    <id>https://zsd.name/2022/01/06/20220106c-biao-zhun-ku-shi-yong/</id>
+    <published>2022-01-06T09:52:00.000Z</published>
+    <updated>2022-01-16T12:23:18.599Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C-标准库使用&quot;&gt;&lt;a href=&quot;#C-标准库使用&quot; class=&quot;headerlink&quot; title=&quot;C++标准库使用&quot;&gt;&lt;/a&gt;C++标准库使用&lt;/h1&gt;&lt;p&gt;========================&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构与算法" scheme="https://zsd.name/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://zsd.name/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="C++" scheme="https://zsd.name/tags/C/"/>
+    
+    <category term="数据结构" scheme="https://zsd.name/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac上使用C++万能头文件</title>
+    <link href="https://zsd.name/2022/01/01/20220101mac-shang-shi-yong-c-wan-neng-tou-wen-jian/"/>
+    <id>https://zsd.name/2022/01/01/20220101mac-shang-shi-yong-c-wan-neng-tou-wen-jian/</id>
+    <published>2022-01-01T06:52:00.000Z</published>
+    <updated>2022-01-16T12:23:01.031Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Mac上使用C-万能头文件&quot;&gt;&lt;a href=&quot;#Mac上使用C-万能头文件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构与算法" scheme="https://zsd.name/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://zsd.name/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="C++" scheme="https://zsd.name/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</title>
+    <link href="https://zsd.name/2021/05/01/interfacekit.zh-hans/"/>
+    <id>https://zsd.name/2021/05/01/interfacekit.zh-hans/</id>
+    <published>2021-04-30T18:37:00.000Z</published>
+    <updated>2022-01-16T13:04:47.049Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;InterfaceKit&quot;&gt;&lt;a href=&quot;#InterfaceKit&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+    <category term="cocoapods" scheme="https://zsd.name/tags/cocoapods/"/>
+    
+    <category term="macOS" scheme="https://zsd.name/tags/macOS/"/>
+    
+    <category term="tvOS" scheme="https://zsd.name/tags/tvOS/"/>
+    
+    <category term="watchOS" scheme="https://zsd.name/tags/watchOS/"/>
+    
+    <category term="carthage" scheme="https://zsd.name/tags/carthage/"/>
+    
+    <category term="swift package manager" scheme="https://zsd.name/tags/swift-package-manager/"/>
+    
+    <category term="github" scheme="https://zsd.name/tags/github/"/>
+    
+    <category term="git" scheme="https://zsd.name/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!</title>
+    <link href="https://zsd.name/2021/05/01/interfacekit/"/>
+    <id>https://zsd.name/2021/05/01/interfacekit/</id>
+    <published>2021-04-30T18:21:00.000Z</published>
+    <updated>2022-01-16T12:26:06.134Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;InterfaceKit&quot;&gt;&lt;a href=&quot;#InterfaceKit&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+    <category term="cocoapods" scheme="https://zsd.name/tags/cocoapods/"/>
+    
+    <category term="macOS" scheme="https://zsd.name/tags/macOS/"/>
+    
+    <category term="tvOS" scheme="https://zsd.name/tags/tvOS/"/>
+    
+    <category term="watchOS" scheme="https://zsd.name/tags/watchOS/"/>
+    
+    <category term="carthage" scheme="https://zsd.name/tags/carthage/"/>
+    
+    <category term="swift package manager" scheme="https://zsd.name/tags/swift-package-manager/"/>
+    
+    <category term="github" scheme="https://zsd.name/tags/github/"/>
+    
+    <category term="git" scheme="https://zsd.name/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jazzy生成代码解释文档</title>
+    <link href="https://zsd.name/2021/04/30/jazzy-sheng-cheng-dai-ma-jie-shi-wen-dang/"/>
+    <id>https://zsd.name/2021/04/30/jazzy-sheng-cheng-dai-ma-jie-shi-wen-dang/</id>
+    <published>2021-04-30T05:47:00.000Z</published>
+    <updated>2022-01-16T12:29:03.863Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;jazzy生成代码解释文档&quot;&gt;&lt;a href=&quot;#jazzy生成代码解释文档&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="文档处理" scheme="https://zsd.name/categories/%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
+    
+    <category term="Objective-C" scheme="https://zsd.name/tags/Objective-C/"/>
+    
+    <category term="doc" scheme="https://zsd.name/tags/doc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>podspec示例</title>
+    <link href="https://zsd.name/2021/04/25/podspec-shi-li/"/>
+    <id>https://zsd.name/2021/04/25/podspec-shi-li/</id>
+    <published>2021-04-25T07:30:00.000Z</published>
+    <updated>2022-01-16T12:29:50.126Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;podspec示例&quot;&gt;&lt;a href=&quot;#podspec示例&quot; class=&quot;headerlink&quot; title=&quot;podspec示例&quot;&gt;&lt;/a&gt;podspec示例&lt;/h1&gt;&lt;p&gt;========================&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+    <category term="cocoapods" scheme="https://zsd.name/tags/cocoapods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Carthage使用工作记录</title>
+    <link href="https://zsd.name/2021/04/23/carthage-shi-yong-gong-zuo-ji-lu/"/>
+    <id>https://zsd.name/2021/04/23/carthage-shi-yong-gong-zuo-ji-lu/</id>
+    <published>2021-04-23T15:59:00.000Z</published>
+    <updated>2022-01-16T12:25:06.207Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Carthage使用工作记录&quot;&gt;&lt;a href=&quot;#Carthage使用工作记录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+    <category term="carthage" scheme="https://zsd.name/tags/carthage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Carthage使用摘录</title>
+    <link href="https://zsd.name/2021/04/23/carthage-shi-yong-zhai-lu/"/>
+    <id>https://zsd.name/2021/04/23/carthage-shi-yong-zhai-lu/</id>
+    <published>2021-04-23T15:58:00.000Z</published>
+    <updated>2022-01-16T12:25:12.589Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Carthage使用摘录&quot;&gt;&lt;a href=&quot;#Carthage使用摘录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+    <category term="carthage" scheme="https://zsd.name/tags/carthage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Carthage库制作摘录</title>
+    <link href="https://zsd.name/2021/04/23/carthage-ku-zhi-zuo-zhai-lu/"/>
+    <id>https://zsd.name/2021/04/23/carthage-ku-zhi-zuo-zhai-lu/</id>
+    <published>2021-04-23T15:57:00.000Z</published>
+    <updated>2022-01-16T12:25:00.142Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Carthage库制作摘录&quot;&gt;&lt;a href=&quot;#Carthage库制作摘录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+    <category term="carthage" scheme="https://zsd.name/tags/carthage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>制作多平台的framework</title>
+    <link href="https://zsd.name/2021/04/23/zhi-zuo-duo-ping-tai-de-framework/"/>
+    <id>https://zsd.name/2021/04/23/zhi-zuo-duo-ping-tai-de-framework/</id>
+    <published>2021-04-22T18:28:00.000Z</published>
+    <updated>2022-01-16T12:24:49.524Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;制作多平台的framework&quot;&gt;&lt;a href=&quot;#制作多平台的framework&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>去除 GLKit API 弃用警告</title>
+    <link href="https://zsd.name/2021/04/21/qu-chu-glkit-api-qi-yong-jing-gao/"/>
+    <id>https://zsd.name/2021/04/21/qu-chu-glkit-api-qi-yong-jing-gao/</id>
+    <published>2021-04-20T18:11:00.000Z</published>
+    <updated>2022-01-16T12:24:31.162Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;去除-GLKit-API-弃用警告&quot;&gt;&lt;a href=&quot;#去除-GLKit-API-弃用警告&quot; class=&quot;headerlink&quot; title=&quot;去除 GLKit API 弃用警告&quot;&gt;&lt;/a&gt;去除 GLKit API</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用R.swift检查各种string文件的问题</title>
+    <link href="https://zsd.name/2021/04/16/shi-yong-r.swift-jian-cha-ge-chong-string-wen-jian-de-wen-ti-md/"/>
+    <id>https://zsd.name/2021/04/16/shi-yong-r.swift-jian-cha-ge-chong-string-wen-jian-de-wen-ti-md/</id>
+    <published>2021-04-16T04:32:00.000Z</published>
+    <updated>2022-01-16T12:24:38.263Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;使用R-swift检查各种string文件的问题&quot;&gt;&lt;a href=&quot;#使用R-swift检查各种string文件的问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS日志框架CocoaLumberjack</title>
+    <link href="https://zsd.name/2021/04/10/ios-ri-zhi-kuang-jia-cocoalumberjack-jian-dan-shi-yong/"/>
+    <id>https://zsd.name/2021/04/10/ios-ri-zhi-kuang-jia-cocoalumberjack-jian-dan-shi-yong/</id>
+    <published>2021-04-10T09:06:00.000Z</published>
+    <updated>2022-01-16T12:26:42.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;iOS日志框架CocoaLumberjack&quot;&gt;&lt;a href=&quot;#iOS日志框架CocoaLumberjack&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>查看cocoapods中各个库的版本</title>
+    <link href="https://zsd.name/2021/04/09/cha-kan-cocoapods-zhong-ge-ge-ku-de-ban-ben/"/>
+    <id>https://zsd.name/2021/04/09/cha-kan-cocoapods-zhong-ge-ge-ku-de-ban-ben/</id>
+    <published>2021-04-09T13:00:00.000Z</published>
+    <updated>2022-01-16T12:23:58.151Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;查看cocoapods中各个库的版本&quot;&gt;&lt;a href=&quot;#查看cocoapods中各个库的版本&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+    <category term="cocoapods" scheme="https://zsd.name/tags/cocoapods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zip使用</title>
+    <link href="https://zsd.name/2021/04/08/zip-shi-yong/"/>
+    <id>https://zsd.name/2021/04/08/zip-shi-yong/</id>
+    <published>2021-04-08T09:23:00.000Z</published>
+    <updated>2022-01-16T12:30:46.393Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Zip使用&quot;&gt;&lt;a href=&quot;#Zip使用&quot; class=&quot;headerlink&quot; title=&quot;Zip使用&quot;&gt;&lt;/a&gt;Zip使用&lt;/h1&gt;&lt;p&gt;========================&lt;/p&gt;
+&lt;p&gt;感觉官方写得挺明白的&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
+    
+    <category term="zip" scheme="https://zsd.name/tags/zip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS mlmodelc内部文件格式规范</title>
+    <link href="https://zsd.name/2021/04/08/iosmlmodelc-nei-bu-wen-jian-ge-shi-gui-fan/"/>
+    <id>https://zsd.name/2021/04/08/iosmlmodelc-nei-bu-wen-jian-ge-shi-gui-fan/</id>
+    <published>2021-04-08T07:42:00.000Z</published>
+    <updated>2022-01-16T12:28:37.393Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;iOS-mlmodelc内部文件格式规范&quot;&gt;&lt;a href=&quot;#iOS-mlmodelc内部文件格式规范&quot; class=&quot;headerlink&quot; title=&quot;iOS mlmodelc内部文件格式规范&quot;&gt;&lt;/a&gt;iOS</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="file" scheme="https://zsd.name/tags/file/"/>
+    
+    <category term="机器学习" scheme="https://zsd.name/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS延时</title>
+    <link href="https://zsd.name/2021/04/06/ios-yan-shi/"/>
+    <id>https://zsd.name/2021/04/06/ios-yan-shi/</id>
+    <published>2021-04-06T12:40:00.000Z</published>
+    <updated>2022-01-16T12:28:28.199Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;iOS延时&quot;&gt;&lt;a href=&quot;#iOS延时&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
+    
+    <category term="time" scheme="https://zsd.name/tags/time/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS调试摘录</title>
+    <link href="https://zsd.name/2021/04/05/ios-diao-shi-zhai-lu/"/>
+    <id>https://zsd.name/2021/04/05/ios-diao-shi-zhai-lu/</id>
+    <published>2021-04-04T16:19:00.000Z</published>
+    <updated>2022-01-16T12:26:35.864Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;iOS调试摘录&quot;&gt;&lt;a href=&quot;#iOS调试摘录&quot; class=&quot;headerlink&quot; title=&quot;iOS调试摘录&quot;&gt;&lt;/a&gt;iOS调试摘录&lt;/h1&gt;&lt;p&gt;========================&lt;br&gt; po vo do</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="软件测试" scheme="https://zsd.name/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS_Swift文件夹和文件操作</title>
+    <link href="https://zsd.name/2021/04/04/ios-swift-wen-jian-jia-he-wen-jian-cao-zuo/"/>
+    <id>https://zsd.name/2021/04/04/ios-swift-wen-jian-jia-he-wen-jian-cao-zuo/</id>
+    <published>2021-04-04T15:58:00.000Z</published>
+    <updated>2022-01-16T12:26:18.027Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;iOS-Swift文件夹和文件操作&quot;&gt;&lt;a href=&quot;#iOS-Swift文件夹和文件操作&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
+    
+    <category term="file" scheme="https://zsd.name/tags/file/"/>
+    
+  </entry>
+  
+</feed>
