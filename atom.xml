@@ -104,92 +104,6 @@
   </entry>
   
   <entry>
-    <title>InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</title>
-    <link href="https://zsd.name/2021/05/01/interfacekit.zh-hans/"/>
-    <id>https://zsd.name/2021/05/01/interfacekit.zh-hans/</id>
-    <published>2021-04-30T18:37:00.000Z</published>
-    <updated>2022-01-17T19:56:39.385Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;InterfaceKit&quot;&gt;&lt;a href=&quot;#InterfaceKit&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
-    
-    <category term="git" scheme="https://zsd.name/tags/git/"/>
-    
-    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
-    
-    <category term="github" scheme="https://zsd.name/tags/github/"/>
-    
-    <category term="carthage" scheme="https://zsd.name/tags/carthage/"/>
-    
-    <category term="cocoapods" scheme="https://zsd.name/tags/cocoapods/"/>
-    
-    <category term="macOS" scheme="https://zsd.name/tags/macOS/"/>
-    
-    <category term="tvOS" scheme="https://zsd.name/tags/tvOS/"/>
-    
-    <category term="watchOS" scheme="https://zsd.name/tags/watchOS/"/>
-    
-    <category term="swift package manager" scheme="https://zsd.name/tags/swift-package-manager/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!</title>
-    <link href="https://zsd.name/2021/05/01/interfacekit/"/>
-    <id>https://zsd.name/2021/05/01/interfacekit/</id>
-    <published>2021-04-30T18:21:00.000Z</published>
-    <updated>2022-01-16T12:26:06.134Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;InterfaceKit&quot;&gt;&lt;a href=&quot;#InterfaceKit&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
-    
-    <category term="git" scheme="https://zsd.name/tags/git/"/>
-    
-    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
-    
-    <category term="github" scheme="https://zsd.name/tags/github/"/>
-    
-    <category term="carthage" scheme="https://zsd.name/tags/carthage/"/>
-    
-    <category term="cocoapods" scheme="https://zsd.name/tags/cocoapods/"/>
-    
-    <category term="macOS" scheme="https://zsd.name/tags/macOS/"/>
-    
-    <category term="tvOS" scheme="https://zsd.name/tags/tvOS/"/>
-    
-    <category term="watchOS" scheme="https://zsd.name/tags/watchOS/"/>
-    
-    <category term="swift package manager" scheme="https://zsd.name/tags/swift-package-manager/"/>
-    
-  </entry>
-  
-  <entry>
     <title>jazzy生成代码解释文档</title>
     <link href="https://zsd.name/2021/04/30/jazzy-sheng-cheng-dai-ma-jie-shi-wen-dang/"/>
     <id>https://zsd.name/2021/04/30/jazzy-sheng-cheng-dai-ma-jie-shi-wen-dang/</id>
@@ -616,6 +530,62 @@
     <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
     
     <category term="file" scheme="https://zsd.name/tags/file/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swift字符串截取摘录</title>
+    <link href="https://zsd.name/2021/04/04/swift-zi-fu-chuan-jie-qu-zhai-lu/"/>
+    <id>https://zsd.name/2021/04/04/swift-zi-fu-chuan-jie-qu-zhai-lu/</id>
+    <published>2021-04-04T15:51:00.000Z</published>
+    <updated>2022-01-16T12:30:36.024Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Swift字符串截取摘录&quot;&gt;&lt;a href=&quot;#Swift字符串截取摘录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swift 解决URL或参数中含有中文（Swift URL编码）</title>
+    <link href="https://zsd.name/2021/04/04/20210404swift-jie-jue-url-huo-can-shu-zhong-han-you-zhong-wen/"/>
+    <id>https://zsd.name/2021/04/04/20210404swift-jie-jue-url-huo-can-shu-zhong-han-you-zhong-wen/</id>
+    <published>2021-04-04T03:44:00.000Z</published>
+    <updated>2022-01-16T12:22:28.458Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Swift-解决URL或参数中含有中文（Swift-URL编码）&quot;&gt;&lt;a href=&quot;#Swift-解决URL或参数中含有中文（Swift-URL编码）&quot; class=&quot;headerlink&quot; title=&quot;Swift 解决URL或参数中含有中文（Swift</summary>
+        
+      
+    
+    
+    
+    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
+    
+    <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
+    
+    <category term="network" scheme="https://zsd.name/tags/network/"/>
     
   </entry>
   
