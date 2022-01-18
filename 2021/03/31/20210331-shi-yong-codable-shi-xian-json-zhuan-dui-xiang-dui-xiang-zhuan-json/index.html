@@ -4,10 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="使用Codable实现JSON转对象、对象转JSON, 张赛东的艺苑">
+    <meta name="keywords" content="使用Codable实现JSON转对象、对象转JSON, 张赛东">
     <meta name="description" content="使用Codable实现JSON转对象、对象转JSON========================
 先上代码，这里我是在Swift playground中运行，方便演示
-1234567891011121314151617181920212">
+import UIKit
+import Foundation
+
+//">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,22 +22,22 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>使用Codable实现JSON转对象、对象转JSON | 张赛东的艺苑</title>
-    <link rel="icon" type="image/jpeg" href="../../../../favicon.jpg">
+    <title>使用Codable实现JSON转对象、对象转JSON | 张赛东</title>
+    <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../favicon.jpg">
 
-    <link rel="stylesheet" type="text/css" href="../../../../libs/awesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="../../../../libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../css/matery.css">
-    <link rel="stylesheet" type="text/css" href="../../../../css/my.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../css/my.css">
 
-    <script src="../../../../libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/jquery/jquery-3.6.0.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="张赛东的艺苑" type="application/atom+xml">
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -57,9 +60,9 @@
             <div class="brand-logo">
                 <a href="../../../../index.html" class="waves-effect waves-light">
                     
-                    <img src="../../../../medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">张赛东的艺苑</span>
+                    <span class="logo-span">张赛东</span>
                 </a>
             </div>
             
@@ -167,12 +170,12 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="../../../../medias/logo.png" class="logo-img circle responsive-img">
+        <img src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">张赛东的艺苑</div>
+        <div class="logo-name">张赛东</div>
         <div class="logo-desc">
             
-            张赛东
+            张赛东的艺苑
             
         </div>
     </div>
@@ -346,7 +349,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../../../../medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -364,7 +367,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="../../../../libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -471,12 +474,12 @@
                                 <span class="chip bg-color">iOS</span>
                             </a>
                         
-                            <a href="../../../../tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">
-                                <span class="chip bg-color">软件测试</span>
-                            </a>
-                        
                             <a href="../../../../tags/JSON/">
                                 <span class="chip bg-color">JSON</span>
+                            </a>
+                        
+                            <a href="../../../../tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">
+                                <span class="chip bg-color">软件测试</span>
                             </a>
                         
                             <a href="../../../../tags/simulation/">
@@ -545,7 +548,7 @@
 
         
         <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="../../../../libs/prism/prism.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/prism/prism.css">
         
 
         
@@ -554,7 +557,85 @@
             <div id="articleContent">
                 <h1 id="使用Codable实现JSON转对象、对象转JSON"><a href="#使用Codable实现JSON转对象、对象转JSON" class="headerlink" title="使用Codable实现JSON转对象、对象转JSON"></a>使用Codable实现JSON转对象、对象转JSON</h1><p>========================</p>
 <p>先上代码，这里我是在Swift playground中运行，方便演示</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line">import Foundation</span><br><span class="line"></span><br><span class="line">// MARK: - Decode</span><br><span class="line"></span><br><span class="line">struct User: Codable { // 基本类型组合默认遵守Codable协议</span><br><span class="line">    var name: String</span><br><span class="line">    var age: Int</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">let jsonStr = """</span><br><span class="line">{</span><br><span class="line">    "name": "Ryan",</span><br><span class="line">    "age": 18</span><br><span class="line">}</span><br><span class="line">"""</span><br><span class="line"></span><br><span class="line">let jsonData = jsonStr.data(using: .utf8)!</span><br><span class="line"></span><br><span class="line">let decoder = JSONDecoder()</span><br><span class="line"></span><br><span class="line">do {</span><br><span class="line">    let userObj = try decoder.decode(User.self, from: jsonData)</span><br><span class="line">    print("userObj = \(userObj)")</span><br><span class="line">} catch {</span><br><span class="line">    print("decode error")</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">// MARK: - Encode</span><br><span class="line"></span><br><span class="line">let user = User(name: "Lux", age: 20)</span><br><span class="line"></span><br><span class="line">let encoder = JSONEncoder()</span><br><span class="line"></span><br><span class="line">do {</span><br><span class="line">    let data = try encoder.encode(user)</span><br><span class="line">    let jsonStr = String(data: data, encoding: .utf8)!</span><br><span class="line">    print("jsonStr = \(jsonStr)")</span><br><span class="line">} catch {</span><br><span class="line">    print("encode error")</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">struct Introduction: Identifiable, Codable {</span><br><span class="line">   var id = UUID()</span><br><span class="line">   var idForDataBase: Int64</span><br><span class="line">   var image: String</span><br><span class="line">   var title: String</span><br><span class="line">   var text: String</span><br><span class="line">   //这里的date原是想要展示日期，现在就用于当备注</span><br><span class="line">   var date: String</span><br><span class="line">}</span><br><span class="line">class I18n {</span><br><span class="line">    class func localizedString(_ key: String?) -&gt; String {</span><br><span class="line">        guard let key = key else { return "" }</span><br><span class="line">        return NSLocalizedString(key, tableName: nil, bundle: Bundle(for: I18n.self), value: "", comment: "")</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">let culturalRelicsData = [</span><br><span class="line">    Introduction(idForDataBase: Int64.init(20210303063005), image: "郎窑红釉穿带直口瓶", title: I18n.localizedString("bottle"), text: I18n.localizedString("郎窑红釉穿带直口瓶，清康熙，高20.8cm，口径6.1cm，足径9.1cm。瓶直口，长颈，垂腹，圈足外撇。足外墙两侧各有一长方形穿孔，可穿系绳带。在容器上系带是对无梁、无系、无扳手的器物进行提拿的传统方法，拆卸容易而又非常实用，也可以使器物在摆放位置上固定，不致被损坏。"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">     Introduction(idForDataBase: Int64.init(20210303063006), image: "张成造款雕漆云纹盒", title: I18n.localizedString("box"), text: I18n.localizedString("张成是元代雕漆大家，其传世作品被一致认为是雕漆作品里的珍品。张成造款雕漆云纹盘为故宫漆器的代表作品。高3.3cm，口径19.2cm.盘木胎黑漆，内外均雕云纹。堆漆甚厚，晶莹照人，刻工圆润。从此件具款的剔犀圆盘可知张成不仅是剔红高手，剔犀技巧也精湛至极，此盘为研究元代剔犀工艺提供了实例。"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">     Introduction(idForDataBase: Int64.init(20210303063007), image: "彩漆描金楼阁式自开门群仙祝寿御制钟", title: I18n.localizedString("clock"), text: I18n.localizedString("黑漆彩绘楼阁群仙祝寿钟为故宫钟表的代表作。高185cm，面宽102cm，侧宽70cm.此钟共有7套机械系统，分别控制走时、报时、景箱内的活动装置等，技术水准相当高。根据记录，从乾隆八年接旨着手设计到十四年完工，历时五年多。"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">     Introduction(idForDataBase: Int64.init(20210303063008), image: "乾隆款金瓯永固杯", title: I18n.localizedString("cup"), text: I18n.localizedString("宫廷之宝乾隆款金瓯永固杯为故宫宫廷文物的代表作。高12.5厘米，口径8厘米，足高5厘米，口边刻有回纹。根据清“内务府活计档”记载，乾隆皇帝对此杯的制作十分重视，不仅调用内库黄金、珍珠、宝石等珍贵材料，而且精工细作，曾多次修改，直至皇帝满意为止。因此，该杯一直被清代皇帝视为珍贵的祖传法宝。"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">     Introduction(idForDataBase: Int64.init(20210303063009), image: "掐丝珐琅缠枝莲纹象耳炉", title: I18n.localizedString("ear_furnace"), text: I18n.localizedString("掐丝珐琅缠枝莲纹象耳炉，元，通高13.9cm，口径16cm，足径13.5cm。清宫旧藏。炉铜胎，圆形，鼓腹，象首卷鼻耳，圈足。炉颈部浅蓝釉地，饰黄、白、红、紫四色菊花12朵。腹部宝蓝釉地，饰红、白、黄三色掐丝珐琅缠枝莲花6朵。其下饰莲瓣纹一周。"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">    Introduction(idForDataBase: Int64.init(20210303063010), image: "青玉云龙纹炉", title: I18n.localizedString("grain_furnace"), text: I18n.localizedString("青玉云龙纹炉为故宫玉器的代表作品。宋代出品，高7.9cm，口径12.8cm.炉青玉质。通体以“工”字纹为底，上饰游龙、祥云和海水纹。器内底阴刻乾隆七言诗一首：“何年庙器赞天经，刻作飞龙殿四灵。毛伯邢侯异周制，祖丁父癸似商形。依然韫匵阅桑海，所惜从薪遇丙叮土气羊脂胥变幻，只余云水淡拖青。”"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">    Introduction(idForDataBase: Int64.init(20210303063011), image: "清明上河图", title: I18n.localizedString("painting"), text: I18n.localizedString("《清明上河图》为故宫书画代表作品，该画为张择端所作，以精致的工笔记录了北宋末叶、徽宗时代首都汴京(今开封)郊区和城内汴河两岸的建筑和民生。全图分为三个段落。作品以长卷形式，采用散点透视的构图法，将繁杂的景物纳入统一而富于变化的画面中。在5米多长的画卷里，共绘了550多个各色人物。"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">    Introduction(idForDataBase: Int64.init(20210303063012), image: "平复帖", title: I18n.localizedString("placard"), text: I18n.localizedString("西晋陆机的《平复帖》是故宫法帖的代表作品，也是目前存世最早的名人墨迹，内容为陆机向朋友问候疾病的书札。"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">    Introduction(idForDataBase: Int64.init(20210303063013), image: "酗亚方尊", title: I18n.localizedString("zun"), text: I18n.localizedString("青铜之宝酗亚方尊为故宫青铜器的代表作品。青铜器的产生是古代中国从野蛮时代走向文明时代的重要标志之一。尊是盛酒器，流行于商早期至春秋战国时期。方尊传世较少。上世纪70年代在山东益都苏埠屯出土了几件带有亚铭文的青铜器，从挖掘的墓穴来看，规模都不小，加上众多带有亚铭记的器物，说明它们所代表的可能是一个大族。"), date: I18n.localizedString("故宫镇馆之宝")),</span><br><span class="line">    Introduction(idForDataBase: Int64.init(20210303063014), image: "沈子蕃缂丝《梅鹊图》轴", title: I18n.localizedString("magpie"), text: I18n.localizedString("沈子蕃缂丝《梅鹊图》轴为故宫织绣的代表作品。图轴纵104cm，宽36cm.中国古代缂丝被认为是丝织工艺中最为高贵的品种，古人以“一寸缂丝一寸金”言缂丝作品之珍贵。缂丝之高贵，首先因其耗费工时巨大，以万缕千丝成其工巧，其次，缂技易学难精，虽摹缂书画，并非简单的照葫芦画瓢。"), date: I18n.localizedString("故宫镇馆之宝"))</span><br><span class="line">]</span><br><span class="line">let encoder2 = JSONEncoder()</span><br><span class="line">do {</span><br><span class="line">    let data = try encoder2.encode(culturalRelicsData)</span><br><span class="line">    let jsonStr = String(data: data, encoding: .utf8)!</span><br><span class="line">    print("jsonStr = \(jsonStr)")</span><br><span class="line">} catch {</span><br><span class="line">    print("encode error")</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">import UIKit
+import Foundation
+
+// MARK: - Decode
+
+struct User: Codable { // 基本类型组合默认遵守Codable协议
+    var name: String
+    var age: Int
+}
+
+let jsonStr = """
+{
+    "name": "Ryan",
+    "age": 18
+}
+"""
+
+let jsonData = jsonStr.data(using: .utf8)!
+
+let decoder = JSONDecoder()
+
+do {
+    let userObj = try decoder.decode(User.self, from: jsonData)
+    print("userObj = \(userObj)")
+} catch {
+    print("decode error")
+}
+
+// MARK: - Encode
+
+let user = User(name: "Lux", age: 20)
+
+let encoder = JSONEncoder()
+
+do {
+    let data = try encoder.encode(user)
+    let jsonStr = String(data: data, encoding: .utf8)!
+    print("jsonStr = \(jsonStr)")
+} catch {
+    print("encode error")
+}
+
+
+
+struct Introduction: Identifiable, Codable {
+   var id = UUID()
+   var idForDataBase: Int64
+   var image: String
+   var title: String
+   var text: String
+   //这里的date原是想要展示日期，现在就用于当备注
+   var date: String
+}
+class I18n {
+    class func localizedString(_ key: String?) -&gt; String {
+        guard let key = key else { return "" }
+        return NSLocalizedString(key, tableName: nil, bundle: Bundle(for: I18n.self), value: "", comment: "")
+    }
+}
+let culturalRelicsData = [
+    Introduction(idForDataBase: Int64.init(20210303063005), image: "郎窑红釉穿带直口瓶", title: I18n.localizedString("bottle"), text: I18n.localizedString("郎窑红釉穿带直口瓶，清康熙，高20.8cm，口径6.1cm，足径9.1cm。瓶直口，长颈，垂腹，圈足外撇。足外墙两侧各有一长方形穿孔，可穿系绳带。在容器上系带是对无梁、无系、无扳手的器物进行提拿的传统方法，拆卸容易而又非常实用，也可以使器物在摆放位置上固定，不致被损坏。"), date: I18n.localizedString("故宫镇馆之宝")),
+     Introduction(idForDataBase: Int64.init(20210303063006), image: "张成造款雕漆云纹盒", title: I18n.localizedString("box"), text: I18n.localizedString("张成是元代雕漆大家，其传世作品被一致认为是雕漆作品里的珍品。张成造款雕漆云纹盘为故宫漆器的代表作品。高3.3cm，口径19.2cm.盘木胎黑漆，内外均雕云纹。堆漆甚厚，晶莹照人，刻工圆润。从此件具款的剔犀圆盘可知张成不仅是剔红高手，剔犀技巧也精湛至极，此盘为研究元代剔犀工艺提供了实例。"), date: I18n.localizedString("故宫镇馆之宝")),
+     Introduction(idForDataBase: Int64.init(20210303063007), image: "彩漆描金楼阁式自开门群仙祝寿御制钟", title: I18n.localizedString("clock"), text: I18n.localizedString("黑漆彩绘楼阁群仙祝寿钟为故宫钟表的代表作。高185cm，面宽102cm，侧宽70cm.此钟共有7套机械系统，分别控制走时、报时、景箱内的活动装置等，技术水准相当高。根据记录，从乾隆八年接旨着手设计到十四年完工，历时五年多。"), date: I18n.localizedString("故宫镇馆之宝")),
+     Introduction(idForDataBase: Int64.init(20210303063008), image: "乾隆款金瓯永固杯", title: I18n.localizedString("cup"), text: I18n.localizedString("宫廷之宝乾隆款金瓯永固杯为故宫宫廷文物的代表作。高12.5厘米，口径8厘米，足高5厘米，口边刻有回纹。根据清“内务府活计档”记载，乾隆皇帝对此杯的制作十分重视，不仅调用内库黄金、珍珠、宝石等珍贵材料，而且精工细作，曾多次修改，直至皇帝满意为止。因此，该杯一直被清代皇帝视为珍贵的祖传法宝。"), date: I18n.localizedString("故宫镇馆之宝")),
+     Introduction(idForDataBase: Int64.init(20210303063009), image: "掐丝珐琅缠枝莲纹象耳炉", title: I18n.localizedString("ear_furnace"), text: I18n.localizedString("掐丝珐琅缠枝莲纹象耳炉，元，通高13.9cm，口径16cm，足径13.5cm。清宫旧藏。炉铜胎，圆形，鼓腹，象首卷鼻耳，圈足。炉颈部浅蓝釉地，饰黄、白、红、紫四色菊花12朵。腹部宝蓝釉地，饰红、白、黄三色掐丝珐琅缠枝莲花6朵。其下饰莲瓣纹一周。"), date: I18n.localizedString("故宫镇馆之宝")),
+    Introduction(idForDataBase: Int64.init(20210303063010), image: "青玉云龙纹炉", title: I18n.localizedString("grain_furnace"), text: I18n.localizedString("青玉云龙纹炉为故宫玉器的代表作品。宋代出品，高7.9cm，口径12.8cm.炉青玉质。通体以“工”字纹为底，上饰游龙、祥云和海水纹。器内底阴刻乾隆七言诗一首：“何年庙器赞天经，刻作飞龙殿四灵。毛伯邢侯异周制，祖丁父癸似商形。依然韫匵阅桑海，所惜从薪遇丙叮土气羊脂胥变幻，只余云水淡拖青。”"), date: I18n.localizedString("故宫镇馆之宝")),
+    Introduction(idForDataBase: Int64.init(20210303063011), image: "清明上河图", title: I18n.localizedString("painting"), text: I18n.localizedString("《清明上河图》为故宫书画代表作品，该画为张择端所作，以精致的工笔记录了北宋末叶、徽宗时代首都汴京(今开封)郊区和城内汴河两岸的建筑和民生。全图分为三个段落。作品以长卷形式，采用散点透视的构图法，将繁杂的景物纳入统一而富于变化的画面中。在5米多长的画卷里，共绘了550多个各色人物。"), date: I18n.localizedString("故宫镇馆之宝")),
+    Introduction(idForDataBase: Int64.init(20210303063012), image: "平复帖", title: I18n.localizedString("placard"), text: I18n.localizedString("西晋陆机的《平复帖》是故宫法帖的代表作品，也是目前存世最早的名人墨迹，内容为陆机向朋友问候疾病的书札。"), date: I18n.localizedString("故宫镇馆之宝")),
+    Introduction(idForDataBase: Int64.init(20210303063013), image: "酗亚方尊", title: I18n.localizedString("zun"), text: I18n.localizedString("青铜之宝酗亚方尊为故宫青铜器的代表作品。青铜器的产生是古代中国从野蛮时代走向文明时代的重要标志之一。尊是盛酒器，流行于商早期至春秋战国时期。方尊传世较少。上世纪70年代在山东益都苏埠屯出土了几件带有亚铭文的青铜器，从挖掘的墓穴来看，规模都不小，加上众多带有亚铭记的器物，说明它们所代表的可能是一个大族。"), date: I18n.localizedString("故宫镇馆之宝")),
+    Introduction(idForDataBase: Int64.init(20210303063014), image: "沈子蕃缂丝《梅鹊图》轴", title: I18n.localizedString("magpie"), text: I18n.localizedString("沈子蕃缂丝《梅鹊图》轴为故宫织绣的代表作品。图轴纵104cm，宽36cm.中国古代缂丝被认为是丝织工艺中最为高贵的品种，古人以“一寸缂丝一寸金”言缂丝作品之珍贵。缂丝之高贵，首先因其耗费工时巨大，以万缕千丝成其工巧，其次，缂技易学难精，虽摹缂书画，并非简单的照葫芦画瓢。"), date: I18n.localizedString("故宫镇馆之宝"))
+]
+let encoder2 = JSONEncoder()
+do {
+    let data = try encoder2.encode(culturalRelicsData)
+    let jsonStr = String(data: data, encoding: .utf8)!
+    print("jsonStr = \(jsonStr)")
+} catch {
+    print("encode error")
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="JSON转对象"><a href="#JSON转对象" class="headerlink" title="JSON转对象"></a>JSON转对象</h2><p><img src="/2021/03/31/20210331-shi-yong-codable-shi-xian-json-zhuan-dui-xiang-dui-xiang-zhuan-json/1.png"></p>
 <h2 id="对象转JSON"><a href="#对象转JSON" class="headerlink" title="对象转JSON"></a>对象转JSON</h2><p><img src="/2021/03/31/20210331-shi-yong-codable-shi-xian-json-zhuan-dui-xiang-dui-xiang-zhuan-json/2.png"></p>
 
@@ -625,12 +706,12 @@
                                     <span class="chip bg-color">iOS</span>
                                 </a>
                             
-                                <a href="../../../../tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">
-                                    <span class="chip bg-color">软件测试</span>
-                                </a>
-                            
                                 <a href="../../../../tags/JSON/">
                                     <span class="chip bg-color">JSON</span>
+                                </a>
+                            
+                                <a href="../../../../tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">
+                                    <span class="chip bg-color">软件测试</span>
                                 </a>
                             
                                 <a href="../../../../tags/simulation/">
@@ -645,12 +726,12 @@
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="../../../../libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="../../../../libs/share/js/social-share.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/share/js/social-share.min.js"></script>
     
 
     
@@ -768,10 +849,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="../../../../medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="../../../../medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -842,7 +923,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="../../../../medias/featureimages/21.jpg" class="responsive-img" alt="Swift函数举例">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../medias/featureimages/21.jpg" class="responsive-img" alt="Swift函数举例">
                         
                         <span class="card-title">Swift函数举例</span>
                     </div>
@@ -895,7 +976,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="../../../../medias/featureimages/13.jpg" class="responsive-img" alt="借助github或其他网站的服务器模拟数据">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../medias/featureimages/13.jpg" class="responsive-img" alt="借助github或其他网站的服务器模拟数据">
                         
                         <span class="card-title">借助github或其他网站的服务器模拟数据</span>
                     </div>
@@ -929,24 +1010,16 @@
                         <span class="chip bg-color">iOS</span>
                     </a>
                     
-                    <a href="../../../../tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
                     <a href="../../../../tags/server/">
                         <span class="chip bg-color">server</span>
                     </a>
                     
-                    <a href="../../../../tags/network/">
-                        <span class="chip bg-color">network</span>
+                    <a href="../../../../tags/JSON/">
+                        <span class="chip bg-color">JSON</span>
                     </a>
                     
                     <a href="../../../../tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">
                         <span class="chip bg-color">软件测试</span>
-                    </a>
-                    
-                    <a href="../../../../tags/JSON/">
-                        <span class="chip bg-color">JSON</span>
                     </a>
                     
                     <a href="../../../../tags/simulation/">
@@ -955,6 +1028,14 @@
                     
                     <a href="../../../../tags/data/">
                         <span class="chip bg-color">data</span>
+                    </a>
+                    
+                    <a href="../../../../tags/network/">
+                        <span class="chip bg-color">network</span>
+                    </a>
+                    
+                    <a href="../../../../tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                     <a href="../../../../tags/Web/">
@@ -1003,7 +1084,7 @@
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: 张赛东的艺苑<br />'
+            + '来源: 张赛东<br />'
             + '文章作者: 张赛东<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
@@ -1015,21 +1096,21 @@
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="../../../../libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="../../../../libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="../../../../libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="../../../../libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/codeBlock/codeShrink.js"></script>
 
 
     </div>
@@ -1050,7 +1131,7 @@
 </div>
 
 
-<script src="../../../../libs/tocbot/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1135,7 +1216,7 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="../../../../libs/aplayer/APlayer.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
         
@@ -1181,8 +1262,8 @@
     </div>
 </div>
 
-<script src="../../../../libs/aplayer/APlayer.min.js"></script>
-<script src="../../../../libs/aplayer/Meting.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/aplayer/Meting.min.js"></script>
 
     
 
@@ -1199,7 +1280,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">54.3k</span>
+                        class="white-color">54.7k</span>
             
             
             
@@ -1247,16 +1328,22 @@
                         var diff = t2 - t1;
                         var diffYears = Math.floor(diff / years);
                         var diffDays = Math.floor((diff / days) - diffYears * 365);
-
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
                         // 区分是否有年份.
                         var language = 'zh-CN';
                         if (startYear === String(todayYear)) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
-                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                                daysTip = '本站已运行 ' + diffDays + ' 天 '+ diffHours +
+                            ' 时 ' + diffMinutes + ' 分 ' + diffSeconds + ' 秒';
                             } else if (language === 'zh-HK') {
-                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                                daysTip = '本站已運行 ' + diffDays + ' 天 '+ diffHours +
+                            ' 時 ' + diffMinutes + ' 分 ' + diffSeconds + ' 秒';
                             }
                             document.getElementById("sitetime").innerHTML = daysTip;
                         } else {
@@ -1264,15 +1351,17 @@
                             var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
                                 + diffDays + ' days';
                             if (language === 'zh-CN') {
-                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天 '+ diffHours +
+                            ' 时 ' + diffMinutes + ' 分 ' + diffSeconds + ' 秒';
                             } else if (language === 'zh-HK') {
-                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天 '+ diffHours +
+                            ' 時 ' + diffMinutes + ' 分 ' + diffSeconds + ' 秒';
                             }
                             document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
                         }
                     }
-
-                    calcSiteTime();
+                    //calcSiteTime();
+                    setInterval(calcSiteTime, 1000);
                 </script>
             
             <br>
@@ -1320,7 +1409,7 @@
 <div class="progress-bar"></div>
 
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -1443,12 +1532,12 @@ $(function () {
 </div>
 
 
-    <script src="../../../../libs/materialize/materialize.min.js"></script>
-    <script src="../../../../libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="../../../../libs/aos/aos.js"></script>
-    <script src="../../../../libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="../../../../libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="../../../../js/matery.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../js/matery.js"></script>
 
     
 
@@ -1460,7 +1549,7 @@ $(function () {
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="../../../../libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/others/snow.js"><\/script>');
             }
         </script>
     
@@ -1471,14 +1560,14 @@ $(function () {
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="../../../../libs/others/star.js"><\/script>');
+                document.write('<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/others/star.js"><\/script>');
             }
         </script>
     
 
      
         <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="../../../../libs/others/TencentCaptcha.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/others/TencentCaptcha.js"></script>
         <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
@@ -1511,10 +1600,10 @@ $(function () {
 </script>
 
     
-    <script src="../../../../libs/others/clicklove.js" async="async"></script>
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="../../../../libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1524,13 +1613,18 @@ $(function () {
     <!--腾讯兔小巢-->
     
     
-
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/background/canvas-nest.js"></script>
     
 
     
 
     
-    <script src="../../../../libs/instantpage/instantpage.js" type="module"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/adong666666/adong666666.github.io# https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io../../../../libs/instantpage/instantpage.js" type="module"></script>
     
 
 </body>
