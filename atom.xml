@@ -6,7 +6,7 @@
   <link href="https://zsd.name/atom.xml" rel="self"/>
   
   <link href="https://zsd.name/"/>
-  <updated>2022-01-16T12:23:27.625Z</updated>
+  <updated>2022-01-19T03:33:38.035Z</updated>
   <id>https://zsd.name/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo文件名大小写问题摘录</title>
+    <link href="https://zsd.name/2022/01/19/20220119hexo-wen-jian-ming-da-xiao-xie-wen-ti/"/>
+    <id>https://zsd.name/2022/01/19/20220119hexo-wen-jian-ming-da-xiao-xie-wen-ti/</id>
+    <published>2022-01-19T03:28:00.000Z</published>
+    <updated>2022-01-19T03:33:38.035Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hexo文件名大小写问题摘录&quot;&gt;&lt;a href=&quot;#Hexo文件名大小写问题摘录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="脚本语言" scheme="https://zsd.name/categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="git" scheme="https://zsd.name/tags/git/"/>
+    
+    <category term="github" scheme="https://zsd.name/tags/github/"/>
+    
+    <category term="博文" scheme="https://zsd.name/tags/%E5%8D%9A%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>动态规划之状态压缩</title>
@@ -126,9 +155,9 @@
     
     <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
     
-    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
-    
     <category term="git" scheme="https://zsd.name/tags/git/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
     
     <category term="github" scheme="https://zsd.name/tags/github/"/>
     
@@ -169,9 +198,9 @@
     
     <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
     
-    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
-    
     <category term="git" scheme="https://zsd.name/tags/git/"/>
+    
+    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
     
     <category term="github" scheme="https://zsd.name/tags/github/"/>
     
@@ -587,35 +616,6 @@
     <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
     
     <category term="软件测试" scheme="https://zsd.name/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS_Swift文件夹和文件操作</title>
-    <link href="https://zsd.name/2021/04/04/ios-swift-wen-jian-jia-he-wen-jian-cao-zuo/"/>
-    <id>https://zsd.name/2021/04/04/ios-swift-wen-jian-jia-he-wen-jian-cao-zuo/</id>
-    <published>2021-04-04T15:58:00.000Z</published>
-    <updated>2022-01-16T12:26:18.027Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;iOS-Swift文件夹和文件操作&quot;&gt;&lt;a href=&quot;#iOS-Swift文件夹和文件操作&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
-    
-    <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
-    
-    <category term="file" scheme="https://zsd.name/tags/file/"/>
     
   </entry>
   
