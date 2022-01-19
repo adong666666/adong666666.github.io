@@ -146,6 +146,17 @@ github举例只需新建仓库或使用已有仓库或使用博客仓库等，�
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="../../../../bb" class="waves-effect waves-light">
+      
+      <i class="fas fa-comment" style="zoom: 0.6;"></i>
+      
+      <span>说说</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="../../../../friends" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
@@ -252,6 +263,17 @@ github举例只需新建仓库或使用已有仓库或使用博客仓库等，�
 			    <i class="fa-fw fas fa-comments"></i>
 			
 			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../../../../bb" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comment"></i>
+			
+			说说
 		</a>
           
         </li>
@@ -774,7 +796,7 @@ INFO  Deploy done: git<span aria-hidden="true" class="line-numbers-rows"><span><
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="qq,wechat,qzone,weibo,douban,twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="../../../../libs/share/js/social-share.min.js"></script>
     
 
@@ -1141,6 +1163,9 @@ INFO  Deploy done: git<span aria-hidden="true" class="line-numbers-rows"><span><
 <script type="text/javascript" src="../../../../libs/codeBlock/codeShrink.js"></script>
 
 
+
+<!-- 这里我改了BBtalk app body 中显示消息为61.8% -->
+
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
@@ -1274,9 +1299,9 @@ INFO  Deploy done: git<span aria-hidden="true" class="line-numbers-rows"><span><
     
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
+                   server="tencent"
                    type="playlist"
-                   id="503838841"
+                   id="8324097649#503838841"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
@@ -1648,18 +1673,19 @@ $(function () {
                 function change_Tidio() {
                     var tidio=$("#tidio-chat iframe");
                     if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "5px" : ($("div.toc-title").length&&$(window).width()>977)>0?"130px":"65px";
+                        document.getElementById("tidio-chat-iframe").style.right="-6.5px";
                         document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
                         document.getElementById("tidio-chat-iframe").style.zIndex="997";
                     }
                     else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "5px":"65px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-6.5px";
                         document.getElementById("tidio-chat-iframe").style.zIndex="997";
                     }
                     else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "5px":"60px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-6.5px";
                         document.getElementById("tidio-chat-iframe").style.zIndex="997";
                     }
                     if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
@@ -1692,3 +1718,6 @@ $(function () {
 </body>
 
 </html>
+
+
+
