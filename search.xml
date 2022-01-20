@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>基于Hexo的matery主题搭建博客并深度优化摘录</title>
+      <link href="/2022/01/20/20220120-ji-yu-hexo-de-matery-zhu-ti-da-jian-bo-ke-bing-shen-du-you-hua-zhai-lu/"/>
+      <url>/2022/01/20/20220120-ji-yu-hexo-de-matery-zhu-ti-da-jian-bo-ke-bing-shen-du-you-hua-zhai-lu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="基于Hexo的matery主题搭建博客并深度优化摘录"><a href="#基于Hexo的matery主题搭建博客并深度优化摘录" class="headerlink" title="基于Hexo的matery主题搭建博客并深度优化摘录"></a>基于Hexo的matery主题搭建博客并深度优化摘录</h1><p>========================</p><p><img src="/2022/01/20/20220120-ji-yu-hexo-de-matery-zhu-ti-da-jian-bo-ke-bing-shen-du-you-hua-zhai-lu/1.png" alt="基于Hexo的matery主题搭建博客并深度优化摘录"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 脚本语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> github </tag>
+            
+            <tag> 博文 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git Large File Storage摘录</title>
       <link href="/2022/01/20/20220120gitlargefilestorage-zhai-lu/"/>
       <url>/2022/01/20/20220120gitlargefilestorage-zhai-lu/</url>

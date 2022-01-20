@@ -6,7 +6,7 @@
   <link href="https://zsd.name/atom.xml" rel="self"/>
   
   <link href="https://zsd.name/"/>
-  <updated>2022-01-20T06:09:10.103Z</updated>
+  <updated>2022-01-20T11:27:10.688Z</updated>
   <id>https://zsd.name/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Hexo的matery主题搭建博客并深度优化摘录</title>
+    <link href="https://zsd.name/2022/01/20/20220120-ji-yu-hexo-de-matery-zhu-ti-da-jian-bo-ke-bing-shen-du-you-hua-zhai-lu/"/>
+    <id>https://zsd.name/2022/01/20/20220120-ji-yu-hexo-de-matery-zhu-ti-da-jian-bo-ke-bing-shen-du-you-hua-zhai-lu/</id>
+    <published>2022-01-20T11:22:00.000Z</published>
+    <updated>2022-01-20T11:27:10.688Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;基于Hexo的matery主题搭建博客并深度优化摘录&quot;&gt;&lt;a href=&quot;#基于Hexo的matery主题搭建博客并深度优化摘录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="脚本语言" scheme="https://zsd.name/categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="git" scheme="https://zsd.name/tags/git/"/>
+    
+    <category term="github" scheme="https://zsd.name/tags/github/"/>
+    
+    <category term="博文" scheme="https://zsd.name/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="hexo" scheme="https://zsd.name/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>git Large File Storage摘录</title>
@@ -587,35 +618,6 @@
     <category term="file" scheme="https://zsd.name/tags/file/"/>
     
     <category term="机器学习" scheme="https://zsd.name/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS延时</title>
-    <link href="https://zsd.name/2021/04/06/ios-yan-shi/"/>
-    <id>https://zsd.name/2021/04/06/ios-yan-shi/</id>
-    <published>2021-04-06T12:40:00.000Z</published>
-    <updated>2022-01-16T12:28:28.199Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;iOS延时&quot;&gt;&lt;a href=&quot;#iOS延时&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
-    
-    <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
-    
-    <category term="time" scheme="https://zsd.name/tags/time/"/>
     
   </entry>
   
