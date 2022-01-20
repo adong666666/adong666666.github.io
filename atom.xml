@@ -6,7 +6,7 @@
   <link href="https://zsd.name/atom.xml" rel="self"/>
   
   <link href="https://zsd.name/"/>
-  <updated>2022-01-19T03:33:38.035Z</updated>
+  <updated>2022-01-20T06:09:10.103Z</updated>
   <id>https://zsd.name/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git Large File Storage摘录</title>
+    <link href="https://zsd.name/2022/01/20/20220120gitlargefilestorage-zhai-lu/"/>
+    <id>https://zsd.name/2022/01/20/20220120gitlargefilestorage-zhai-lu/</id>
+    <published>2022-01-20T06:07:00.000Z</published>
+    <updated>2022-01-20T06:09:10.103Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;git-Large-File-Storage摘录&quot;&gt;&lt;a href=&quot;#git-Large-File-Storage摘录&quot; class=&quot;headerlink&quot; title=&quot;git Large File Storage摘录&quot;&gt;&lt;/a&gt;git Large</summary>
+        
+      
+    
+    
+    
+    <category term="版本控制git" scheme="https://zsd.name/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6git/"/>
+    
+    
+    <category term="git" scheme="https://zsd.name/tags/git/"/>
+    
+    <category term="github" scheme="https://zsd.name/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo文件名大小写问题摘录</title>
@@ -589,33 +616,6 @@
     <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
     
     <category term="time" scheme="https://zsd.name/tags/time/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS调试摘录</title>
-    <link href="https://zsd.name/2021/04/05/ios-diao-shi-zhai-lu/"/>
-    <id>https://zsd.name/2021/04/05/ios-diao-shi-zhai-lu/</id>
-    <published>2021-04-04T16:19:00.000Z</published>
-    <updated>2022-01-16T12:26:35.864Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;iOS调试摘录&quot;&gt;&lt;a href=&quot;#iOS调试摘录&quot; class=&quot;headerlink&quot; title=&quot;iOS调试摘录&quot;&gt;&lt;/a&gt;iOS调试摘录&lt;/h1&gt;&lt;p&gt;========================&lt;br&gt; po vo do</summary>
-        
-      
-    
-    
-    
-    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
-    
-    <category term="软件测试" scheme="https://zsd.name/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
