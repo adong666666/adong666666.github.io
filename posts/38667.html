@@ -1,0 +1,1862 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="PodfileKit将github上常见的iOS(Swift)第三方框架进行了汇总，并且将框架进行了分类，为用户管理第三方框架提供了方便, 张赛东">
+    <meta name="description" content="PodfileKit========================
+Easy Podfile !
+PodfileKit将github上常见的iOS(Swift)第三方框架进行了汇总，并且将框架进行了分类，为用户管理第三方框架提供了方便。
+">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>PodfileKit将github上常见的iOS(Swift)第三方框架进行了汇总，并且将框架进行了分类，为用户管理第三方框架提供了方便 | 张赛东</title>
+    <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+    <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="../libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/matery.css">
+    <link rel="stylesheet" type="text/css" href="../css/my.css">
+
+    <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
+</head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/source_matery/medias/background.jpeg);
+       background-repeat:no-repeat;
+       background-size: 100% 100%;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="../index.html" class="waves-effect waves-light">
+<div>
+                    
+                    <img src="../medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">张赛东</span>
+</div>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../index.html" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../resume" class="waves-effect waves-light">
+      
+      <i class="fas fa-book" style="zoom: 0.6;"></i>
+      
+      <span>简历</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../bb" class="waves-effect waves-light">
+      
+      <i class="fas fa-comment" style="zoom: 0.6;"></i>
+      
+      <span>说说</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="../friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="../medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">张赛东</div>
+        <div class="logo-desc">
+            
+            张赛东的艺苑
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="../index.html" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../resume" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-book"></i>
+			
+			简历
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../bb" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comment"></i>
+			
+			说说
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="../friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/adong666666/adong666666.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/adong666666/adong666666.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">PodfileKit将github上常见的iOS(Swift)第三方框架进行了汇总，并且将框架进行了分类，为用户管理第三方框架提供了方便</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="../libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="../tags/iOS/">
+                                <span class="chip bg-color">iOS</span>
+                            </a>
+                        
+                            <a href="../tags/framework/">
+                                <span class="chip bg-color">framework</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="../categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="post-category">
+                                移动开发
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-01
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-01-21
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    6 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="../libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="PodfileKit"><a href="#PodfileKit" class="headerlink" title="PodfileKit"></a>PodfileKit</h1><p>========================</p>
+<p>Easy Podfile !</p>
+<p>PodfileKit将github上常见的iOS(Swift)第三方框架进行了汇总，并且将框架进行了分类，为用户管理第三方框架提供了方便。</p>
+<h1 id="github网址：https-github-com-adong666666-PodfileKit"><a href="#github网址：https-github-com-adong666666-PodfileKit" class="headerlink" title="github网址：https://github.com/adong666666/PodfileKit"></a>github网址：<a target="_blank" rel="noopener" href="https://github.com/adong666666/PodfileKit">https://github.com/adong666666/PodfileKit</a></h1><ul>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E5%B9%B3%E5%8F%B0">设置平台</a></li>
+<li><a href="#%E6%8C%87%E5%AE%9A%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6">指定第三方框架</a></li>
+<li><a href="#%E6%A1%86%E6%9E%B6%E5%88%86%E7%B1%BB">框架分类</a></li>
+<li><a href="#%E5%AD%90%E6%A1%86%E6%9E%B6">子框架</a></li>
+<li><a href="#%E5%BB%BA%E7%AB%8B%E5%88%86%E7%BB%84">建立分组</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a></li>
+<li><a href="#%E8%B4%A1%E7%8C%AE">贡献</a></li>
+<li><a href="#license">License</a><h2 id="设置平台"><a href="#设置平台" class="headerlink" title="设置平台"></a>设置平台</h2><code>platform:ios,'13.0'</code>，这里的<code>‘13.0’</code>是App所能支持的最低iOS系统版本，你可以替换为<code>‘11.0’、'12.3'、‘14.0’</code>等版本。<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README/%E5%B9%B3%E5%8F%B0%E8%AE%BE%E7%BD%AE.png" alt="设置平台"><h2 id="指定第三方框架"><a href="#指定第三方框架" class="headerlink" title="指定第三方框架"></a>指定第三方框架</h2><code>pod 'ARVideoKit'</code>指定名为<code>‘ARVideoKit’</code>的框架进行下载，你可以将<code>‘ARVideoKit’</code>替换为<code>‘你想要安装的框架的名称’</code>。通过<code>:git =&gt;</code>来指定相应网址，通过<code>:branch =&gt;</code>来指定相应分支，通过<code>commit:</code>来指定某次提交的版本，通过<code>:tag =&gt;</code>来指定某次被标记的提交版本，通过<code>:inhibit_warnings =&gt; true</code>来规避单个框架的警告。当然，<code>pod 'ARVideoKit'</code>之后的相关指定都可以被省略，这样你将会下载该框架的默认版本，一般为适合你工程的最新版本。<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README/%E7%A4%BA%E4%BE%8B.png" alt="示例"><h2 id="框架分类"><a href="#框架分类" class="headerlink" title="框架分类"></a>框架分类</h2>对框架进行了分类，你也可以根据自己的喜好进行分类。<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README/%E6%A1%86%E6%9E%B6%E5%88%86%E7%B1%BB.png" alt="框架分类"><br>当分类中有你需要使用的框架时，便将”#“删除即可。<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README/%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9.png" alt="框架选择"><h2 id="子框架"><a href="#子框架" class="headerlink" title="子框架"></a>子框架</h2>对于某些框架，如果只用到框架中部分功能，则不必下载整个框架，只需下载其子框架。<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README/%E5%AD%90%E6%A1%86%E6%9E%B6.png" alt="子框架"><h2 id="建立分组"><a href="#建立分组" class="headerlink" title="建立分组"></a>建立分组</h2>你可以使用<pre class="line-numbers language-none"><code class="language-none">def groupName 
+ pod ...
+ ...
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+来建立分组，比如某些框架是用于调试的，某些框架是用于App发布的，某些框架比较特殊等。在<code>target</code>之后，你需要将<code>ProjectName</code>替换为你项目的名称。<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README/%E5%88%86%E7%BB%84.png" alt="建立分组"><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2></li>
+</ul>
+<ul>
+<li>克隆本仓库，从而拿到仓库中的<code>PodFile</code>文件</li>
+<li>直接下载本仓库中的<code>PodFile</code>，置于工程文件夹的目录之下</li>
+<li>拷贝本仓库中<code>PodFile</code>的内容到你自己生成的<code>PodFile</code>文件中</li>
+<li>使用终端打开工程所在目录，运行如下命令<pre class="line-numbers language-none"><code class="language-none">$ pod install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h2></li>
+<li>Fork it !</li>
+<li>Create your feature branch: <code>git checkout -b my-new-feature</code></li>
+<li>Commit your changes: <code>git commit -am 'Add some feature'</code></li>
+<li>Push to the branch: <code>git push origin my-new-feature</code></li>
+<li>Submit a pull request<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2>PodfileKit is released under the MIT license. <a target="_blank" rel="noopener" href="https://github.com/adong666666/PodfileKit/blob/master/LICENSE">See LICENSE</a> for details.<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2>这里因为在博客就直接给内容哈：<pre class="line-numbers language-none"><code class="language-none">source 'https://github.com/CocoaPods/Specs.git'
+# 所支持的iOS系统版本
+platform:ios,'13.0'
+use_frameworks!
+# 规避第三方库的警告
+inhibit_all_warnings!
+
+def thirdParty
+  # eg. # AR录像
+  # git指定网址, branch指定分支， commit指定某次提交的版本， tag指定某次被标记的提交版本，inhibit_warnings规避单个框架的警告
+  # pod 'ARVideoKit'#, :git =&gt; 'https://github.com/AFathi/ARVideoKit.git', :branch =&gt; 'swift_5', commit: "b7e1facdedd8fe16d04ef5f47c4697e89bad9f27",'~&gt; 5.0', :tag =&gt; '1.6.0', :inhibit_warnings =&gt; true
+  # 网络请求
+  # pod 'Alamofire'
+  # pod 'Moya'
+  # pod 'AlamofireObjectMapper'
+  # JSON解析
+  # pod 'SwiftyJSON'
+  # pod 'HandyJSON'
+  # pod 'Argo'
+  # pod 'Sync'
+  # 检测网络状态
+  # pod 'ReachabilitySwift'
+  # 数据流
+  # pod 'RxSwift'
+  # pod 'RxCocoa'
+  # pod 'ObjectMapper'
+  # pod 'ReSwift'
+  # pod 'ReactiveSwift'
+  # pod 'ReactorKit'
+  # 网络图片
+  # pod 'Kingfisher'
+  # 布局
+  # pod 'SnapKit'
+  # pod 'Cartography'
+  # pod 'Neon'
+  # pod 'AnimatedCollectionViewLayout'
+  # pod "BouncyLayout"
+  # pod 'TangramKit'
+  # pod 'TinyConstraints'
+  # pod 'LayoutKit'
+  # pod 'SteviaLayout'
+  # 动画
+  # pod 'Spring', :git =&gt; 'https://github.com/MengTo/Spring.git'
+  # pod 'lottie-ios'
+  # pod 'ViewAnimator'
+  # pod 'Advance'
+  # pod 'Pastel'
+  # pod 'YapAnimator'
+  # 转场
+  # pod 'Hero'
+  # pod 'Transition'
+  # pod 'Jelly'
+  # 代码规范
+  # pod 'SwiftLint'
+  # UserDefault
+  # pod 'SwiftyUserDefaults'
+  # 数据库
+  # pod 'SQLite.swift'
+  # pod 'GRDB.swift'
+  # pod 'FMDB'
+  # pod 'RealmSwift'
+  # pod 'YapDatabase'
+  # pod 'CoreStore'
+  # 扩展
+  # pod 'SwifterSwift'
+  ## pod 'SwifterSwift/SwiftStdlib'
+  ## pod 'SwifterSwift/Foundation'
+  ## pod 'SwifterSwift/UIKit'
+  ## pod 'SwifterSwift/AppKit'
+  ## pod 'SwifterSwift/MapKit'
+  ## pod 'SwifterSwift/CoreGraphics'
+  ## pod 'SwifterSwift/CoreLocation'
+  ## pod 'SwifterSwift/SpriteKit'
+  ## pod 'SwifterSwift/SceneKit'
+  ## pod 'SwifterSwift/StoreKit'
+  ## pod 'SwifterSwift/Dispatch'
+  # pod 'Then'
+  ### Use 'SwiftUIX'
+  # pod 'EZSwiftExtensions'
+  # Resources（图片、颜色、本地化字符串）
+  # pod 'R.swift'
+  # pod 'SwiftGen'
+  # 监控
+  # pod 'Crashlytics'
+  # pod 'Fabric'
+  # pod 'Bugly'
+  # 绑定
+  # pod 'bond'
+  # 提示框
+  # pod 'JGProgressHUD'
+  # pod 'SwiftMessages'
+  # pod 'SwiftEntryKit'
+  # pod 'SPPermissions'
+  # pod 'NotificationBanner'
+  # pod 'Whisper'
+  # pod 'PopupDialog'
+  # pod 'Toast-Swift'
+  # 侧边栏
+  # pod 'SideMenu'
+  # pod 'YALSideMenu'
+  # 下拉菜单
+  # pod 'BTNavigationDropdownMenu'
+  # 分页菜单
+  # pod 'Parchment'
+  # pod 'Tabman'
+  # UI控件
+  # pod 'LYEmptyView'
+  # pod 'CollectionKit'
+  # pod 'DifferenceKit'
+  # pod 'ACBadge'
+  # pod 'LTMorphingLabel'
+  # pod 'SkeletonView'
+  # pod 'NVActivityIndicatorView'
+  # pod 'FSPagerView'
+  # pod 'TextFieldEffects'
+  # pod 'SwipeCellKit'
+  # pod 'ScrollableGraphView'
+  # pod 'SCLAlertView'
+  # pod 'SkyFloatingLabelTextField'
+  # pod 'ActiveLabel'
+  # pod 'MarqueeLabel'
+  # pod 'DOFavoriteButton'
+  # pod 'Persei' # top menu for UITableView / UICollectionView / UIScrollView
+  # pod 'XLActionController'
+  # pod 'LNPopupController'
+  # pod 'CHIPageControl'
+  # pod 'EasyTipView'
+  # pod 'CardParts'
+  # pod 'PMAlertController'
+  # pod 'Segmentio'
+  # pod 'HGCircularSlider'
+  # pod 'ZLSwipeableViewSwift'
+  # pod 'ALCameraViewController'
+  # pod 'SwiftSpinner'
+  # pod 'Cosmos'
+  # 扫描
+  # pod 'BarcodeScanner'
+  # 二维码
+  # pod 'EFQRCode'
+  # 扫描文件
+  # pod 'WeScan'
+  # 取色器
+  # pod 'ColorSlider'
+  # 提示软件更新
+  # pod 'Siren'
+  # 机器学习视觉
+  # pod 'OpenCV'
+  # 反馈
+  # pod 'PinpointKit'
+  # 日志
+  # pod 'SwiftyBeaver'
+  # 加密
+  # pod 'CryptoSwift'
+  # pod 'RNCryptor'
+  # 内购
+  # pod 'SwiftyStoreKit'
+  # 日历
+  # pod 'JTAppleCalendar'
+  # pod 'CVCalendar'
+  # 图像处理
+  # pod 'Nuke'
+  # pod 'Macaw'
+  # 图片拾取
+  # pod 'ImagePicker'
+  # pod 'ZLPhotoBrowser'
+  # pod 'YPImagePicker'
+  # pod 'SKPhotoBrowser'
+  # 测试
+  # pod 'Quick'
+  # pod 'Nimble'
+  # Storyboard和xib
+  # pod 'IBAnimatable'
+  # 时间
+  # pod 'SwiftDate'
+  # 缓存
+  # pod 'HanekeSwift'
+  # pod 'Disk'
+  # pod 'Cache'
+  # 数学
+  # pod 'Surge'
+  # 多线程
+  # pod "AsyncSwift"
+  # pod 'Hydra'
+  # pod 'BrightFutures'
+  # 依赖注入
+  # pod 'Swinject'
+  # pod 'Typhoon'
+  # 聊天
+  # pod 'Chatto'
+  # pod 'ChattoAdditions'
+  # 信息
+  # pod 'Messenger'
+  # pod 'MessageKit'
+  # 手机号码
+  # pod 'PhoneNumberKit'
+  # 函数式编程
+  # pod 'Swiftz'
+  # 设备
+  # pod 'DeviceKit'
+  # 富文本
+  # pod 'BonMot'
+  # pod 'SwiftRichString'
+  # 人脸
+  # pod 'FaceAware'
+  # 地理位置
+  # pod 'SwiftLocation'
+  # HTML、XML
+  # pod 'SwiftSoup'
+  # pod 'Ono'
+  # pod 'Kanna'
+  # 便利 UITableViewCells, UICollectionViewCells 便利复用等
+  # pod 'Reusable'
+  # 本地化
+  # pod 'Localize-Swift'
+  # Gif支持
+  # pod 'Gifu'
+  # 颜色
+  # pod 'DynamicColor'
+  # 检测内存泄漏等
+  # pod 'LifetimeTracker'
+  # 表格
+  # pod 'SwiftCharts'
+  # 文件处理
+  # pod 'FileKit'
+  # pod 'Files'
+  # 主题 适配暗黑模式
+  # pod 'SwiftTheme'
+  # 状态栏显示FPS, CPU and memory usage, device model, app and iOS versions 等信息
+  # pod 'GDPerformanceView-Swift'
+  # 相机 麦克风
+  # pod 'HaishinKit.swift'
+  # 下载
+  # pod 'Tiercel'
+  # 蓝牙
+  # pod 'BluetoothKit'
+  # 压缩
+  # pod 'Zip'
+  # 钥匙串
+  # pod 'KeychainSwift'
+  # 社会化分享
+  # pod 'UMengUshare'
+  ## pod 'UMengUShare/UI'
+  ## pod 'UMengUShare/Social/ReducedWeChat'
+  ## pod 'UMengUShare/Social/ReducedQQ'
+end
+
+def project
+end
+
+def debug
+  # App界面调试
+  # pod 'Reveal-SDK'
+  # pod 'CocoaDebug'
+  # 网络调试
+  # pod 'Bagel'
+  # pod 'ResponseDetective'
+  # 日志
+  # pod 'XCGLogger'
+end
+  # 在这里替换你的项目名称
+target "ProjectName" do
+  thirdParty
+  project
+  debug
+end
+
+post_install do |installer_representation|
+  installer_representation.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      # 所支持的iOS系统版本
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
+  end
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="../about" rel="external nofollow noreferrer">张赛东</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://zsd.name">https://zsd.name</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="../about" target="_blank">张赛东</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="../tags/iOS/">
+                                    <span class="chip bg-color">iOS</span>
+                                </a>
+                            
+                                <a href="../tags/framework/">
+                                    <span class="chip bg-color">framework</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="../libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,qzone,weibo,douban,twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="../libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="../medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="../medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80NTc4MS8yMjI5Mg==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="50954.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="../medias/featureimages/5.jpg" class="responsive-img" alt="PodfileKit summarizes the common iOS (Swift) third-party frameworks on GitHub (cocoapods)">
+                        
+                        <span class="card-title">PodfileKit summarizes the common iOS (Swift) third-party frameworks on GitHub (cocoapods)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="post-category">
+                                    移动开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../tags/iOS/">
+                        <span class="chip bg-color">iOS</span>
+                    </a>
+                    
+                    <a href="../tags/framework/">
+                        <span class="chip bg-color">framework</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="57105.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="../medias/featureimages/19.jpg" class="responsive-img" alt="学术论文——基于ARKit技术的文物交互式相机App的设计与实现">
+                        
+                        <span class="card-title">学术论文——基于ARKit技术的文物交互式相机App的设计与实现</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            第一篇正式发表的学术论文
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../categories/%E8%AE%BA%E6%96%87/" class="post-category">
+                                    论文
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 张赛东<br />'
+            + '文章作者: 张赛东<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="../libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="../libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="../libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="../libs/codeBlock/codeShrink.js"></script>
+
+
+
+<!-- 这里我改了BBtalk app body 中显示消息为61.8% -->
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="../libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="../libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="8324097649#503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='false'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="../libs/aplayer/APlayer.min.js"></script>
+<script src="../libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="../about" target="_blank">张赛东</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">54.8k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv"  style='display:none'>
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv" style='display:none'>
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2019";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天 '+ diffHours +
+                            ' 时 ' + diffMinutes + ' 分 ' + diffSeconds + ' 秒';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天 '+ diffHours +
+                            ' 時 ' + diffMinutes + ' 分 ' + diffSeconds + ' 秒';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天 '+ diffHours +
+                            ' 时 ' + diffMinutes + ' 分 ' + diffSeconds + ' 秒';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天 '+ diffHours +
+                            ' 時 ' + diffMinutes + ' 分 ' + diffSeconds + ' 秒';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+                    //calcSiteTime();
+                    setInterval(calcSiteTime, 1000);
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/adong666666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:3440217568@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3440217568" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3440217568" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/adong666666" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/adong666666" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9a8d11b1b6c75b0a6341d5ad863bb30e";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('../search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="../libs/materialize/materialize.min.js"></script>
+    <script src="../libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../libs/aos/aos.js"></script>
+    <script src="../libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="../libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="../libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="../libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9a8d11b1b6c75b0a6341d5ad863bb30e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="../libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="../libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/epsglosqfu2wvhe79ydixzev7ry1nsia.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "5px" : ($("div.toc-title").length&&$(window).width()>977)>0?"130px":"65px";
+                        document.getElementById("tidio-chat-iframe").style.right="-6.5px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "5px":"65px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-6.5px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "5px":"60px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-6.5px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="../libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="../libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i+240*i||document.documentElement.clientHeight*i+240*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+
+</html>
+
+
+

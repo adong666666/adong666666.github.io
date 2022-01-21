@@ -6,7 +6,7 @@
   <link href="https://zsd.name/atom.xml" rel="self"/>
   
   <link href="https://zsd.name/"/>
-  <updated>2022-01-20T11:27:10.688Z</updated>
+  <updated>2022-01-21T09:15:00.146Z</updated>
   <id>https://zsd.name/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo进阶之各种优化摘录</title>
+    <link href="https://zsd.name/posts/36046.html"/>
+    <id>https://zsd.name/posts/36046.html</id>
+    <published>2022-01-21T09:14:00.000Z</published>
+    <updated>2022-01-21T09:15:00.146Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hexo进阶之各种优化摘录&quot;&gt;&lt;a href=&quot;#Hexo进阶之各种优化摘录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="脚本语言" scheme="https://zsd.name/categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="git" scheme="https://zsd.name/tags/git/"/>
+    
+    <category term="github" scheme="https://zsd.name/tags/github/"/>
+    
+    <category term="博文" scheme="https://zsd.name/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="hexo" scheme="https://zsd.name/tags/hexo/"/>
+    
+    <category term="ejs" scheme="https://zsd.name/tags/ejs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>基于Hexo的matery主题搭建博客并深度优化摘录</title>
-    <link href="https://zsd.name/2022/01/20/20220120-ji-yu-hexo-de-matery-zhu-ti-da-jian-bo-ke-bing-shen-du-you-hua-zhai-lu/"/>
-    <id>https://zsd.name/2022/01/20/20220120-ji-yu-hexo-de-matery-zhu-ti-da-jian-bo-ke-bing-shen-du-you-hua-zhai-lu/</id>
+    <link href="https://zsd.name/posts/46171.html"/>
+    <id>https://zsd.name/posts/46171.html</id>
     <published>2022-01-20T11:22:00.000Z</published>
-    <updated>2022-01-20T11:27:10.688Z</updated>
+    <updated>2022-01-21T09:16:49.342Z</updated>
     
     
       
@@ -45,14 +78,16 @@
     
     <category term="hexo" scheme="https://zsd.name/tags/hexo/"/>
     
+    <category term="ejs" scheme="https://zsd.name/tags/ejs/"/>
+    
   </entry>
   
   <entry>
     <title>git Large File Storage摘录</title>
-    <link href="https://zsd.name/2022/01/20/20220120gitlargefilestorage-zhai-lu/"/>
-    <id>https://zsd.name/2022/01/20/20220120gitlargefilestorage-zhai-lu/</id>
+    <link href="https://zsd.name/posts/55425.html"/>
+    <id>https://zsd.name/posts/55425.html</id>
     <published>2022-01-20T06:07:00.000Z</published>
-    <updated>2022-01-20T06:09:10.103Z</updated>
+    <updated>2022-01-21T06:38:59.348Z</updated>
     
     
       
@@ -76,10 +111,10 @@
   
   <entry>
     <title>Hexo文件名大小写问题摘录</title>
-    <link href="https://zsd.name/2022/01/19/20220119hexo-wen-jian-ming-da-xiao-xie-wen-ti/"/>
-    <id>https://zsd.name/2022/01/19/20220119hexo-wen-jian-ming-da-xiao-xie-wen-ti/</id>
+    <link href="https://zsd.name/posts/12645.html"/>
+    <id>https://zsd.name/posts/12645.html</id>
     <published>2022-01-19T03:28:00.000Z</published>
-    <updated>2022-01-19T03:33:38.035Z</updated>
+    <updated>2022-01-21T09:16:08.373Z</updated>
     
     
       
@@ -101,14 +136,18 @@
     
     <category term="博文" scheme="https://zsd.name/tags/%E5%8D%9A%E6%96%87/"/>
     
+    <category term="hexo" scheme="https://zsd.name/tags/hexo/"/>
+    
+    <category term="ejs" scheme="https://zsd.name/tags/ejs/"/>
+    
   </entry>
   
   <entry>
     <title>动态规划之状态压缩</title>
-    <link href="https://zsd.name/2022/01/16/20220116-dong-tai-gui-hua-zhi-zhuang-tai-ya-suo/"/>
-    <id>https://zsd.name/2022/01/16/20220116-dong-tai-gui-hua-zhi-zhuang-tai-ya-suo/</id>
+    <link href="https://zsd.name/posts/49630.html"/>
+    <id>https://zsd.name/posts/49630.html</id>
     <published>2022-01-16T03:57:00.000Z</published>
-    <updated>2022-01-16T12:23:27.625Z</updated>
+    <updated>2022-01-21T06:38:38.319Z</updated>
     
     
       
@@ -135,8 +174,8 @@
   
   <entry>
     <title>C++标准库使用</title>
-    <link href="https://zsd.name/2022/01/06/20220106c-biao-zhun-ku-shi-yong/"/>
-    <id>https://zsd.name/2022/01/06/20220106c-biao-zhun-ku-shi-yong/</id>
+    <link href="https://zsd.name/posts/44130.html"/>
+    <id>https://zsd.name/posts/44130.html</id>
     <published>2022-01-06T09:52:00.000Z</published>
     <updated>2022-01-16T12:23:18.599Z</updated>
     
@@ -165,8 +204,8 @@
   
   <entry>
     <title>Mac上使用C++万能头文件</title>
-    <link href="https://zsd.name/2022/01/01/20220101mac-shang-shi-yong-c-wan-neng-tou-wen-jian/"/>
-    <id>https://zsd.name/2022/01/01/20220101mac-shang-shi-yong-c-wan-neng-tou-wen-jian/</id>
+    <link href="https://zsd.name/posts/33854.html"/>
+    <id>https://zsd.name/posts/33854.html</id>
     <published>2022-01-01T06:52:00.000Z</published>
     <updated>2022-01-16T12:23:01.031Z</updated>
     
@@ -192,8 +231,8 @@
   
   <entry>
     <title>InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</title>
-    <link href="https://zsd.name/2021/05/01/interfacekit.zh-hans/"/>
-    <id>https://zsd.name/2021/05/01/interfacekit.zh-hans/</id>
+    <link href="https://zsd.name/posts/47700.html"/>
+    <id>https://zsd.name/posts/47700.html</id>
     <published>2021-04-30T18:37:00.000Z</published>
     <updated>2022-01-17T19:56:39.385Z</updated>
     
@@ -235,8 +274,8 @@
   
   <entry>
     <title>InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!</title>
-    <link href="https://zsd.name/2021/05/01/interfacekit/"/>
-    <id>https://zsd.name/2021/05/01/interfacekit/</id>
+    <link href="https://zsd.name/posts/35069.html"/>
+    <id>https://zsd.name/posts/35069.html</id>
     <published>2021-04-30T18:21:00.000Z</published>
     <updated>2022-01-16T12:26:06.134Z</updated>
     
@@ -278,10 +317,10 @@
   
   <entry>
     <title>jazzy生成代码解释文档</title>
-    <link href="https://zsd.name/2021/04/30/jazzy-sheng-cheng-dai-ma-jie-shi-wen-dang/"/>
-    <id>https://zsd.name/2021/04/30/jazzy-sheng-cheng-dai-ma-jie-shi-wen-dang/</id>
+    <link href="https://zsd.name/posts/31013.html"/>
+    <id>https://zsd.name/posts/31013.html</id>
     <published>2021-04-30T05:47:00.000Z</published>
-    <updated>2022-01-16T12:29:03.863Z</updated>
+    <updated>2022-01-21T06:45:47.050Z</updated>
     
     
       
@@ -309,8 +348,8 @@
   
   <entry>
     <title>podspec示例</title>
-    <link href="https://zsd.name/2021/04/25/podspec-shi-li/"/>
-    <id>https://zsd.name/2021/04/25/podspec-shi-li/</id>
+    <link href="https://zsd.name/posts/34032.html"/>
+    <id>https://zsd.name/posts/34032.html</id>
     <published>2021-04-25T07:30:00.000Z</published>
     <updated>2022-01-16T12:29:50.126Z</updated>
     
@@ -339,8 +378,8 @@
   
   <entry>
     <title>Carthage使用工作记录</title>
-    <link href="https://zsd.name/2021/04/23/carthage-shi-yong-gong-zuo-ji-lu/"/>
-    <id>https://zsd.name/2021/04/23/carthage-shi-yong-gong-zuo-ji-lu/</id>
+    <link href="https://zsd.name/posts/16458.html"/>
+    <id>https://zsd.name/posts/16458.html</id>
     <published>2021-04-23T15:59:00.000Z</published>
     <updated>2022-01-16T12:25:06.207Z</updated>
     
@@ -368,10 +407,10 @@
   
   <entry>
     <title>Carthage使用摘录</title>
-    <link href="https://zsd.name/2021/04/23/carthage-shi-yong-zhai-lu/"/>
-    <id>https://zsd.name/2021/04/23/carthage-shi-yong-zhai-lu/</id>
+    <link href="https://zsd.name/posts/8147.html"/>
+    <id>https://zsd.name/posts/8147.html</id>
     <published>2021-04-23T15:58:00.000Z</published>
-    <updated>2022-01-16T12:25:12.589Z</updated>
+    <updated>2022-01-21T06:42:21.622Z</updated>
     
     
       
@@ -397,10 +436,10 @@
   
   <entry>
     <title>Carthage库制作摘录</title>
-    <link href="https://zsd.name/2021/04/23/carthage-ku-zhi-zuo-zhai-lu/"/>
-    <id>https://zsd.name/2021/04/23/carthage-ku-zhi-zuo-zhai-lu/</id>
+    <link href="https://zsd.name/posts/59855.html"/>
+    <id>https://zsd.name/posts/59855.html</id>
     <published>2021-04-23T15:57:00.000Z</published>
-    <updated>2022-01-16T12:25:00.142Z</updated>
+    <updated>2022-01-21T06:43:10.979Z</updated>
     
     
       
@@ -426,10 +465,10 @@
   
   <entry>
     <title>制作多平台的framework</title>
-    <link href="https://zsd.name/2021/04/23/zhi-zuo-duo-ping-tai-de-framework/"/>
-    <id>https://zsd.name/2021/04/23/zhi-zuo-duo-ping-tai-de-framework/</id>
+    <link href="https://zsd.name/posts/65269.html"/>
+    <id>https://zsd.name/posts/65269.html</id>
     <published>2021-04-22T18:28:00.000Z</published>
-    <updated>2022-01-16T12:24:49.524Z</updated>
+    <updated>2022-01-21T06:44:16.842Z</updated>
     
     
       
@@ -453,10 +492,10 @@
   
   <entry>
     <title>去除 GLKit API 弃用警告</title>
-    <link href="https://zsd.name/2021/04/21/qu-chu-glkit-api-qi-yong-jing-gao/"/>
-    <id>https://zsd.name/2021/04/21/qu-chu-glkit-api-qi-yong-jing-gao/</id>
+    <link href="https://zsd.name/posts/14629.html"/>
+    <id>https://zsd.name/posts/14629.html</id>
     <published>2021-04-20T18:11:00.000Z</published>
-    <updated>2022-01-16T12:24:31.162Z</updated>
+    <updated>2022-01-21T06:39:45.979Z</updated>
     
     
       
@@ -480,8 +519,8 @@
   
   <entry>
     <title>使用R.swift检查各种string文件的问题</title>
-    <link href="https://zsd.name/2021/04/16/shi-yong-r.swift-jian-cha-ge-chong-string-wen-jian-de-wen-ti-md/"/>
-    <id>https://zsd.name/2021/04/16/shi-yong-r.swift-jian-cha-ge-chong-string-wen-jian-de-wen-ti-md/</id>
+    <link href="https://zsd.name/posts/39320.html"/>
+    <id>https://zsd.name/posts/39320.html</id>
     <published>2021-04-16T04:32:00.000Z</published>
     <updated>2022-01-16T12:24:38.263Z</updated>
     
@@ -507,8 +546,8 @@
   
   <entry>
     <title>iOS日志框架CocoaLumberjack</title>
-    <link href="https://zsd.name/2021/04/10/ios-ri-zhi-kuang-jia-cocoalumberjack-jian-dan-shi-yong/"/>
-    <id>https://zsd.name/2021/04/10/ios-ri-zhi-kuang-jia-cocoalumberjack-jian-dan-shi-yong/</id>
+    <link href="https://zsd.name/posts/9465.html"/>
+    <id>https://zsd.name/posts/9465.html</id>
     <published>2021-04-10T09:06:00.000Z</published>
     <updated>2022-01-16T12:26:42.795Z</updated>
     
@@ -534,8 +573,8 @@
   
   <entry>
     <title>查看cocoapods中各个库的版本</title>
-    <link href="https://zsd.name/2021/04/09/cha-kan-cocoapods-zhong-ge-ge-ku-de-ban-ben/"/>
-    <id>https://zsd.name/2021/04/09/cha-kan-cocoapods-zhong-ge-ge-ku-de-ban-ben/</id>
+    <link href="https://zsd.name/posts/48263.html"/>
+    <id>https://zsd.name/posts/48263.html</id>
     <published>2021-04-09T13:00:00.000Z</published>
     <updated>2022-01-16T12:23:58.151Z</updated>
     
@@ -563,8 +602,8 @@
   
   <entry>
     <title>Zip使用</title>
-    <link href="https://zsd.name/2021/04/08/zip-shi-yong/"/>
-    <id>https://zsd.name/2021/04/08/zip-shi-yong/</id>
+    <link href="https://zsd.name/posts/17588.html"/>
+    <id>https://zsd.name/posts/17588.html</id>
     <published>2021-04-08T09:23:00.000Z</published>
     <updated>2022-01-16T12:30:46.393Z</updated>
     
@@ -589,35 +628,6 @@
     <category term="framework" scheme="https://zsd.name/tags/framework/"/>
     
     <category term="zip" scheme="https://zsd.name/tags/zip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS mlmodelc内部文件格式规范</title>
-    <link href="https://zsd.name/2021/04/08/iosmlmodelc-nei-bu-wen-jian-ge-shi-gui-fan/"/>
-    <id>https://zsd.name/2021/04/08/iosmlmodelc-nei-bu-wen-jian-ge-shi-gui-fan/</id>
-    <published>2021-04-08T07:42:00.000Z</published>
-    <updated>2022-01-16T12:28:37.393Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;iOS-mlmodelc内部文件格式规范&quot;&gt;&lt;a href=&quot;#iOS-mlmodelc内部文件格式规范&quot; class=&quot;headerlink&quot; title=&quot;iOS mlmodelc内部文件格式规范&quot;&gt;&lt;/a&gt;iOS</summary>
-        
-      
-    
-    
-    
-    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
-    
-    <category term="file" scheme="https://zsd.name/tags/file/"/>
-    
-    <category term="机器学习" scheme="https://zsd.name/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

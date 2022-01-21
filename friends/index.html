@@ -39,7 +39,7 @@
 
    <style>
     body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/source_matery/medias/background.jpeg);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -54,10 +54,12 @@
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="../index.html" class="waves-effect waves-light">
+<div>
                     
                     <img src="../medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">张赛东</span>
+</div>
                 </a>
             </div>
             
@@ -361,6 +363,8 @@
     </nav>
 
 </header>
+
+
 
     <div class="bg-cover pd-header about-cover">
     <div class="container">
@@ -717,7 +721,7 @@
                             <div class="card frind-card1">
                                 <div class="frind-ship">
                                     <div class="title">
-                                        <img src="/images/RxSwift.png" alt="img">
+                                        <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/RxSwift.png" alt="img">
                                         <div>
                                             <h1 class="friend-name">RxSwift中文教程</h1>
                                             <p style="position: relative;top: -35px;">ReactiveX（简写: Rx）是一个可以帮助我们简化异步编程的框架。[RxSwift] 是 Rx 的 Swift 版本。它尝试将原有的一些概念移植到 iOS/macOS 平台。你可以在这里找到跨平台文档 ReactiveX.io。KVO，异步操作 和 流 全部被统一成抽象序列。这就是为什么 Rx 会如此简单，优雅和强大。</p>
@@ -738,7 +742,7 @@
                             <div class="card frind-card2">
                                 <div class="frind-ship">
                                     <div class="title">
-                                        <img src="/images/logo.png" alt="img">
+                                        <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/logo.png" alt="img">
                                         <div>
                                             <h1 class="friend-name">Cone</h1>
                                             <p style="position: relative;top: -35px;">Cone，本科毕业于某不知名双非末流一本，科班CS专业。本科做了四年iOS开发，写过无数iOS应用，拿过无数软件竞赛奖，也折腾过安卓开发，整过Spring全家桶，写过网站，搭过服务器。秋招拿到了微信、抖音等大厂offer，是一段从春招屡战屡败到秋招屡战屡胜的经历。关于更多他的故事，你可以关注他的公众号「ConeZhang」</p>
@@ -759,7 +763,7 @@
                             <div class="card frind-card3">
                                 <div class="frind-ship">
                                     <div class="title">
-                                        <img src="/images/avatar.png" alt="img">
+                                        <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/avatar.png" alt="img">
                                         <div>
                                             <h1 class="friend-name">泠音</h1>
                                             <p style="position: relative;top: -35px;">他比较低调：岁月总是历久弥新，需要细细品尝。即便选择了放在自己面前的唯一选项，那也称不上是自己的选择吧</p>
@@ -1280,7 +1284,13 @@ $(function () {
     <script src="../libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i+240*i||document.documentElement.clientHeight*i+240*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
 
