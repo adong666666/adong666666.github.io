@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>解决动态规划问题的思考过程摘录</title>
+      <link href="/posts/7211.html"/>
+      <url>/posts/7211.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="解决动态规划问题的思考过程摘录"><a href="#解决动态规划问题的思考过程摘录" class="headerlink" title="解决动态规划问题的思考过程摘录"></a>解决动态规划问题的思考过程摘录</h1><p>========================</p><p>心得： 这里的记忆化颇有意思，dp[i]如果之前计算过，且不为-1，则直接返回dp[i]。如未计算过则计算且只计算一次dp[i]，也就是说，本来递归需要大量重复的计算，却因为之前已经记录了该值而能直接得到结果。给我感觉是提前记录需要重复计算的值，从而提高效率。这种方法配合递归比较细节，着实让人眼前一亮。</p><p>摘录：</p><p>让我们先从一道例题开始</p><p>题目：300.最长上升子序列</p><p>描述：</p><p>给定一个无序的整数数组，找到其中最长上升子序列的长度。</p><p>示例：</p><p>输入: [10,9,2,5,3,7,101,18]<br>输出: 4<br>解释: 最长的上升子序列是 [2,3,7,101]，它的长度是4。</p><h2 id="考虑能否将问题规模减小"><a href="#考虑能否将问题规模减小" class="headerlink" title="考虑能否将问题规模减小"></a>考虑能否将问题规模减小</h2><p>将问题规模减小的方式有很多种，一些典型的减小方式是动态规划分类的依据，例如线性，区间，树形等。这里考虑数组上常用的两种思路：</p><ul><li>每次减少一半：如果每次将问题规模减少一半，原问题有[10,9,2,5]，和[3,7,101,18]，两个子问题的最优解分别为 [2,5] 和 [3,7,101]，但是找不到好的组合方式将两个子问题最优解组合为原问题最优解 [2,5,7,101]。</li><li>每次减少一个：记 f(n) 为以第 nn 个数结尾的最长子序列，每次减少一个，将原问题分为f(n−1), f(n-2), …, f(1)，共 n - 1n−1 个子问题。n - 1 = 7n−1=7 个子问题以及答案如下：</li></ul><ul><li>[10, 9, 2, 5, 3, 7, 101] -&gt; [2, 5, 7, 101]</li><li>[10, 9, 2, 5, 3, 7] -&gt; [2, 5, 7]</li><li>[10, 9, 2, 5, 3] -&gt; [2, 3]</li><li>[10, 9, 2, 5] -&gt; [2, 5]</li><li>[10, 9, 2] -&gt; [2]</li><li>[10, 9] -&gt; [9]</li><li>[10] -&gt; [10]</li></ul><p>已经有 7 个子问题的最优解之后，可以发现一种组合方式得到原问题的最优解：f(6)的结果 [2,5,7], 7 &lt; 187&lt;18，同时长度也是 f(1)~f(7) 中，结尾小于 18 的结果中最长的。f(7)虽然长度为 4 比 f(6)长，但结尾是不小于 18 的，无法组合成原问题的解。<br>以上组合方式可以写成一个式子，即状态转移方程</p><p>f(n)=maxf(i)+1&nbsp;其中&nbsp;i&lt;n&nbsp;且&nbsp;a[i]&lt;a[n]</p><p>这种思考如何通过f(1)…f(n-1)求出 f(n)的过程实际就是在思考状态转移方程怎么写。</p><p>总结： 解决动态规划问题最难的地方有两点：</p><ul><li>如何定义 f(n)</li><li>如何通过 f(1), f(2), … f(n−1) 推导出f(n)，即状态转移方程<h2 id="1-递归"><a href="#1-递归" class="headerlink" title="1. 递归"></a>1. 递归</h2>有了状态转移方程，实际上已经可以直接用递归进行实现了。<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">int f(vector&lt;int&gt;&amp; nums, int i){    int a = 1;    for(int j = 0; j &lt; i; ++j)    {        if(nums[j] &lt; nums[i])        ¦   a = max(a, f(nums, j) + 1);    }    return a;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-自顶向下（记忆化）"><a href="#2-自顶向下（记忆化）" class="headerlink" title="2. 自顶向下（记忆化）"></a>2. 自顶向下（记忆化）</h2>递归的解法需要非常多的重复计算，如果有一种办法能避免这些重复计算，可以节省大量计算时间。记忆化就是基于这个思路的算法。在递归地求解子问题 f(1)f(1), f(2)f(2)… 过程中，将结果保存到一个表里，在后续求解子问题中如果遇到求过结果的子问题，直接查表去得到答案而不计算。<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">int f(vector&lt;int&gt;&amp; nums, int i, vector&lt;int&gt;&amp; dp){    if(dp[i] != -1) return dp[i];    int a = 1;    for(int j = 0; j &lt; i; ++j)    {        if(nums[j] &lt; nums[i])        ¦   a = max(a, f(nums, j) + 1);    }    dp[i] = a;    return dp[i];}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="3-自底向上（迭代）"><a href="#3-自底向上（迭代）" class="headerlink" title="3. 自底向上（迭代）"></a>3. 自底向上（迭代）</h2>在自顶向下的算法中，由于递归的存在，程序运行时有额外的栈的消耗。</li></ul><p>有了状态转移方程，我们就知道如何从最小的问题规模入手，然后不断地增加问题规模，直到所要求的问题规模为止。在这个过程中，我们同样地可以记忆每个问题规模的解来避免重复的计算。这种方法就是自底向上的方法，由于避免了递归，这是一种更好的办法。</p><p>但是迭代法需要有一个明确的迭代方向，例如线性，区间，树形，状态压缩等比较主流的动态规划问题中，迭代方向都有相应的模式。参考后面的例题。但是有一些问题迭代法方向是不确定的，这时可以退而求其次用记忆化来做。</p><p>链接：<a href="https://leetcode-cn.com/leetbook/read/dynamic-programming-1-plus/xcos8s/">https://leetcode-cn.com/leetbook/read/dynamic-programming-1-plus/xcos8s/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> C++ </tag>
+            
+            <tag> 动态规划 </tag>
+            
+            <tag> 记忆化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo进阶之各种优化摘录</title>
       <link href="/posts/36046.html"/>
       <url>/posts/36046.html</url>

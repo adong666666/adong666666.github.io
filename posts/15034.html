@@ -816,6 +816,15 @@
     </div>
     <!-- City版安装代码已完成 -->
 </div>
+
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+  <a class="btn-floating btn-large waves-effect waves-light" href="#lv-container" title="直达评论">
+    <i class="fas fa-comments"></i>
+  </a>
+</div>
+
+
     
 
     
@@ -1165,7 +1174,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">54.8k</span>
+                        class="white-color">56k</span>
             
             
             
@@ -1415,6 +1424,49 @@ $(function () {
 });
 </script>
 
+    
+    
+<div class="stars-con">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+</div>
+<!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+  <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+    <i id="sum-moon-icon" class="fas fa-moon" style="width:48px; height:48px; font-size: 28px;"></i>
+  </a>
+</div>
+
+<script>
+  function switchNightMode() {
+    $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      setTimeout(function () {
+        $('body').hasClass('DarkMode')
+        ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon'))
+        : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+          
+        setTimeout(function () {
+          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+            $(this).remove()
+          })
+        }, 2e3)
+      })
+  }
+</script>
+
+
+
+<script>
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+    } else {
+        document.body.classList.remove('DarkMode');
+        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+    }
+</script>
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -1505,23 +1557,23 @@ $(function () {
                 function change_Tidio() {
                     var tidio=$("#tidio-chat iframe");
                     if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "5px" : ($("div.toc-title").length&&$(window).width()>977)>0?"130px":"65px";
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-10px" : ($("div.toc-title").length&&$(window).width()>977)>0?"250px":"52px";
                         document.getElementById("tidio-chat-iframe").style.right="-6.5px";
                         document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="999";
                     }
                     else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "5px":"65px" ;
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "0px":"52px" ;
                         document.getElementById("tidio-chat-iframe").style.right="-6.5px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="999";
                     }
                     else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "5px":"60px" ;
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "0px":"52px" ;
                         document.getElementById("tidio-chat-iframe").style.right="-6.5px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="999";
                     }
                     if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
-                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="999";
                     }
                 }
             });
