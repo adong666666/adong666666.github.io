@@ -537,7 +537,7 @@
             text: '文章日历',
             left: 'center',
             textStyle: {
-                color: '#3C4858'
+                color: '#777777'
             }
         },
         tooltip: {
@@ -582,12 +582,14 @@
             },
             monthLabel: {
                 nameMap: 'cn',
-                fontSize: 11
+                fontSize: 11,
+                color: '#999999'
             },
             dayLabel: {
                 formatter: '{start}  1st',
                 nameMap: 'cn',
-                fontSize: 11
+                fontSize: 11,
+                color: '#999999'
             }
         }],
         series: [{
@@ -601,6 +603,8 @@
 
     myChart.setOption(option);
 </script>
+
+
 
     
 
@@ -630,7 +634,7 @@
             <div class="cd-timeline-img day" data-aos="zoom-in-up">
                 <span>28</span>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
+            <article class="cd-timeline-content" data-aos="fade-up" style= "background-color: rgba(0,0,0,0)">
                 <div class="article col s12 m6">
                     <div class="card">
                         <a href="../../../posts/22939.html">
@@ -642,7 +646,7 @@
                                 <span class="card-title">闭包循环引用</span>
                             </div>
                         </a>
-                        <div class="card-content article-content">
+                        <div class="card-content article-content" >
                             <div class="summary block-with-text">
                                 
                                     闭包循环引用========================我们在闭包的基础概念中讲到闭包是引用类型的，因此，与Objective-C的block一样，可能导致循环引用的问题。
@@ -692,7 +696,7 @@
             <div class="cd-timeline-img day" data-aos="zoom-in-up">
                 <span>16</span>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
+            <article class="cd-timeline-content" data-aos="fade-up" style= "background-color: rgba(0,0,0,0)">
                 <div class="article col s12 m6">
                     <div class="card">
                         <a href="../../../posts/26121.html">
@@ -704,7 +708,7 @@
                                 <span class="card-title">Swift反射摘录</span>
                             </div>
                         </a>
-                        <div class="card-content article-content">
+                        <div class="card-content article-content" >
                             <div class="summary block-with-text">
                                 
                                     Swift反射摘录========================
@@ -747,6 +751,9 @@
 </main>
 
 
+
+
+<!--  这里我在article里加了这么一句style= "background-color: rgba(0,0,0,0)"，将白色背景变透明适配暗黑模式  -->
 
 
     <footer class="page-footer bg-color">
@@ -1081,6 +1088,7 @@ $(function () {
 
 <script>
   function switchNightMode() {
+    
     $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
       setTimeout(function () {
         $('body').hasClass('DarkMode')
@@ -1093,6 +1101,63 @@ $(function () {
           })
         }, 2e3)
       })
+      
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.getElementById("basicInformation").style.color = "#163e3e";
+        ["only", "brief", "detail", "right", "person0", "resumeLink"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.color = "#111";
+            }
+        });
+        var getDom = document.getElementsByClassName("head_line");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.borderColor = "#111";
+        }
+        var getDom2 = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom2.length;i++){
+            getDom2[i].onmouseover=function(){
+                this.style.textDecoration = "underline";
+                this.style.color = "#1bd1a5";
+            }
+            getDom2[i].onmouseout=function(){
+                this.style.textDecoration = "none";
+                this.style.color = "#111";
+            }
+        }
+        var getDom3 = document.getElementsByClassName("title0");
+        for(var i=0;i<getDom3.length;i++){
+            getDom3[i].style.color = "#38485c";
+        }
+    } else {
+        document.getElementById("basicInformation").style.color = "#bcf0f5";
+        ["only", "brief", "detail", "right", "person0", "resumeLink"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.color = "#c0c0c0";
+            }
+        });
+        var getDom = document.getElementsByClassName("head_line");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.borderColor = "#c0c0c0";
+        }
+        var getDom2 = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom2.length;i++){
+            getDom2[i].onmouseover=function(){
+                this.style.textDecoration = "underline";
+                this.style.color = "#1bd1a5";
+            }
+            getDom2[i].onmouseout=function(){
+                this.style.textDecoration = "none";
+                this.style.color = "#c0c0c0";
+            }
+        }
+        var getDom3 = document.getElementsByClassName("title0");
+        for(var i=0;i<getDom3.length;i++){
+            getDom3[i].style.color = "#666666";
+        }
+    }
   }
 </script>
 

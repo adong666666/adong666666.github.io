@@ -582,7 +582,7 @@
 
 
                                 </div>
-                                <div class="title">张赛东</div>
+                                <div class="title" style="color: #666666">张赛东</div>
                                 <div class="career">追光者</div>
                                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
@@ -719,17 +719,36 @@
         title: {
             text: '文章发布统计图',
             top: -5,
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#777777'
+            }
         },
         tooltip: {
             trigger: 'axis'
         },
         xAxis: {
             type: 'category',
-            data: ["2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01"]
+            data: ["2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01"],
+            axisLabel: {
+                color: "#777777"
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#888888'
+                }
+            }
         },
         yAxis: {
             type: 'value',
+            axisLabel: {
+                color: "#777777"
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#888888'
+                }
+            }
         },
         series: [
             {
@@ -766,7 +785,10 @@
         title: {
             text: '文章分类统计图',
             top: -4,
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#777777'
+            }
         },
         tooltip: {
             trigger: 'item',
@@ -796,18 +818,37 @@
         title: {
             text: 'TOP10 标签统计图',
             top: -5,
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#777777'
+            }
         },
         tooltip: {},
         xAxis: [
             {
                 type: 'category',
-                data: ["iOS","framework","Swift","git","github","cocoapods","network","博文","carthage","server"]
+                data: ["iOS","framework","Swift","git","github","cocoapods","network","博文","carthage","server"],
+                axisLabel: {
+                   color: "#777777"
+                },
+                axisLine: {
+                lineStyle: {
+                    color: '#888888'
+                }
+                }
             }
         ],
         yAxis: [
             {
-                type: 'value'
+                type: 'value',
+                axisLabel: {
+                   color: "#777777"
+                },
+                axisLine: {
+                lineStyle: {
+                    color: '#888888'
+                }
+                }
             }
         ],
         series: [
@@ -845,6 +886,8 @@
 </script>
 
 
+
+
                 
                 
 <div class="my-projects">
@@ -857,11 +900,11 @@
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
                 <a href="https://apps.apple.com/us/app/runinto-enjoy-ar-keep-moving/id1480828569" class="icon"
-                   style="background: linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)" target="_blank">
+                   style="background: linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)" style="color: #777777" target="_blank">
                     <i class="fas fa-file-alt"></i>
                 </a>
                 <div class="info-title">
-                    <a href="../https:/apps.apple.com/us/app/runinto-enjoy-ar-keep-moving/id1480828569" target="_blank">RunInto AR文物交互式相机</a>
+                    <a href="https://apps.apple.com/us/app/runinto-enjoy-ar-keep-moving/id1480828569" style="color: #777777" target="_blank">RunInto AR文物交互式相机</a>
                 </div>
                 <div class="info-desc">RunInto是一款基于ARKit增强现实、Core ML 机器学习和Metal高级3D图形渲染等技术开发的AR文物交互式相机App。采用iOS平台最新的ARKit增强现实、SwiftUI 全新UI框架和Core ML机器学习技术，设计并实现了一款基于iOS平台集文物识别与检测、文物3D建模和文物交互多功能于一体的App。系统能准确、高效地实现文物识别和检测、文物相关信息的获取、文物3D欣赏以及用户与文物之间的互动，为用户带来身临其境的体验，同时为文物爱好者鉴别和欣赏文物带来了极大的便利。系统严格的按照软件工程的开发思想，经过反复的软件系统测试，最终实现了用户操作简单、系统运行稳定、数据访问安全、界面美观简洁的教育类移动应用。</div>
             </div>
@@ -870,11 +913,11 @@
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
                 <a href="https://github.com/adong666666" class="icon"
-                   style="background: linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)" target="_blank">
+                   style="background: linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)" style="color: #777777" target="_blank">
                     <i class="fas fa-database"></i>
                 </a>
                 <div class="info-title">
-                    <a href="../https:/github.com/adong666666" target="_blank">Dreamlike AR相册流</a>
+                    <a href="https://github.com/adong666666" style="color: #777777" target="_blank">Dreamlike AR相册流</a>
                 </div>
                 <div class="info-desc">Dreamlike是一款基于ARKit增强现实、Core ML 机器学习和Metal高级3D图形渲染等技术开发的智能AR（Augmented Reality，增强现实）相册，项目团队将其称为“Dreamlike”AR相册流。其主要特色是对用户在苹果手机上的照片进行智能分类，AR展示。它旨在为用户将照片进行整理归类，并提供AR展示的功能，用户可以根据个人喜好，选择以瀑布流、虚拟现实、增强现实的方式欣赏分好类的照片、系统相册中随机抽取的照片，或是用户自定义想要展示的照片。该App即便在离线模式下亦能流畅运行，且仅需获取用户的相机权限，是一款集科技、乐趣和安全于一体的App。</div>
             </div>
@@ -883,11 +926,11 @@
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
                 <a href="https://github.com/adong666666/InterfaceKit" class="icon"
-                   style="background: linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)" target="_blank">
+                   style="background: linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)" style="color: #777777" target="_blank">
                     <i class="fas fa-file-alt"></i>
                 </a>
                 <div class="info-title">
-                    <a href="../https:/github.com/adong666666/InterfaceKit" target="_blank">开源框架InterfaceKit</a>
+                    <a href="https://github.com/adong666666/InterfaceKit" style="color: #777777" target="_blank">开源框架InterfaceKit</a>
                 </div>
                 <div class="info-desc">• InterfaceKit旨在简便地实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口。 • InterfaceKit同时支持iOS、macOS、tvOS和watchOS全部四个平台。 • 可通过CocoaPods、Carthage、Swift Package Manager和手动集成等多种多种方式进行安装。 • 使用Jazzy为该框架生成代码解释文档。 • 使用Github Action workflows对该框架进行持续集成且状态为passing。 • 所提供的示例代码，一套代码在iOS、macOS、tvOS和watchOS四个平台上运行。</div>
             </div>
@@ -896,6 +939,9 @@
         
     </div>
 </div>
+
+
+
 
                 
 
@@ -1025,7 +1071,7 @@
 
     
     <div class="other-skills chip-container" data-aos="zoom-in-up">
-        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
+        <div class="sub-title center-align" style="color: #666666"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
         <div class="tag-chips center-align">
             
             
@@ -1243,6 +1289,8 @@
     
 
 </div>
+
+
 
                 
 
@@ -1666,6 +1714,7 @@ $(function () {
 
 <script>
   function switchNightMode() {
+    
     $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
       setTimeout(function () {
         $('body').hasClass('DarkMode')
@@ -1678,6 +1727,63 @@ $(function () {
           })
         }, 2e3)
       })
+      
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.getElementById("basicInformation").style.color = "#163e3e";
+        ["only", "brief", "detail", "right", "person0", "resumeLink"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.color = "#111";
+            }
+        });
+        var getDom = document.getElementsByClassName("head_line");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.borderColor = "#111";
+        }
+        var getDom2 = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom2.length;i++){
+            getDom2[i].onmouseover=function(){
+                this.style.textDecoration = "underline";
+                this.style.color = "#1bd1a5";
+            }
+            getDom2[i].onmouseout=function(){
+                this.style.textDecoration = "none";
+                this.style.color = "#111";
+            }
+        }
+        var getDom3 = document.getElementsByClassName("title0");
+        for(var i=0;i<getDom3.length;i++){
+            getDom3[i].style.color = "#38485c";
+        }
+    } else {
+        document.getElementById("basicInformation").style.color = "#bcf0f5";
+        ["only", "brief", "detail", "right", "person0", "resumeLink"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.color = "#c0c0c0";
+            }
+        });
+        var getDom = document.getElementsByClassName("head_line");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.borderColor = "#c0c0c0";
+        }
+        var getDom2 = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom2.length;i++){
+            getDom2[i].onmouseover=function(){
+                this.style.textDecoration = "underline";
+                this.style.color = "#1bd1a5";
+            }
+            getDom2[i].onmouseout=function(){
+                this.style.textDecoration = "none";
+                this.style.color = "#c0c0c0";
+            }
+        }
+        var getDom3 = document.getElementsByClassName("title0");
+        for(var i=0;i<getDom3.length;i++){
+            getDom3[i].style.color = "#666666";
+        }
+    }
   }
 </script>
 

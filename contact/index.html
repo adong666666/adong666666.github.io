@@ -936,6 +936,7 @@ $(function () {
 
 <script>
   function switchNightMode() {
+    
     $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
       setTimeout(function () {
         $('body').hasClass('DarkMode')
@@ -948,6 +949,63 @@ $(function () {
           })
         }, 2e3)
       })
+      
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.getElementById("basicInformation").style.color = "#163e3e";
+        ["only", "brief", "detail", "right", "person0", "resumeLink"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.color = "#111";
+            }
+        });
+        var getDom = document.getElementsByClassName("head_line");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.borderColor = "#111";
+        }
+        var getDom2 = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom2.length;i++){
+            getDom2[i].onmouseover=function(){
+                this.style.textDecoration = "underline";
+                this.style.color = "#1bd1a5";
+            }
+            getDom2[i].onmouseout=function(){
+                this.style.textDecoration = "none";
+                this.style.color = "#111";
+            }
+        }
+        var getDom3 = document.getElementsByClassName("title0");
+        for(var i=0;i<getDom3.length;i++){
+            getDom3[i].style.color = "#38485c";
+        }
+    } else {
+        document.getElementById("basicInformation").style.color = "#bcf0f5";
+        ["only", "brief", "detail", "right", "person0", "resumeLink"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.color = "#c0c0c0";
+            }
+        });
+        var getDom = document.getElementsByClassName("head_line");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.borderColor = "#c0c0c0";
+        }
+        var getDom2 = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom2.length;i++){
+            getDom2[i].onmouseover=function(){
+                this.style.textDecoration = "underline";
+                this.style.color = "#1bd1a5";
+            }
+            getDom2[i].onmouseout=function(){
+                this.style.textDecoration = "none";
+                this.style.color = "#c0c0c0";
+            }
+        }
+        var getDom3 = document.getElementsByClassName("title0");
+        for(var i=0;i<getDom3.length;i++){
+            getDom3[i].style.color = "#666666";
+        }
+    }
   }
 </script>
 
