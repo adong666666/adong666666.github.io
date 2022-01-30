@@ -32,9 +32,9 @@ PodfileKit summarizes the common iOS (Swift) third-party frameworks on">
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -529,7 +529,7 @@ PodfileKit summarizes the common iOS (Swift) third-party frameworks on">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -600,346 +600,346 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <li>Create your feature branch: <code>git checkout -b my-new-feature</code></li>
 <li>Commit your changes: <code>git commit -am 'Add some feature'</code></li>
 <li>Push to the branch: <code>git push origin my-new-feature</code></li>
-<li>Submit a pull request<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2>PodfileKit is released under the MIT license. <a target="_blank" rel="noopener" href="https://github.com/adong666666/PodfileKit/blob/master/LICENSE">See LICENSE</a> for details.<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><pre class="line-numbers language-none"><code class="language-none">source 'https://github.com/CocoaPods/Specs.git'
-# Minimum supported iOS system version
-platform:ios,'13.0'
-use_frameworks!
-# Inhibit the warning of the third party library
-inhibit_all_warnings!
+<li>Submit a pull request<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2>PodfileKit is released under the MIT license. <a target="_blank" rel="noopener" href="https://github.com/adong666666/PodfileKit/blob/master/LICENSE">See LICENSE</a> for details.<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">source <span class="token string">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="token comment"># Minimum supported iOS system version</span>
+platform<span class="token symbol">:ios</span><span class="token punctuation">,</span><span class="token string">'13.0'</span>
+use_frameworks<span class="token operator">!</span>
+<span class="token comment"># Inhibit the warning of the third party library</span>
+inhibit_all_warnings<span class="token operator">!</span>
 
-def thirdParty
-  # eg. # AR Video
-  # Git specifies the web address, branch specifies the branch, commit specifies the submitted version, tag specifies the marked submitted version and inhibit_ Warnings to avoid warnings from a single framework
-  # pod 'ARVideoKit', :git =&gt; 'https://github.com/AFathi/ARVideoKit.git', :branch =&gt; 'swift_5', commit: "b7e1facdedd8fe16d04ef5f47c4697e89bad9f27",'~&gt; 5.0', :tag =&gt; '1.6.0', :inhibit_warnings =&gt; true
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">thirdParty</span></span>
+  <span class="token comment"># eg. # AR Video</span>
+  <span class="token comment"># Git specifies the web address, branch specifies the branch, commit specifies the submitted version, tag specifies the marked submitted version and inhibit_ Warnings to avoid warnings from a single framework</span>
+  <span class="token comment"># pod 'ARVideoKit', :git =&gt; 'https://github.com/AFathi/ARVideoKit.git', :branch =&gt; 'swift_5', commit: "b7e1facdedd8fe16d04ef5f47c4697e89bad9f27",'~&gt; 5.0', :tag =&gt; '1.6.0', :inhibit_warnings =&gt; true</span>
   
-  # Network Request
-  # pod 'Alamofire'
-  # pod 'Moya'
-  # pod 'AlamofireObjectMapper'
+  <span class="token comment"># Network Request</span>
+  <span class="token comment"># pod 'Alamofire'</span>
+  <span class="token comment"># pod 'Moya'</span>
+  <span class="token comment"># pod 'AlamofireObjectMapper'</span>
   
-  # JSON Parsing
-  # pod 'SwiftyJSON'
-  # pod 'HandyJSON'
-  # pod 'Argo'
-  # pod 'Sync'
+  <span class="token comment"># JSON Parsing</span>
+  <span class="token comment"># pod 'SwiftyJSON'</span>
+  <span class="token comment"># pod 'HandyJSON'</span>
+  <span class="token comment"># pod 'Argo'</span>
+  <span class="token comment"># pod 'Sync'</span>
   
-  # Detect Network Status
-  # pod 'ReachabilitySwift'
+  <span class="token comment"># Detect Network Status</span>
+  <span class="token comment"># pod 'ReachabilitySwift'</span>
   
-  # Data Stream
-  # pod 'RxSwift'
-  # pod 'RxCocoa'
-  # pod 'ObjectMapper'
-  # pod 'ReSwift'
-  # pod 'ReactiveSwift'
-  # pod 'ReactorKit'
+  <span class="token comment"># Data Stream</span>
+  <span class="token comment"># pod 'RxSwift'</span>
+  <span class="token comment"># pod 'RxCocoa'</span>
+  <span class="token comment"># pod 'ObjectMapper'</span>
+  <span class="token comment"># pod 'ReSwift'</span>
+  <span class="token comment"># pod 'ReactiveSwift'</span>
+  <span class="token comment"># pod 'ReactorKit'</span>
   
-  # Internet Pictures
-  # pod 'Kingfisher'
+  <span class="token comment"># Internet Pictures</span>
+  <span class="token comment"># pod 'Kingfisher'</span>
   
-  # Layout
-  # pod 'SnapKit'
-  # pod 'Cartography'
-  # pod 'Neon'
-  # pod 'AnimatedCollectionViewLayout'
-  # pod "BouncyLayout"
-  # pod 'TangramKit'
-  # pod 'TinyConstraints'
-  # pod 'LayoutKit'
-  # pod 'SteviaLayout'
+  <span class="token comment"># Layout</span>
+  <span class="token comment"># pod 'SnapKit'</span>
+  <span class="token comment"># pod 'Cartography'</span>
+  <span class="token comment"># pod 'Neon'</span>
+  <span class="token comment"># pod 'AnimatedCollectionViewLayout'</span>
+  <span class="token comment"># pod "BouncyLayout"</span>
+  <span class="token comment"># pod 'TangramKit'</span>
+  <span class="token comment"># pod 'TinyConstraints'</span>
+  <span class="token comment"># pod 'LayoutKit'</span>
+  <span class="token comment"># pod 'SteviaLayout'</span>
   
-  # Animation
-  # pod 'Spring', :git =&gt; 'https://github.com/MengTo/Spring.git'
-  # pod 'lottie-ios'
-  # pod 'ViewAnimator'
-  # pod 'Advance'
-  # pod 'Pastel'
-  # pod 'YapAnimator'
+  <span class="token comment"># Animation</span>
+  <span class="token comment"># pod 'Spring', :git =&gt; 'https://github.com/MengTo/Spring.git'</span>
+  <span class="token comment"># pod 'lottie-ios'</span>
+  <span class="token comment"># pod 'ViewAnimator'</span>
+  <span class="token comment"># pod 'Advance'</span>
+  <span class="token comment"># pod 'Pastel'</span>
+  <span class="token comment"># pod 'YapAnimator'</span>
   
-  # Transition
-  # pod 'Hero'
-  # pod 'Transition'
-  # pod 'Jelly'
+  <span class="token comment"># Transition</span>
+  <span class="token comment"># pod 'Hero'</span>
+  <span class="token comment"># pod 'Transition'</span>
+  <span class="token comment"># pod 'Jelly'</span>
   
-  # Code Rules
-  # pod 'SwiftLint'
+  <span class="token comment"># Code Rules</span>
+  <span class="token comment"># pod 'SwiftLint'</span>
   
-  # UserDefault
-  # pod 'SwiftyUserDefaults'
+  <span class="token comment"># UserDefault</span>
+  <span class="token comment"># pod 'SwiftyUserDefaults'</span>
   
-  # Data Base
-  # pod 'SQLite.swift'
-  # pod 'GRDB.swift'
-  # pod 'FMDB'
-  # pod 'RealmSwift'
-  # pod 'YapDatabase'
-  # pod 'CoreStore'
+  <span class="token comment"># Data Base</span>
+  <span class="token comment"># pod 'SQLite.swift'</span>
+  <span class="token comment"># pod 'GRDB.swift'</span>
+  <span class="token comment"># pod 'FMDB'</span>
+  <span class="token comment"># pod 'RealmSwift'</span>
+  <span class="token comment"># pod 'YapDatabase'</span>
+  <span class="token comment"># pod 'CoreStore'</span>
   
-  # Extension
-  # pod 'SwifterSwift'
-  ## pod 'SwifterSwift/SwiftStdlib'
-  ## pod 'SwifterSwift/Foundation'
-  ## pod 'SwifterSwift/UIKit'
-  ## pod 'SwifterSwift/AppKit'
-  ## pod 'SwifterSwift/MapKit'
-  ## pod 'SwifterSwift/CoreGraphics'
-  ## pod 'SwifterSwift/CoreLocation'
-  ## pod 'SwifterSwift/SpriteKit'
-  ## pod 'SwifterSwift/SceneKit'
-  ## pod 'SwifterSwift/StoreKit'
-  ## pod 'SwifterSwift/Dispatch'
-  # pod 'Then'
-  ### Use 'SwiftUIX'
-  # pod 'EZSwiftExtensions'
+  <span class="token comment"># Extension</span>
+  <span class="token comment"># pod 'SwifterSwift'</span>
+  <span class="token comment">## pod 'SwifterSwift/SwiftStdlib'</span>
+  <span class="token comment">## pod 'SwifterSwift/Foundation'</span>
+  <span class="token comment">## pod 'SwifterSwift/UIKit'</span>
+  <span class="token comment">## pod 'SwifterSwift/AppKit'</span>
+  <span class="token comment">## pod 'SwifterSwift/MapKit'</span>
+  <span class="token comment">## pod 'SwifterSwift/CoreGraphics'</span>
+  <span class="token comment">## pod 'SwifterSwift/CoreLocation'</span>
+  <span class="token comment">## pod 'SwifterSwift/SpriteKit'</span>
+  <span class="token comment">## pod 'SwifterSwift/SceneKit'</span>
+  <span class="token comment">## pod 'SwifterSwift/StoreKit'</span>
+  <span class="token comment">## pod 'SwifterSwift/Dispatch'</span>
+  <span class="token comment"># pod 'Then'</span>
+  <span class="token comment">### Use 'SwiftUIX'</span>
+  <span class="token comment"># pod 'EZSwiftExtensions'</span>
   
-  # Resources (picture, color, localized string)
-  # pod 'R.swift'
-  # pod 'SwiftGen'
+  <span class="token comment"># Resources (picture, color, localized string)</span>
+  <span class="token comment"># pod 'R.swift'</span>
+  <span class="token comment"># pod 'SwiftGen'</span>
   
-  # Monitor
-  # pod 'Crashlytics'
-  # pod 'Fabric'
-  # pod 'Bugly'
+  <span class="token comment"># Monitor</span>
+  <span class="token comment"># pod 'Crashlytics'</span>
+  <span class="token comment"># pod 'Fabric'</span>
+  <span class="token comment"># pod 'Bugly'</span>
  
-  # Bind
-  # pod 'bond'
+  <span class="token comment"># Bind</span>
+  <span class="token comment"># pod 'bond'</span>
   
-  # Alert
-  # pod 'JGProgressHUD'
-  # pod 'SwiftMessages'
-  # pod 'SwiftEntryKit'
-  # pod 'SPPermissions'
-  # pod 'NotificationBanner'
-  # pod 'Whisper'
-  # pod 'PopupDialog'
-  # pod 'Toast-Swift'
+  <span class="token comment"># Alert</span>
+  <span class="token comment"># pod 'JGProgressHUD'</span>
+  <span class="token comment"># pod 'SwiftMessages'</span>
+  <span class="token comment"># pod 'SwiftEntryKit'</span>
+  <span class="token comment"># pod 'SPPermissions'</span>
+  <span class="token comment"># pod 'NotificationBanner'</span>
+  <span class="token comment"># pod 'Whisper'</span>
+  <span class="token comment"># pod 'PopupDialog'</span>
+  <span class="token comment"># pod 'Toast-Swift'</span>
   
-  # Side Menu
-  # pod 'SideMenu'
-  # pod 'YALSideMenu'
+  <span class="token comment"># Side Menu</span>
+  <span class="token comment"># pod 'SideMenu'</span>
+  <span class="token comment"># pod 'YALSideMenu'</span>
   
-  # Drop-down Menu
-  # pod 'BTNavigationDropdownMenu'
+  <span class="token comment"># Drop-down Menu</span>
+  <span class="token comment"># pod 'BTNavigationDropdownMenu'</span>
   
-  # Pagination Menu
-  # pod 'Parchment'
-  # pod 'Tabman'
+  <span class="token comment"># Pagination Menu</span>
+  <span class="token comment"># pod 'Parchment'</span>
+  <span class="token comment"># pod 'Tabman'</span>
   
-  # UI Controls
-  # pod 'LYEmptyView'
-  # pod 'CollectionKit'
-  # pod 'DifferenceKit'
-  # pod 'ACBadge'
-  # pod 'LTMorphingLabel'
-  # pod 'SkeletonView'
-  # pod 'NVActivityIndicatorView'
-  # pod 'FSPagerView'
-  # pod 'TextFieldEffects'
-  # pod 'SwipeCellKit'
-  # pod 'ScrollableGraphView'
-  # pod 'SCLAlertView'
-  # pod 'SkyFloatingLabelTextField'
-  # pod 'ActiveLabel'
-  # pod 'MarqueeLabel'
-  # pod 'DOFavoriteButton'
-  # pod 'Persei' # top menu for UITableView / UICollectionView / UIScrollView
-  # pod 'XLActionController'
-  # pod 'LNPopupController'
-  # pod 'CHIPageControl'
-  # pod 'EasyTipView'
-  # pod 'CardParts'
-  # pod 'PMAlertController'
-  # pod 'Segmentio'
-  # pod 'HGCircularSlider'
-  # pod 'ZLSwipeableViewSwift'
-  # pod 'ALCameraViewController'
-  # pod 'SwiftSpinner'
-  # pod 'Cosmos'
+  <span class="token comment"># UI Controls</span>
+  <span class="token comment"># pod 'LYEmptyView'</span>
+  <span class="token comment"># pod 'CollectionKit'</span>
+  <span class="token comment"># pod 'DifferenceKit'</span>
+  <span class="token comment"># pod 'ACBadge'</span>
+  <span class="token comment"># pod 'LTMorphingLabel'</span>
+  <span class="token comment"># pod 'SkeletonView'</span>
+  <span class="token comment"># pod 'NVActivityIndicatorView'</span>
+  <span class="token comment"># pod 'FSPagerView'</span>
+  <span class="token comment"># pod 'TextFieldEffects'</span>
+  <span class="token comment"># pod 'SwipeCellKit'</span>
+  <span class="token comment"># pod 'ScrollableGraphView'</span>
+  <span class="token comment"># pod 'SCLAlertView'</span>
+  <span class="token comment"># pod 'SkyFloatingLabelTextField'</span>
+  <span class="token comment"># pod 'ActiveLabel'</span>
+  <span class="token comment"># pod 'MarqueeLabel'</span>
+  <span class="token comment"># pod 'DOFavoriteButton'</span>
+  <span class="token comment"># pod 'Persei' # top menu for UITableView / UICollectionView / UIScrollView</span>
+  <span class="token comment"># pod 'XLActionController'</span>
+  <span class="token comment"># pod 'LNPopupController'</span>
+  <span class="token comment"># pod 'CHIPageControl'</span>
+  <span class="token comment"># pod 'EasyTipView'</span>
+  <span class="token comment"># pod 'CardParts'</span>
+  <span class="token comment"># pod 'PMAlertController'</span>
+  <span class="token comment"># pod 'Segmentio'</span>
+  <span class="token comment"># pod 'HGCircularSlider'</span>
+  <span class="token comment"># pod 'ZLSwipeableViewSwift'</span>
+  <span class="token comment"># pod 'ALCameraViewController'</span>
+  <span class="token comment"># pod 'SwiftSpinner'</span>
+  <span class="token comment"># pod 'Cosmos'</span>
   
-  # Scan
-  # pod 'BarcodeScanner'
+  <span class="token comment"># Scan</span>
+  <span class="token comment"># pod 'BarcodeScanner'</span>
   
-  # QR Code
-  # pod 'EFQRCode'
+  <span class="token comment"># QR Code</span>
+  <span class="token comment"># pod 'EFQRCode'</span>
   
-  # Scan Document
-  # pod 'WeScan'
+  <span class="token comment"># Scan Document</span>
+  <span class="token comment"># pod 'WeScan'</span>
   
-  # Color Picker
-  # pod 'ColorSlider'
+  <span class="token comment"># Color Picker</span>
+  <span class="token comment"># pod 'ColorSlider'</span>
   
-  # Prompt for Software Updates
-  # pod 'Siren'
+  <span class="token comment"># Prompt for Software Updates</span>
+  <span class="token comment"># pod 'Siren'</span>
   
-  # Machine learning Vision
-  # pod 'OpenCV'
+  <span class="token comment"># Machine learning Vision</span>
+  <span class="token comment"># pod 'OpenCV'</span>
   
-  # Feedback
-  # pod 'PinpointKit'
+  <span class="token comment"># Feedback</span>
+  <span class="token comment"># pod 'PinpointKit'</span>
   
-  # Log
-  # pod 'SwiftyBeaver'
+  <span class="token comment"># Log</span>
+  <span class="token comment"># pod 'SwiftyBeaver'</span>
   
-  # Encryption
-  # pod 'CryptoSwift'
-  # pod 'RNCryptor'
+  <span class="token comment"># Encryption</span>
+  <span class="token comment"># pod 'CryptoSwift'</span>
+  <span class="token comment"># pod 'RNCryptor'</span>
   
-  # Internal Purchase
-  # pod 'SwiftyStoreKit'
+  <span class="token comment"># Internal Purchase</span>
+  <span class="token comment"># pod 'SwiftyStoreKit'</span>
   
-  # Calendar
-  # pod 'JTAppleCalendar'
-  # pod 'CVCalendar'
+  <span class="token comment"># Calendar</span>
+  <span class="token comment"># pod 'JTAppleCalendar'</span>
+  <span class="token comment"># pod 'CVCalendar'</span>
   
-  # Image Processing
-  # pod 'Nuke'
-  # pod 'Macaw'
+  <span class="token comment"># Image Processing</span>
+  <span class="token comment"># pod 'Nuke'</span>
+  <span class="token comment"># pod 'Macaw'</span>
   
-  # Image Picker
-  # pod 'ImagePicker'
-  # pod 'ZLPhotoBrowser'
-  # pod 'YPImagePicker'
-  # pod 'SKPhotoBrowser'
+  <span class="token comment"># Image Picker</span>
+  <span class="token comment"># pod 'ImagePicker'</span>
+  <span class="token comment"># pod 'ZLPhotoBrowser'</span>
+  <span class="token comment"># pod 'YPImagePicker'</span>
+  <span class="token comment"># pod 'SKPhotoBrowser'</span>
   
-  # Test
-  # pod 'Quick'
-  # pod 'Nimble'
+  <span class="token comment"># Test</span>
+  <span class="token comment"># pod 'Quick'</span>
+  <span class="token comment"># pod 'Nimble'</span>
   
-  # Storyboard and xib
-  # pod 'IBAnimatable'
+  <span class="token comment"># Storyboard and xib</span>
+  <span class="token comment"># pod 'IBAnimatable'</span>
   
-  # Date
-  # pod 'SwiftDate'
+  <span class="token comment"># Date</span>
+  <span class="token comment"># pod 'SwiftDate'</span>
   
-  # Cache
-  # pod 'HanekeSwift'
-  # pod 'Disk'
-  # pod 'Cache'
+  <span class="token comment"># Cache</span>
+  <span class="token comment"># pod 'HanekeSwift'</span>
+  <span class="token comment"># pod 'Disk'</span>
+  <span class="token comment"># pod 'Cache'</span>
   
-  # Mathematics
-  # pod 'Surge'
+  <span class="token comment"># Mathematics</span>
+  <span class="token comment"># pod 'Surge'</span>
   
-  # Multithreading
-  # pod "AsyncSwift"
-  # pod 'Hydra'
-  # pod 'BrightFutures'
+  <span class="token comment"># Multithreading</span>
+  <span class="token comment"># pod "AsyncSwift"</span>
+  <span class="token comment"># pod 'Hydra'</span>
+  <span class="token comment"># pod 'BrightFutures'</span>
   
-  # Dependency Injection
-  # pod 'Swinject'
-  # pod 'Typhoon'
+  <span class="token comment"># Dependency Injection</span>
+  <span class="token comment"># pod 'Swinject'</span>
+  <span class="token comment"># pod 'Typhoon'</span>
   
-  # Chat
-  # pod 'Chatto'
-  # pod 'ChattoAdditions'
+  <span class="token comment"># Chat</span>
+  <span class="token comment"># pod 'Chatto'</span>
+  <span class="token comment"># pod 'ChattoAdditions'</span>
   
-  # Message
-  # pod 'Messenger'
-  # pod 'MessageKit'
+  <span class="token comment"># Message</span>
+  <span class="token comment"># pod 'Messenger'</span>
+  <span class="token comment"># pod 'MessageKit'</span>
   
-  # Phone Number
-  # pod 'PhoneNumberKit'
+  <span class="token comment"># Phone Number</span>
+  <span class="token comment"># pod 'PhoneNumberKit'</span>
   
-  # Functional Programming
-  # pod 'Swiftz'
+  <span class="token comment"># Functional Programming</span>
+  <span class="token comment"># pod 'Swiftz'</span>
   
-  # Device
-  # pod 'DeviceKit'
+  <span class="token comment"># Device</span>
+  <span class="token comment"># pod 'DeviceKit'</span>
   
-  # Rich Text
-  # pod 'BonMot'
-  # pod 'SwiftRichString'
+  <span class="token comment"># Rich Text</span>
+  <span class="token comment"># pod 'BonMot'</span>
+  <span class="token comment"># pod 'SwiftRichString'</span>
   
-  # Face
-  # pod 'FaceAware'
+  <span class="token comment"># Face</span>
+  <span class="token comment"># pod 'FaceAware'</span>
   
-  # Geographic Location
-  # pod 'SwiftLocation'
+  <span class="token comment"># Geographic Location</span>
+  <span class="token comment"># pod 'SwiftLocation'</span>
   
-  # HTML、XML
-  # pod 'SwiftSoup'
-  # pod 'Ono'
-  # pod 'Kanna'
+  <span class="token comment"># HTML、XML</span>
+  <span class="token comment"># pod 'SwiftSoup'</span>
+  <span class="token comment"># pod 'Ono'</span>
+  <span class="token comment"># pod 'Kanna'</span>
   
-  # Convenient (uitableviewcells, uicollectionviewcells, convenient reuse, etc)
-  # pod 'Reusable'
+  <span class="token comment"># Convenient (uitableviewcells, uicollectionviewcells, convenient reuse, etc)</span>
+  <span class="token comment"># pod 'Reusable'</span>
   
-  # Localization
-  # pod 'Localize-Swift'
+  <span class="token comment"># Localization</span>
+  <span class="token comment"># pod 'Localize-Swift'</span>
   
-  # Gif Support
-  # pod 'Gifu'
+  <span class="token comment"># Gif Support</span>
+  <span class="token comment"># pod 'Gifu'</span>
   
-  # Color
-  # pod 'DynamicColor'
+  <span class="token comment"># Color</span>
+  <span class="token comment"># pod 'DynamicColor'</span>
   
-  # Detecting memory leaks, etc
-  # pod 'LifetimeTracker'
+  <span class="token comment"># Detecting memory leaks, etc</span>
+  <span class="token comment"># pod 'LifetimeTracker'</span>
   
-  # Chart
-  # pod 'SwiftCharts'
+  <span class="token comment"># Chart</span>
+  <span class="token comment"># pod 'SwiftCharts'</span>
   
-  # File Processing
-  # pod 'FileKit'
-  # pod 'Files'
+  <span class="token comment"># File Processing</span>
+  <span class="token comment"># pod 'FileKit'</span>
+  <span class="token comment"># pod 'Files'</span>
   
-  # Theme (Adapt to Dark Mode)
-  # pod 'SwiftTheme'
+  <span class="token comment"># Theme (Adapt to Dark Mode)</span>
+  <span class="token comment"># pod 'SwiftTheme'</span>
   
-  # The status bar displays information such as FPS, CPU and memory usage, device model, app and iOS versions
-  # pod 'GDPerformanceView-Swift'
+  <span class="token comment"># The status bar displays information such as FPS, CPU and memory usage, device model, app and iOS versions</span>
+  <span class="token comment"># pod 'GDPerformanceView-Swift'</span>
   
-  # Camera and Microphone
-  # pod 'HaishinKit.swift'
+  <span class="token comment"># Camera and Microphone</span>
+  <span class="token comment"># pod 'HaishinKit.swift'</span>
   
-  # Download
-  # pod 'Tiercel'
+  <span class="token comment"># Download</span>
+  <span class="token comment"># pod 'Tiercel'</span>
   
-  # Bluetooth
-  # pod 'BluetoothKit'
+  <span class="token comment"># Bluetooth</span>
+  <span class="token comment"># pod 'BluetoothKit'</span>
   
-  # Compress
-  # pod 'Zip'
+  <span class="token comment"># Compress</span>
+  <span class="token comment"># pod 'Zip'</span>
   
-  # Keychain
-  # pod 'KeychainSwift'
+  <span class="token comment"># Keychain</span>
+  <span class="token comment"># pod 'KeychainSwift'</span>
   
-  # Social Sharing
-  # pod 'UMengUshare'
-  ## pod 'UMengUShare/UI'
-  ## pod 'UMengUShare/Social/ReducedWeChat'
-  ## pod 'UMengUShare/Social/ReducedQQ'
-end
+  <span class="token comment"># Social Sharing</span>
+  <span class="token comment"># pod 'UMengUshare'</span>
+  <span class="token comment">## pod 'UMengUShare/UI'</span>
+  <span class="token comment">## pod 'UMengUShare/Social/ReducedWeChat'</span>
+  <span class="token comment">## pod 'UMengUShare/Social/ReducedQQ'</span>
+<span class="token keyword">end</span>
 
-def project
-end
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">project</span></span>
+<span class="token keyword">end</span>
 
-def debug
-  # App Interface Debugging
-  # pod 'Reveal-SDK'
-  # pod 'CocoaDebug'
+<span class="token keyword">def</span> <span class="token method-definition"><span class="token function">debug</span></span>
+  <span class="token comment"># App Interface Debugging</span>
+  <span class="token comment"># pod 'Reveal-SDK'</span>
+  <span class="token comment"># pod 'CocoaDebug'</span>
   
-  # Network Debugging
-  # pod 'Bagel'
-  # pod 'ResponseDetective'
+  <span class="token comment"># Network Debugging</span>
+  <span class="token comment"># pod 'Bagel'</span>
+  <span class="token comment"># pod 'ResponseDetective'</span>
   
-  # Log
-  # pod 'XCGLogger'
-end
-  # Replace your project name here
-target "ProjectName" do
+  <span class="token comment"># Log</span>
+  <span class="token comment"># pod 'XCGLogger'</span>
+<span class="token keyword">end</span>
+  <span class="token comment"># Replace your project name here</span>
+target <span class="token string">"ProjectName"</span> <span class="token keyword">do</span>
   thirdParty
   project
   debug
-end
+<span class="token keyword">end</span>
 
-post_install do |installer_representation|
-  installer_representation.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      # Minimum supported iOS system version
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-    end
-  end
-end
+post_install <span class="token keyword">do</span> <span class="token operator">|</span>installer_representation<span class="token operator">|</span>
+  installer_representation<span class="token punctuation">.</span>pods_project<span class="token punctuation">.</span>targets<span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token keyword">do</span> <span class="token operator">|</span>target<span class="token operator">|</span>
+    target<span class="token punctuation">.</span>build_configurations<span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token keyword">do</span> <span class="token operator">|</span>config<span class="token operator">|</span>
+      <span class="token comment"># Minimum supported iOS system version</span>
+      config<span class="token punctuation">.</span>build_settings<span class="token punctuation">[</span><span class="token string">'IPHONEOS_DEPLOYMENT_TARGET'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'13.0'</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 
@@ -1556,7 +1556,7 @@ end
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

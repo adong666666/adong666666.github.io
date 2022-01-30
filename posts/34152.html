@@ -31,9 +31,9 @@ UIKitlet url = dataShare.queryFromManyTable(with: modelName, from: [dataShare.cu
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -528,7 +528,7 @@ UIKitlet url = dataShare.queryFromManyTable(with: modelName, from: [dataShare.cu
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -566,30 +566,30 @@ UIKitlet url = dataShare.queryFromManyTable(with: modelName, from: [dataShare.cu
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Kingfisher简单使用"><a href="#Kingfisher简单使用" class="headerlink" title="Kingfisher简单使用"></a>Kingfisher简单使用</h1><p>========================</p>
-<h2 id="UIKit"><a href="#UIKit" class="headerlink" title="UIKit"></a>UIKit</h2><pre class="line-numbers language-none"><code class="language-none">let url = dataShare.queryFromManyTable(with: modelName, from: [dataShare.cuturalRelicsIntroduction,
-                                                                          dataShare.models3DIntroduction,
-                                                                          dataShare.paintingModelsIntroduction])?.image
-           objectImageView.kf.indicatorType = .activity
-           objectImageView.kf.setImage(with: URL(string: url))
-           // 设置超时时间
-           let downloader = KingfisherManager.shared.downloader
-           // 超时时间（秒）
-           downloader.downloadTimeout = 50
+<h2 id="UIKit"><a href="#UIKit" class="headerlink" title="UIKit"></a>UIKit</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> dataShare<span class="token punctuation">.</span><span class="token function">queryFromManyTable</span><span class="token punctuation">(</span>with<span class="token punctuation">:</span> modelName<span class="token punctuation">,</span> from<span class="token punctuation">:</span> <span class="token punctuation">[</span>dataShare<span class="token punctuation">.</span>cuturalRelicsIntroduction<span class="token punctuation">,</span>
+                                                                          dataShare<span class="token punctuation">.</span>models3DIntroduction<span class="token punctuation">,</span>
+                                                                          dataShare<span class="token punctuation">.</span>paintingModelsIntroduction<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>image
+           objectImageView<span class="token punctuation">.</span>kf<span class="token punctuation">.</span>indicatorType <span class="token operator">=</span> <span class="token punctuation">.</span>activity
+           objectImageView<span class="token punctuation">.</span>kf<span class="token punctuation">.</span><span class="token function">setImage</span><span class="token punctuation">(</span>with<span class="token punctuation">:</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> url<span class="token punctuation">)</span><span class="token punctuation">)</span>
+           <span class="token comment">// 设置超时时间</span>
+           <span class="token keyword">let</span> downloader <span class="token operator">=</span> <span class="token builtin">KingfisherManager</span><span class="token punctuation">.</span>shared<span class="token punctuation">.</span>downloader
+           <span class="token comment">// 超时时间（秒）</span>
+           downloader<span class="token punctuation">.</span>downloadTimeout <span class="token operator">=</span> <span class="token number">50</span>
            
-           // 获取缓存代销
-           let cache = KingfisherManager.shared.cache
-           // 设置最大缓存为多少 100M  默认是无上限
-           cache.memoryStorage.config.totalCostLimit = 100 * 1024 * 1024
-           // 设置保存时间 1天 默认5分钟
-           cache.memoryStorage.config.expiration = StorageExpiration.seconds(300)
-           cache.diskStorage.config.sizeLimit = 100 * 1024 * 1024
-           cache.diskStorage.config.expiration = StorageExpiration.days(7)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="SwiftUI"><a href="#SwiftUI" class="headerlink" title="SwiftUI"></a>SwiftUI</h2><pre class="line-numbers language-none"><code class="language-none">KFImage(URL(string: Images.help.url))
-    .diskCacheExpiration(.days(365))
-    .resizable()
-    .aspectRatio(contentMode: .fit)
-    .foregroundColor(.white)
-    .frame(width: 20.fitCGWidth, height: 20.fitCGWidth, alignment: .center)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+           <span class="token comment">// 获取缓存代销</span>
+           <span class="token keyword">let</span> cache <span class="token operator">=</span> <span class="token builtin">KingfisherManager</span><span class="token punctuation">.</span>shared<span class="token punctuation">.</span>cache
+           <span class="token comment">// 设置最大缓存为多少 100M  默认是无上限</span>
+           cache<span class="token punctuation">.</span>memoryStorage<span class="token punctuation">.</span>config<span class="token punctuation">.</span>totalCostLimit <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span>
+           <span class="token comment">// 设置保存时间 1天 默认5分钟</span>
+           cache<span class="token punctuation">.</span>memoryStorage<span class="token punctuation">.</span>config<span class="token punctuation">.</span>expiration <span class="token operator">=</span> <span class="token builtin">StorageExpiration</span><span class="token punctuation">.</span><span class="token function">seconds</span><span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">)</span>
+           cache<span class="token punctuation">.</span>diskStorage<span class="token punctuation">.</span>config<span class="token punctuation">.</span>sizeLimit <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span>
+           cache<span class="token punctuation">.</span>diskStorage<span class="token punctuation">.</span>config<span class="token punctuation">.</span>expiration <span class="token operator">=</span> <span class="token builtin">StorageExpiration</span><span class="token punctuation">.</span><span class="token function">days</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="SwiftUI"><a href="#SwiftUI" class="headerlink" title="SwiftUI"></a>SwiftUI</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token function">KFImage</span><span class="token punctuation">(</span><span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token builtin">Images</span><span class="token punctuation">.</span>help<span class="token punctuation">.</span>url<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">diskCacheExpiration</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token function">days</span><span class="token punctuation">(</span><span class="token number">365</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">resizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">aspectRatio</span><span class="token punctuation">(</span>contentMode<span class="token punctuation">:</span> <span class="token punctuation">.</span>fit<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token punctuation">.</span>white<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">frame</span><span class="token punctuation">(</span>width<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">.</span>fitCGWidth<span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">.</span>fitCGWidth<span class="token punctuation">,</span> alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>center<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1200,7 +1200,7 @@ UIKitlet url = dataShare.queryFromManyTable(with: modelName, from: [dataShare.cu
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

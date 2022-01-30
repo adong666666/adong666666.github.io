@@ -31,9 +31,9 @@ let encodeURLStr = urlString.addingPercentEncoding(withAllowedC">
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -532,7 +532,7 @@ let encodeURLStr = urlString.addingPercentEncoding(withAllowedC">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -570,67 +570,67 @@ let encodeURLStr = urlString.addingPercentEncoding(withAllowedC">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Swift-解决URL或参数中含有中文（Swift-URL编码）"><a href="#Swift-解决URL或参数中含有中文（Swift-URL编码）" class="headerlink" title="Swift 解决URL或参数中含有中文（Swift URL编码）"></a>Swift 解决URL或参数中含有中文（Swift URL编码）</h1><p>========================</p>
-<pre class="line-numbers language-none"><code class="language-none">let encodeURLStr = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-let url =  URL.init(string: encodeURLStr)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> encodeURLStr <span class="token operator">=</span> urlString<span class="token punctuation">.</span><span class="token function">addingPercentEncoding</span><span class="token punctuation">(</span>withAllowedCharacters<span class="token punctuation">:</span> <span class="token punctuation">.</span>urlQueryAllowed<span class="token punctuation">)</span>
+<span class="token keyword">let</span> url <span class="token operator">=</span>  <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> encodeURLStr<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
-<pre class="line-numbers language-none"><code class="language-none">static func get( _ url: String, parameters: [String: Any] , completionHandler: @escaping (NSError?, JSON) -&gt; Void)  {
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token keyword">get</span><span class="token punctuation">(</span> <span class="token number">_</span> url<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> parameters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">String</span><span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token punctuation">]</span> <span class="token punctuation">,</span> completionHandler<span class="token punctuation">:</span> @escaping <span class="token punctuation">(</span><span class="token builtin">NSError</span><span class="token operator">?</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Void</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
 
-      var urlStr = url
-      var flag = true
-      let generalDelimitersToEncode = ":#[]@" // does not include "?" or "/" due to RFC 3986 - Section 3.4
-      let subDelimitersToEncode = "!$&amp;'()*+,;="
-      var allowedCharacterSet = CharacterSet.urlQueryAllowed
-      allowedCharacterSet.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
-      for ( key , value) in parameters {
+      <span class="token keyword">var</span> urlStr <span class="token operator">=</span> url
+      <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span>
+      <span class="token keyword">let</span> generalDelimitersToEncode <span class="token operator">=</span> <span class="token string">":#[]@"</span> <span class="token comment">// does not include "?" or "/" due to RFC 3986 - Section 3.4</span>
+      <span class="token keyword">let</span> subDelimitersToEncode <span class="token operator">=</span> <span class="token string">"!$&amp;'()*+,;="</span>
+      <span class="token keyword">var</span> allowedCharacterSet <span class="token operator">=</span> <span class="token builtin">CharacterSet</span><span class="token punctuation">.</span>urlQueryAllowed
+      allowedCharacterSet<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>charactersIn<span class="token punctuation">:</span> <span class="token string">"<span class="token interpolation"><span class="token delimiter variable">\(</span>generalDelimitersToEncode<span class="token delimiter variable">)</span></span><span class="token interpolation"><span class="token delimiter variable">\(</span>subDelimitersToEncode<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span> key <span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token keyword">in</span> parameters <span class="token punctuation">{</span>
 
-         var anyValue: Any = value
-         if let value = value as? String{
+         <span class="token keyword">var</span> anyValue<span class="token punctuation">:</span> <span class="token builtin">Any</span> <span class="token operator">=</span> value
+         <span class="token keyword">if</span> <span class="token keyword">let</span> value <span class="token operator">=</span> value <span class="token keyword">as</span><span class="token operator">?</span> <span class="token builtin">String</span><span class="token punctuation">{</span>
 
-            anyValue = value.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet) ?? ""
-         }
+            anyValue <span class="token operator">=</span> value<span class="token punctuation">.</span><span class="token function">addingPercentEncoding</span><span class="token punctuation">(</span>withAllowedCharacters<span class="token punctuation">:</span> allowedCharacterSet<span class="token punctuation">)</span> <span class="token operator">?</span><span class="token operator">?</span> <span class="token string">""</span>
+         <span class="token punctuation">}</span>
 
-         if flag{
-            flag = false
-            urlStr += "?" + key + "=\(anyValue)"
-         }else{
-            urlStr += "&amp;" + key + "=\(anyValue)"
-         }
-      }
-      if let url = URL.init(string: urlStr){
-         var request = URLRequest(url: url)
-         request.cachePolicy = .reloadIgnoringLocalCacheData
+         <span class="token keyword">if</span> flag<span class="token punctuation">{</span>
+            flag <span class="token operator">=</span> <span class="token boolean">false</span>
+            urlStr <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">"?"</span> <span class="token operator">+</span> key <span class="token operator">+</span> <span class="token string">"=<span class="token interpolation"><span class="token delimiter variable">\(</span>anyValue<span class="token delimiter variable">)</span></span>"</span>
+         <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            urlStr <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">"&amp;"</span> <span class="token operator">+</span> key <span class="token operator">+</span> <span class="token string">"=<span class="token interpolation"><span class="token delimiter variable">\(</span>anyValue<span class="token delimiter variable">)</span></span>"</span>
+         <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> urlStr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">var</span> request <span class="token operator">=</span> <span class="token function">URLRequest</span><span class="token punctuation">(</span>url<span class="token punctuation">:</span> url<span class="token punctuation">)</span>
+         request<span class="token punctuation">.</span>cachePolicy <span class="token operator">=</span> <span class="token punctuation">.</span>reloadIgnoringLocalCacheData
 
-         URLSession.shared.dataTask(with: request, completionHandler: { (data, response, err) in
+         <span class="token builtin">URLSession</span><span class="token punctuation">.</span>shared<span class="token punctuation">.</span><span class="token function">dataTask</span><span class="token punctuation">(</span>with<span class="token punctuation">:</span> request<span class="token punctuation">,</span> completionHandler<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token punctuation">(</span>data<span class="token punctuation">,</span> response<span class="token punctuation">,</span> err<span class="token punctuation">)</span> <span class="token keyword">in</span>
 
-            if let err = err{
+            <span class="token keyword">if</span> <span class="token keyword">let</span> err <span class="token operator">=</span> err<span class="token punctuation">{</span>
 
-               completionHandler(err as NSError, JSON.null )
-            }else{
-//               if let json = try? JSONSerialization.jsonObject(with: data!, options: [.allowFragments, .mutableContainers , .mutableLeaves]) as? [String: Any]  {
-               if let data = data {
-                  let json = JSON.init(data: data)
-                  guard let code = json["code"].int,
-                     let msg = json["msg"].string else{
-                        completionHandler(NSError(domain: "", code: 1, userInfo: nil), JSON.null)
-                        return
-                  }
+               <span class="token function">completionHandler</span><span class="token punctuation">(</span>err <span class="token keyword">as</span> <span class="token builtin">NSError</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span>null <span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+<span class="token comment">//               if let json = try? JSONSerialization.jsonObject(with: data!, options: [.allowFragments, .mutableContainers , .mutableLeaves]) as? [String: Any]  {</span>
+               <span class="token keyword">if</span> <span class="token keyword">let</span> data <span class="token operator">=</span> data <span class="token punctuation">{</span>
+                  <span class="token keyword">let</span> json <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span>data<span class="token punctuation">:</span> data<span class="token punctuation">)</span>
+                  <span class="token keyword">guard</span> <span class="token keyword">let</span> code <span class="token operator">=</span> json<span class="token punctuation">[</span><span class="token string">"code"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>int<span class="token punctuation">,</span>
+                     <span class="token keyword">let</span> msg <span class="token operator">=</span> json<span class="token punctuation">[</span><span class="token string">"msg"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string <span class="token keyword">else</span><span class="token punctuation">{</span>
+                        <span class="token function">completionHandler</span><span class="token punctuation">(</span><span class="token function">NSError</span><span class="token punctuation">(</span>domain<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span> code<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> userInfo<span class="token punctuation">:</span> <span class="token constant">nil</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span>null<span class="token punctuation">)</span>
+                        <span class="token keyword">return</span>
+                  <span class="token punctuation">}</span>
 
-                  if code  != 10000 {
+                  <span class="token keyword">if</span> code  <span class="token operator">!=</span> <span class="token number">10000</span> <span class="token punctuation">{</span>
 
-                     completionHandler(NSError(domain: msg, code: code, userInfo: nil), JSON.null )
-                  }else{
+                     <span class="token function">completionHandler</span><span class="token punctuation">(</span><span class="token function">NSError</span><span class="token punctuation">(</span>domain<span class="token punctuation">:</span> msg<span class="token punctuation">,</span> code<span class="token punctuation">:</span> code<span class="token punctuation">,</span> userInfo<span class="token punctuation">:</span> <span class="token constant">nil</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span>null <span class="token punctuation">)</span>
+                  <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
 
-                     completionHandler(nil, json["data"])
-                  }
-               }
-            }
+                     <span class="token function">completionHandler</span><span class="token punctuation">(</span><span class="token constant">nil</span><span class="token punctuation">,</span> json<span class="token punctuation">[</span><span class="token string">"data"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">}</span>
+               <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
 
 
-         })
-            .resume()
-      }
-   }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+         <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1253,7 +1253,7 @@ let url =  URL.init(string: encodeURLStr)<span aria-hidden="true" class="line-nu
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

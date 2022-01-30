@@ -30,9 +30,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -527,7 +527,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -565,7 +565,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Swift函数举例"><a href="#Swift函数举例" class="headerlink" title="Swift函数举例"></a>Swift函数举例</h1><p>========================<br>这里<code>tate, Request, RequestID, Event</code>都是泛型，函数的返回值为闭包<code>(ObservableSchedulerContext&lt;State&gt;) -&gt; Observable&lt;Event&gt; </code>，闭包<code>(State) -&gt; [RequestID: Request]</code>的返回值是一个字典</p>
-<pre class="line-numbers language-none"><code class="language-none">/**
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">/**
  State: State type of the system.
  Request: Subset of state used to control the feedback loop.
  For every uniquely identifiable request `effects` closure is invoked with the initial value of the request and future requests corresponding to the same identifier.
@@ -575,48 +575,48 @@
  - parameter initial: Initial request.
  - parameter state: Latest request state.
  - returns: The feedback loop performing the effects.
- */
-public func react&lt;State, Request: Equatable, RequestID, Event&gt;(
-    requests: @escaping (State) -&gt; [RequestID: Request],
-    effects: @escaping (_ initial: Request, _ state: Observable&lt;Request&gt;) -&gt; Observable&lt;Event&gt;
-) -&gt; (ObservableSchedulerContext&lt;State&gt;) -&gt; Observable&lt;Event&gt; {
-    return { stateContext in
-        Observable.create { observer in
-            let state = RequestLifetimeTracking&lt;Request, RequestID, Event&gt;(
-                effects: effects,
-                scheduler: stateContext.scheduler,
-                observer: observer
-            )
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> react<span class="token operator">&lt;</span><span class="token builtin">State</span><span class="token punctuation">,</span> <span class="token builtin">Request</span><span class="token punctuation">:</span> <span class="token builtin">Equatable</span><span class="token punctuation">,</span> <span class="token builtin">RequestID</span><span class="token punctuation">,</span> <span class="token builtin">Event</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>
+    requests<span class="token punctuation">:</span> @escaping <span class="token punctuation">(</span><span class="token builtin">State</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token builtin">RequestID</span><span class="token punctuation">:</span> <span class="token builtin">Request</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    effects<span class="token punctuation">:</span> @escaping <span class="token punctuation">(</span><span class="token number">_</span> initial<span class="token punctuation">:</span> <span class="token builtin">Request</span><span class="token punctuation">,</span> <span class="token number">_</span> state<span class="token punctuation">:</span> <span class="token builtin">Observable</span><span class="token operator">&lt;</span><span class="token builtin">Request</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Observable</span><span class="token operator">&lt;</span><span class="token builtin">Event</span><span class="token operator">&gt;</span>
+<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token builtin">ObservableSchedulerContext</span><span class="token operator">&lt;</span><span class="token builtin">State</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Observable</span><span class="token operator">&lt;</span><span class="token builtin">Event</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> stateContext <span class="token keyword">in</span>
+        <span class="token builtin">Observable</span><span class="token punctuation">.</span>create <span class="token punctuation">{</span> observer <span class="token keyword">in</span>
+            <span class="token keyword">let</span> state <span class="token operator">=</span> <span class="token builtin">RequestLifetimeTracking</span><span class="token operator">&lt;</span><span class="token builtin">Request</span><span class="token punctuation">,</span> <span class="token builtin">RequestID</span><span class="token punctuation">,</span> <span class="token builtin">Event</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>
+                effects<span class="token punctuation">:</span> effects<span class="token punctuation">,</span>
+                scheduler<span class="token punctuation">:</span> stateContext<span class="token punctuation">.</span>scheduler<span class="token punctuation">,</span>
+                observer<span class="token punctuation">:</span> observer
+            <span class="token punctuation">)</span>
 
-            let subscription = stateContext.source
-                .map(requests)
-                .subscribe { event in
-                    switch event {
-                    case .next(let requests):
-                        state.forwardRequests(requests)
-                    case .error(let error):
-                        observer.on(.error(error))
-                    case .completed:
-                        observer.on(.completed)
-                    }
-                }
+            <span class="token keyword">let</span> subscription <span class="token operator">=</span> stateContext<span class="token punctuation">.</span>source
+                <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>requests<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span>subscribe <span class="token punctuation">{</span> event <span class="token keyword">in</span>
+                    <span class="token keyword">switch</span> event <span class="token punctuation">{</span>
+                    <span class="token keyword">case</span> <span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token keyword">let</span> requests<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        state<span class="token punctuation">.</span><span class="token function">forwardRequests</span><span class="token punctuation">(</span>requests<span class="token punctuation">)</span>
+                    <span class="token keyword">case</span> <span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token keyword">let</span> error<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        observer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token keyword">case</span> <span class="token punctuation">.</span>completed<span class="token punctuation">:</span>
+                        observer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">.</span>completed<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
 
-            return Disposables.create {
-                state.dispose()
-                subscription.dispose()
-            }
-        }
-    }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+            <span class="token keyword">return</span> <span class="token builtin">Disposables</span><span class="token punctuation">.</span>create <span class="token punctuation">{</span>
+                state<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                subscription<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>泛型WeakOwner继承AnyObject，这里where的条件限定函数的参数，与返回的闭包无关</p>
-<pre class="line-numbers language-none"><code class="language-none">/**
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">/**
  Bi-directional binding of a system State to external state machine and events from it.
  Strongify owner.
- */
-public func bind&lt;State, Event, WeakOwner&gt;(_ owner: WeakOwner, _ bindings: @escaping (WeakOwner, ObservableSchedulerContext&lt;State&gt;) -&gt; (Bindings&lt;Event&gt;))
-    -&gt; (ObservableSchedulerContext&lt;State&gt;) -&gt; Observable&lt;Event&gt; where WeakOwner: AnyObject {
-    return bind(bindingsStrongify(owner, bindings))
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> bind<span class="token operator">&lt;</span><span class="token builtin">State</span><span class="token punctuation">,</span> <span class="token builtin">Event</span><span class="token punctuation">,</span> <span class="token builtin">WeakOwner</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">_</span> owner<span class="token punctuation">:</span> <span class="token builtin">WeakOwner</span><span class="token punctuation">,</span> <span class="token number">_</span> bindings<span class="token punctuation">:</span> @escaping <span class="token punctuation">(</span><span class="token builtin">WeakOwner</span><span class="token punctuation">,</span> <span class="token builtin">ObservableSchedulerContext</span><span class="token operator">&lt;</span><span class="token builtin">State</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token builtin">Bindings</span><span class="token operator">&lt;</span><span class="token builtin">Event</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token builtin">ObservableSchedulerContext</span><span class="token operator">&lt;</span><span class="token builtin">State</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Observable</span><span class="token operator">&lt;</span><span class="token builtin">Event</span><span class="token operator">&gt;</span> <span class="token keyword">where</span> <span class="token builtin">WeakOwner</span><span class="token punctuation">:</span> <span class="token builtin">AnyObject</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">bind</span><span class="token punctuation">(</span><span class="token function">bindingsStrongify</span><span class="token punctuation">(</span>owner<span class="token punctuation">,</span> bindings<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1236,7 +1236,7 @@ public func bind&lt;State, Event, WeakOwner&gt;(_ owner: WeakOwner, _ bindings: 
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

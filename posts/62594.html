@@ -32,9 +32,9 @@ zhang">
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -533,7 +533,7 @@ zhang">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -571,222 +571,222 @@ zhang">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="将framework提交至cocoapods工作记录"><a href="#将framework提交至cocoapods工作记录" class="headerlink" title="将framework提交至cocoapods工作记录"></a>将framework提交至cocoapods工作记录</h1><p>========================</p>
-<pre class="line-numbers language-none"><code class="language-none">zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % git add .
-zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % git commit -m "Initial release of InterfaceKit"
-[master (root-commit) a1942f6] Initial release of InterfaceKit
- 155 files changed, 21738 insertions(+)
- create mode 100644 .github/ISSUE_TEMPLATE.md
- create mode 100644 .github/Pull_request_template.md
- create mode 100644 .github/workflows/podspecs.yml
- create mode 100644 .github/workflows/tests.yml
- create mode 100644 .gitignore
- create mode 100644 .jazzy.yaml
- create mode 100644 .ruby-gemset
- create mode 100644 .ruby-version
- create mode 100644 .swift-version
- create mode 100644 .swiftformat
- create mode 100644 .swiftlint.yml
- create mode 100644 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
- create mode 100644 .swiftpm/xcode/package.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
- create mode 100644 CHANGELOG.md
- create mode 100644 CHANGELOG.zh-Hans.md
- create mode 100644 CONTRIBUTING.md
- create mode 100644 CONTRIBUTING.zh-Hans.md
- create mode 100644 CartfileExample/Cartfile
- create mode 100644 Code of Conduct.md
- create mode 100644 Code of Conduct.zh-Hans.md
- create mode 100644 Docs/Structs.html
- create mode 100644 Docs/Structs/InterfaceView.html
- create mode 100644 Docs/Structs/InterfaceViewController.html
- create mode 100644 Docs/Structs/NSInterfaceView.html
- create mode 100644 Docs/Structs/NSInterfaceViewController.html
- create mode 100644 Docs/Structs/WKInterfaceView.html
- create mode 100644 Docs/badge.svg
- create mode 100644 Docs/css/highlight.css
- create mode 100644 Docs/css/jazzy.css
- create mode 100644 Docs/docsets/.docset/Contents/Info.plist
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/Structs.html
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/Structs/InterfaceView.html
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/Structs/InterfaceViewController.html
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/Structs/NSInterfaceView.html
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/Structs/NSInterfaceViewController.html
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/Structs/WKInterfaceView.html
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/badge.svg
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/css/highlight.css
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/css/jazzy.css
- create mode 100755 Docs/docsets/.docset/Contents/Resources/Documents/img/carat.png
- create mode 100755 Docs/docsets/.docset/Contents/Resources/Documents/img/dash.png
- create mode 100755 Docs/docsets/.docset/Contents/Resources/Documents/img/gh.png
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/img/spinner.gif
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/index.html
- create mode 100755 Docs/docsets/.docset/Contents/Resources/Documents/js/jazzy.js
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/js/jazzy.search.js
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/js/jquery.min.js
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/js/lunr.min.js
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/js/typeahead.jquery.js
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/search.json
- create mode 100644 Docs/docsets/.docset/Contents/Resources/Documents/undocumented.json
- create mode 100644 Docs/docsets/.docset/Contents/Resources/docSet.dsidx
- create mode 100644 Docs/docsets/.tgz
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Info.plist
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs.html
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/InterfaceView.html
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/InterfaceViewController.html
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/NSInterfaceView.html
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/NSInterfaceViewController.html
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/WKInterfaceView.html
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/badge.svg
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/css/highlight.css
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/css/jazzy.css
- create mode 100755 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/img/carat.png
- create mode 100755 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/img/dash.png
- create mode 100755 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/img/gh.png
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/img/spinner.gif
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/index.html
- create mode 100755 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/jazzy.js
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/jazzy.search.js
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/jquery.min.js
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/lunr.min.js
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/typeahead.jquery.js
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/search.json
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/undocumented.json
- create mode 100644 Docs/docsets/InterfaceKit.docset/Contents/Resources/docSet.dsidx
- create mode 100644 Docs/docsets/InterfaceKit.tgz
- create mode 100644 Docs/docsets/InterfaceKit.xml
- create mode 100755 Docs/img/carat.png
- create mode 100755 Docs/img/dash.png
- create mode 100755 Docs/img/gh.png
- create mode 100644 Docs/img/spinner.gif
- create mode 100644 Docs/index.html
- create mode 100755 Docs/js/jazzy.js
- create mode 100644 Docs/js/jazzy.search.js
- create mode 100644 Docs/js/jquery.min.js
- create mode 100644 Docs/js/lunr.min.js
- create mode 100644 Docs/js/typeahead.jquery.js
- create mode 100644 Docs/search.json
- create mode 100644 Docs/undocumented.json
- create mode 100644 Example/iOSExample/EApp.swift
- create mode 100644 Example/iOSExample/Example.xcodeproj/project.pbxproj
- create mode 100644 Example/iOSExample/Example.xcodeproj/project.xcworkspace/contents.xcworkspacedata
- create mode 100644 Example/iOSExample/Example.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
- create mode 100644 Example/iOSExample/Example/Info.plist
- create mode 100644 Example/iOSExample/Example/Preview Content/Preview Assets.xcassets/Contents.json
- create mode 100644 Example/macOSExample/macOSExample.xcodeproj/project.pbxproj
- create mode 100644 Example/macOSExample/macOSExample.xcodeproj/project.xcworkspace/contents.xcworkspacedata
- create mode 100644 Example/macOSExample/macOSExample.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
- create mode 100644 Example/macOSExample/macOSExample/Info.plist
- create mode 100644 Example/macOSExample/macOSExample/Preview Content/Preview Assets.xcassets/Contents.json
- create mode 100644 Example/macOSExample/macOSExample/macOSExample.entitlements
- create mode 100644 Example/tvOSExample/tvOSExample.xcodeproj/project.pbxproj
- create mode 100644 Example/tvOSExample/tvOSExample.xcodeproj/project.xcworkspace/contents.xcworkspacedata
- create mode 100644 Example/tvOSExample/tvOSExample.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
- create mode 100644 Example/tvOSExample/tvOSExample/Info.plist
- create mode 100644 Example/tvOSExample/tvOSExample/Preview Content/Preview Assets.xcassets/Contents.json
- create mode 100644 Example/watchOSExample/watchOSExample WatchKit App/Assets.xcassets/AccentColor.colorset/Contents.json
- create mode 100644 Example/watchOSExample/watchOSExample WatchKit App/Assets.xcassets/AppIcon.appiconset/Contents.json
- create mode 100644 Example/watchOSExample/watchOSExample WatchKit App/Assets.xcassets/Contents.json
- create mode 100644 Example/watchOSExample/watchOSExample WatchKit App/Info.plist
- create mode 100644 Example/watchOSExample/watchOSExample WatchKit Extension/Info.plist
- create mode 100644 Example/watchOSExample/watchOSExample WatchKit Extension/Preview Content/Preview Assets.xcassets/Contents.json
- create mode 100644 Example/watchOSExample/watchOSExample.xcodeproj/project.pbxproj
- create mode 100644 Example/watchOSExample/watchOSExample.xcodeproj/project.xcworkspace/contents.xcworkspacedata
- create mode 100644 Example/watchOSExample/watchOSExample.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
- create mode 100644 Gemfile
- create mode 100644 InterfaceKit.podspec
- create mode 100644 InterfaceKit.xcframework.zip
- create mode 100644 InterfaceKit.xcodeproj/project.pbxproj
- create mode 100644 InterfaceKit.xcodeproj/project.xcworkspace/contents.xcworkspacedata
- create mode 100644 InterfaceKit.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
- create mode 100644 InterfaceKit.xcodeproj/xcshareddata/xcschemes/InterfaceKit.xcscheme
- create mode 100644 InterfaceKit.xcworkspace/contents.xcworkspacedata
- create mode 100644 InterfaceKit.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
- create mode 100644 InterfaceKit/Info.plist
- create mode 100644 InterfaceKit/InterfaceKit.h
- create mode 100644 InterfaceKitTests/Info.plist
- create mode 100644 InterfaceKitTests/InterfaceKitTests.swift
- create mode 100644 LICENSE
- create mode 100644 LICENSE.md
- create mode 100644 LICENSE.zh-Hans.md
- create mode 100644 Package.swift
- create mode 100644 Pictures/CartfileLocation.png
- create mode 100644 Pictures/China.png
- create mode 100644 Pictures/PodfileLocation.png
- create mode 100644 Pictures/SwiftPackageManager.png
- create mode 100644 Pictures/add_framework.png
- create mode 100644 Pictures/copy_files.png
- create mode 100644 Pictures/drag_framework.png
- create mode 100644 Pictures/unzip.png
- create mode 100644 Pictures/use_frameworks.png
- create mode 100644 Pictures/use_xcframeworks.png
- create mode 100755 PodfileExample/Podfile
- create mode 100644 README.md
- create mode 100644 README.zh-Hans.md
- create mode 100644 Sources/InterfaceKit/NSInterface.swift
- create mode 100644 Sources/InterfaceKit/UIInterface.swift
- create mode 100644 Sources/InterfaceKit/WKInterface.swift
- create mode 100644 Tests/InterfaceKitTests/InterfaceKitTests.swift
- create mode 100644 Tests/InterfaceKitTests/XCTestManifests.swift
- create mode 100644 Tests/LinuxMain.swift
- create mode 100644 Vision.md
- create mode 100644 Vision.zh-Hans.md
- create mode 100644 codecov.yml
-zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % git push
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token function">git</span> commit -m <span class="token string">"Initial release of InterfaceKit"</span>
+<span class="token punctuation">[</span>master <span class="token punctuation">(</span>root-commit<span class="token punctuation">)</span> a1942f6<span class="token punctuation">]</span> Initial release of InterfaceKit
+ <span class="token number">155</span> files changed, <span class="token number">21738</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+ create mode <span class="token number">100644</span> .github/ISSUE_TEMPLATE.md
+ create mode <span class="token number">100644</span> .github/Pull_request_template.md
+ create mode <span class="token number">100644</span> .github/workflows/podspecs.yml
+ create mode <span class="token number">100644</span> .github/workflows/tests.yml
+ create mode <span class="token number">100644</span> .gitignore
+ create mode <span class="token number">100644</span> .jazzy.yaml
+ create mode <span class="token number">100644</span> .ruby-gemset
+ create mode <span class="token number">100644</span> .ruby-version
+ create mode <span class="token number">100644</span> .swift-version
+ create mode <span class="token number">100644</span> .swiftformat
+ create mode <span class="token number">100644</span> .swiftlint.yml
+ create mode <span class="token number">100644</span> .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+ create mode <span class="token number">100644</span> .swiftpm/xcode/package.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ create mode <span class="token number">100644</span> CHANGELOG.md
+ create mode <span class="token number">100644</span> CHANGELOG.zh-Hans.md
+ create mode <span class="token number">100644</span> CONTRIBUTING.md
+ create mode <span class="token number">100644</span> CONTRIBUTING.zh-Hans.md
+ create mode <span class="token number">100644</span> CartfileExample/Cartfile
+ create mode <span class="token number">100644</span> Code of Conduct.md
+ create mode <span class="token number">100644</span> Code of Conduct.zh-Hans.md
+ create mode <span class="token number">100644</span> Docs/Structs.html
+ create mode <span class="token number">100644</span> Docs/Structs/InterfaceView.html
+ create mode <span class="token number">100644</span> Docs/Structs/InterfaceViewController.html
+ create mode <span class="token number">100644</span> Docs/Structs/NSInterfaceView.html
+ create mode <span class="token number">100644</span> Docs/Structs/NSInterfaceViewController.html
+ create mode <span class="token number">100644</span> Docs/Structs/WKInterfaceView.html
+ create mode <span class="token number">100644</span> Docs/badge.svg
+ create mode <span class="token number">100644</span> Docs/css/highlight.css
+ create mode <span class="token number">100644</span> Docs/css/jazzy.css
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Info.plist
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/Structs.html
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/Structs/InterfaceView.html
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/Structs/InterfaceViewController.html
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/Structs/NSInterfaceView.html
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/Structs/NSInterfaceViewController.html
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/Structs/WKInterfaceView.html
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/badge.svg
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/css/highlight.css
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/css/jazzy.css
+ create mode <span class="token number">100755</span> Docs/docsets/.docset/Contents/Resources/Documents/img/carat.png
+ create mode <span class="token number">100755</span> Docs/docsets/.docset/Contents/Resources/Documents/img/dash.png
+ create mode <span class="token number">100755</span> Docs/docsets/.docset/Contents/Resources/Documents/img/gh.png
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/img/spinner.gif
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/index.html
+ create mode <span class="token number">100755</span> Docs/docsets/.docset/Contents/Resources/Documents/js/jazzy.js
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/js/jazzy.search.js
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/js/jquery.min.js
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/js/lunr.min.js
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/js/typeahead.jquery.js
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/search.json
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/Documents/undocumented.json
+ create mode <span class="token number">100644</span> Docs/docsets/.docset/Contents/Resources/docSet.dsidx
+ create mode <span class="token number">100644</span> Docs/docsets/.tgz
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Info.plist
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs.html
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/InterfaceView.html
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/InterfaceViewController.html
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/NSInterfaceView.html
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/NSInterfaceViewController.html
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/Structs/WKInterfaceView.html
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/badge.svg
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/css/highlight.css
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/css/jazzy.css
+ create mode <span class="token number">100755</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/img/carat.png
+ create mode <span class="token number">100755</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/img/dash.png
+ create mode <span class="token number">100755</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/img/gh.png
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/img/spinner.gif
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/index.html
+ create mode <span class="token number">100755</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/jazzy.js
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/jazzy.search.js
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/jquery.min.js
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/lunr.min.js
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/js/typeahead.jquery.js
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/search.json
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/Documents/undocumented.json
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.docset/Contents/Resources/docSet.dsidx
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.tgz
+ create mode <span class="token number">100644</span> Docs/docsets/InterfaceKit.xml
+ create mode <span class="token number">100755</span> Docs/img/carat.png
+ create mode <span class="token number">100755</span> Docs/img/dash.png
+ create mode <span class="token number">100755</span> Docs/img/gh.png
+ create mode <span class="token number">100644</span> Docs/img/spinner.gif
+ create mode <span class="token number">100644</span> Docs/index.html
+ create mode <span class="token number">100755</span> Docs/js/jazzy.js
+ create mode <span class="token number">100644</span> Docs/js/jazzy.search.js
+ create mode <span class="token number">100644</span> Docs/js/jquery.min.js
+ create mode <span class="token number">100644</span> Docs/js/lunr.min.js
+ create mode <span class="token number">100644</span> Docs/js/typeahead.jquery.js
+ create mode <span class="token number">100644</span> Docs/search.json
+ create mode <span class="token number">100644</span> Docs/undocumented.json
+ create mode <span class="token number">100644</span> Example/iOSExample/EApp.swift
+ create mode <span class="token number">100644</span> Example/iOSExample/Example.xcodeproj/project.pbxproj
+ create mode <span class="token number">100644</span> Example/iOSExample/Example.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ create mode <span class="token number">100644</span> Example/iOSExample/Example.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ create mode <span class="token number">100644</span> Example/iOSExample/Example/Info.plist
+ create mode <span class="token number">100644</span> Example/iOSExample/Example/Preview Content/Preview Assets.xcassets/Contents.json
+ create mode <span class="token number">100644</span> Example/macOSExample/macOSExample.xcodeproj/project.pbxproj
+ create mode <span class="token number">100644</span> Example/macOSExample/macOSExample.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ create mode <span class="token number">100644</span> Example/macOSExample/macOSExample.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ create mode <span class="token number">100644</span> Example/macOSExample/macOSExample/Info.plist
+ create mode <span class="token number">100644</span> Example/macOSExample/macOSExample/Preview Content/Preview Assets.xcassets/Contents.json
+ create mode <span class="token number">100644</span> Example/macOSExample/macOSExample/macOSExample.entitlements
+ create mode <span class="token number">100644</span> Example/tvOSExample/tvOSExample.xcodeproj/project.pbxproj
+ create mode <span class="token number">100644</span> Example/tvOSExample/tvOSExample.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ create mode <span class="token number">100644</span> Example/tvOSExample/tvOSExample.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ create mode <span class="token number">100644</span> Example/tvOSExample/tvOSExample/Info.plist
+ create mode <span class="token number">100644</span> Example/tvOSExample/tvOSExample/Preview Content/Preview Assets.xcassets/Contents.json
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample WatchKit App/Assets.xcassets/AccentColor.colorset/Contents.json
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample WatchKit App/Assets.xcassets/AppIcon.appiconset/Contents.json
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample WatchKit App/Assets.xcassets/Contents.json
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample WatchKit App/Info.plist
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample WatchKit Extension/Info.plist
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample WatchKit Extension/Preview Content/Preview Assets.xcassets/Contents.json
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample.xcodeproj/project.pbxproj
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ create mode <span class="token number">100644</span> Example/watchOSExample/watchOSExample.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ create mode <span class="token number">100644</span> Gemfile
+ create mode <span class="token number">100644</span> InterfaceKit.podspec
+ create mode <span class="token number">100644</span> InterfaceKit.xcframework.zip
+ create mode <span class="token number">100644</span> InterfaceKit.xcodeproj/project.pbxproj
+ create mode <span class="token number">100644</span> InterfaceKit.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ create mode <span class="token number">100644</span> InterfaceKit.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ create mode <span class="token number">100644</span> InterfaceKit.xcodeproj/xcshareddata/xcschemes/InterfaceKit.xcscheme
+ create mode <span class="token number">100644</span> InterfaceKit.xcworkspace/contents.xcworkspacedata
+ create mode <span class="token number">100644</span> InterfaceKit.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ create mode <span class="token number">100644</span> InterfaceKit/Info.plist
+ create mode <span class="token number">100644</span> InterfaceKit/InterfaceKit.h
+ create mode <span class="token number">100644</span> InterfaceKitTests/Info.plist
+ create mode <span class="token number">100644</span> InterfaceKitTests/InterfaceKitTests.swift
+ create mode <span class="token number">100644</span> LICENSE
+ create mode <span class="token number">100644</span> LICENSE.md
+ create mode <span class="token number">100644</span> LICENSE.zh-Hans.md
+ create mode <span class="token number">100644</span> Package.swift
+ create mode <span class="token number">100644</span> Pictures/CartfileLocation.png
+ create mode <span class="token number">100644</span> Pictures/China.png
+ create mode <span class="token number">100644</span> Pictures/PodfileLocation.png
+ create mode <span class="token number">100644</span> Pictures/SwiftPackageManager.png
+ create mode <span class="token number">100644</span> Pictures/add_framework.png
+ create mode <span class="token number">100644</span> Pictures/copy_files.png
+ create mode <span class="token number">100644</span> Pictures/drag_framework.png
+ create mode <span class="token number">100644</span> Pictures/unzip.png
+ create mode <span class="token number">100644</span> Pictures/use_frameworks.png
+ create mode <span class="token number">100644</span> Pictures/use_xcframeworks.png
+ create mode <span class="token number">100755</span> PodfileExample/Podfile
+ create mode <span class="token number">100644</span> README.md
+ create mode <span class="token number">100644</span> README.zh-Hans.md
+ create mode <span class="token number">100644</span> Sources/InterfaceKit/NSInterface.swift
+ create mode <span class="token number">100644</span> Sources/InterfaceKit/UIInterface.swift
+ create mode <span class="token number">100644</span> Sources/InterfaceKit/WKInterface.swift
+ create mode <span class="token number">100644</span> Tests/InterfaceKitTests/InterfaceKitTests.swift
+ create mode <span class="token number">100644</span> Tests/InterfaceKitTests/XCTestManifests.swift
+ create mode <span class="token number">100644</span> Tests/LinuxMain.swift
+ create mode <span class="token number">100644</span> Vision.md
+ create mode <span class="token number">100644</span> Vision.zh-Hans.md
+ create mode <span class="token number">100644</span> codecov.yml
+zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token function">git</span> push
 To https://github.com/adong666666/InterfaceKit.git
- ! [rejected]        master -&gt; master (fetch first)
-error: failed to push some refs to 'https://github.com/adong666666/InterfaceKit.git'
-hint: Updates were rejected because the remote contains work that you do
+ <span class="token operator">!</span> <span class="token punctuation">[</span>rejected<span class="token punctuation">]</span>        master -<span class="token operator">&gt;</span> master <span class="token punctuation">(</span>fetch first<span class="token punctuation">)</span>
+error: failed to push some refs to <span class="token string">'https://github.com/adong666666/InterfaceKit.git'</span>
+hint: Updates were rejected because the remote contains work that you <span class="token keyword">do</span>
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % git push -f
-Enumerating objects: 162, done.
-Counting objects: 100% (162/162), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (145/145), done.
-Writing objects: 100% (162/162), 8.12 MiB | 45.00 KiB/s, done.
-Total 162 (delta 28), reused 0 (delta 0)
-remote: Resolving deltas: 100% (28/28), done.
+hint: <span class="token punctuation">(</span>e.g., <span class="token string">'git pull ...'</span><span class="token punctuation">)</span> before pushing again.
+hint: See the <span class="token string">'Note about fast-forwards'</span> <span class="token keyword">in</span> <span class="token string">'git push --help'</span> <span class="token keyword">for</span> details.
+zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token function">git</span> push -f
+Enumerating objects: <span class="token number">162</span>, done.
+Counting objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">162</span>/162<span class="token punctuation">)</span>, done.
+Delta compression using up to <span class="token number">16</span> threads
+Compressing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">145</span>/145<span class="token punctuation">)</span>, done.
+Writing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">162</span>/162<span class="token punctuation">)</span>, <span class="token number">8.12</span> MiB <span class="token operator">|</span> <span class="token number">45.00</span> KiB/s, done.
+Total <span class="token number">162</span> <span class="token punctuation">(</span>delta <span class="token number">28</span><span class="token punctuation">)</span>, reused <span class="token number">0</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>
+remote: Resolving deltas: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">28</span>/28<span class="token punctuation">)</span>, done.
 To https://github.com/adong666666/InterfaceKit.git
- + 7d1efa9...a1942f6 master -&gt; master (forced update)
-zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % git tag 5.4.0
-zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % git push --tag
-Total 0 (delta 0), reused 0 (delta 0)
+ + 7d1efa9<span class="token punctuation">..</span>.a1942f6 master -<span class="token operator">&gt;</span> master <span class="token punctuation">(</span>forced update<span class="token punctuation">)</span>
+zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token function">git</span> tag <span class="token number">5.4</span>.0
+zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token function">git</span> push --tag
+Total <span class="token number">0</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>, reused <span class="token number">0</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>
 To https://github.com/adong666666/InterfaceKit.git
- * [new tag]         5.4.0 -&gt; 5.4.0
+ * <span class="token punctuation">[</span>new tag<span class="token punctuation">]</span>         <span class="token number">5.4</span>.0 -<span class="token operator">&gt;</span> <span class="token number">5.4</span>.0
 zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % pod lib lint
 
- -&gt; InterfaceKit (5.4.0)
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Using new build system
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Building targets in parallel
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Using codesigning identity override: -
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Planning build
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Constructing build description
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  warning: Skipping code signing because the target does not have an Info.plist file and one is not being generated automatically. (in target 'App' from project 'App')
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Using codesigning identity override: 
+ -<span class="token operator">&gt;</span> InterfaceKit <span class="token punctuation">(</span><span class="token number">5.4</span>.0<span class="token punctuation">)</span>
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Using new build system
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Building targets <span class="token keyword">in</span> parallel
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Using codesigning identity override: -
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Planning build
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Constructing build description
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  warning: Skipping code signing because the target does not have an Info.plist <span class="token function">file</span> and one is not being generated automatically. <span class="token punctuation">(</span>in target <span class="token string">'App'</span> from project <span class="token string">'App'</span><span class="token punctuation">)</span>
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Using codesigning identity override: 
 
 InterfaceKit passed validation.
 zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % pod trunk push InterfaceKit.podspec
-Updating spec repo `trunk`
+Updating spec repo <span class="token variable"><span class="token variable">`</span>trunk<span class="token variable">`</span></span>
 Validating podspec
- -&gt; InterfaceKit (5.4.0)
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Using new build system
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Building targets in parallel
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Using codesigning identity override: -
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Planning build
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Constructing build description
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  warning: Skipping code signing because the target does not have an Info.plist file and one is not being generated automatically. (in target 'App' from project 'App')
-    - NOTE  | [InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more...] xcodebuild:  note: Using codesigning identity override: 
+ -<span class="token operator">&gt;</span> InterfaceKit <span class="token punctuation">(</span><span class="token number">5.4</span>.0<span class="token punctuation">)</span>
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Using new build system
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Building targets <span class="token keyword">in</span> parallel
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Using codesigning identity override: -
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Planning build
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Constructing build description
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  warning: Skipping code signing because the target does not have an Info.plist <span class="token function">file</span> and one is not being generated automatically. <span class="token punctuation">(</span>in target <span class="token string">'App'</span> from project <span class="token string">'App'</span><span class="token punctuation">)</span>
+    - NOTE  <span class="token operator">|</span> <span class="token punctuation">[</span>InterfaceKit/UIKit, InterfaceKit/AppKit, InterfaceKit/WatchKit, and more<span class="token punctuation">..</span>.<span class="token punctuation">]</span> xcodebuild:  note: Using codesigning identity override: 
 
-Updating spec repo `trunk`
+Updating spec repo <span class="token variable"><span class="token variable">`</span>trunk<span class="token variable">`</span></span>
 
 --------------------------------------------------------------------------------
  🎉  Congrats
 
- 🚀  InterfaceKit (5.4.0) successfully published
- 📅  April 30th, 10:04
+ 🚀  InterfaceKit <span class="token punctuation">(</span><span class="token number">5.4</span>.0<span class="token punctuation">)</span> successfully published
+ 📅  April 30th, <span class="token number">10</span>:04
  🌎  https://cocoapods.org/pods/InterfaceKit
- 👍  Tell your friends!
+ 👍  Tell your friends<span class="token operator">!</span>
 --------------------------------------------------------------------------------
 zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit %       <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-none"><code class="language-none">Last login: Thu Jan 17 17:43:47 on ttys001
@@ -1883,7 +1883,7 @@ iMac-2:CommonUse adong666666$
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

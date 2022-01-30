@@ -33,9 +33,9 @@ let urls: ">
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -534,7 +534,7 @@ let urls: ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -573,184 +573,184 @@ let urls: ">
             <div id="articleContent">
                 <h1 id="iOS-Swift文件夹和文件操作"><a href="#iOS-Swift文件夹和文件操作" class="headerlink" title="iOS_Swift文件夹和文件操作"></a>iOS_Swift文件夹和文件操作</h1><p>========================</p>
 <p>首先获取app文件夹：(以下例子都在doucment文件夹下操作)</p>
-<pre class="line-numbers language-none"><code class="language-none">let manager = FileManager.default
-let urls: [URL] = manager.urls(for: .documentDirectory, in: .userDomainMask)
-// .libraryDirectory、.cachesDirectory ...
-self.documentURL = urls.first!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><pre class="line-numbers language-none"><code class="language-none">let url = self.documentURL.appendingPathComponent("moxiaoyan", isDirectory: true)
-var isDirectory: ObjCBool = ObjCBool(false)
-let isExist = manager.fileExists(atPath: url.path, isDirectory: &amp;isDirectory)
-if !isExist {
-  do {
-    try manager.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
-  } catch {
-    print("createDirectory error:\(error)")
-  }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="创建文件，并写入内容"><a href="#创建文件，并写入内容" class="headerlink" title="创建文件，并写入内容"></a>创建文件，并写入内容</h2><pre class="line-numbers language-none"><code class="language-none">let url = self.documentURL.appendingPathComponent("moxiaoyan/test1.txt", isDirectory: true) // txt文件会自动创建，只要给个名称就行
-let string = "moxiaoyan"
-do {
-  try string.write(to: url, atomically: true, encoding: .utf8)
-  // Data、Array、Dictionary、Image 都可以write
-} catch {
-  print("write string error:\(error)")
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="文件夹-文件-信息"><a href="#文件夹-文件-信息" class="headerlink" title="文件夹/文件 信息"></a>文件夹/文件 信息</h2><pre class="line-numbers language-none"><code class="language-none">let url = self.documentURL.appendingPathComponent("moxiaoyan", isDirectory: true) // or "moxiaoyan/test1.txt"
-// 可读、可写、可执行、可删除
-let readable = manager.isReadableFile(atPath: url.path)
-let writeable = manager.isWritableFile(atPath: url.path)
-let executable = manager.isExecutableFile(atPath: url.path)
-let deleteable = manager.isDeletableFile(atPath: url.path)
-print("readable:\(readable) writeable:\(writeable) executable:\(executable) deleteable:\(deleteable)")
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> manager <span class="token operator">=</span> <span class="token builtin">FileManager</span><span class="token punctuation">.</span><span class="token keyword">default</span>
+<span class="token keyword">let</span> urls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token constant">URL</span><span class="token punctuation">]</span> <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">urls</span><span class="token punctuation">(</span><span class="token keyword">for</span><span class="token punctuation">:</span> <span class="token punctuation">.</span>documentDirectory<span class="token punctuation">,</span> <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token punctuation">.</span>userDomainMask<span class="token punctuation">)</span>
+<span class="token comment">// .libraryDirectory、.cachesDirectory ...</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span>documentURL <span class="token operator">=</span> urls<span class="token punctuation">.</span><span class="token builtin">first</span><span class="token operator">!</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan"</span><span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> isDirectory<span class="token punctuation">:</span> <span class="token builtin">ObjCBool</span> <span class="token operator">=</span> <span class="token function">ObjCBool</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> isExist <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">fileExists</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token operator">&amp;</span>isDirectory<span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token operator">!</span>isExist <span class="token punctuation">{</span>
+  <span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> manager<span class="token punctuation">.</span><span class="token function">createDirectory</span><span class="token punctuation">(</span>at<span class="token punctuation">:</span> url<span class="token punctuation">,</span> withIntermediateDirectories<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> attributes<span class="token punctuation">:</span> <span class="token constant">nil</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"createDirectory error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="创建文件，并写入内容"><a href="#创建文件，并写入内容" class="headerlink" title="创建文件，并写入内容"></a>创建文件，并写入内容</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan/test1.txt"</span><span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token comment">// txt文件会自动创建，只要给个名称就行</span>
+<span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">"moxiaoyan"</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token keyword">try</span> string<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>to<span class="token punctuation">:</span> url<span class="token punctuation">,</span> atomically<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> encoding<span class="token punctuation">:</span> <span class="token punctuation">.</span>utf8<span class="token punctuation">)</span>
+  <span class="token comment">// Data、Array、Dictionary、Image 都可以write</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"write string error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="文件夹-文件-信息"><a href="#文件夹-文件-信息" class="headerlink" title="文件夹/文件 信息"></a>文件夹/文件 信息</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan"</span><span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token comment">// or "moxiaoyan/test1.txt"</span>
+<span class="token comment">// 可读、可写、可执行、可删除</span>
+<span class="token keyword">let</span> readable <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">isReadableFile</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+<span class="token keyword">let</span> writeable <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">isWritableFile</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+<span class="token keyword">let</span> executable <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">isExecutableFile</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+<span class="token keyword">let</span> deleteable <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">isDeletableFile</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"readable:<span class="token interpolation"><span class="token delimiter variable">\(</span>readable<span class="token delimiter variable">)</span></span> writeable:<span class="token interpolation"><span class="token delimiter variable">\(</span>writeable<span class="token delimiter variable">)</span></span> executable:<span class="token interpolation"><span class="token delimiter variable">\(</span>executable<span class="token delimiter variable">)</span></span> deleteable:<span class="token interpolation"><span class="token delimiter variable">\(</span>deleteable<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
  
-// NSFileCreationDate:创建时间、NSFileSize:文件大小、NSFileType:文件类型...
-do {
-  let attributes: Dictionary = try manager.attributesOfItem(atPath: url.path)
-  print("attributes\(attributes)")
-  let fileSize = attributes[FileAttributeKey.size] as! Int
-  print("fileSize:\(fileSize)")
-} catch {
-  print("attributes error: \(error)")
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="删除-文件夹-文件"><a href="#删除-文件夹-文件" class="headerlink" title="删除 文件夹/文件"></a>删除 文件夹/文件</h2><pre class="line-numbers language-none"><code class="language-none">let url = self.documentURL.appendingPathComponent("moxiaoyan", isDirectory: true)
-var isDirectory: ObjCBool = ObjCBool(false)
-let isExist = manager.fileExists(atPath: url.path, isDirectory: &amp;isDirectory)
-if isExist {
-  do {
-    try manager.removeItem(at: url) // 删除文件
-    // try manager.removeItem(atPath: url.path) // 删除文件路径
-  } catch {
-    print("removeItem error:\(error)")
-  }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="清空文件夹"><a href="#清空文件夹" class="headerlink" title="清空文件夹"></a>清空文件夹</h2><pre class="line-numbers language-none"><code class="language-none">// 删除文件夹里的所有文件，而不删除文件夹
-let url = self.documentURL.appendingPathComponent("moxiaoyan", isDirectory: true)
-// 方法1：删除，再创建
-// self.deleteFile(name)
-// self.createFile(name)
+<span class="token comment">// NSFileCreationDate:创建时间、NSFileSize:文件大小、NSFileType:文件类型...</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> attributes<span class="token punctuation">:</span> <span class="token builtin">Dictionary</span> <span class="token operator">=</span> <span class="token keyword">try</span> manager<span class="token punctuation">.</span><span class="token function">attributesOfItem</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"attributes<span class="token interpolation"><span class="token delimiter variable">\(</span>attributes<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> fileSize <span class="token operator">=</span> attributes<span class="token punctuation">[</span><span class="token builtin">FileAttributeKey</span><span class="token punctuation">.</span>size<span class="token punctuation">]</span> <span class="token keyword">as</span><span class="token operator">!</span> <span class="token builtin">Int</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"fileSize:<span class="token interpolation"><span class="token delimiter variable">\(</span>fileSize<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"attributes error: <span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="删除-文件夹-文件"><a href="#删除-文件夹-文件" class="headerlink" title="删除 文件夹/文件"></a>删除 文件夹/文件</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan"</span><span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> isDirectory<span class="token punctuation">:</span> <span class="token builtin">ObjCBool</span> <span class="token operator">=</span> <span class="token function">ObjCBool</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> isExist <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">fileExists</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token operator">&amp;</span>isDirectory<span class="token punctuation">)</span>
+<span class="token keyword">if</span> isExist <span class="token punctuation">{</span>
+  <span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> manager<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span>at<span class="token punctuation">:</span> url<span class="token punctuation">)</span> <span class="token comment">// 删除文件</span>
+    <span class="token comment">// try manager.removeItem(atPath: url.path) // 删除文件路径</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"removeItem error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="清空文件夹"><a href="#清空文件夹" class="headerlink" title="清空文件夹"></a>清空文件夹</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">// 删除文件夹里的所有文件，而不删除文件夹</span>
+<span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan"</span><span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token comment">// 方法1：删除，再创建</span>
+<span class="token comment">// self.deleteFile(name)</span>
+<span class="token comment">// self.createFile(name)</span>
  
-// 方法2：遍历文件删除
-let files = manager.subpaths(atPath: url.path)
-for file in files ?? [] {
-  do {
-    try manager.removeItem(atPath: url.path + "/\(file)") // 需要拼接路径！！
-  } catch {
-    print("remove item:\(file)\n error:\(error)")
-  }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="遍历文件夹"><a href="#遍历文件夹" class="headerlink" title="遍历文件夹"></a>遍历文件夹</h2><pre class="line-numbers language-none"><code class="language-none">let url = self.documentURL.appendingPathComponent("moxiaoyan", isDirectory: true)
-// 1.1 浅遍历：只有 文件夹/文件 名
-do {
-  let contentsOfDirectory = try manager.contentsOfDirectory(atPath: url.path)
-  print("contentsOfDirectory:\(contentsOfDirectory)")
-} catch {
-  print("1.1 浅遍历 error:\(error)")
-}
-// 1.2 浅遍历：包含完整路径
-do {
-  let contentsOfDirectory = try manager.contentsOfDirectory(at: url,
-                                                            includingPropertiesForKeys: nil,
-                                                            options: .skipsHiddenFiles)
-  print("skipsHiddenFiles:\(contentsOfDirectory)")
-} catch {
-  print("1.2 浅遍历 error:\(error)")
-}
+<span class="token comment">// 方法2：遍历文件删除</span>
+<span class="token keyword">let</span> files <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">subpaths</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+<span class="token keyword">for</span> file <span class="token keyword">in</span> files <span class="token operator">?</span><span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+  <span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> manager<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path <span class="token operator">+</span> <span class="token string">"/<span class="token interpolation"><span class="token delimiter variable">\(</span>file<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span> <span class="token comment">// 需要拼接路径！！</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"remove item:<span class="token interpolation"><span class="token delimiter variable">\(</span>file<span class="token delimiter variable">)</span></span>\n error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="遍历文件夹"><a href="#遍历文件夹" class="headerlink" title="遍历文件夹"></a>遍历文件夹</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan"</span><span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token comment">// 1.1 浅遍历：只有 文件夹/文件 名</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> contentsOfDirectory <span class="token operator">=</span> <span class="token keyword">try</span> manager<span class="token punctuation">.</span><span class="token function">contentsOfDirectory</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"contentsOfDirectory:<span class="token interpolation"><span class="token delimiter variable">\(</span>contentsOfDirectory<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"1.1 浅遍历 error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 1.2 浅遍历：包含完整路径</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> contentsOfDirectory <span class="token operator">=</span> <span class="token keyword">try</span> manager<span class="token punctuation">.</span><span class="token function">contentsOfDirectory</span><span class="token punctuation">(</span>at<span class="token punctuation">:</span> url<span class="token punctuation">,</span>
+                                                            includingPropertiesForKeys<span class="token punctuation">:</span> <span class="token constant">nil</span><span class="token punctuation">,</span>
+                                                            options<span class="token punctuation">:</span> <span class="token punctuation">.</span>skipsHiddenFiles<span class="token punctuation">)</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"skipsHiddenFiles:<span class="token interpolation"><span class="token delimiter variable">\(</span>contentsOfDirectory<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"1.2 浅遍历 error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
  
-// 2.1 深度遍历：只有当前文件夹下的路径
-let enumberatorAtPath = manager.enumerator(atPath: url.path)
-print("2.1 深度遍历：\(enumberatorAtPath?.allObjects)")
-// 2.2 深度遍历：包含完整路径
-let enumberatorAtURL = manager.enumerator(at: url,
-                                          includingPropertiesForKeys: nil,
-                                          options: .skipsHiddenFiles,
-                                          errorHandler: nil)
-print("2.2 深度遍历：\(enumberatorAtURL?.allObjects)")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="文件写入数据"><a href="#文件写入数据" class="headerlink" title="文件写入数据"></a>文件写入数据</h2><pre class="line-numbers language-none"><code class="language-none">let url = self.documentURL.appendingPathComponent("moxiaoyan/test1.txt", isDirectory: true)
-guard let data = string.data(using: .utf8, allowLossyConversion: true) else {
-  return
-}
-// 1.写在结尾
-do {
-  let writeHandler = try FileHandle(forWritingTo: url)
-  writeHandler.seekToEndOfFile()
-  writeHandler.write(data)
-} catch {
-  print("writeHandler error:\(error)")
-}
-// 2.从第n个字符开始覆盖
-do {
-  let writeHandler = try FileHandle(forWritingTo: url)
-  do {
-    try writeHandler.seek(toOffset: 1)
-  } catch {
-    print("writeHandler.seek error:\(error)")
-  }
-  writeHandler.write(data)
-} catch {
-  print("writeHandler error:\(error)")
-}
-// 3.只保留前n个字符
-do {
-  let writeHandler = try FileHandle(forWritingTo: url)
-  do {
-    try writeHandler.truncate(atOffset: 1)
-  } catch {
-    print("writeHandler.truncate error:\(error)")
-  }
-  writeHandler.write(data)
-} catch {
-  print("writeHandler error:\(error)")
-}
-// 4.只保留前n个字符:(n超过原字符长度，则并接在结尾)
-do {
-  let writeHandler = try FileHandle(forWritingTo: url)
-  writeHandler.truncateFile(atOffset: 12)
-  writeHandler.write(data)
-} catch {
-  print("writeHandler error:\(error)")
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="读取文件内容"><a href="#读取文件内容" class="headerlink" title="读取文件内容"></a>读取文件内容</h2><pre class="line-numbers language-none"><code class="language-none">let url = self.documentURL.appendingPathComponent("moxiaoyan/test1.txt", isDirectory: true)
-// 方法1:
-guard let data = manager.contents(atPath: url.path) else {
-  return
-}
-let readString = String(data: data, encoding: .utf8)
-print("方法1：\(readString ?? "")")
-// 方法2:
-guard let readHandler = FileHandle(forReadingAtPath: url.path) else {
-  return
-}
-guard let data2: Data = readHandler.readDataToEndOfFile() else {
-  return
-}
-let readString2 = String(data: data2, encoding: .utf8)
-print("方法2：\(readString2 ?? "")")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h2><pre class="line-numbers language-none"><code class="language-none">let file1 = self.documentURL.appendingPathComponent("moxiaoyan/test1.txt")
-let file2 = self.documentURL.appendingPathComponent("moxiaoyan/test2.txt")
-do {
-  // try manager.copyItem(at: file1, to: file2) // 直接复制文件
-  try manager.copyItem(atPath: file1.path, toPath: file2.path) // 复制文件内容
-} catch {
-  print("copyItem error:\(error)")
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="移动文件"><a href="#移动文件" class="headerlink" title="移动文件"></a>移动文件</h2><pre class="line-numbers language-none"><code class="language-none">let url = self.documentURL.appendingPathComponent(name, isDirectory: true)
-let file1 = url.appendingPathComponent(name)
-print("文件1:\(file1)")
-let file2 = url.appendingPathComponent(to + "/test1.txt")
-print("文件2:\(file2)")
-do {
-  // try manager.moveItem(atPath: file1.path, toPath: file2.path) // 直接拷贝文件
-  try manager.moveItem(at: file1, to: file2) // 拷贝文件内容
-} catch {
-  print("moveItem error:\(error)")
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="比较文件"><a href="#比较文件" class="headerlink" title="比较文件"></a>比较文件</h2><pre class="line-numbers language-none"><code class="language-none">let file1 = self.documentURL.appendingPathComponent(name1)
-let file2 = self.documentURL.appendingPathComponent(name2)
-// 参数必须的是路径（相同字符串false）
-let equal = manager.contentsEqual(atPath: file1.path, andPath: file2.path) 
-print("file1:\(file1)")
-print("file2:\(file2)")
-print("equal:\(equal)")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">// 2.1 深度遍历：只有当前文件夹下的路径</span>
+<span class="token keyword">let</span> enumberatorAtPath <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">enumerator</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"2.1 深度遍历：<span class="token interpolation"><span class="token delimiter variable">\(</span>enumberatorAtPath<span class="token operator">?</span><span class="token punctuation">.</span>allObjects<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token comment">// 2.2 深度遍历：包含完整路径</span>
+<span class="token keyword">let</span> enumberatorAtURL <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">enumerator</span><span class="token punctuation">(</span>at<span class="token punctuation">:</span> url<span class="token punctuation">,</span>
+                                          includingPropertiesForKeys<span class="token punctuation">:</span> <span class="token constant">nil</span><span class="token punctuation">,</span>
+                                          options<span class="token punctuation">:</span> <span class="token punctuation">.</span>skipsHiddenFiles<span class="token punctuation">,</span>
+                                          errorHandler<span class="token punctuation">:</span> <span class="token constant">nil</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"2.2 深度遍历：<span class="token interpolation"><span class="token delimiter variable">\(</span>enumberatorAtURL<span class="token operator">?</span><span class="token punctuation">.</span>allObjects<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="文件写入数据"><a href="#文件写入数据" class="headerlink" title="文件写入数据"></a>文件写入数据</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan/test1.txt"</span><span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">guard</span> <span class="token keyword">let</span> data <span class="token operator">=</span> string<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span>using<span class="token punctuation">:</span> <span class="token punctuation">.</span>utf8<span class="token punctuation">,</span> allowLossyConversion<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 1.写在结尾</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> writeHandler <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token function">FileHandle</span><span class="token punctuation">(</span>forWritingTo<span class="token punctuation">:</span> url<span class="token punctuation">)</span>
+  writeHandler<span class="token punctuation">.</span><span class="token function">seekToEndOfFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  writeHandler<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"writeHandler error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 2.从第n个字符开始覆盖</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> writeHandler <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token function">FileHandle</span><span class="token punctuation">(</span>forWritingTo<span class="token punctuation">:</span> url<span class="token punctuation">)</span>
+  <span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> writeHandler<span class="token punctuation">.</span><span class="token function">seek</span><span class="token punctuation">(</span>toOffset<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"writeHandler.seek error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  writeHandler<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"writeHandler error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 3.只保留前n个字符</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> writeHandler <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token function">FileHandle</span><span class="token punctuation">(</span>forWritingTo<span class="token punctuation">:</span> url<span class="token punctuation">)</span>
+  <span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> writeHandler<span class="token punctuation">.</span><span class="token function">truncate</span><span class="token punctuation">(</span>atOffset<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"writeHandler.truncate error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  writeHandler<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"writeHandler error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 4.只保留前n个字符:(n超过原字符长度，则并接在结尾)</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> writeHandler <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token function">FileHandle</span><span class="token punctuation">(</span>forWritingTo<span class="token punctuation">:</span> url<span class="token punctuation">)</span>
+  writeHandler<span class="token punctuation">.</span><span class="token function">truncateFile</span><span class="token punctuation">(</span>atOffset<span class="token punctuation">:</span> <span class="token number">12</span><span class="token punctuation">)</span>
+  writeHandler<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"writeHandler error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="读取文件内容"><a href="#读取文件内容" class="headerlink" title="读取文件内容"></a>读取文件内容</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan/test1.txt"</span><span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token comment">// 方法1:</span>
+<span class="token keyword">guard</span> <span class="token keyword">let</span> data <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">contents</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> readString <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>data<span class="token punctuation">:</span> data<span class="token punctuation">,</span> encoding<span class="token punctuation">:</span> <span class="token punctuation">.</span>utf8<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"方法1：<span class="token interpolation"><span class="token delimiter variable">\(</span>readString <span class="token operator">?</span><span class="token operator">?</span> <span class="token string">""</span><span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token comment">// 方法2:</span>
+<span class="token keyword">guard</span> <span class="token keyword">let</span> readHandler <span class="token operator">=</span> <span class="token function">FileHandle</span><span class="token punctuation">(</span>forReadingAtPath<span class="token punctuation">:</span> url<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">guard</span> <span class="token keyword">let</span> data2<span class="token punctuation">:</span> <span class="token builtin">Data</span> <span class="token operator">=</span> readHandler<span class="token punctuation">.</span><span class="token function">readDataToEndOfFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> readString2 <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>data<span class="token punctuation">:</span> data2<span class="token punctuation">,</span> encoding<span class="token punctuation">:</span> <span class="token punctuation">.</span>utf8<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"方法2：<span class="token interpolation"><span class="token delimiter variable">\(</span>readString2 <span class="token operator">?</span><span class="token operator">?</span> <span class="token string">""</span><span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> file1 <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan/test1.txt"</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> file2 <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span><span class="token string">"moxiaoyan/test2.txt"</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token comment">// try manager.copyItem(at: file1, to: file2) // 直接复制文件</span>
+  <span class="token keyword">try</span> manager<span class="token punctuation">.</span><span class="token function">copyItem</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> file1<span class="token punctuation">.</span>path<span class="token punctuation">,</span> toPath<span class="token punctuation">:</span> file2<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token comment">// 复制文件内容</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"copyItem error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="移动文件"><a href="#移动文件" class="headerlink" title="移动文件"></a>移动文件</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> isDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> file1 <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"文件1:<span class="token interpolation"><span class="token delimiter variable">\(</span>file1<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> file2 <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span>to <span class="token operator">+</span> <span class="token string">"/test1.txt"</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"文件2:<span class="token interpolation"><span class="token delimiter variable">\(</span>file2<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+  <span class="token comment">// try manager.moveItem(atPath: file1.path, toPath: file2.path) // 直接拷贝文件</span>
+  <span class="token keyword">try</span> manager<span class="token punctuation">.</span><span class="token function">moveItem</span><span class="token punctuation">(</span>at<span class="token punctuation">:</span> file1<span class="token punctuation">,</span> to<span class="token punctuation">:</span> file2<span class="token punctuation">)</span> <span class="token comment">// 拷贝文件内容</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"moveItem error:<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="比较文件"><a href="#比较文件" class="headerlink" title="比较文件"></a>比较文件</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> file1 <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span>name1<span class="token punctuation">)</span>
+<span class="token keyword">let</span> file2 <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>documentURL<span class="token punctuation">.</span><span class="token function">appendingPathComponent</span><span class="token punctuation">(</span>name2<span class="token punctuation">)</span>
+<span class="token comment">// 参数必须的是路径（相同字符串false）</span>
+<span class="token keyword">let</span> <span class="token builtin">equal</span> <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">contentsEqual</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> file1<span class="token punctuation">.</span>path<span class="token punctuation">,</span> andPath<span class="token punctuation">:</span> file2<span class="token punctuation">.</span>path<span class="token punctuation">)</span> 
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"file1:<span class="token interpolation"><span class="token delimiter variable">\(</span>file1<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"file2:<span class="token interpolation"><span class="token delimiter variable">\(</span>file2<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"equal:<span class="token interpolation"><span class="token delimiter variable">\(</span><span class="token builtin">equal</span><span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1365,7 +1365,7 @@ print("equal:\(equal)")<span aria-hidden="true" class="line-numbers-rows"><span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

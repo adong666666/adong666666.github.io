@@ -31,9 +31,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -536,7 +536,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-28
+                    2022-01-31
                 </div>
                 
 
@@ -602,28 +602,28 @@
 <p>总结： 解决动态规划问题最难的地方有两点：</p>
 <ul>
 <li>如何定义 f(n)</li>
-<li>如何通过 f(1), f(2), … f(n−1) 推导出f(n)，即状态转移方程<h2 id="1-递归"><a href="#1-递归" class="headerlink" title="1. 递归"></a>1. 递归</h2>有了状态转移方程，实际上已经可以直接用递归进行实现了。<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">int f(vector&lt;int&gt;&amp; nums, int i)
-{
-    int a = 1;
-    for(int j = 0; j &lt; i; ++j)
-    {
-        if(nums[j] &lt; nums[i])
-        ¦   a = max(a, f(nums, j) + 1);
-    }
-    return a;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="2-自顶向下（记忆化）"><a href="#2-自顶向下（记忆化）" class="headerlink" title="2. 自顶向下（记忆化）"></a>2. 自顶向下（记忆化）</h2>递归的解法需要非常多的重复计算，如果有一种办法能避免这些重复计算，可以节省大量计算时间。记忆化就是基于这个思路的算法。在递归地求解子问题 f(1)f(1), f(2)f(2)… 过程中，将结果保存到一个表里，在后续求解子问题中如果遇到求过结果的子问题，直接查表去得到答案而不计算。<pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">int f(vector&lt;int&gt;&amp; nums, int i, vector&lt;int&gt;&amp; dp)
-{
-    if(dp[i] != -1) return dp[i];
-    int a = 1;
-    for(int j = 0; j &lt; i; ++j)
-    {
-        if(nums[j] &lt; nums[i])
-        ¦   a = max(a, f(nums, j) + 1);
-    }
-    dp[i] = a;
-    return dp[i];
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<li>如何通过 f(1), f(2), … f(n−1) 推导出f(n)，即状态转移方程<h2 id="1-递归"><a href="#1-递归" class="headerlink" title="1. 递归"></a>1. 递归</h2>有了状态转移方程，实际上已经可以直接用递归进行实现了。<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">f</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        ¦   a <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> j<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2-自顶向下（记忆化）"><a href="#2-自顶向下（记忆化）" class="headerlink" title="2. 自顶向下（记忆化）"></a>2. 自顶向下（记忆化）</h2>递归的解法需要非常多的重复计算，如果有一种办法能避免这些重复计算，可以节省大量计算时间。记忆化就是基于这个思路的算法。在递归地求解子问题 f(1)f(1), f(2)f(2)… 过程中，将结果保存到一个表里，在后续求解子问题中如果遇到求过结果的子问题，直接查表去得到答案而不计算。<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">f</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> dp<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        ¦   a <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> j<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="3-自底向上（迭代）"><a href="#3-自底向上（迭代）" class="headerlink" title="3. 自底向上（迭代）"></a>3. 自底向上（迭代）</h2>在自顶向下的算法中，由于递归的存在，程序运行时有额外的栈的消耗。</li>
 </ul>
 <p>有了状态转移方程，我们就知道如何从最小的问题规模入手，然后不断地增加问题规模，直到所要求的问题规模为止。在这个过程中，我们同样地可以记忆每个问题规模的解来避免重复的计算。这种方法就是自底向上的方法，由于避免了递归，这是一种更好的办法。</p>
@@ -911,18 +911,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="">
+                <a href="22189.html">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/18.jpg" class="responsive-img" alt="解决动态规划问题的思考过程摘录">
+                        <img src="../medias/featureimages/15.jpg" class="responsive-img" alt="LeetCode第62题（动态规划）：不同路径">
                         
-                        <span class="card-title">解决动态规划问题的思考过程摘录</span>
+                        <span class="card-title">LeetCode第62题（动态规划）：不同路径</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -932,9 +931,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -947,7 +946,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -965,6 +963,10 @@
                     
                     <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
                         <span class="chip bg-color">记忆化</span>
+                    </a>
+                    
+                    <a href="../tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
                     </a>
                     
                 </div>
@@ -1269,7 +1271,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

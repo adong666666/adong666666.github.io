@@ -31,9 +31,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -528,7 +528,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -566,45 +566,45 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="iOS日志框架CocoaLumberjack"><a href="#iOS日志框架CocoaLumberjack" class="headerlink" title="iOS日志框架CocoaLumberjack"></a>iOS日志框架CocoaLumberjack</h1><p>========================<br>我使用了如下代码进行配置，只需在AppDelegate或SceneDelegate调用configDDLog即可（在其他某些文件配置也是可以的）</p>
-<pre class="line-numbers language-none"><code class="language-none">//
-//  configDDLog.swift
-//  RunInto
-//
-//  Created by 张赛东（手机：15674119605） on 2021/4/10.
-//  Copyright © 2021 adong666666. All rights reserved.
-//
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">//</span>
+<span class="token comment">//  configDDLog.swift</span>
+<span class="token comment">//  RunInto</span>
+<span class="token comment">//</span>
+<span class="token comment">//  Created by 张赛东（手机：15674119605） on 2021/4/10.</span>
+<span class="token comment">//  Copyright © 2021 adong666666. All rights reserved.</span>
+<span class="token comment">//</span>
 
-import Foundation
-import CocoaLumberjack
-/**
+<span class="token keyword">import</span> <span class="token builtin">Foundation</span>
+<span class="token keyword">import</span> <span class="token builtin">CocoaLumberjack</span>
+<span class="token comment">/**
  配置DDLog相关参数
- */
-func configDDLog() {
-//    //让日志只在debug时输出
-//    #if DEBUG
-//        defaultDebugLevel = .Verbose
-//    #else
-//    dynamicLogLevel = .off
-//    #endif
-    //添加发送日志语句到苹果的日志系统
-    DDLog.add(DDOSLogger.sharedInstance)
-    //添加发送日志语句到Xcode控制台
-    //DDLog.add(DDTTYLogger.sharedInstance!)
+ */</span>
+<span class="token keyword">func</span> <span class="token function">configDDLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">//    //让日志只在debug时输出</span>
+<span class="token comment">//    #if DEBUG</span>
+<span class="token comment">//        defaultDebugLevel = .Verbose</span>
+<span class="token comment">//    #else</span>
+<span class="token comment">//    dynamicLogLevel = .off</span>
+<span class="token comment">//    #endif</span>
+    <span class="token comment">//添加发送日志语句到苹果的日志系统</span>
+    <span class="token builtin">DDLog</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token builtin">DDOSLogger</span><span class="token punctuation">.</span>sharedInstance<span class="token punctuation">)</span>
+    <span class="token comment">//添加发送日志语句到Xcode控制台</span>
+    <span class="token comment">//DDLog.add(DDTTYLogger.sharedInstance!)</span>
     
-    //MARK: - 日志将会被保存到沙盒/Library/Caches/Logs，这意味着可以上传至服务器
-    let fileLogger: DDFileLogger = DDFileLogger() // File Logger
-    fileLogger.rollingFrequency = 60 * 60 * 24 // 24 hours
-    fileLogger.logFileManager.maximumNumberOfLogFiles = 7
-    DDLog.add(fileLogger)
-    log(fileLogger.currentLogFileInfo?.filePath)
+    <span class="token comment">//MARK: - 日志将会被保存到沙盒/Library/Caches/Logs，这意味着可以上传至服务器</span>
+    <span class="token keyword">let</span> fileLogger<span class="token punctuation">:</span> <span class="token builtin">DDFileLogger</span> <span class="token operator">=</span> <span class="token function">DDFileLogger</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// File Logger</span>
+    fileLogger<span class="token punctuation">.</span>rollingFrequency <span class="token operator">=</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span> <span class="token comment">// 24 hours</span>
+    fileLogger<span class="token punctuation">.</span>logFileManager<span class="token punctuation">.</span>maximumNumberOfLogFiles <span class="token operator">=</span> <span class="token number">7</span>
+    <span class="token builtin">DDLog</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>fileLogger<span class="token punctuation">)</span>
+    <span class="token function">log</span><span class="token punctuation">(</span>fileLogger<span class="token punctuation">.</span>currentLogFileInfo<span class="token operator">?</span><span class="token punctuation">.</span>filePath<span class="token punctuation">)</span>
     
-//    //允许控制台带颜色
-//    DDTTYLogger.sharedInstance?.colorsEnabled = true
-//    //设置Info下为蓝色
-//    DDTTYLogger.sharedInstance?.setForegroundColor(UIColor.blue, backgroundColor: UIColor.white, for: .info)
-}
+<span class="token comment">//    //允许控制台带颜色</span>
+<span class="token comment">//    DDTTYLogger.sharedInstance?.colorsEnabled = true</span>
+<span class="token comment">//    //设置Info下为蓝色</span>
+<span class="token comment">//    DDTTYLogger.sharedInstance?.setForegroundColor(UIColor.blue, backgroundColor: UIColor.white, for: .info)</span>
+<span class="token punctuation">}</span>
 
-/**
+<span class="token comment">/**
  得到输出的字符串的格式
 
  - parameter message:  日志消息的主题
@@ -613,82 +613,82 @@ func configDDLog() {
  - parameter line:     日志消息所在的方法中的行数，方便调试定位用
 
  - returns: 返回输出的日志字符串
- */
-private func getMessage(message: String, file: StaticString, function: StaticString, line: UInt ) -&gt; String {
-    //初始化需要返回的字符串
-    var returnMessage: String = ""
-    //通过file获取文件的名称
-    if let className = file.description.components(separatedBy: CharacterSet.init(charactersIn: "/")).last {
-        //拼接字符串
-        returnMessage = "\n" +
-                  "className:\(className)\n" +
-                  " function:\(function)\n" +
-                  "      ine:\(line)\n" +
-                  "  message:\(message)"
-    } else {
-        //拼接字符串
-        returnMessage = "\n" +
-            " function:\(function)\n" +
-            "      ine:\(line)\n" +
-            "  message:\(message)"
-    }
-    return returnMessage
-}
+ */</span>
+<span class="token keyword">private</span> <span class="token keyword">func</span> <span class="token function">getMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span><span class="token punctuation">,</span> function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span><span class="token punctuation">,</span> line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">String</span> <span class="token punctuation">{</span>
+    <span class="token comment">//初始化需要返回的字符串</span>
+    <span class="token keyword">var</span> returnMessage<span class="token punctuation">:</span> <span class="token builtin">String</span> <span class="token operator">=</span> <span class="token string">""</span>
+    <span class="token comment">//通过file获取文件的名称</span>
+    <span class="token keyword">if</span> <span class="token keyword">let</span> className <span class="token operator">=</span> file<span class="token punctuation">.</span>description<span class="token punctuation">.</span><span class="token function">components</span><span class="token punctuation">(</span>separatedBy<span class="token punctuation">:</span> <span class="token builtin">CharacterSet</span><span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span>charactersIn<span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">last</span> <span class="token punctuation">{</span>
+        <span class="token comment">//拼接字符串</span>
+        returnMessage <span class="token operator">=</span> <span class="token string">"\n"</span> <span class="token operator">+</span>
+                  <span class="token string">"className:<span class="token interpolation"><span class="token delimiter variable">\(</span>className<span class="token delimiter variable">)</span></span>\n"</span> <span class="token operator">+</span>
+                  <span class="token string">" function:<span class="token interpolation"><span class="token delimiter variable">\(</span>function<span class="token delimiter variable">)</span></span>\n"</span> <span class="token operator">+</span>
+                  <span class="token string">"      ine:<span class="token interpolation"><span class="token delimiter variable">\(</span>line<span class="token delimiter variable">)</span></span>\n"</span> <span class="token operator">+</span>
+                  <span class="token string">"  message:<span class="token interpolation"><span class="token delimiter variable">\(</span>message<span class="token delimiter variable">)</span></span>"</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">//拼接字符串</span>
+        returnMessage <span class="token operator">=</span> <span class="token string">"\n"</span> <span class="token operator">+</span>
+            <span class="token string">" function:<span class="token interpolation"><span class="token delimiter variable">\(</span>function<span class="token delimiter variable">)</span></span>\n"</span> <span class="token operator">+</span>
+            <span class="token string">"      ine:<span class="token interpolation"><span class="token delimiter variable">\(</span>line<span class="token delimiter variable">)</span></span>\n"</span> <span class="token operator">+</span>
+            <span class="token string">"  message:<span class="token interpolation"><span class="token delimiter variable">\(</span>message<span class="token delimiter variable">)</span></span>"</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> returnMessage
+<span class="token punctuation">}</span>
 
-/**
+<span class="token comment">/**
    输出Info等级的日志消息
- */
-public func logInfo(_ message: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-    DDLogInfo(getMessage(message: message, file: file, function: function, line: line))
-}
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">logInfo</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">DDLogInfo</span><span class="token punctuation">(</span><span class="token function">getMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">:</span> message<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-/**
+<span class="token comment">/**
  输出Error等级的日志消息
- */
-public func logError(_ message: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-    DDLogError(getMessage(message: message, file: file, function: function, line: line))
-}
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">logError</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">DDLogError</span><span class="token punctuation">(</span><span class="token function">getMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">:</span> message<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-/**
+<span class="token comment">/**
  输出Debug等级的日志消息
- */
-public func logDebug(_ message: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-    DDLogDebug(getMessage(message: message, file: file, function: function, line: line))
-}
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">logDebug</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">DDLogDebug</span><span class="token punctuation">(</span><span class="token function">getMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">:</span> message<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-/**
+<span class="token comment">/**
  输出Warn等级的日志消息
- */
-public func logWarn(_ message: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-    DDLogWarn(getMessage(message: message, file: file, function: function, line: line))
-}
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">logWarn</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">DDLogWarn</span><span class="token punctuation">(</span><span class="token function">getMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">:</span> message<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-public func logVerbose(_ message: String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-    DDLogVerbose(getMessage(message: message, file: file, function: function, line: line))
-}
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">logVerbose</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">DDLogVerbose</span><span class="token punctuation">(</span><span class="token function">getMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">:</span> message<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>此外，我还引用了官方demo的一些代码</p>
-<pre class="line-numbers language-none"><code class="language-none">// Software License Agreement (BSD License)
-//
-// Copyright (c) 2010-2021, Deusty, LLC
-// All rights reserved.
-//
-// Redistribution and use of this software in source and binary forms,
-// with or without modification, are permitted provided that the following conditions are met:
-//
-// * Redistributions of source code must retain the above copyright notice,
-//   this list of conditions and the following disclaimer.
-//
-// * Neither the name of Deusty nor the names of its contributors may be used
-//   to endorse or promote products derived from this software without specific
-//   prior written permission of Deusty, LLC.
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">// Software License Agreement (BSD License)</span>
+<span class="token comment">//</span>
+<span class="token comment">// Copyright (c) 2010-2021, Deusty, LLC</span>
+<span class="token comment">// All rights reserved.</span>
+<span class="token comment">//</span>
+<span class="token comment">// Redistribution and use of this software in source and binary forms,</span>
+<span class="token comment">// with or without modification, are permitted provided that the following conditions are met:</span>
+<span class="token comment">//</span>
+<span class="token comment">// * Redistributions of source code must retain the above copyright notice,</span>
+<span class="token comment">//   this list of conditions and the following disclaimer.</span>
+<span class="token comment">//</span>
+<span class="token comment">// * Neither the name of Deusty nor the names of its contributors may be used</span>
+<span class="token comment">//   to endorse or promote products derived from this software without specific</span>
+<span class="token comment">//   prior written permission of Deusty, LLC.</span>
 
-#if SWIFT_PACKAGE
-import CocoaLumberjack
-import CocoaLumberjackSwiftSupport
+#<span class="token keyword">if</span> <span class="token constant">SWIFT_PACKAGE</span>
+<span class="token keyword">import</span> <span class="token builtin">CocoaLumberjack</span>
+<span class="token keyword">import</span> <span class="token builtin">CocoaLumberjackSwiftSupport</span>
 #endif
 
-/**
+<span class="token comment">/**
  * Replacement for Swift's `assert` function that will output a log message even when assertions
  * are disabled.
  *
@@ -697,250 +697,250 @@ import CocoaLumberjackSwiftSupport
  *     even when assertions are disabled.
  *   - message: A string to log (using `DDLogError`) if `condition` evaluates to `false`.
  *     The default is an empty string.
- */
+ */</span>
 @inlinable
-public func DDAssert(_ condition: @autoclosure () -&gt; Bool, _ message: @autoclosure () -&gt; String = "", level: DDLogLevel = .all, context: Int = 0, file: StaticString = #file, function: StaticString = #function, line: UInt = #line, tag: Any? = nil, asynchronous async: Bool = false, ddlog: DDLog = DDLog.sharedInstance) {
-    if !condition() {
-        DDLogError(message(), level: level, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
-        Swift.assertionFailure(message(), file: file, line: line)
-    }
-}
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">DDAssert</span><span class="token punctuation">(</span><span class="token number">_</span> condition<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Bool</span><span class="token punctuation">,</span> <span class="token number">_</span> message<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">String</span> <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token operator">=</span> <span class="token punctuation">.</span>all<span class="token punctuation">,</span> context<span class="token punctuation">:</span> <span class="token builtin">Int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token constant">nil</span><span class="token punctuation">,</span> asynchronous async<span class="token punctuation">:</span> <span class="token builtin">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> <span class="token builtin">DDLog</span> <span class="token operator">=</span> <span class="token builtin">DDLog</span><span class="token punctuation">.</span>sharedInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token operator">!</span><span class="token function">condition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">DDLogError</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> level<span class="token punctuation">,</span> context<span class="token punctuation">:</span> context<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> tag<span class="token punctuation">,</span> asynchronous<span class="token punctuation">:</span> async<span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> ddlog<span class="token punctuation">)</span>
+        <span class="token builtin">Swift</span><span class="token punctuation">.</span><span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-/**
+<span class="token comment">/**
  * Replacement for Swift's `assertionFailure` function that will output a log message even
  * when assertions are disabled.
  *
  * - Parameters:
  *   - message: A string to log (using `DDLogError`). The default is an empty string.
- */
+ */</span>
 @inlinable
-public func DDAssertionFailure(_ message: @autoclosure () -&gt; String = "", level: DDLogLevel = .all, context: Int = 0, file: StaticString = #file, function: StaticString = #function, line: UInt = #line, tag: Any? = nil, asynchronous async: Bool = false, ddlog: DDLog = DDLog.sharedInstance) {
-    DDLogError(message(), level: level, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
-    Swift.assertionFailure(message(), file: file, line: line)
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">DDAssertionFailure</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">String</span> <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token operator">=</span> <span class="token punctuation">.</span>all<span class="token punctuation">,</span> context<span class="token punctuation">:</span> <span class="token builtin">Int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token constant">nil</span><span class="token punctuation">,</span> asynchronous async<span class="token punctuation">:</span> <span class="token builtin">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> <span class="token builtin">DDLog</span> <span class="token operator">=</span> <span class="token builtin">DDLog</span><span class="token punctuation">.</span>sharedInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">DDLogError</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> level<span class="token punctuation">,</span> context<span class="token punctuation">:</span> context<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> tag<span class="token punctuation">,</span> asynchronous<span class="token punctuation">:</span> async<span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> ddlog<span class="token punctuation">)</span>
+    <span class="token builtin">Swift</span><span class="token punctuation">.</span><span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">// Software License Agreement (BSD License)
-//
-// Copyright (c) 2010-2021, Deusty, LLC
-// All rights reserved.
-//
-// Redistribution and use of this software in source and binary forms,
-// with or without modification, are permitted provided that the following conditions are met:
-//
-// * Redistributions of source code must retain the above copyright notice,
-//   this list of conditions and the following disclaimer.
-//
-// * Neither the name of Deusty nor the names of its contributors may be used
-//   to endorse or promote products derived from this software without specific
-//   prior written permission of Deusty, LLC.
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">// Software License Agreement (BSD License)</span>
+<span class="token comment">//</span>
+<span class="token comment">// Copyright (c) 2010-2021, Deusty, LLC</span>
+<span class="token comment">// All rights reserved.</span>
+<span class="token comment">//</span>
+<span class="token comment">// Redistribution and use of this software in source and binary forms,</span>
+<span class="token comment">// with or without modification, are permitted provided that the following conditions are met:</span>
+<span class="token comment">//</span>
+<span class="token comment">// * Redistributions of source code must retain the above copyright notice,</span>
+<span class="token comment">//   this list of conditions and the following disclaimer.</span>
+<span class="token comment">//</span>
+<span class="token comment">// * Neither the name of Deusty nor the names of its contributors may be used</span>
+<span class="token comment">//   to endorse or promote products derived from this software without specific</span>
+<span class="token comment">//   prior written permission of Deusty, LLC.</span>
 
-@_exported import CocoaLumberjack
-#if SWIFT_PACKAGE
-import CocoaLumberjackSwiftSupport
+@_exported <span class="token keyword">import</span> <span class="token builtin">CocoaLumberjack</span>
+#<span class="token keyword">if</span> <span class="token constant">SWIFT_PACKAGE</span>
+<span class="token keyword">import</span> <span class="token builtin">CocoaLumberjackSwiftSupport</span>
 #endif
 
-extension DDLogFlag {
-    public static func from(_ logLevel: DDLogLevel) -&gt; DDLogFlag {
-        return DDLogFlag(rawValue: logLevel.rawValue)
-    }
+<span class="token keyword">extension</span> <span class="token builtin">DDLogFlag</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token function">from</span><span class="token punctuation">(</span><span class="token number">_</span> logLevel<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">DDLogFlag</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">DDLogFlag</span><span class="token punctuation">(</span>rawValue<span class="token punctuation">:</span> logLevel<span class="token punctuation">.</span>rawValue<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
 
-    public init(_ logLevel: DDLogLevel) {
-        self = DDLogFlag(rawValue: logLevel.rawValue)
-    }
+    <span class="token keyword">public</span> <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token number">_</span> logLevel<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span> <span class="token operator">=</span> <span class="token function">DDLogFlag</span><span class="token punctuation">(</span>rawValue<span class="token punctuation">:</span> logLevel<span class="token punctuation">.</span>rawValue<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
 
-    /// Returns the log level, or the lowest equivalent.
-    public func toLogLevel() -&gt; DDLogLevel {
-        if let ourValid = DDLogLevel(rawValue: rawValue) {
-            return ourValid
-        } else {
-            if contains(.verbose) {
-                return .verbose
-            } else if contains(.debug) {
-                return .debug
-            } else if contains(.info) {
-                return .info
-            } else if contains(.warning) {
-                return .warning
-            } else if contains(.error) {
-                return .error
-            } else {
-                return .off
-            }
-        }
-    }
-}
+    <span class="token comment">/// Returns the log level, or the lowest equivalent.</span>
+    <span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">toLogLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">DDLogLevel</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token keyword">let</span> ourValid <span class="token operator">=</span> <span class="token function">DDLogLevel</span><span class="token punctuation">(</span>rawValue<span class="token punctuation">:</span> rawValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> ourValid
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">.</span>verbose<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">.</span>verbose
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">.</span>debug<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">.</span>debug
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">.</span>info<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">.</span>info
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">.</span>warning<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">.</span>warning
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">.</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">.</span>error
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">.</span>off
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-/// The log level that can dynamically limit log messages (vs. the static DDDefaultLogLevel). This log level will only be checked, if the message passes the `DDDefaultLogLevel`.
-public var dynamicLogLevel = DDLogLevel.all
+<span class="token comment">/// The log level that can dynamically limit log messages (vs. the static DDDefaultLogLevel). This log level will only be checked, if the message passes the `DDDefaultLogLevel`.</span>
+<span class="token keyword">public</span> <span class="token keyword">var</span> dynamicLogLevel <span class="token operator">=</span> <span class="token builtin">DDLogLevel</span><span class="token punctuation">.</span>all
 
-/// Resets the `dynamicLogLevel` to `.all`.
-/// - SeeAlso: `dynamicLogLevel`
+<span class="token comment">/// Resets the `dynamicLogLevel` to `.all`.</span>
+<span class="token comment">/// - SeeAlso: `dynamicLogLevel`</span>
 @inlinable
-public func resetDynamicLogLevel() {
-    dynamicLogLevel = .all
-}
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">resetDynamicLogLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    dynamicLogLevel <span class="token operator">=</span> <span class="token punctuation">.</span>all
+<span class="token punctuation">}</span>
 
-@available(*, deprecated, message: "Please use dynamicLogLevel", renamed: "dynamicLogLevel")
-public var defaultDebugLevel: DDLogLevel {
-    get {
-        return dynamicLogLevel
-    }
-    set {
-        dynamicLogLevel = newValue
-    }
-}
+@<span class="token function">available</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span> deprecated<span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">"Please use dynamicLogLevel"</span><span class="token punctuation">,</span> renamed<span class="token punctuation">:</span> <span class="token string">"dynamicLogLevel"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">var</span> defaultDebugLevel<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token punctuation">{</span>
+    <span class="token keyword">get</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> dynamicLogLevel
+    <span class="token punctuation">}</span>
+    <span class="token keyword">set</span> <span class="token punctuation">{</span>
+        dynamicLogLevel <span class="token operator">=</span> newValue
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-@available(*, deprecated, message: "Please use resetDynamicLogLevel", renamed: "resetDynamicLogLevel")
-public func resetDefaultDebugLevel() {
-    resetDynamicLogLevel()
-}
+@<span class="token function">available</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span> deprecated<span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">"Please use resetDynamicLogLevel"</span><span class="token punctuation">,</span> renamed<span class="token punctuation">:</span> <span class="token string">"resetDynamicLogLevel"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">resetDefaultDebugLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">resetDynamicLogLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-/// If `true`, all logs (except errors) are logged asynchronously by default.
-public var asyncLoggingEnabled = true
-
-@inlinable
-public func _DDLogMessage(_ message: @autoclosure () -&gt; Any,
-                          level: DDLogLevel,
-                          flag: DDLogFlag,
-                          context: Int,
-                          file: StaticString,
-                          function: StaticString,
-                          line: UInt,
-                          tag: Any?,
-                          asynchronous: Bool,
-                          ddlog: DDLog) {
-    // The `dynamicLogLevel` will always be checked here (instead of being passed in).
-    // We cannot "mix" it with the `DDDefaultLogLevel`, because otherwise the compiler won't strip strings that are not logged.
-    if level.rawValue &amp; flag.rawValue != 0 &amp;&amp; dynamicLogLevel.rawValue &amp; flag.rawValue != 0 {
-        // Tell the DDLogMessage constructor to copy the C strings that get passed to it.
-        let logMessage = DDLogMessage(message: String(describing: message()),
-                                      level: level,
-                                      flag: flag,
-                                      context: context,
-                                      file: String(describing: file),
-                                      function: String(describing: function),
-                                      line: line,
-                                      tag: tag,
-                                      options: [.copyFile, .copyFunction],
-                                      timestamp: nil)
-        ddlog.log(asynchronous: asynchronous, message: logMessage)
-    }
-}
+<span class="token comment">/// If `true`, all logs (except errors) are logged asynchronously by default.</span>
+<span class="token keyword">public</span> <span class="token keyword">var</span> asyncLoggingEnabled <span class="token operator">=</span> <span class="token boolean">true</span>
 
 @inlinable
-public func DDLogDebug(_ message: @autoclosure () -&gt; Any,
-                       level: DDLogLevel = .debug,
-                       context: Int = 0,
-                       file: StaticString = #file,
-                       function: StaticString = #function,
-                       line: UInt = #line,
-                       tag: Any? = nil,
-                       asynchronous async: Bool = asyncLoggingEnabled,
-                       ddlog: DDLog = .sharedInstance) {
-    _DDLogMessage(message(), level: level, flag: .debug, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
-}
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">_DDLogMessage</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Any</span><span class="token punctuation">,</span>
+                          level<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span><span class="token punctuation">,</span>
+                          flag<span class="token punctuation">:</span> <span class="token builtin">DDLogFlag</span><span class="token punctuation">,</span>
+                          context<span class="token punctuation">:</span> <span class="token builtin">Int</span><span class="token punctuation">,</span>
+                          file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span><span class="token punctuation">,</span>
+                          function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span><span class="token punctuation">,</span>
+                          line<span class="token punctuation">:</span> <span class="token builtin">UInt</span><span class="token punctuation">,</span>
+                          tag<span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token operator">?</span><span class="token punctuation">,</span>
+                          asynchronous<span class="token punctuation">:</span> <span class="token builtin">Bool</span><span class="token punctuation">,</span>
+                          ddlog<span class="token punctuation">:</span> <span class="token builtin">DDLog</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// The `dynamicLogLevel` will always be checked here (instead of being passed in).</span>
+    <span class="token comment">// We cannot "mix" it with the `DDDefaultLogLevel`, because otherwise the compiler won't strip strings that are not logged.</span>
+    <span class="token keyword">if</span> level<span class="token punctuation">.</span>rawValue <span class="token operator">&amp;</span> flag<span class="token punctuation">.</span>rawValue <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> dynamicLogLevel<span class="token punctuation">.</span>rawValue <span class="token operator">&amp;</span> flag<span class="token punctuation">.</span>rawValue <span class="token operator">!=</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Tell the DDLogMessage constructor to copy the C strings that get passed to it.</span>
+        <span class="token keyword">let</span> logMessage <span class="token operator">=</span> <span class="token function">DDLogMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">:</span> <span class="token function">String</span><span class="token punctuation">(</span>describing<span class="token punctuation">:</span> <span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                      level<span class="token punctuation">:</span> level<span class="token punctuation">,</span>
+                                      flag<span class="token punctuation">:</span> flag<span class="token punctuation">,</span>
+                                      context<span class="token punctuation">:</span> context<span class="token punctuation">,</span>
+                                      file<span class="token punctuation">:</span> <span class="token function">String</span><span class="token punctuation">(</span>describing<span class="token punctuation">:</span> file<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                      function<span class="token punctuation">:</span> <span class="token function">String</span><span class="token punctuation">(</span>describing<span class="token punctuation">:</span> function<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                      line<span class="token punctuation">:</span> line<span class="token punctuation">,</span>
+                                      tag<span class="token punctuation">:</span> tag<span class="token punctuation">,</span>
+                                      options<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span>copyFile<span class="token punctuation">,</span> <span class="token punctuation">.</span>copyFunction<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                      timestamp<span class="token punctuation">:</span> <span class="token constant">nil</span><span class="token punctuation">)</span>
+        ddlog<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>asynchronous<span class="token punctuation">:</span> asynchronous<span class="token punctuation">,</span> message<span class="token punctuation">:</span> logMessage<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 @inlinable
-public func DDLogInfo(_ message: @autoclosure () -&gt; Any,
-                      level: DDLogLevel = .info,
-                      context: Int = 0,
-                      file: StaticString = #file,
-                      function: StaticString = #function,
-                      line: UInt = #line,
-                      tag: Any? = nil,
-                      asynchronous async: Bool = asyncLoggingEnabled,
-                      ddlog: DDLog = .sharedInstance) {
-    _DDLogMessage(message(), level: level, flag: .info, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
-}
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">DDLogDebug</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Any</span><span class="token punctuation">,</span>
+                       level<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token operator">=</span> <span class="token punctuation">.</span>debug<span class="token punctuation">,</span>
+                       context<span class="token punctuation">:</span> <span class="token builtin">Int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                       file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span>
+                       function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span>
+                       line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">,</span>
+                       tag<span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token constant">nil</span><span class="token punctuation">,</span>
+                       asynchronous async<span class="token punctuation">:</span> <span class="token builtin">Bool</span> <span class="token operator">=</span> asyncLoggingEnabled<span class="token punctuation">,</span>
+                       ddlog<span class="token punctuation">:</span> <span class="token builtin">DDLog</span> <span class="token operator">=</span> <span class="token punctuation">.</span>sharedInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">_DDLogMessage</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> level<span class="token punctuation">,</span> flag<span class="token punctuation">:</span> <span class="token punctuation">.</span>debug<span class="token punctuation">,</span> context<span class="token punctuation">:</span> context<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> tag<span class="token punctuation">,</span> asynchronous<span class="token punctuation">:</span> async<span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> ddlog<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
 @inlinable
-public func DDLogWarn(_ message: @autoclosure () -&gt; Any,
-                      level: DDLogLevel = DDLogLevel.warning,
-                      context: Int = 0,
-                      file: StaticString = #file,
-                      function: StaticString = #function,
-                      line: UInt = #line,
-                      tag: Any? = nil,
-                      asynchronous async: Bool = asyncLoggingEnabled,
-                      ddlog: DDLog = .sharedInstance) {
-    _DDLogMessage(message(), level: level, flag: .warning, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
-}
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">DDLogInfo</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Any</span><span class="token punctuation">,</span>
+                      level<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token operator">=</span> <span class="token punctuation">.</span>info<span class="token punctuation">,</span>
+                      context<span class="token punctuation">:</span> <span class="token builtin">Int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                      file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span>
+                      function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span>
+                      line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">,</span>
+                      tag<span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token constant">nil</span><span class="token punctuation">,</span>
+                      asynchronous async<span class="token punctuation">:</span> <span class="token builtin">Bool</span> <span class="token operator">=</span> asyncLoggingEnabled<span class="token punctuation">,</span>
+                      ddlog<span class="token punctuation">:</span> <span class="token builtin">DDLog</span> <span class="token operator">=</span> <span class="token punctuation">.</span>sharedInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">_DDLogMessage</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> level<span class="token punctuation">,</span> flag<span class="token punctuation">:</span> <span class="token punctuation">.</span>info<span class="token punctuation">,</span> context<span class="token punctuation">:</span> context<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> tag<span class="token punctuation">,</span> asynchronous<span class="token punctuation">:</span> async<span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> ddlog<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
 @inlinable
-public func DDLogVerbose(_ message: @autoclosure () -&gt; Any,
-                         level: DDLogLevel = .verbose,
-                         context: Int = 0,
-                         file: StaticString = #file,
-                         function: StaticString = #function,
-                         line: UInt = #line,
-                         tag: Any? = nil,
-                         asynchronous async: Bool = asyncLoggingEnabled,
-                         ddlog: DDLog = .sharedInstance) {
-    _DDLogMessage(message(), level: level, flag: .verbose, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
-}
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">DDLogWarn</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Any</span><span class="token punctuation">,</span>
+                      level<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token operator">=</span> <span class="token builtin">DDLogLevel</span><span class="token punctuation">.</span>warning<span class="token punctuation">,</span>
+                      context<span class="token punctuation">:</span> <span class="token builtin">Int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                      file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span>
+                      function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span>
+                      line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">,</span>
+                      tag<span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token constant">nil</span><span class="token punctuation">,</span>
+                      asynchronous async<span class="token punctuation">:</span> <span class="token builtin">Bool</span> <span class="token operator">=</span> asyncLoggingEnabled<span class="token punctuation">,</span>
+                      ddlog<span class="token punctuation">:</span> <span class="token builtin">DDLog</span> <span class="token operator">=</span> <span class="token punctuation">.</span>sharedInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">_DDLogMessage</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> level<span class="token punctuation">,</span> flag<span class="token punctuation">:</span> <span class="token punctuation">.</span>warning<span class="token punctuation">,</span> context<span class="token punctuation">:</span> context<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> tag<span class="token punctuation">,</span> asynchronous<span class="token punctuation">:</span> async<span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> ddlog<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
 @inlinable
-public func DDLogError(_ message: @autoclosure () -&gt; Any,
-                       level: DDLogLevel = .error,
-                       context: Int = 0,
-                       file: StaticString = #file,
-                       function: StaticString = #function,
-                       line: UInt = #line,
-                       tag: Any? = nil,
-                       asynchronous async: Bool = false,
-                       ddlog: DDLog = .sharedInstance) {
-    _DDLogMessage(message(), level: level, flag: .error, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
-}
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">DDLogVerbose</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Any</span><span class="token punctuation">,</span>
+                         level<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token operator">=</span> <span class="token punctuation">.</span>verbose<span class="token punctuation">,</span>
+                         context<span class="token punctuation">:</span> <span class="token builtin">Int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                         file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span>
+                         function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span>
+                         line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">,</span>
+                         tag<span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token constant">nil</span><span class="token punctuation">,</span>
+                         asynchronous async<span class="token punctuation">:</span> <span class="token builtin">Bool</span> <span class="token operator">=</span> asyncLoggingEnabled<span class="token punctuation">,</span>
+                         ddlog<span class="token punctuation">:</span> <span class="token builtin">DDLog</span> <span class="token operator">=</span> <span class="token punctuation">.</span>sharedInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">_DDLogMessage</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> level<span class="token punctuation">,</span> flag<span class="token punctuation">:</span> <span class="token punctuation">.</span>verbose<span class="token punctuation">,</span> context<span class="token punctuation">:</span> context<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> tag<span class="token punctuation">,</span> asynchronous<span class="token punctuation">:</span> async<span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> ddlog<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-/// Returns a String of the current filename, without full path or extension.
-///
-/// Analogous to the C preprocessor macro `THIS_FILE`.
-public func currentFileName(_ fileName: StaticString = #file) -&gt; String {
-    var str = String(describing: fileName)
-    if let idx = str.range(of: "/", options: .backwards)?.upperBound {
-        str = String(str[idx...])
-    }
-    if let idx = str.range(of: ".", options: .backwards)?.lowerBound {
-        str = String(str[..&lt;idx])
-    }
-    return str
-}
+@inlinable
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">DDLogError</span><span class="token punctuation">(</span><span class="token number">_</span> message<span class="token punctuation">:</span> @autoclosure <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Any</span><span class="token punctuation">,</span>
+                       level<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token operator">=</span> <span class="token punctuation">.</span>error<span class="token punctuation">,</span>
+                       context<span class="token punctuation">:</span> <span class="token builtin">Int</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                       file<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">,</span>
+                       function<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #function<span class="token punctuation">,</span>
+                       line<span class="token punctuation">:</span> <span class="token builtin">UInt</span> <span class="token operator">=</span> #line<span class="token punctuation">,</span>
+                       tag<span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token constant">nil</span><span class="token punctuation">,</span>
+                       asynchronous async<span class="token punctuation">:</span> <span class="token builtin">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                       ddlog<span class="token punctuation">:</span> <span class="token builtin">DDLog</span> <span class="token operator">=</span> <span class="token punctuation">.</span>sharedInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">_DDLogMessage</span><span class="token punctuation">(</span><span class="token function">message</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> level<span class="token punctuation">:</span> level<span class="token punctuation">,</span> flag<span class="token punctuation">:</span> <span class="token punctuation">.</span>error<span class="token punctuation">,</span> context<span class="token punctuation">:</span> context<span class="token punctuation">,</span> file<span class="token punctuation">:</span> file<span class="token punctuation">,</span> function<span class="token punctuation">:</span> function<span class="token punctuation">,</span> line<span class="token punctuation">:</span> line<span class="token punctuation">,</span> tag<span class="token punctuation">:</span> tag<span class="token punctuation">,</span> asynchronous<span class="token punctuation">:</span> async<span class="token punctuation">,</span> ddlog<span class="token punctuation">:</span> ddlog<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-// swiftlint:disable identifier_name
-// swiftlint doesn't like func names that begin with a capital letter - deprecated
-@available(*, deprecated, message: "Please use currentFileName", renamed: "currentFileName")
-public func CurrentFileName(_ fileName: StaticString = #file) -&gt; String {
-    return currentFileName(fileName)
-}
+<span class="token comment">/// Returns a String of the current filename, without full path or extension.</span>
+<span class="token comment">///</span>
+<span class="token comment">/// Analogous to the C preprocessor macro `THIS_FILE`.</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">currentFileName</span><span class="token punctuation">(</span><span class="token number">_</span> fileName<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">String</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>describing<span class="token punctuation">:</span> fileName<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">let</span> idx <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">range</span><span class="token punctuation">(</span>of<span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span> options<span class="token punctuation">:</span> <span class="token punctuation">.</span>backwards<span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>upperBound <span class="token punctuation">{</span>
+        str <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>idx<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token keyword">let</span> idx <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">range</span><span class="token punctuation">(</span>of<span class="token punctuation">:</span> <span class="token string">"."</span><span class="token punctuation">,</span> options<span class="token punctuation">:</span> <span class="token punctuation">.</span>backwards<span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>lowerBound <span class="token punctuation">{</span>
+        str <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">&lt;</span>idx<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> str
+<span class="token punctuation">}</span>
+
+<span class="token comment">// swiftlint:disable identifier_name</span>
+<span class="token comment">// swiftlint doesn't like func names that begin with a capital letter - deprecated</span>
+@<span class="token function">available</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span> deprecated<span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">"Please use currentFileName"</span><span class="token punctuation">,</span> renamed<span class="token punctuation">:</span> <span class="token string">"currentFileName"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">CurrentFileName</span><span class="token punctuation">(</span><span class="token number">_</span> fileName<span class="token punctuation">:</span> <span class="token builtin">StaticString</span> <span class="token operator">=</span> #file<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">String</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">currentFileName</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-none"><code class="language-none">// Software License Agreement (BSD License)
-//
-// Copyright (c) 2010-2021, Deusty, LLC
-// All rights reserved.
-//
-// Redistribution and use of this software in source and binary forms,
-// with or without modification, are permitted provided that the following conditions are met:
-//
-// * Redistributions of source code must retain the above copyright notice,
-//   this list of conditions and the following disclaimer.
-//
-// * Neither the name of Deusty nor the names of its contributors may be used
-//   to endorse or promote products derived from this software without specific
-//   prior written permission of Deusty, LLC.
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">// Software License Agreement (BSD License)</span>
+<span class="token comment">//</span>
+<span class="token comment">// Copyright (c) 2010-2021, Deusty, LLC</span>
+<span class="token comment">// All rights reserved.</span>
+<span class="token comment">//</span>
+<span class="token comment">// Redistribution and use of this software in source and binary forms,</span>
+<span class="token comment">// with or without modification, are permitted provided that the following conditions are met:</span>
+<span class="token comment">//</span>
+<span class="token comment">// * Redistributions of source code must retain the above copyright notice,</span>
+<span class="token comment">//   this list of conditions and the following disclaimer.</span>
+<span class="token comment">//</span>
+<span class="token comment">// * Neither the name of Deusty nor the names of its contributors may be used</span>
+<span class="token comment">//   to endorse or promote products derived from this software without specific</span>
+<span class="token comment">//   prior written permission of Deusty, LLC.</span>
 
-#if canImport(Combine)
+#<span class="token keyword">if</span> <span class="token function">canImport</span><span class="token punctuation">(</span><span class="token builtin">Combine</span><span class="token punctuation">)</span>
 
-import Combine
+<span class="token keyword">import</span> <span class="token builtin">Combine</span>
 
-#if SWIFT_PACKAGE
-import CocoaLumberjack
-import CocoaLumberjackSwiftSupport
+#<span class="token keyword">if</span> <span class="token constant">SWIFT_PACKAGE</span>
+<span class="token keyword">import</span> <span class="token builtin">CocoaLumberjack</span>
+<span class="token keyword">import</span> <span class="token builtin">CocoaLumberjackSwiftSupport</span>
 #endif
 
-@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-extension DDLog {
+@<span class="token function">available</span><span class="token punctuation">(</span><span class="token constant">OSX</span> <span class="token number">10.15</span><span class="token punctuation">,</span> iOS <span class="token number">13.0</span><span class="token punctuation">,</span> tvOS <span class="token number">13.0</span><span class="token punctuation">,</span> watchOS <span class="token number">6.0</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword">extension</span> <span class="token builtin">DDLog</span> <span class="token punctuation">{</span>
 
-    /**
+    <span class="token comment">/**
      * Creates a message publisher.
      *
      * The publisher will add and remove loggers as subscriptions are added and removed.
@@ -954,84 +954,84 @@ extension DDLog {
      *
      * - Parameter logLevel: preemptive filter of the message returned by the publisher. All levels are sent by default
      * - Returns: A MessagePublisher that emits LogMessages filtered by the specified logLevel
-     **/
-    public func messagePublisher(with logLevel: DDLogLevel = .all) -&gt; MessagePublisher {
-        return MessagePublisher(log: self, with: logLevel)
-    }
+     **/</span>
+    <span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">messagePublisher</span><span class="token punctuation">(</span>with logLevel<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span> <span class="token operator">=</span> <span class="token punctuation">.</span>all<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">MessagePublisher</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">MessagePublisher</span><span class="token punctuation">(</span>log<span class="token punctuation">:</span> <span class="token keyword">self</span><span class="token punctuation">,</span> with<span class="token punctuation">:</span> logLevel<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
 
-    // MARK: - MessagePublisher
+    <span class="token comment">// MARK: - MessagePublisher</span>
     
-    @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-    public struct MessagePublisher: Combine.Publisher {
+    @<span class="token function">available</span><span class="token punctuation">(</span><span class="token constant">OSX</span> <span class="token number">10.15</span><span class="token punctuation">,</span> iOS <span class="token number">13.0</span><span class="token punctuation">,</span> tvOS <span class="token number">13.0</span><span class="token punctuation">,</span> watchOS <span class="token number">6.0</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">struct</span> <span class="token builtin">MessagePublisher</span><span class="token punctuation">:</span> <span class="token builtin">Combine</span><span class="token punctuation">.</span><span class="token builtin">Publisher</span> <span class="token punctuation">{</span>
 
-        public typealias Output = DDLogMessage
-        public typealias Failure = Never
+        <span class="token keyword">public</span> <span class="token keyword">typealias</span> <span class="token builtin">Output</span> <span class="token operator">=</span> <span class="token builtin">DDLogMessage</span>
+        <span class="token keyword">public</span> <span class="token keyword">typealias</span> <span class="token builtin">Failure</span> <span class="token operator">=</span> <span class="token builtin">Never</span>
 
-        private let log: DDLog
-        private let logLevel: DDLogLevel
+        <span class="token keyword">private</span> <span class="token keyword">let</span> log<span class="token punctuation">:</span> <span class="token builtin">DDLog</span>
+        <span class="token keyword">private</span> <span class="token keyword">let</span> logLevel<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span>
 
-        public init(log: DDLog, with logLevel: DDLogLevel) {
-            self.log = log
-            self.logLevel = logLevel
-        }
+        <span class="token keyword">public</span> <span class="token keyword">init</span><span class="token punctuation">(</span>log<span class="token punctuation">:</span> <span class="token builtin">DDLog</span><span class="token punctuation">,</span> with logLevel<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">self</span><span class="token punctuation">.</span>log <span class="token operator">=</span> log
+            <span class="token keyword">self</span><span class="token punctuation">.</span>logLevel <span class="token operator">=</span> logLevel
+        <span class="token punctuation">}</span>
 
-        public func receive&lt;S&gt;(subscriber: S) where S: Subscriber, S.Failure == Failure, S.Input == Output {
+        <span class="token keyword">public</span> <span class="token keyword">func</span> receive<span class="token operator">&lt;</span>S<span class="token operator">&gt;</span><span class="token punctuation">(</span>subscriber<span class="token punctuation">:</span> S<span class="token punctuation">)</span> <span class="token keyword">where</span> S<span class="token punctuation">:</span> <span class="token builtin">Subscriber</span><span class="token punctuation">,</span> S<span class="token punctuation">.</span><span class="token builtin">Failure</span> <span class="token operator">==</span> <span class="token builtin">Failure</span><span class="token punctuation">,</span> S<span class="token punctuation">.</span><span class="token builtin">Input</span> <span class="token operator">==</span> <span class="token builtin">Output</span> <span class="token punctuation">{</span>
 
-            let subscription = Subscription(log: self.log, with: logLevel, subscriber: subscriber)
-            subscriber.receive(subscription: subscription)
-        }
-    }
+            <span class="token keyword">let</span> subscription <span class="token operator">=</span> <span class="token function">Subscription</span><span class="token punctuation">(</span>log<span class="token punctuation">:</span> <span class="token keyword">self</span><span class="token punctuation">.</span>log<span class="token punctuation">,</span> with<span class="token punctuation">:</span> logLevel<span class="token punctuation">,</span> subscriber<span class="token punctuation">:</span> subscriber<span class="token punctuation">)</span>
+            subscriber<span class="token punctuation">.</span><span class="token function">receive</span><span class="token punctuation">(</span>subscription<span class="token punctuation">:</span> subscription<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
-    // MARK: - Subscription
+    <span class="token comment">// MARK: - Subscription</span>
 
-    private final class Subscription&lt;S: Subscriber&gt;: NSObject, DDLogger, Combine.Subscription
-        where S.Input == DDLogMessage {
-        private var subscriber: S?
-        private weak var log: DDLog?
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">Subscription</span><span class="token operator">&lt;</span>S<span class="token punctuation">:</span> <span class="token builtin">Subscriber</span><span class="token operator">&gt;</span><span class="token punctuation">:</span> <span class="token builtin">NSObject</span><span class="token punctuation">,</span> <span class="token builtin">DDLogger</span><span class="token punctuation">,</span> <span class="token builtin">Combine</span><span class="token punctuation">.</span><span class="token builtin">Subscription</span>
+        <span class="token keyword">where</span> S<span class="token punctuation">.</span><span class="token builtin">Input</span> <span class="token operator">==</span> <span class="token builtin">DDLogMessage</span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> <span class="token keyword">var</span> subscriber<span class="token punctuation">:</span> S<span class="token operator">?</span>
+        <span class="token keyword">private</span> <span class="token keyword">weak</span> <span class="token keyword">var</span> log<span class="token punctuation">:</span> <span class="token builtin">DDLog</span><span class="token operator">?</span>
 
-        //Not used but DDLogger requires it. The preferred way to achieve this is to use the `map()` Combine operator of the publisher.
-        //ie:
-        // DDLog.sharedInstance.messagePublisher()
-        //     .map { [format log message] }
-        //     .sink(receiveValue: { [process log message] })
-        //
-        var logFormatter: DDLogFormatter? = nil
+        <span class="token comment">//Not used but DDLogger requires it. The preferred way to achieve this is to use the `map()` Combine operator of the publisher.</span>
+        <span class="token comment">//ie:</span>
+        <span class="token comment">// DDLog.sharedInstance.messagePublisher()</span>
+        <span class="token comment">//     .map { [format log message] }</span>
+        <span class="token comment">//     .sink(receiveValue: { [process log message] })</span>
+        <span class="token comment">//</span>
+        <span class="token keyword">var</span> logFormatter<span class="token punctuation">:</span> <span class="token builtin">DDLogFormatter</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token constant">nil</span>
 
-        let combineIdentifier = CombineIdentifier()
+        <span class="token keyword">let</span> combineIdentifier <span class="token operator">=</span> <span class="token function">CombineIdentifier</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-        init(log: DDLog, with logLevel: DDLogLevel, subscriber: S) {
+        <span class="token keyword">init</span><span class="token punctuation">(</span>log<span class="token punctuation">:</span> <span class="token builtin">DDLog</span><span class="token punctuation">,</span> with logLevel<span class="token punctuation">:</span> <span class="token builtin">DDLogLevel</span><span class="token punctuation">,</span> subscriber<span class="token punctuation">:</span> S<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-            self.subscriber = subscriber
-            self.log = log
+            <span class="token keyword">self</span><span class="token punctuation">.</span>subscriber <span class="token operator">=</span> subscriber
+            <span class="token keyword">self</span><span class="token punctuation">.</span>log <span class="token operator">=</span> log
 
-            super.init()
+            <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-            log.add(self, with: logLevel)
-        }
+            log<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">,</span> with<span class="token punctuation">:</span> logLevel<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
 
-        func request(_ demand: Subscribers.Demand) {
-            //The log messages are endless until canceled, so we won't do any demand management.
-            //Combine operators can be used to deal with it as needed.
-        }
+        <span class="token keyword">func</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token number">_</span> demand<span class="token punctuation">:</span> <span class="token builtin">Subscribers</span><span class="token punctuation">.</span><span class="token builtin">Demand</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//The log messages are endless until canceled, so we won't do any demand management.</span>
+            <span class="token comment">//Combine operators can be used to deal with it as needed.</span>
+        <span class="token punctuation">}</span>
 
-        func cancel() {
-            self.log?.remove(self)
-            self.subscriber = nil
-        }
+        <span class="token keyword">func</span> <span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">self</span><span class="token punctuation">.</span>log<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">)</span>
+            <span class="token keyword">self</span><span class="token punctuation">.</span>subscriber <span class="token operator">=</span> <span class="token constant">nil</span>
+        <span class="token punctuation">}</span>
 
-        func log(message logMessage: DDLogMessage) {
-            _ = self.subscriber?.receive(logMessage)
-        }
-    }
-}
+        <span class="token keyword">func</span> <span class="token function">log</span><span class="token punctuation">(</span>message logMessage<span class="token punctuation">:</span> <span class="token builtin">DDLogMessage</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token number">_</span> <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>subscriber<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">receive</span><span class="token punctuation">(</span>logMessage<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-extension Publisher where Output == DDLogMessage {
+@<span class="token function">available</span><span class="token punctuation">(</span><span class="token constant">OSX</span> <span class="token number">10.15</span><span class="token punctuation">,</span> iOS <span class="token number">13.0</span><span class="token punctuation">,</span> tvOS <span class="token number">13.0</span><span class="token punctuation">,</span> watchOS <span class="token number">6.0</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword">extension</span> <span class="token builtin">Publisher</span> <span class="token keyword">where</span> <span class="token builtin">Output</span> <span class="token operator">==</span> <span class="token builtin">DDLogMessage</span> <span class="token punctuation">{</span>
 
-    public func formatted(with formatter: DDLogFormatter) -&gt; Publishers.CompactMap&lt;Self, String&gt; {
-        return compactMap { formatter.format(message: $0) }
-    }
-}
+    <span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function">formatted</span><span class="token punctuation">(</span>with formatter<span class="token punctuation">:</span> <span class="token builtin">DDLogFormatter</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Publishers</span><span class="token punctuation">.</span><span class="token builtin">CompactMap</span><span class="token operator">&lt;</span><span class="token keyword">Self</span><span class="token punctuation">,</span> <span class="token builtin">String</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> compactMap <span class="token punctuation">{</span> formatter<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>message<span class="token punctuation">:</span> $<span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 #endif
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -1649,7 +1649,7 @@ extension Publisher where Output == DDLogMessage {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

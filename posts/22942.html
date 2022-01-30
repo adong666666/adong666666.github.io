@@ -32,9 +32,9 @@ let results = [1, 2, 3, 4, 5, 6, 7, 8, 9]">
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -525,7 +525,7 @@ let results = [1, 2, 3, 4, 5, 6, 7, 8, 9]">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -564,40 +564,40 @@ let results = [1, 2, 3, 4, 5, 6, 7, 8, 9]">
             <div id="articleContent">
                 <h1 id="Swift高阶函数"><a href="#Swift高阶函数" class="headerlink" title="Swift高阶函数"></a>Swift高阶函数</h1><p>========================</p>
 <h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><h4 id="map-1"><a href="#map-1" class="headerlink" title="map"></a>map</h4><p><code>map</code>对于原始集合里的每一个元素, 以一个变换后的元素替换之形成一个新的集合</p>
-<pre class="line-numbers language-none"><code class="language-none">let results = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-let allResults = results.map{ $0.map{ $0 * 10 } }
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> results <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> allResults <span class="token operator">=</span> results<span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">{</span> $<span class="token number">0</span><span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">{</span> $<span class="token number">0</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
 
-print(allResults)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">print</span><span class="token punctuation">(</span>allResults<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>输出结果</p>
 <pre class="line-numbers language-none"><code class="language-none">[10, 20, 30, 40, 50, 60, 70, 80, 90]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="flatMap"><a href="#flatMap" class="headerlink" title="flatMap"></a>flatMap</h4><p><code>flatMap</code>对于元素是集合的集合, 可以得到单级的集合</p>
-<pre class="line-numbers language-none"><code class="language-none">let results = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-let allResults = results.flatMap{ $0.map{ $0 * 10 } }
-let passMarks = results.flatMap{ $0.filter{ $0 &gt; 5 } }
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> results <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> allResults <span class="token operator">=</span> results<span class="token punctuation">.</span>flatMap<span class="token punctuation">{</span> $<span class="token number">0</span><span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">{</span> $<span class="token number">0</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token keyword">let</span> passMarks <span class="token operator">=</span> results<span class="token punctuation">.</span>flatMap<span class="token punctuation">{</span> $<span class="token number">0</span><span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">{</span> $<span class="token number">0</span> <span class="token operator">&gt;</span> <span class="token number">5</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
 
-print(allResults)
-print(passMarks)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">print</span><span class="token punctuation">(</span>allResults<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>passMarks<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>输出结果</p>
 <pre class="line-numbers language-none"><code class="language-none">[10, 20, 30, 40, 50, 60, 70, 80, 90]
 [6, 7, 8, 9] <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h4 id="compactMap"><a href="#compactMap" class="headerlink" title="compactMap"></a>compactMap</h4><p><code>compactMap</code>过滤空值</p>
-<pre class="line-numbers language-none"><code class="language-none">let keys: [String?] = ["Zhangsan", nil, "Lisi", nil, "Wawngwu"]
-let validNames = keys.compactMap{ $0 }
-print(validNames)
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> keys<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">String</span><span class="token operator">?</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Zhangsan"</span><span class="token punctuation">,</span> <span class="token constant">nil</span><span class="token punctuation">,</span> <span class="token string">"Lisi"</span><span class="token punctuation">,</span> <span class="token constant">nil</span><span class="token punctuation">,</span> <span class="token string">"Wawngwu"</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> validNames <span class="token operator">=</span> keys<span class="token punctuation">.</span>compactMap<span class="token punctuation">{</span> $<span class="token number">0</span> <span class="token punctuation">}</span>
+<span class="token function">print</span><span class="token punctuation">(</span>validNames<span class="token punctuation">)</span>
 
-let counts = keys.compactMap { $0?.count }
-print(counts)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">let</span> counts <span class="token operator">=</span> keys<span class="token punctuation">.</span>compactMap <span class="token punctuation">{</span> $<span class="token number">0</span><span class="token operator">?</span><span class="token punctuation">.</span><span class="token builtin">count</span> <span class="token punctuation">}</span>
+<span class="token function">print</span><span class="token punctuation">(</span>counts<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>输出结果：</p>
 <pre class="line-numbers language-none"><code class="language-none">["Zhangsan", "Lisi", "Wawngwu"]
 [8, 4, 7]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p><code>filter</code>对于原始集合里的每一个元素, 通过判定来将其丢弃或者放进新集合</p>
-<pre class="line-numbers language-none"><code class="language-none">let numbers: [Int] = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-print(numbers.filter{ $0 &gt; 50})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> numbers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">Int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">]</span>
+<span class="token function">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">{</span> $<span class="token number">0</span> <span class="token operator">&gt;</span> <span class="token number">50</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>输出结果</p>
 <pre class="line-numbers language-none"><code class="language-none">[60, 70, 80, 90]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h2><p><code>reduce</code>对于原始集合里的每一个元素, 作用与当前累积的结果上</p>
-<pre class="line-numbers language-none"><code class="language-none">let numbers: [Int] = [1, 2, 3, 4, 5, 10]
-print(numbers.reduce(0) { $0 + $1 })<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> numbers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">Int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token function">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> $<span class="token number">0</span> <span class="token operator">+</span> $<span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>输出结果</p>
 <pre class="line-numbers language-none"><code class="language-none">25<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1203,7 +1203,7 @@ print(numbers.reduce(0) { $0 + $1 })<span aria-hidden="true" class="line-numbers
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

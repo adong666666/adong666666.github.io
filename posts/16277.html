@@ -32,9 +32,9 @@ github举例只需新建仓库或使用已有仓库或使用博客仓库等，�
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -561,7 +561,7 @@ github举例只需新建仓库或使用已有仓库或使用博客仓库等，�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -602,11 +602,11 @@ github举例只需新建仓库或使用已有仓库或使用博客仓库等，�
 <p>其实非常简单，假设要模拟JSON数据只要把json文件传到网站的服务器</p>
 <h2 id="github举例"><a href="#github举例" class="headerlink" title="github举例"></a>github举例</h2><p>只需新建仓库或使用已有仓库或使用博客仓库等，把相应的json文件推送到远程仓库。<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210331%E5%80%9F%E5%8A%A9github%E6%88%96%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE/1.png"><br>而后就可以直接对着该json进行网络请求<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/adong666666/adong666666.github.io/master/runinto/CulturalRelicsData.json">https://raw.githubusercontent.com/adong666666/adong666666.github.io/master/runinto/CulturalRelicsData.json</a><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210331%E5%80%9F%E5%8A%A9github%E6%88%96%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE/2.png"></p>
 <h2 id="博客举例"><a href="#博客举例" class="headerlink" title="博客举例"></a>博客举例</h2><p>把json文件放到博客源文件的目录或子目录下，这里我放在子目录runinto下<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210331%E5%80%9F%E5%8A%A9github%E6%88%96%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE/3.png"><br>图片或其他资源也都放在博客源文件的目录或子目录下，这里我放在子目录image下<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210331%E5%80%9F%E5%8A%A9github%E6%88%96%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE/4.png"><br>部署博客</p>
-<pre class="line-numbers language-none"><code class="language-none">zhangsaidong@zhangsaidongs-MacBook-Pro blog % hexo g &amp;&amp; hexo d
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zhangsaidong@zhangsaidongs-MacBook-Pro blog % hexo g <span class="token operator">&amp;&amp;</span> hexo d
 INFO  Validating config
-WARN  Deprecated config detected: "external_link" with a Boolean value is deprecated. See https://hexo.io/docs/configuration for more details.
+WARN  Deprecated config detected: <span class="token string">"external_link"</span> with a Boolean value is deprecated. See https://hexo.io/docs/configuration <span class="token keyword">for</span> <span class="token function">more</span> details.
 INFO  Start processing
-INFO  Files loaded in 594 ms
+INFO  Files loaded <span class="token keyword">in</span> <span class="token number">594</span> ms
 INFO  Deleted: json/CulturalRelicsIntroduction.json
 INFO  Generated: runinto/Models3DData.json
 INFO  Generated: runinto/CulturalRelicsData.json
@@ -616,19 +616,19 @@ INFO  Generated: runinto/IntroductionData.json
 INFO  Generated: runinto/PaintingModelsData.json
 INFO  Generated: books/index.html
 INFO  Generated: works/index.html
-INFO  Generated: 2021/03/31/20210331Moya使用/index.html
-INFO  Generated: 2021/03/31/20210331HandyJSON使用/index.html
-INFO  Generated: 2021/03/31/20210331iOS开发之真机调试下查看本地沙盒数据摘录/index.html
-INFO  Generated: 2021/03/20/20210320git发布tag/index.html
-INFO  Generated: 2021/03/21/20210320Perfect部署到云服务器摘录/index.html
-INFO  Generated: 2021/03/18/Mac命令行关闭端口/index.html
-INFO  Generated: 2021/03/16/20210316Swift多线程/index.html
-INFO  Generated: 2019/08/03/iOS-Localizable-strings/index.html
+INFO  Generated: <span class="token number">2021</span>/03/31/20210331Moya使用/index.html
+INFO  Generated: <span class="token number">2021</span>/03/31/20210331HandyJSON使用/index.html
+INFO  Generated: <span class="token number">2021</span>/03/31/20210331iOS开发之真机调试下查看本地沙盒数据摘录/index.html
+INFO  Generated: <span class="token number">2021</span>/03/20/20210320git发布tag/index.html
+INFO  Generated: <span class="token number">2021</span>/03/21/20210320Perfect部署到云服务器摘录/index.html
+INFO  Generated: <span class="token number">2021</span>/03/18/Mac命令行关闭端口/index.html
+INFO  Generated: <span class="token number">2021</span>/03/16/20210316Swift多线程/index.html
+INFO  Generated: <span class="token number">2019</span>/08/03/iOS-Localizable-strings/index.html
 INFO  Generated: about/index/resume.html
 INFO  Generated: archive/index.html
 INFO  Generated: archives/2019/index.html
-INFO  Generated: 2020/09/30/学术论文——基于ARKit技术的文物交互式相机App的设计与实现/index.html
-INFO  Generated: 2019/07/06/hello-world/index.html
+INFO  Generated: <span class="token number">2020</span>/09/30/学术论文——基于ARKit技术的文物交互式相机App的设计与实现/index.html
+INFO  Generated: <span class="token number">2019</span>/07/06/hello-world/index.html
 INFO  Generated: archives/2019/07/index.html
 INFO  Generated: archives/page/2/index.html
 INFO  Generated: archives/2020/index.html
@@ -652,41 +652,41 @@ INFO  Generated: tags/论文/index.html
 INFO  Generated: tags/git/index.html
 INFO  Generated: tags/DataBase/index.html
 INFO  Generated: about/index.html
-INFO  Generated: 2021/03/22/20210322iOS之制作xcframework摘录/index.html
+INFO  Generated: <span class="token number">2021</span>/03/22/20210322iOS之制作xcframework摘录/index.html
 INFO  Generated: archives/index.html
 INFO  Generated: tags/index.html
-INFO  Generated: 2021/03/01/README/index.html
-INFO  Generated: 2021/03/01/README.en/index.html
-INFO  Generated: 2021/03/03/20210331SQLite.swift使用/index.html
-INFO  Generated: 2021/03/27/20210327gitbook配置/index.html
-INFO  Generated: 2021/03/20/Perfect部署到服务器工作记录/index.html
-INFO  52 files generated in 157 ms
+INFO  Generated: <span class="token number">2021</span>/03/01/README/index.html
+INFO  Generated: <span class="token number">2021</span>/03/01/README.en/index.html
+INFO  Generated: <span class="token number">2021</span>/03/03/20210331SQLite.swift使用/index.html
+INFO  Generated: <span class="token number">2021</span>/03/27/20210327gitbook配置/index.html
+INFO  Generated: <span class="token number">2021</span>/03/20/Perfect部署到服务器工作记录/index.html
+INFO  <span class="token number">52</span> files generated <span class="token keyword">in</span> <span class="token number">157</span> ms
 INFO  Validating config
-WARN  Deprecated config detected: "external_link" with a Boolean value is deprecated. See https://hexo.io/docs/configuration for more details.
-INFO  Deploying: git
-INFO  Clearing .deploy_git folder...
-INFO  Copying files from public folder...
-INFO  Copying files from extend dirs...
-[master c336836] Site updated: 2021-03-31 11:58:37
- 53 files changed, 466 insertions(+), 1 deletion(-)
- delete mode 100644 json/CulturalRelicsIntroduction.json
- create mode 100644 runinto/CulturalRelicsData.json
- create mode 100644 runinto/IntroductionData.json
- create mode 100644 runinto/Models3DData.json
- create mode 100644 runinto/PaintingModelsData.json
- create mode 100644 runinto/PaintingRomanceData.json
- create mode 100644 runinto/StylePredictData.json
-Enumerating objects: 228, done.
-Counting objects: 100% (228/228), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (84/84), done.
-Writing objects: 100% (123/123), 28.58 KiB | 2.86 MiB/s, done.
-Total 123 (delta 55), reused 0 (delta 0)
-remote: Resolving deltas: 100% (55/55), completed with 38 local objects.
+WARN  Deprecated config detected: <span class="token string">"external_link"</span> with a Boolean value is deprecated. See https://hexo.io/docs/configuration <span class="token keyword">for</span> <span class="token function">more</span> details.
+INFO  Deploying: <span class="token function">git</span>
+INFO  Clearing .deploy_git folder<span class="token punctuation">..</span>.
+INFO  Copying files from public folder<span class="token punctuation">..</span>.
+INFO  Copying files from extend dirs<span class="token punctuation">..</span>.
+<span class="token punctuation">[</span>master c336836<span class="token punctuation">]</span> Site updated: <span class="token number">2021</span>-03-31 <span class="token number">11</span>:58:37
+ <span class="token number">53</span> files changed, <span class="token number">466</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">1</span> deletion<span class="token punctuation">(</span>-<span class="token punctuation">)</span>
+ delete mode <span class="token number">100644</span> json/CulturalRelicsIntroduction.json
+ create mode <span class="token number">100644</span> runinto/CulturalRelicsData.json
+ create mode <span class="token number">100644</span> runinto/IntroductionData.json
+ create mode <span class="token number">100644</span> runinto/Models3DData.json
+ create mode <span class="token number">100644</span> runinto/PaintingModelsData.json
+ create mode <span class="token number">100644</span> runinto/PaintingRomanceData.json
+ create mode <span class="token number">100644</span> runinto/StylePredictData.json
+Enumerating objects: <span class="token number">228</span>, done.
+Counting objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">228</span>/228<span class="token punctuation">)</span>, done.
+Delta compression using up to <span class="token number">16</span> threads
+Compressing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">84</span>/84<span class="token punctuation">)</span>, done.
+Writing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">123</span>/123<span class="token punctuation">)</span>, <span class="token number">28.58</span> KiB <span class="token operator">|</span> <span class="token number">2.86</span> MiB/s, done.
+Total <span class="token number">123</span> <span class="token punctuation">(</span>delta <span class="token number">55</span><span class="token punctuation">)</span>, reused <span class="token number">0</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>
+remote: Resolving deltas: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">55</span>/55<span class="token punctuation">)</span>, completed with <span class="token number">38</span> <span class="token builtin class-name">local</span> objects.
 To https://github.com/adong666666/adong666666.github.io.git
-   03af415..c336836  HEAD -&gt; master
-Branch 'master' set up to track remote branch 'master' from 'https://github.com/adong666666/adong666666.github.io.git'.
-INFO  Deploy done: git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+   03af415<span class="token punctuation">..</span>c336836  HEAD -<span class="token operator">&gt;</span> master
+Branch <span class="token string">'master'</span> <span class="token builtin class-name">set</span> up to track remote branch <span class="token string">'master'</span> from <span class="token string">'https://github.com/adong666666/adong666666.github.io.git'</span><span class="token builtin class-name">.</span>
+INFO  Deploy done: <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>将博客部署之后，就可以用对应url进行网络请求，如这里使用的是<a href="https://zsd.name/runinto/IntroductionData.json">https://zsd.name/runinto/IntroductionData.json</a><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210331%E5%80%9F%E5%8A%A9github%E6%88%96%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE/5.png"><br>图片资源也可以拿到，如<a href="https://zsd.name/images/xinyi.jpg">https://zsd.name/images/xinyi.jpg</a><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210331%E5%80%9F%E5%8A%A9github%E6%88%96%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE/6.png"><br>这便相当于有个现成的模拟服务器，各种软件开发，这样模拟数据是不是很轻松！</p>
 
                 
@@ -1346,7 +1346,7 @@ INFO  Deploy done: git<span aria-hidden="true" class="line-numbers-rows"><span><
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

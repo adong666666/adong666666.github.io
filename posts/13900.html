@@ -35,9 +35,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -536,7 +536,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -574,116 +574,116 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Moya使用"><a href="#Moya使用" class="headerlink" title="Moya使用"></a>Moya使用</h1><p>========================<br>我觉得看这代码就知道怎么用了，其实就是一个整理。</p>
-<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><pre class="line-numbers language-none"><code class="language-none">//
-//  IntroductionAPI.swift
-//  RunInto
-//
-//  Created by 张赛东（手机：15674119605） on 2021/3/30.
-//  Copyright © 2021 adong666666. All rights reserved.
-//
-// swiftlint:disable identifier_name
-import Foundation
-import Moya
-import HandyJSON
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">//</span>
+<span class="token comment">//  IntroductionAPI.swift</span>
+<span class="token comment">//  RunInto</span>
+<span class="token comment">//</span>
+<span class="token comment">//  Created by 张赛东（手机：15674119605） on 2021/3/30.</span>
+<span class="token comment">//  Copyright © 2021 adong666666. All rights reserved.</span>
+<span class="token comment">//</span>
+<span class="token comment">// swiftlint:disable identifier_name</span>
+<span class="token keyword">import</span> <span class="token builtin">Foundation</span>
+<span class="token keyword">import</span> <span class="token builtin">Moya</span>
+<span class="token keyword">import</span> <span class="token builtin">HandyJSON</span>
 
-let ip = "http://47.119.162.99"
+<span class="token keyword">let</span> ip <span class="token operator">=</span> <span class="token string">"http://47.119.162.99"</span>
 
-let culturalRelicsDataUrl = ip + "/runinto/culturalRelicsData"
-let models3DDataUrl = ip +  "/runinto/models3DData"
-let introductionDataUrl = ip + "/runinto/introductionData"
-let paintingModeslDataUrl = ip + "/runinto/paintingModelsData"
-let paintinggRomanceDataUrl = ip + "/runinto/paintingRomanceData"
-let stylePredictDataUrl = ip + "/runinto/stylePredictData"
-/// 介绍接口
-let introductionPovider = MoyaProvider&lt;IntroductionAPI&gt;()
+<span class="token keyword">let</span> culturalRelicsDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/culturalRelicsData"</span>
+<span class="token keyword">let</span> models3DDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span>  <span class="token string">"/runinto/models3DData"</span>
+<span class="token keyword">let</span> introductionDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/introductionData"</span>
+<span class="token keyword">let</span> paintingModeslDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/paintingModelsData"</span>
+<span class="token keyword">let</span> paintinggRomanceDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/paintingRomanceData"</span>
+<span class="token keyword">let</span> stylePredictDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/stylePredictData"</span>
+<span class="token comment">/// 介绍接口</span>
+<span class="token keyword">let</span> introductionPovider <span class="token operator">=</span> <span class="token builtin">MoyaProvider</span><span class="token operator">&lt;</span><span class="token builtin">IntroductionAPI</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-enum IntroductionAPI {
-    case culturalRelicsData
-    case models3DData
-    case introductionData
-    case paintingModeslData
-    case paintinggRomanceData
-    case stylePredictData
-}
+<span class="token keyword">enum</span> <span class="token builtin">IntroductionAPI</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> culturalRelicsData
+    <span class="token keyword">case</span> models3DData
+    <span class="token keyword">case</span> introductionData
+    <span class="token keyword">case</span> paintingModeslData
+    <span class="token keyword">case</span> paintinggRomanceData
+    <span class="token keyword">case</span> stylePredictData
+<span class="token punctuation">}</span>
 
-extension IntroductionAPI: TargetType {
-    //服务器地址
-    public var baseURL: URL {
-        return URL(string: ip)!
-    }
+<span class="token keyword">extension</span> <span class="token builtin">IntroductionAPI</span><span class="token punctuation">:</span> <span class="token builtin">TargetType</span> <span class="token punctuation">{</span>
+    <span class="token comment">//服务器地址</span>
+    <span class="token keyword">public</span> <span class="token keyword">var</span> baseURL<span class="token punctuation">:</span> <span class="token constant">URL</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> ip<span class="token punctuation">)</span><span class="token operator">!</span>
+    <span class="token punctuation">}</span>
     
-    var path: String {
-        switch self {
-        case .culturalRelicsData:
-            return "/runinto/culturalRelicsData"
-        case .models3DData:
-            return "/runinto/models3DData"
-        case .introductionData:
-            return "/runinto/introductionData"
-        case .paintingModeslData:
-            return "/runinto/paintingModelsData"
-        case .paintinggRomanceData:
-            return "/runinto/paintingRomanceData"
-        case .stylePredictData:
-            return "/runinto/stylePredictData"
-        }
-    }
+    <span class="token keyword">var</span> path<span class="token punctuation">:</span> <span class="token builtin">String</span> <span class="token punctuation">{</span>
+        <span class="token keyword">switch</span> <span class="token keyword">self</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token punctuation">.</span>culturalRelicsData<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"/runinto/culturalRelicsData"</span>
+        <span class="token keyword">case</span> <span class="token punctuation">.</span>models3DData<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"/runinto/models3DData"</span>
+        <span class="token keyword">case</span> <span class="token punctuation">.</span>introductionData<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"/runinto/introductionData"</span>
+        <span class="token keyword">case</span> <span class="token punctuation">.</span>paintingModeslData<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"/runinto/paintingModelsData"</span>
+        <span class="token keyword">case</span> <span class="token punctuation">.</span>paintinggRomanceData<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"/runinto/paintingRomanceData"</span>
+        <span class="token keyword">case</span> <span class="token punctuation">.</span>stylePredictData<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"/runinto/stylePredictData"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
     
-    var method: Moya.Method { return .get }
-    var task: Task {
-        let parameters: [String: Any] = [:]
-        return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-    }
+    <span class="token keyword">var</span> method<span class="token punctuation">:</span> <span class="token builtin">Moya</span><span class="token punctuation">.</span><span class="token builtin">Method</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token punctuation">.</span><span class="token keyword">get</span> <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> task<span class="token punctuation">:</span> <span class="token builtin">Task</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> parameters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">String</span><span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> <span class="token punctuation">.</span><span class="token function">requestParameters</span><span class="token punctuation">(</span>parameters<span class="token punctuation">:</span> parameters<span class="token punctuation">,</span> encoding<span class="token punctuation">:</span> <span class="token builtin">URLEncoding</span><span class="token punctuation">.</span><span class="token keyword">default</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
     
-    var sampleData: Data { return "".data(using: .utf8)!}
-    var headers: [String: String]? { return nil }
-}
+    <span class="token keyword">var</span> sampleData<span class="token punctuation">:</span> <span class="token builtin">Data</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span>using<span class="token punctuation">:</span> <span class="token punctuation">.</span>utf8<span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">}</span>
+    <span class="token keyword">var</span> headers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">String</span><span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">]</span><span class="token operator">?</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token constant">nil</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><p>在合适的地方调用，<code>mapJSON()</code>也是Moya里的函数。<code>JSON()</code>则是SwiftyJSON里的常用函数</p>
-<pre class="line-numbers language-none"><code class="language-none">//
-//  NetworkTool.swift
-//  RunInto
-//
-//  Created by 张赛东（手机：15674119605） on 2021/3/30.
-//  Copyright © 2021 adong666666. All rights reserved.
-//
-//swiftlint:disable void_return
-import Foundation
-import Alamofire
-import SwiftyJSON
-import HandyJSON
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">//</span>
+<span class="token comment">//  NetworkTool.swift</span>
+<span class="token comment">//  RunInto</span>
+<span class="token comment">//</span>
+<span class="token comment">//  Created by 张赛东（手机：15674119605） on 2021/3/30.</span>
+<span class="token comment">//  Copyright © 2021 adong666666. All rights reserved.</span>
+<span class="token comment">//</span>
+<span class="token comment">//swiftlint:disable void_return</span>
+<span class="token keyword">import</span> <span class="token builtin">Foundation</span>
+<span class="token keyword">import</span> <span class="token builtin">Alamofire</span>
+<span class="token keyword">import</span> <span class="token builtin">SwiftyJSON</span>
+<span class="token keyword">import</span> <span class="token builtin">HandyJSON</span>
 
-protocol NetworkToolProtocol {
-    static func loadCulturalRelicsData(input: IntroductionAPI, completionHandler: @escaping ([Introduction?]) -&gt; ())
-}
+<span class="token keyword">protocol</span> <span class="token builtin">NetworkToolProtocol</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token function">loadCulturalRelicsData</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token builtin">IntroductionAPI</span><span class="token punctuation">,</span> completionHandler<span class="token punctuation">:</span> @escaping <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token builtin">Introduction</span><span class="token operator">?</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-extension NetworkToolProtocol {
-    static func loadCulturalRelicsData(input: IntroductionAPI, completionHandler: @escaping ([Introduction?]) -&gt; ()) {
-        //        AF.request(culturalRelicsDataUrl, method: .get, parameters: [:]).responseJSON(completionHandler: { (response) in
-        //            let value = response.value
-        //            let json = JSON(value as Any)
-        //            log(json)
-        //        })
-        introductionPovider.request(input) { (result) in
-            if case let .success(response) = result {
-                //解析数据
-                let data = try? response.mapJSON()
-                let json = JSON(data!)
-                let culturalRelicsData = json["data"]["culturalRelicsData"]
-                //log(json)
-                //log(culturalRelicsData)
-                if let mappedObject = JSONDeserializer&lt;Introduction&gt;.deserializeModelArrayFrom(json: culturalRelicsData.description) {
-                    //log(mappedObject)
-                    //log(mappedObject.count)
-                    completionHandler(mappedObject)
-                }
-            }
-        }
-    }
-}
+<span class="token keyword">extension</span> <span class="token builtin">NetworkToolProtocol</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token function">loadCulturalRelicsData</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token builtin">IntroductionAPI</span><span class="token punctuation">,</span> completionHandler<span class="token punctuation">:</span> @escaping <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token builtin">Introduction</span><span class="token operator">?</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//        AF.request(culturalRelicsDataUrl, method: .get, parameters: [:]).responseJSON(completionHandler: { (response) in</span>
+        <span class="token comment">//            let value = response.value</span>
+        <span class="token comment">//            let json = JSON(value as Any)</span>
+        <span class="token comment">//            log(json)</span>
+        <span class="token comment">//        })</span>
+        introductionPovider<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token keyword">in</span>
+            <span class="token keyword">if</span> <span class="token keyword">case</span> <span class="token keyword">let</span> <span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token operator">=</span> result <span class="token punctuation">{</span>
+                <span class="token comment">//解析数据</span>
+                <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token keyword">try</span><span class="token operator">?</span> response<span class="token punctuation">.</span><span class="token function">mapJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">let</span> json <span class="token operator">=</span> <span class="token function">JSON</span><span class="token punctuation">(</span>data<span class="token operator">!</span><span class="token punctuation">)</span>
+                <span class="token keyword">let</span> culturalRelicsData <span class="token operator">=</span> json<span class="token punctuation">[</span><span class="token string">"data"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"culturalRelicsData"</span><span class="token punctuation">]</span>
+                <span class="token comment">//log(json)</span>
+                <span class="token comment">//log(culturalRelicsData)</span>
+                <span class="token keyword">if</span> <span class="token keyword">let</span> mappedObject <span class="token operator">=</span> <span class="token builtin">JSONDeserializer</span><span class="token operator">&lt;</span><span class="token builtin">Introduction</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token function">deserializeModelArrayFrom</span><span class="token punctuation">(</span>json<span class="token punctuation">:</span> culturalRelicsData<span class="token punctuation">.</span>description<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//log(mappedObject)</span>
+                    <span class="token comment">//log(mappedObject.count)</span>
+                    <span class="token function">completionHandler</span><span class="token punctuation">(</span>mappedObject<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-struct NetworkTool: NetworkToolProtocol {}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">struct</span> <span class="token builtin">NetworkTool</span><span class="token punctuation">:</span> <span class="token builtin">NetworkToolProtocol</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1302,7 +1302,7 @@ struct NetworkTool: NetworkToolProtocol {}<span aria-hidden="true" class="line-n
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

@@ -35,9 +35,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -536,7 +536,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -574,206 +574,206 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="SQLite-swift使用"><a href="#SQLite-swift使用" class="headerlink" title="SQLite.swift使用"></a>SQLite.swift使用</h1><p>========================<br>对于这个，我只想上代码。</p>
-<h2 id="数据库代码示例"><a href="#数据库代码示例" class="headerlink" title="数据库代码示例"></a>数据库代码示例</h2><pre class="line-numbers language-none"><code class="language-none">//
-//  DataBase.swift
-//  RunInto
-//
-//  Created by 张赛东（手机：15674119605） on 2021/3/3.
-//  Copyright © 2021 adong666666. All rights reserved.
-//
+<h2 id="数据库代码示例"><a href="#数据库代码示例" class="headerlink" title="数据库代码示例"></a>数据库代码示例</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">//</span>
+<span class="token comment">//  DataBase.swift</span>
+<span class="token comment">//  RunInto</span>
+<span class="token comment">//</span>
+<span class="token comment">//  Created by 张赛东（手机：15674119605） on 2021/3/3.</span>
+<span class="token comment">//  Copyright © 2021 adong666666. All rights reserved.</span>
+<span class="token comment">//</span>
 
-import Foundation
-import SQLite
+<span class="token keyword">import</span> <span class="token builtin">Foundation</span>
+<span class="token keyword">import</span> <span class="token builtin">SQLite</span>
 
-struct  DataCenterConstant {
-    static let dbName = "db.sqlite"
-    static let dbFilePath = NSHomeDirectory() + "/Documents/" + DataCenterConstant.dbName
-}
+<span class="token keyword">struct</span>  <span class="token builtin">DataCenterConstant</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">let</span> dbName <span class="token operator">=</span> <span class="token string">"db.sqlite"</span>
+    <span class="token keyword">static</span> <span class="token keyword">let</span> dbFilePath <span class="token operator">=</span> <span class="token function">NSHomeDirectory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"/Documents/"</span> <span class="token operator">+</span> <span class="token builtin">DataCenterConstant</span><span class="token punctuation">.</span>dbName
+<span class="token punctuation">}</span>
 
-class DataBase {
-    static let shared = DataBase()
-    static var dataBase: Connection? = {
-        do {
-            return try Connection(DataCenterConstant.dbFilePath)
-        } catch {
-            assertionFailure("Fail to Create DataBase")
-            debugPrint(error)
-        }
-        return nil
-    }()
+<span class="token keyword">class</span> <span class="token class-name">DataBase</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">let</span> shared <span class="token operator">=</span> <span class="token function">DataBase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">static</span> <span class="token keyword">var</span> dataBase<span class="token punctuation">:</span> <span class="token builtin">Connection</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">try</span> <span class="token function">Connection</span><span class="token punctuation">(</span><span class="token builtin">DataCenterConstant</span><span class="token punctuation">.</span>dbFilePath<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+            <span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token string">"Fail to Create DataBase"</span><span class="token punctuation">)</span>
+            <span class="token function">debugPrint</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token constant">nil</span>
+    <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     
-    var cuturalRelicsIntroduction = CulturalRelicsIntroduction()
-    init() {
-        cuturalRelicsIntroduction.setupTable()
-    }
-}
+    <span class="token keyword">var</span> cuturalRelicsIntroduction <span class="token operator">=</span> <span class="token function">CulturalRelicsIntroduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cuturalRelicsIntroduction<span class="token punctuation">.</span><span class="token function">setupTable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-// MARK: - Query
-extension DataBase {
-    // 查询所有文物介绍
-    func queryCulturalRelicsIntroduction() -&gt; [Introduction] {
-        var intro = [Introduction]()
-        do {
-            for value in Array(try DataBase.dataBase!.prepare(cuturalRelicsIntroduction.table)) {
-                let idForDB = value[cuturalRelicsIntroduction.id]
-                let name = value[cuturalRelicsIntroduction.name]
-                let introduction = value[cuturalRelicsIntroduction.introduction]
-                let photo = value[cuturalRelicsIntroduction.photo]
-                let remark = value[cuturalRelicsIntroduction.remark]
-                let tempIntroduction = Introduction(idForDataBase: idForDB, image: photo, title: I18n.localizedString(name), text: I18n.localizedString(introduction), date: I18n.localizedString(remark))
-                intro.append(tempIntroduction)
-            }
-        } catch {
-            assertionFailure("\(error)")
-        }
-        return intro
-    }
-    //查询个别文物介绍
-    func queryIntroduction(with id: Int64) -&gt; Introduction? {
-        let filter = cuturalRelicsIntroduction.table.filter(id == cuturalRelicsIntroduction.id)
-        do {
-            guard let pluck = try DataBase.dataBase?.pluck(filter) else {
-                return nil
-            }
-            return  Introduction(idForDataBase: pluck[cuturalRelicsIntroduction.id],
-                                 image: pluck[cuturalRelicsIntroduction.photo],
-                                 title: pluck[cuturalRelicsIntroduction.name],
-                                 text: pluck[cuturalRelicsIntroduction.introduction],
-                                 date: pluck[cuturalRelicsIntroduction.remark])
-        } catch {
-            assertionFailure()
-        }
-        return nil
-    }
-    func queryIntroduction(with name: String) -&gt; Introduction? {
-        let filter = cuturalRelicsIntroduction.table.filter(name == cuturalRelicsIntroduction.name)
-        do {
-            guard let pluck = try DataBase.dataBase?.pluck(filter) else {
-                return nil
-            }
-            return  Introduction(idForDataBase: pluck[cuturalRelicsIntroduction.id],
-                                 image: pluck[cuturalRelicsIntroduction.photo],
-                                 title: pluck[cuturalRelicsIntroduction.name],
-                                 text: pluck[cuturalRelicsIntroduction.introduction],
-                                 date: pluck[cuturalRelicsIntroduction.remark])
-        } catch {
-            assertionFailure()
-        }
-        return nil
-    }
-}
+<span class="token comment">// MARK: - Query</span>
+<span class="token keyword">extension</span> <span class="token builtin">DataBase</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 查询所有文物介绍</span>
+    <span class="token keyword">func</span> <span class="token function">queryCulturalRelicsIntroduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token builtin">Introduction</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> intro <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">Introduction</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> value <span class="token keyword">in</span> <span class="token function">Array</span><span class="token punctuation">(</span><span class="token keyword">try</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">!</span><span class="token punctuation">.</span><span class="token function">prepare</span><span class="token punctuation">(</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">let</span> idForDB <span class="token operator">=</span> value<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>id<span class="token punctuation">]</span>
+                <span class="token keyword">let</span> name <span class="token operator">=</span> value<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>name<span class="token punctuation">]</span>
+                <span class="token keyword">let</span> introduction <span class="token operator">=</span> value<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>introduction<span class="token punctuation">]</span>
+                <span class="token keyword">let</span> photo <span class="token operator">=</span> value<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>photo<span class="token punctuation">]</span>
+                <span class="token keyword">let</span> remark <span class="token operator">=</span> value<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>remark<span class="token punctuation">]</span>
+                <span class="token keyword">let</span> tempIntroduction <span class="token operator">=</span> <span class="token function">Introduction</span><span class="token punctuation">(</span>idForDataBase<span class="token punctuation">:</span> idForDB<span class="token punctuation">,</span> image<span class="token punctuation">:</span> photo<span class="token punctuation">,</span> title<span class="token punctuation">:</span> <span class="token builtin">I18n</span><span class="token punctuation">.</span><span class="token function">localizedString</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token builtin">I18n</span><span class="token punctuation">.</span><span class="token function">localizedString</span><span class="token punctuation">(</span>introduction<span class="token punctuation">)</span><span class="token punctuation">,</span> date<span class="token punctuation">:</span> <span class="token builtin">I18n</span><span class="token punctuation">.</span><span class="token function">localizedString</span><span class="token punctuation">(</span>remark<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                intro<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>tempIntroduction<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+            <span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token string">"<span class="token interpolation"><span class="token delimiter variable">\(</span>error<span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> intro
+    <span class="token punctuation">}</span>
+    <span class="token comment">//查询个别文物介绍</span>
+    <span class="token keyword">func</span> <span class="token function">queryIntroduction</span><span class="token punctuation">(</span>with id<span class="token punctuation">:</span> <span class="token builtin">Int64</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Introduction</span><span class="token operator">?</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> <span class="token builtin">filter</span> <span class="token operator">=</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>id <span class="token operator">==</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">guard</span> <span class="token keyword">let</span> pluck <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">pluck</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token constant">nil</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span>  <span class="token function">Introduction</span><span class="token punctuation">(</span>idForDataBase<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>id<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                 image<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>photo<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                 title<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>name<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                 text<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>introduction<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                 date<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>remark<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+            <span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token constant">nil</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">func</span> <span class="token function">queryIntroduction</span><span class="token punctuation">(</span>with name<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Introduction</span><span class="token operator">?</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> <span class="token builtin">filter</span> <span class="token operator">=</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>name <span class="token operator">==</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">guard</span> <span class="token keyword">let</span> pluck <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">pluck</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token constant">nil</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span>  <span class="token function">Introduction</span><span class="token punctuation">(</span>idForDataBase<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>id<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                 image<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>photo<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                 title<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>name<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                 text<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>introduction<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                 date<span class="token punctuation">:</span> pluck<span class="token punctuation">[</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>remark<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+            <span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token constant">nil</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-// MARK: - Insert
-extension DataBase {
-    //插入文物介绍
+<span class="token comment">// MARK: - Insert</span>
+<span class="token keyword">extension</span> <span class="token builtin">DataBase</span> <span class="token punctuation">{</span>
+    <span class="token comment">//插入文物介绍</span>
     @discardableResult
-    func insertCulturalRelicsIntroduction(with intro: Introduction) -&gt; (Int64?, String?) {
-        do {
-            if (try DataBase.dataBase?.pluck(cuturalRelicsIntroduction.table.filter(cuturalRelicsIntroduction.id == intro.idForDataBase))) != nil {
-                return (nil, "the cultural relics exsit")
-            }
-            let insert = cuturalRelicsIntroduction.table.insert(cuturalRelicsIntroduction.name &lt;- intro.title,
-                                                                cuturalRelicsIntroduction.id &lt;- intro.idForDataBase,
-                                                                cuturalRelicsIntroduction.introduction &lt;- intro.text,
-                                                                cuturalRelicsIntroduction.photo &lt;- intro.image,
-                                                                cuturalRelicsIntroduction.remark &lt;- intro.date)
-            let insertIntroduction = try? DataBase.dataBase?.run(insert)
-            return (insertIntroduction, "inserted successfully")
-        } catch {
-            assertionFailure()
-        }
-        return(nil, "inserted unsuccessfully")
-    }
-}
+    <span class="token keyword">func</span> <span class="token function">insertCulturalRelicsIntroduction</span><span class="token punctuation">(</span>with intro<span class="token punctuation">:</span> <span class="token builtin">Introduction</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token builtin">Int64</span><span class="token operator">?</span><span class="token punctuation">,</span> <span class="token builtin">String</span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">try</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">pluck</span><span class="token punctuation">(</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>id <span class="token operator">==</span> intro<span class="token punctuation">.</span>idForDataBase<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">nil</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token constant">nil</span><span class="token punctuation">,</span> <span class="token string">"the cultural relics exsit"</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">let</span> insert <span class="token operator">=</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>name <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+                                                                cuturalRelicsIntroduction<span class="token punctuation">.</span>id <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>idForDataBase<span class="token punctuation">,</span>
+                                                                cuturalRelicsIntroduction<span class="token punctuation">.</span>introduction <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+                                                                cuturalRelicsIntroduction<span class="token punctuation">.</span>photo <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>image<span class="token punctuation">,</span>
+                                                                cuturalRelicsIntroduction<span class="token punctuation">.</span>remark <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>date<span class="token punctuation">)</span>
+            <span class="token keyword">let</span> insertIntroduction <span class="token operator">=</span> <span class="token keyword">try</span><span class="token operator">?</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>insert<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>insertIntroduction<span class="token punctuation">,</span> <span class="token string">"inserted successfully"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+            <span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token constant">nil</span><span class="token punctuation">,</span> <span class="token string">"inserted unsuccessfully"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-// MARK: - Delete
-extension DataBase {
-    //删除文物介绍
+<span class="token comment">// MARK: - Delete</span>
+<span class="token keyword">extension</span> <span class="token builtin">DataBase</span> <span class="token punctuation">{</span>
+    <span class="token comment">//删除文物介绍</span>
     @discardableResult
-    func deletetCulturalRelicsIntroduction(with id: Int64) -&gt; (Int?, String?) {
-        let filter = cuturalRelicsIntroduction.table.filter(id == cuturalRelicsIntroduction.id)
-        do {
-            let delete = try DataBase.dataBase?.run(filter.delete())
-            return (delete, "deleted successfully")
-        } catch {
-            assertionFailure()
-        }
-        return (nil, "deleted unsuccessfully")
-    }
+    <span class="token keyword">func</span> <span class="token function">deletetCulturalRelicsIntroduction</span><span class="token punctuation">(</span>with id<span class="token punctuation">:</span> <span class="token builtin">Int64</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token builtin">Int</span><span class="token operator">?</span><span class="token punctuation">,</span> <span class="token builtin">String</span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> <span class="token builtin">filter</span> <span class="token operator">=</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>id <span class="token operator">==</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> delete <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>delete<span class="token punctuation">,</span> <span class="token string">"deleted successfully"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+            <span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token constant">nil</span><span class="token punctuation">,</span> <span class="token string">"deleted unsuccessfully"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
     @discardableResult
-    func deletetCulturalRelicsIntroduction(with name: String) -&gt; (Int?, String?) {
-        let filter = cuturalRelicsIntroduction.table.filter(name == cuturalRelicsIntroduction.name)
-        do {
-            let deleteIntroduction = try DataBase.dataBase?.run(filter.delete())
-            return (deleteIntroduction, "deleted successfully")
-        } catch {
-            assertionFailure()
-        }
-        return (nil, "deleted unsuccessfully")
-    }
-}
+    <span class="token keyword">func</span> <span class="token function">deletetCulturalRelicsIntroduction</span><span class="token punctuation">(</span>with name<span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token builtin">Int</span><span class="token operator">?</span><span class="token punctuation">,</span> <span class="token builtin">String</span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> <span class="token builtin">filter</span> <span class="token operator">=</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>name <span class="token operator">==</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> deleteIntroduction <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>deleteIntroduction<span class="token punctuation">,</span> <span class="token string">"deleted successfully"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+            <span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token constant">nil</span><span class="token punctuation">,</span> <span class="token string">"deleted unsuccessfully"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-// MARK: - Update
-extension DataBase {
-    //修改文物介绍数据
-    func update(_ intro: Introduction) -&gt; (Int?, String?) {
-        guard (try? DataBase.dataBase?.pluck(cuturalRelicsIntroduction.table.filter(cuturalRelicsIntroduction.id == intro.idForDataBase))) != nil else {
-            return (nil, "the cultural relics not exsit")
-        }
-        do {
-            let update = cuturalRelicsIntroduction.table.update(cuturalRelicsIntroduction.name &lt;- intro.title,
-                                                                cuturalRelicsIntroduction.id &lt;- intro.idForDataBase,
-                                                                cuturalRelicsIntroduction.introduction &lt;- intro.text,
-                                                                cuturalRelicsIntroduction.photo &lt;- intro.image,
-                                                                cuturalRelicsIntroduction.remark &lt;- intro.date)
-            let updateIntroduction = try DataBase.dataBase?.run(update)
-            return (updateIntroduction, "updated successfully")
-        } catch {
-            assertionFailure()
-        }
-        return (nil, "updated unsuccessfully")
-    }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="建表示例"><a href="#建表示例" class="headerlink" title="建表示例"></a>建表示例</h2><pre class="line-numbers language-none"><code class="language-none">//
-//  CulturalRelicsIntroduction.swift
-//  RunInto
-//
-//  Created by 张赛东（手机：15674119605） on 2021/3/3.
-//  Copyright © 2021 adong666666. All rights reserved.
-//
+<span class="token comment">// MARK: - Update</span>
+<span class="token keyword">extension</span> <span class="token builtin">DataBase</span> <span class="token punctuation">{</span>
+    <span class="token comment">//修改文物介绍数据</span>
+    <span class="token keyword">func</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token number">_</span> intro<span class="token punctuation">:</span> <span class="token builtin">Introduction</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token builtin">Int</span><span class="token operator">?</span><span class="token punctuation">,</span> <span class="token builtin">String</span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">guard</span> <span class="token punctuation">(</span><span class="token keyword">try</span><span class="token operator">?</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">pluck</span><span class="token punctuation">(</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>id <span class="token operator">==</span> intro<span class="token punctuation">.</span>idForDataBase<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">nil</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token constant">nil</span><span class="token punctuation">,</span> <span class="token string">"the cultural relics not exsit"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> update <span class="token operator">=</span> cuturalRelicsIntroduction<span class="token punctuation">.</span>table<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>cuturalRelicsIntroduction<span class="token punctuation">.</span>name <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+                                                                cuturalRelicsIntroduction<span class="token punctuation">.</span>id <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>idForDataBase<span class="token punctuation">,</span>
+                                                                cuturalRelicsIntroduction<span class="token punctuation">.</span>introduction <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+                                                                cuturalRelicsIntroduction<span class="token punctuation">.</span>photo <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>image<span class="token punctuation">,</span>
+                                                                cuturalRelicsIntroduction<span class="token punctuation">.</span>remark <span class="token operator">&lt;</span><span class="token operator">-</span> intro<span class="token punctuation">.</span>date<span class="token punctuation">)</span>
+            <span class="token keyword">let</span> updateIntroduction <span class="token operator">=</span> <span class="token keyword">try</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>update<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>updateIntroduction<span class="token punctuation">,</span> <span class="token string">"updated successfully"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+            <span class="token function">assertionFailure</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token constant">nil</span><span class="token punctuation">,</span> <span class="token string">"updated unsuccessfully"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="建表示例"><a href="#建表示例" class="headerlink" title="建表示例"></a>建表示例</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">//</span>
+<span class="token comment">//  CulturalRelicsIntroduction.swift</span>
+<span class="token comment">//  RunInto</span>
+<span class="token comment">//</span>
+<span class="token comment">//  Created by 张赛东（手机：15674119605） on 2021/3/3.</span>
+<span class="token comment">//  Copyright © 2021 adong666666. All rights reserved.</span>
+<span class="token comment">//</span>
 
-import Foundation
-import SQLite
+<span class="token keyword">import</span> <span class="token builtin">Foundation</span>
+<span class="token keyword">import</span> <span class="token builtin">SQLite</span>
 
-class CulturalRelicsIntroduction {
-    let table = Table("CulturalRelicsIntroduction")
-    let id = Expression&lt;Int64&gt;("id")
-    let name = Expression&lt;String&gt;("name")
-    let introduction = Expression&lt;String&gt;("introduction")
-    let photo = Expression&lt;String&gt;("photo")
-    let remark = Expression&lt;String&gt;("remark")
-}
-extension CulturalRelicsIntroduction {
-    func setupTable() {
-        do {
-            guard let cmd = createTableCMD() else { return }
-            try DataBase.dataBase?.run(cmd)
-        } catch { print(error) }
-    }
-    func createTableCMD() -&gt; String? {
-        return table.create(ifNotExists: true) {
-            $0.column(id, primaryKey: true)
-            $0.column(name)
-            $0.column(introduction)
-            $0.column(photo)
-            $0.column(remark)
-        }
-    }
-}
+<span class="token keyword">class</span> <span class="token class-name">CulturalRelicsIntroduction</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> table <span class="token operator">=</span> <span class="token function">Table</span><span class="token punctuation">(</span><span class="token string">"CulturalRelicsIntroduction"</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> id <span class="token operator">=</span> <span class="token builtin">Expression</span><span class="token operator">&lt;</span><span class="token builtin">Int64</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token builtin">Expression</span><span class="token operator">&lt;</span><span class="token builtin">String</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> introduction <span class="token operator">=</span> <span class="token builtin">Expression</span><span class="token operator">&lt;</span><span class="token builtin">String</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">"introduction"</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> photo <span class="token operator">=</span> <span class="token builtin">Expression</span><span class="token operator">&lt;</span><span class="token builtin">String</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">"photo"</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> remark <span class="token operator">=</span> <span class="token builtin">Expression</span><span class="token operator">&lt;</span><span class="token builtin">String</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">"remark"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">extension</span> <span class="token builtin">CulturalRelicsIntroduction</span> <span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function">setupTable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token keyword">guard</span> <span class="token keyword">let</span> cmd <span class="token operator">=</span> <span class="token function">createTableCMD</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token punctuation">}</span>
+            <span class="token keyword">try</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>dataBase<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>cmd<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span> <span class="token function">print</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">func</span> <span class="token function">createTableCMD</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">String</span><span class="token operator">?</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> table<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>ifNotExists<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            $<span class="token number">0</span><span class="token punctuation">.</span><span class="token function">column</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> primaryKey<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+            $<span class="token number">0</span><span class="token punctuation">.</span><span class="token function">column</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+            $<span class="token number">0</span><span class="token punctuation">.</span><span class="token function">column</span><span class="token punctuation">(</span>introduction<span class="token punctuation">)</span>
+            $<span class="token number">0</span><span class="token punctuation">.</span><span class="token function">column</span><span class="token punctuation">(</span>photo<span class="token punctuation">)</span>
+            $<span class="token number">0</span><span class="token punctuation">.</span><span class="token function">column</span><span class="token punctuation">(</span>remark<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><p>在合适的地方调用</p>
-<pre class="line-numbers language-none"><code class="language-none">DataBase.shared.insertCulturalRelicsIntroduction(with: intro!)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-none"><code class="language-none">Help(show: $showContent, datas: DataBase.shared.queryCulturalRelicsIntroduction())<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token builtin">DataBase</span><span class="token punctuation">.</span>shared<span class="token punctuation">.</span><span class="token function">insertCulturalRelicsIntroduction</span><span class="token punctuation">(</span>with<span class="token punctuation">:</span> intro<span class="token operator">!</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token function">Help</span><span class="token punctuation">(</span>show<span class="token punctuation">:</span> $showContent<span class="token punctuation">,</span> datas<span class="token punctuation">:</span> <span class="token builtin">DataBase</span><span class="token punctuation">.</span>shared<span class="token punctuation">.</span><span class="token function">queryCulturalRelicsIntroduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="查看sqlite文件"><a href="#查看sqlite文件" class="headerlink" title="查看sqlite文件"></a>查看sqlite文件</h2><p>下载真机的沙盒数据，查看后缀名为.sqlite的文件，即为生成的数据库，在应用商店搜“sqlite”,有很多软件可以查看<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210331SQLite.swift%E4%BD%BF%E7%94%A8/%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93.png"><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210331SQLite.swift%E4%BD%BF%E7%94%A8/%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%932.png"></p>
 <h2 id="导出的表"><a href="#导出的表" class="headerlink" title="导出的表"></a>导出的表</h2><table>
 <thead>
@@ -856,92 +856,92 @@ extension CulturalRelicsIntroduction {
 <td align="left">故宫镇馆之宝</td>
 </tr>
 </tbody></table>
-<h2 id="导出的JSON"><a href="#导出的JSON" class="headerlink" title="导出的JSON"></a>导出的JSON</h2><pre class="line-numbers language-none"><code class="language-none">[
-  {
-    "photo" : "郎窑红釉穿带直口瓶",
-    "remark" : "故宫镇馆之宝",
-    "name" : "bottle",
-    "introduction" : "郎窑红釉穿带直口瓶，清康熙，高20.8cm，口径6.1cm，足径9.1cm。瓶直口，长颈，垂腹，圈足外撇。足外墙两侧各有一长方形穿孔，可穿系绳带。在容器上系带是对无梁、无系、无扳手的器物进行提拿的传统方法，拆卸容易而又非常实用，也可以使器物在摆放位置上固定，不致被损坏。",
-    "id" : 20210303063005
-  },
-  {
-    "id" : 20210303063006,
-    "remark" : "故宫镇馆之宝",
-    "photo" : "张成造款雕漆云纹盒",
-    "name" : "box",
-    "introduction" : "张成是元代雕漆大家，其传世作品被一致认为是雕漆作品里的珍品。张成造款雕漆云纹盘为故宫漆器的代表作品。高3.3cm，口径19.2cm.盘木胎黑漆，内外均雕云纹。堆漆甚厚，晶莹照人，刻工圆润。从此件具款的剔犀圆盘可知张成不仅是剔红高手，剔犀技巧也精湛至极，此盘为研究元代剔犀工艺提供了实例。"
-  },
-  {
-    "id" : 20210303063007,
-    "introduction" : "黑漆彩绘楼阁群仙祝寿钟为故宫钟表的代表作。高185cm，面宽102cm，侧宽70cm.此钟共有7套机械系统，分别控制走时、报时、景箱内的活动装置等，技术水准相当高。根据记录，从乾隆八年接旨着手设计到十四年完工，历时五年多。",
-    "photo" : "彩漆描金楼阁式自开门群仙祝寿御制钟",
-    "remark" : "故宫镇馆之宝",
-    "name" : "clock"
-  },
-  {
-    "name" : "cup",
-    "photo" : "乾隆款金瓯永固杯",
-    "introduction" : "宫廷之宝乾隆款金瓯永固杯为故宫宫廷文物的代表作。高12.5厘米，口径8厘米，足高5厘米，口边刻有回纹。根据清“内务府活计档”记载，乾隆皇帝对此杯的制作十分重视，不仅调用内库黄金、珍珠、宝石等珍贵材料，而且精工细作，曾多次修改，直至皇帝满意为止。因此，该杯一直被清代皇帝视为珍贵的祖传法宝。",
-    "id" : 20210303063008,
-    "remark" : "故宫镇馆之宝"
-  },
-  {
-    "photo" : "掐丝珐琅缠枝莲纹象耳炉",
-    "remark" : "故宫镇馆之宝",
-    "introduction" : "掐丝珐琅缠枝莲纹象耳炉，元，通高13.9cm，口径16cm，足径13.5cm。清宫旧藏。炉铜胎，圆形，鼓腹，象首卷鼻耳，圈足。炉颈部浅蓝釉地，饰黄、白、红、紫四色菊花12朵。腹部宝蓝釉地，饰红、白、黄三色掐丝珐琅缠枝莲花6朵。其下饰莲瓣纹一周。",
-    "id" : 20210303063009,
-    "name" : "ear_furnace"
-  },
-  {
-    "id" : 20210303063010,
-    "remark" : "故宫镇馆之宝",
-    "name" : "grain_furnace",
-    "introduction" : "青玉云龙纹炉为故宫玉器的代表作品。宋代出品，高7.9cm，口径12.8cm.炉青玉质。通体以“工”字纹为底，上饰游龙、祥云和海水纹。器内底阴刻乾隆七言诗一首：“何年庙器赞天经，刻作飞龙殿四灵。毛伯邢侯异周制，祖丁父癸似商形。依然韫匵阅桑海，所惜从薪遇丙叮土气羊脂胥变幻，只余云水淡拖青。”",
-    "photo" : "青玉云龙纹炉"
-  },
-  {
-    "remark" : "故宫镇馆之宝",
-    "photo" : "清明上河图",
-    "id" : 20210303063011,
-    "introduction" : "《清明上河图》为故宫书画代表作品，该画为张择端所作，以精致的工笔记录了北宋末叶、徽宗时代首都汴京(今开封)郊区和城内汴河两岸的建筑和民生。全图分为三个段落。作品以长卷形式，采用散点透视的构图法，将繁杂的景物纳入统一而富于变化的画面中。在5米多长的画卷里，共绘了550多个各色人物。",
-    "name" : "painting"
-  },
-  {
-    "photo" : "平复帖",
-    "introduction" : "西晋陆机的《平复帖》是故宫法帖的代表作品，也是目前存世最早的名人墨迹，内容为陆机向朋友问候疾病的书札。",
-    "name" : "placard",
-    "remark" : "故宫镇馆之宝",
-    "id" : 20210303063012
-  },
-  {
-    "id" : 20210303063013,
-    "photo" : "酗亚方尊",
-    "name" : "zun",
-    "introduction" : "青铜之宝酗亚方尊为故宫青铜器的代表作品。青铜器的产生是古代中国从野蛮时代走向文明时代的重要标志之一。尊是盛酒器，流行于商早期至春秋战国时期。方尊传世较少。上世纪70年代在山东益都苏埠屯出土了几件带有亚铭文的青铜器，从挖掘的墓穴来看，规模都不小，加上众多带有亚铭记的器物，说明它们所代表的可能是一个大族。",
-    "remark" : "故宫镇馆之宝"
-  },
-  {
-    "id" : 20210303063014,
-    "name" : "magpie",
-    "photo" : "沈子蕃缂丝《梅鹊图》轴",
-    "introduction" : "沈子蕃缂丝《梅鹊图》轴为故宫织绣的代表作品。图轴纵104cm，宽36cm.中国古代缂丝被认为是丝织工艺中最为高贵的品种，古人以“一寸缂丝一寸金”言缂丝作品之珍贵。缂丝之高贵，首先因其耗费工时巨大，以万缕千丝成其工巧，其次，缂技易学难精，虽摹缂书画，并非简单的照葫芦画瓢。",
-    "remark" : "故宫镇馆之宝"
-  }
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="导出的插入语句"><a href="#导出的插入语句" class="headerlink" title="导出的插入语句"></a>导出的插入语句</h2><pre class="line-numbers language-none"><code class="language-none">BEGIN;
+<h2 id="导出的JSON"><a href="#导出的JSON" class="headerlink" title="导出的JSON"></a>导出的JSON</h2><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"郎窑红釉穿带直口瓶"</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"bottle"</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"郎窑红釉穿带直口瓶，清康熙，高20.8cm，口径6.1cm，足径9.1cm。瓶直口，长颈，垂腹，圈足外撇。足外墙两侧各有一长方形穿孔，可穿系绳带。在容器上系带是对无梁、无系、无扳手的器物进行提拿的传统方法，拆卸容易而又非常实用，也可以使器物在摆放位置上固定，不致被损坏。"</span><span class="token punctuation">,</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063005</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063006</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span><span class="token punctuation">,</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"张成造款雕漆云纹盒"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"box"</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"张成是元代雕漆大家，其传世作品被一致认为是雕漆作品里的珍品。张成造款雕漆云纹盘为故宫漆器的代表作品。高3.3cm，口径19.2cm.盘木胎黑漆，内外均雕云纹。堆漆甚厚，晶莹照人，刻工圆润。从此件具款的剔犀圆盘可知张成不仅是剔红高手，剔犀技巧也精湛至极，此盘为研究元代剔犀工艺提供了实例。"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063007</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"黑漆彩绘楼阁群仙祝寿钟为故宫钟表的代表作。高185cm，面宽102cm，侧宽70cm.此钟共有7套机械系统，分别控制走时、报时、景箱内的活动装置等，技术水准相当高。根据记录，从乾隆八年接旨着手设计到十四年完工，历时五年多。"</span><span class="token punctuation">,</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"彩漆描金楼阁式自开门群仙祝寿御制钟"</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"clock"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"cup"</span><span class="token punctuation">,</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"乾隆款金瓯永固杯"</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"宫廷之宝乾隆款金瓯永固杯为故宫宫廷文物的代表作。高12.5厘米，口径8厘米，足高5厘米，口边刻有回纹。根据清“内务府活计档”记载，乾隆皇帝对此杯的制作十分重视，不仅调用内库黄金、珍珠、宝石等珍贵材料，而且精工细作，曾多次修改，直至皇帝满意为止。因此，该杯一直被清代皇帝视为珍贵的祖传法宝。"</span><span class="token punctuation">,</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063008</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"掐丝珐琅缠枝莲纹象耳炉"</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"掐丝珐琅缠枝莲纹象耳炉，元，通高13.9cm，口径16cm，足径13.5cm。清宫旧藏。炉铜胎，圆形，鼓腹，象首卷鼻耳，圈足。炉颈部浅蓝釉地，饰黄、白、红、紫四色菊花12朵。腹部宝蓝釉地，饰红、白、黄三色掐丝珐琅缠枝莲花6朵。其下饰莲瓣纹一周。"</span><span class="token punctuation">,</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063009</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"ear_furnace"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063010</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"grain_furnace"</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"青玉云龙纹炉为故宫玉器的代表作品。宋代出品，高7.9cm，口径12.8cm.炉青玉质。通体以“工”字纹为底，上饰游龙、祥云和海水纹。器内底阴刻乾隆七言诗一首：“何年庙器赞天经，刻作飞龙殿四灵。毛伯邢侯异周制，祖丁父癸似商形。依然韫匵阅桑海，所惜从薪遇丙叮土气羊脂胥变幻，只余云水淡拖青。”"</span><span class="token punctuation">,</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"青玉云龙纹炉"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span><span class="token punctuation">,</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"清明上河图"</span><span class="token punctuation">,</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063011</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"《清明上河图》为故宫书画代表作品，该画为张择端所作，以精致的工笔记录了北宋末叶、徽宗时代首都汴京(今开封)郊区和城内汴河两岸的建筑和民生。全图分为三个段落。作品以长卷形式，采用散点透视的构图法，将繁杂的景物纳入统一而富于变化的画面中。在5米多长的画卷里，共绘了550多个各色人物。"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"painting"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"平复帖"</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"西晋陆机的《平复帖》是故宫法帖的代表作品，也是目前存世最早的名人墨迹，内容为陆机向朋友问候疾病的书札。"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"placard"</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span><span class="token punctuation">,</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063012</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063013</span><span class="token punctuation">,</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"酗亚方尊"</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"zun"</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"青铜之宝酗亚方尊为故宫青铜器的代表作品。青铜器的产生是古代中国从野蛮时代走向文明时代的重要标志之一。尊是盛酒器，流行于商早期至春秋战国时期。方尊传世较少。上世纪70年代在山东益都苏埠屯出土了几件带有亚铭文的青铜器，从挖掘的墓穴来看，规模都不小，加上众多带有亚铭记的器物，说明它们所代表的可能是一个大族。"</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"id"</span> <span class="token operator">:</span> <span class="token number">20210303063014</span><span class="token punctuation">,</span>
+    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"magpie"</span><span class="token punctuation">,</span>
+    <span class="token property">"photo"</span> <span class="token operator">:</span> <span class="token string">"沈子蕃缂丝《梅鹊图》轴"</span><span class="token punctuation">,</span>
+    <span class="token property">"introduction"</span> <span class="token operator">:</span> <span class="token string">"沈子蕃缂丝《梅鹊图》轴为故宫织绣的代表作品。图轴纵104cm，宽36cm.中国古代缂丝被认为是丝织工艺中最为高贵的品种，古人以“一寸缂丝一寸金”言缂丝作品之珍贵。缂丝之高贵，首先因其耗费工时巨大，以万缕千丝成其工巧，其次，缂技易学难精，虽摹缂书画，并非简单的照葫芦画瓢。"</span><span class="token punctuation">,</span>
+    <span class="token property">"remark"</span> <span class="token operator">:</span> <span class="token string">"故宫镇馆之宝"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="导出的插入语句"><a href="#导出的插入语句" class="headerlink" title="导出的插入语句"></a>导出的插入语句</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">BEGIN</span><span class="token punctuation">;</span>
 
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063005, 'bottle', '郎窑红釉穿带直口瓶，清康熙，高20.8cm，口径6.1cm，足径9.1cm。瓶直口，长颈，垂腹，圈足外撇。足外墙两侧各有一长方形穿孔，可穿系绳带。在容器上系带是对无梁、无系、无扳手的器物进行提拿的传统方法，拆卸容易而又非常实用，也可以使器物在摆放位置上固定，不致被损坏。', '郎窑红釉穿带直口瓶', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063006, 'box', '张成是元代雕漆大家，其传世作品被一致认为是雕漆作品里的珍品。张成造款雕漆云纹盘为故宫漆器的代表作品。高3.3cm，口径19.2cm.盘木胎黑漆，内外均雕云纹。堆漆甚厚，晶莹照人，刻工圆润。从此件具款的剔犀圆盘可知张成不仅是剔红高手，剔犀技巧也精湛至极，此盘为研究元代剔犀工艺提供了实例。', '张成造款雕漆云纹盒', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063007, 'clock', '黑漆彩绘楼阁群仙祝寿钟为故宫钟表的代表作。高185cm，面宽102cm，侧宽70cm.此钟共有7套机械系统，分别控制走时、报时、景箱内的活动装置等，技术水准相当高。根据记录，从乾隆八年接旨着手设计到十四年完工，历时五年多。', '彩漆描金楼阁式自开门群仙祝寿御制钟', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063008, 'cup', '宫廷之宝乾隆款金瓯永固杯为故宫宫廷文物的代表作。高12.5厘米，口径8厘米，足高5厘米，口边刻有回纹。根据清“内务府活计档”记载，乾隆皇帝对此杯的制作十分重视，不仅调用内库黄金、珍珠、宝石等珍贵材料，而且精工细作，曾多次修改，直至皇帝满意为止。因此，该杯一直被清代皇帝视为珍贵的祖传法宝。', '乾隆款金瓯永固杯', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063009, 'ear_furnace', '掐丝珐琅缠枝莲纹象耳炉，元，通高13.9cm，口径16cm，足径13.5cm。清宫旧藏。炉铜胎，圆形，鼓腹，象首卷鼻耳，圈足。炉颈部浅蓝釉地，饰黄、白、红、紫四色菊花12朵。腹部宝蓝釉地，饰红、白、黄三色掐丝珐琅缠枝莲花6朵。其下饰莲瓣纹一周。', '掐丝珐琅缠枝莲纹象耳炉', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063010, 'grain_furnace', '青玉云龙纹炉为故宫玉器的代表作品。宋代出品，高7.9cm，口径12.8cm.炉青玉质。通体以“工”字纹为底，上饰游龙、祥云和海水纹。器内底阴刻乾隆七言诗一首：“何年庙器赞天经，刻作飞龙殿四灵。毛伯邢侯异周制，祖丁父癸似商形。依然韫匵阅桑海，所惜从薪遇丙叮土气羊脂胥变幻，只余云水淡拖青。”', '青玉云龙纹炉', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063011, 'painting', '《清明上河图》为故宫书画代表作品，该画为张择端所作，以精致的工笔记录了北宋末叶、徽宗时代首都汴京(今开封)郊区和城内汴河两岸的建筑和民生。全图分为三个段落。作品以长卷形式，采用散点透视的构图法，将繁杂的景物纳入统一而富于变化的画面中。在5米多长的画卷里，共绘了550多个各色人物。', '清明上河图', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063012, 'placard', '西晋陆机的《平复帖》是故宫法帖的代表作品，也是目前存世最早的名人墨迹，内容为陆机向朋友问候疾病的书札。', '平复帖', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063013, 'zun', '青铜之宝酗亚方尊为故宫青铜器的代表作品。青铜器的产生是古代中国从野蛮时代走向文明时代的重要标志之一。尊是盛酒器，流行于商早期至春秋战国时期。方尊传世较少。上世纪70年代在山东益都苏埠屯出土了几件带有亚铭文的青铜器，从挖掘的墓穴来看，规模都不小，加上众多带有亚铭记的器物，说明它们所代表的可能是一个大族。', '酗亚方尊', '故宫镇馆之宝');
-INSERT INTO CulturalRelicsIntroduction(id, name, introduction, photo, remark) VALUES(20210303063014, 'magpie', '沈子蕃缂丝《梅鹊图》轴为故宫织绣的代表作品。图轴纵104cm，宽36cm.中国古代缂丝被认为是丝织工艺中最为高贵的品种，古人以“一寸缂丝一寸金”言缂丝作品之珍贵。缂丝之高贵，首先因其耗费工时巨大，以万缕千丝成其工巧，其次，缂技易学难精，虽摹缂书画，并非简单的照葫芦画瓢。', '沈子蕃缂丝《梅鹊图》轴', '故宫镇馆之宝');
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063005</span><span class="token punctuation">,</span> <span class="token string">'bottle'</span><span class="token punctuation">,</span> <span class="token string">'郎窑红釉穿带直口瓶，清康熙，高20.8cm，口径6.1cm，足径9.1cm。瓶直口，长颈，垂腹，圈足外撇。足外墙两侧各有一长方形穿孔，可穿系绳带。在容器上系带是对无梁、无系、无扳手的器物进行提拿的传统方法，拆卸容易而又非常实用，也可以使器物在摆放位置上固定，不致被损坏。'</span><span class="token punctuation">,</span> <span class="token string">'郎窑红釉穿带直口瓶'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063006</span><span class="token punctuation">,</span> <span class="token string">'box'</span><span class="token punctuation">,</span> <span class="token string">'张成是元代雕漆大家，其传世作品被一致认为是雕漆作品里的珍品。张成造款雕漆云纹盘为故宫漆器的代表作品。高3.3cm，口径19.2cm.盘木胎黑漆，内外均雕云纹。堆漆甚厚，晶莹照人，刻工圆润。从此件具款的剔犀圆盘可知张成不仅是剔红高手，剔犀技巧也精湛至极，此盘为研究元代剔犀工艺提供了实例。'</span><span class="token punctuation">,</span> <span class="token string">'张成造款雕漆云纹盒'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063007</span><span class="token punctuation">,</span> <span class="token string">'clock'</span><span class="token punctuation">,</span> <span class="token string">'黑漆彩绘楼阁群仙祝寿钟为故宫钟表的代表作。高185cm，面宽102cm，侧宽70cm.此钟共有7套机械系统，分别控制走时、报时、景箱内的活动装置等，技术水准相当高。根据记录，从乾隆八年接旨着手设计到十四年完工，历时五年多。'</span><span class="token punctuation">,</span> <span class="token string">'彩漆描金楼阁式自开门群仙祝寿御制钟'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063008</span><span class="token punctuation">,</span> <span class="token string">'cup'</span><span class="token punctuation">,</span> <span class="token string">'宫廷之宝乾隆款金瓯永固杯为故宫宫廷文物的代表作。高12.5厘米，口径8厘米，足高5厘米，口边刻有回纹。根据清“内务府活计档”记载，乾隆皇帝对此杯的制作十分重视，不仅调用内库黄金、珍珠、宝石等珍贵材料，而且精工细作，曾多次修改，直至皇帝满意为止。因此，该杯一直被清代皇帝视为珍贵的祖传法宝。'</span><span class="token punctuation">,</span> <span class="token string">'乾隆款金瓯永固杯'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063009</span><span class="token punctuation">,</span> <span class="token string">'ear_furnace'</span><span class="token punctuation">,</span> <span class="token string">'掐丝珐琅缠枝莲纹象耳炉，元，通高13.9cm，口径16cm，足径13.5cm。清宫旧藏。炉铜胎，圆形，鼓腹，象首卷鼻耳，圈足。炉颈部浅蓝釉地，饰黄、白、红、紫四色菊花12朵。腹部宝蓝釉地，饰红、白、黄三色掐丝珐琅缠枝莲花6朵。其下饰莲瓣纹一周。'</span><span class="token punctuation">,</span> <span class="token string">'掐丝珐琅缠枝莲纹象耳炉'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063010</span><span class="token punctuation">,</span> <span class="token string">'grain_furnace'</span><span class="token punctuation">,</span> <span class="token string">'青玉云龙纹炉为故宫玉器的代表作品。宋代出品，高7.9cm，口径12.8cm.炉青玉质。通体以“工”字纹为底，上饰游龙、祥云和海水纹。器内底阴刻乾隆七言诗一首：“何年庙器赞天经，刻作飞龙殿四灵。毛伯邢侯异周制，祖丁父癸似商形。依然韫匵阅桑海，所惜从薪遇丙叮土气羊脂胥变幻，只余云水淡拖青。”'</span><span class="token punctuation">,</span> <span class="token string">'青玉云龙纹炉'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063011</span><span class="token punctuation">,</span> <span class="token string">'painting'</span><span class="token punctuation">,</span> <span class="token string">'《清明上河图》为故宫书画代表作品，该画为张择端所作，以精致的工笔记录了北宋末叶、徽宗时代首都汴京(今开封)郊区和城内汴河两岸的建筑和民生。全图分为三个段落。作品以长卷形式，采用散点透视的构图法，将繁杂的景物纳入统一而富于变化的画面中。在5米多长的画卷里，共绘了550多个各色人物。'</span><span class="token punctuation">,</span> <span class="token string">'清明上河图'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063012</span><span class="token punctuation">,</span> <span class="token string">'placard'</span><span class="token punctuation">,</span> <span class="token string">'西晋陆机的《平复帖》是故宫法帖的代表作品，也是目前存世最早的名人墨迹，内容为陆机向朋友问候疾病的书札。'</span><span class="token punctuation">,</span> <span class="token string">'平复帖'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063013</span><span class="token punctuation">,</span> <span class="token string">'zun'</span><span class="token punctuation">,</span> <span class="token string">'青铜之宝酗亚方尊为故宫青铜器的代表作品。青铜器的产生是古代中国从野蛮时代走向文明时代的重要标志之一。尊是盛酒器，流行于商早期至春秋战国时期。方尊传世较少。上世纪70年代在山东益都苏埠屯出土了几件带有亚铭文的青铜器，从挖掘的墓穴来看，规模都不小，加上众多带有亚铭记的器物，说明它们所代表的可能是一个大族。'</span><span class="token punctuation">,</span> <span class="token string">'酗亚方尊'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> CulturalRelicsIntroduction<span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> introduction<span class="token punctuation">,</span> photo<span class="token punctuation">,</span> remark<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">20210303063014</span><span class="token punctuation">,</span> <span class="token string">'magpie'</span><span class="token punctuation">,</span> <span class="token string">'沈子蕃缂丝《梅鹊图》轴为故宫织绣的代表作品。图轴纵104cm，宽36cm.中国古代缂丝被认为是丝织工艺中最为高贵的品种，古人以“一寸缂丝一寸金”言缂丝作品之珍贵。缂丝之高贵，首先因其耗费工时巨大，以万缕千丝成其工巧，其次，缂技易学难精，虽摹缂书画，并非简单的照葫芦画瓢。'</span><span class="token punctuation">,</span> <span class="token string">'沈子蕃缂丝《梅鹊图》轴'</span><span class="token punctuation">,</span> <span class="token string">'故宫镇馆之宝'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-COMMIT;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1560,7 +1560,7 @@ COMMIT;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             

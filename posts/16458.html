@@ -33,9 +33,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 
@@ -534,7 +534,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-01-31
                 </div>
                 
 
@@ -578,38 +578,38 @@
 <h3 id="生成xcframework"><a href="#生成xcframework" class="headerlink" title="生成xcframework"></a>生成xcframework</h3><pre class="line-numbers language-none"><code class="language-none">carthage update --platform iOS --use-xcframeworks<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="多平台"><a href="#多平台" class="headerlink" title="多平台"></a>多平台</h3><pre class="line-numbers language-none"><code class="language-none">carthage update --use-xcframeworks<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="3、拖入工程"><a href="#3、拖入工程" class="headerlink" title="3、拖入工程"></a>3、拖入工程</h2><p>在工程目录下会生成一个Carthage文件，里面有个Build文件，其中可以找到生成的库</p>
-<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><pre class="line-numbers language-none"><code class="language-none">zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % cd /Users/zhangsaidong/Desktop/test
-zhangsaidong@zhangsaidongs-MacBook-Pro test % $ carthage update --platform iOS
-zsh: command not found: $
-zhangsaidong@zhangsaidongs-MacBook-Pro test % carthage update --platform iOS 
+<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token builtin class-name">cd</span> /Users/zhangsaidong/Desktop/test
+zhangsaidong@zhangsaidongs-MacBook-Pro <span class="token builtin class-name">test</span> % $ carthage update --platform iOS
+zsh: <span class="token builtin class-name">command</span> not found: $
+zhangsaidong@zhangsaidongs-MacBook-Pro <span class="token builtin class-name">test</span> % carthage update --platform iOS 
 *** Fetching SnapKit
-*** Checking out SnapKit at "5.0.1"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.LDPWAL.log
-*** Building scheme "SnapKit" in SnapKit.xcworkspace
-A shell task (/usr/bin/xcrun lipo -create /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/SnapKit/5.0.1/Build/Intermediates.noindex/ArchiveIntermediates/SnapKit/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/SnapKit.framework/SnapKit /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/SnapKit/5.0.1/Build/Products/Release-iphonesimulator/SnapKit.framework/SnapKit -output /Users/zhangsaidong/Desktop/test/Carthage/Build/iOS/SnapKit.framework/SnapKit) failed with exit code 1:
-fatal error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo: /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/SnapKit/5.0.1/Build/Intermediates.noindex/ArchiveIntermediates/SnapKit/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/SnapKit.framework/SnapKit and /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/SnapKit/5.0.1/Build/Products/Release-iphonesimulator/SnapKit.framework/SnapKit have the same architectures (arm64) and can't be in the same fat output file
+*** Checking out SnapKit at <span class="token string">"5.0.1"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.LDPWAL.log
+*** Building scheme <span class="token string">"SnapKit"</span> <span class="token keyword">in</span> SnapKit.xcworkspace
+A shell task <span class="token punctuation">(</span>/usr/bin/xcrun lipo -create /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/SnapKit/5.0.1/Build/Intermediates.noindex/ArchiveIntermediates/SnapKit/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/SnapKit.framework/SnapKit /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/SnapKit/5.0.1/Build/Products/Release-iphonesimulator/SnapKit.framework/SnapKit -output /Users/zhangsaidong/Desktop/test/Carthage/Build/iOS/SnapKit.framework/SnapKit<span class="token punctuation">)</span> failed with <span class="token builtin class-name">exit</span> code <span class="token number">1</span>:
+fatal error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo: /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/SnapKit/5.0.1/Build/Intermediates.noindex/ArchiveIntermediates/SnapKit/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/SnapKit.framework/SnapKit and /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/SnapKit/5.0.1/Build/Products/Release-iphonesimulator/SnapKit.framework/SnapKit have the same architectures <span class="token punctuation">(</span>arm64<span class="token punctuation">)</span> and can't be <span class="token keyword">in</span> the same fat output <span class="token function">file</span>
 
-Building universal frameworks with common architectures is not possible. The device and simulator slices for "SnapKit" both build for: arm64
+Building universal frameworks with common architectures is not possible. The device and simulator slices <span class="token keyword">for</span> <span class="token string">"SnapKit"</span> both build for: arm64
 Rebuild with --use-xcframeworks to create an xcframework bundle instead.
-zhangsaidong@zhangsaidongs-MacBook-Pro test % carthage update --platform iOS --use-xcframeworks
+zhangsaidong@zhangsaidongs-MacBook-Pro <span class="token builtin class-name">test</span> % carthage update --platform iOS --use-xcframeworks
 *** Fetching SnapKit
-*** Checking out SnapKit at "5.0.1"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.w2ACyI.log
-*** Building scheme "SnapKit" in SnapKit.xcworkspace<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-none"><code class="language-none">zhangsaidong@zhangsaidongs-MacBook-Pro test % carthage update --use-xcframeworks
+*** Checking out SnapKit at <span class="token string">"5.0.1"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.w2ACyI.log
+*** Building scheme <span class="token string">"SnapKit"</span> <span class="token keyword">in</span> SnapKit.xcworkspace<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zhangsaidong@zhangsaidongs-MacBook-Pro <span class="token builtin class-name">test</span> % carthage update --use-xcframeworks
 *** Cloning RxSwift
-*** Checking out RxSwift at "6.1.0"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.ZgiMrd.log
-*** Downloading RxSwift.framework binary at "Ethan.1"
-*** Building scheme "RxBlocking" in Rx.xcworkspace
-*** Building scheme "RxRelay" in Rx.xcworkspace
-*** Building scheme "RxSwift" in Rx.xcworkspace
-*** Building scheme "RxCocoa" in Rx.xcworkspace
-*** Building scheme "RxTest" in Rx.xcworkspace<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-none"><code class="language-none">Last login: Sat Apr 24 16:54:56 on ttys004
-c%                                                                              zhangsaidong@zhangsaidongs-MacBook-Pro ~ % cd /Users/zhangsaidong/Desktop/project/CommonlyUsed/RunInto-Apple/RunInto/RunInto
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % cd ..
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install
+*** Checking out RxSwift at <span class="token string">"6.1.0"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.ZgiMrd.log
+*** Downloading RxSwift.framework binary at <span class="token string">"Ethan.1"</span>
+*** Building scheme <span class="token string">"RxBlocking"</span> <span class="token keyword">in</span> Rx.xcworkspace
+*** Building scheme <span class="token string">"RxRelay"</span> <span class="token keyword">in</span> Rx.xcworkspace
+*** Building scheme <span class="token string">"RxSwift"</span> <span class="token keyword">in</span> Rx.xcworkspace
+*** Building scheme <span class="token string">"RxCocoa"</span> <span class="token keyword">in</span> Rx.xcworkspace
+*** Building scheme <span class="token string">"RxTest"</span> <span class="token keyword">in</span> Rx.xcworkspace<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Last login: Sat Apr <span class="token number">24</span> <span class="token number">16</span>:54:56 on ttys004
+c%                                                                              zhangsaidong@zhangsaidongs-MacBook-Pro ~ % <span class="token builtin class-name">cd</span> /Users/zhangsaidong/Desktop/project/CommonlyUsed/RunInto-Apple/RunInto/RunInto
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod <span class="token function">install</span>
 Analyzing dependencies
 Downloading dependencies
 Removing Bagel
@@ -617,53 +617,53 @@ Removing ResponseDetective
 Removing Reveal-SDK
 Generating Pods project
 Integrating client project
-Pod installation complete! There are 75 dependencies from the Podfile and 90 total pods installed.
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install
+Pod installation complete<span class="token operator">!</span> There are <span class="token number">75</span> dependencies from the Podfile and <span class="token number">90</span> total pods installed.
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod <span class="token function">install</span>
 Analyzing dependencies
 Downloading dependencies
 Generating Pods project
 Integrating client project
-Pod installation complete! There are 75 dependencies from the Podfile and 90 total pods installed.
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install
+Pod installation complete<span class="token operator">!</span> There are <span class="token number">75</span> dependencies from the Podfile and <span class="token number">90</span> total pods installed.
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod <span class="token function">install</span>
 Analyzing dependencies
 Downloading dependencies
 Generating Pods project
 Integrating client project
-Pod installation complete! There are 75 dependencies from the Podfile and 90 total pods installed.
+Pod installation complete<span class="token operator">!</span> There are <span class="token number">75</span> dependencies from the Podfile and <span class="token number">90</span> total pods installed.
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Fetching CocoaDebug
-A shell task (/usr/bin/env git fetch --prune --quiet https://github.com/CocoaDebug/CocoaDebug.git refs/tags/*:refs/tags/* +refs/heads/*:refs/heads/* (launched in /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/dependencies/CocoaDebug)) failed with exit code 128:
-error: RPC failed; curl 56 LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
+A shell task <span class="token punctuation">(</span>/usr/bin/env <span class="token function">git</span> fetch --prune --quiet https://github.com/CocoaDebug/CocoaDebug.git refs/tags/*:refs/tags/* +refs/heads/*:refs/heads/* <span class="token punctuation">(</span>launched <span class="token keyword">in</span> /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/dependencies/CocoaDebug<span class="token punctuation">))</span> failed with <span class="token builtin class-name">exit</span> code <span class="token number">128</span>:
+error: RPC failed<span class="token punctuation">;</span> <span class="token function">curl</span> <span class="token number">56</span> LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno <span class="token number">54</span>
 fatal: the remote end hung up unexpectedly
 fatal: early EOF
 fatal: index-pack failed
 
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Cloning CocoaDebug
-A shell task (/usr/bin/env git clone --bare --quiet https://github.com/CocoaDebug/CocoaDebug.git /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/dependencies/CocoaDebug) failed with exit code 128:
-error: RPC failed; curl 56 LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
+A shell task <span class="token punctuation">(</span>/usr/bin/env <span class="token function">git</span> clone --bare --quiet https://github.com/CocoaDebug/CocoaDebug.git /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/dependencies/CocoaDebug<span class="token punctuation">)</span> failed with <span class="token builtin class-name">exit</span> code <span class="token number">128</span>:
+error: RPC failed<span class="token punctuation">;</span> <span class="token function">curl</span> <span class="token number">56</span> LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno <span class="token number">54</span>
 fatal: the remote end hung up unexpectedly
 fatal: early EOF
 fatal: index-pack failed
 
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Cloning TangramKit
-*** Checking out TangramKit at "1.4.2"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.p4tLc5.log
-*** Building scheme "TangramKit" in TangramKit.xcodeproj
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install
+*** Checking out TangramKit at <span class="token string">"1.4.2"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.p4tLc5.log
+*** Building scheme <span class="token string">"TangramKit"</span> <span class="token keyword">in</span> TangramKit.xcodeproj
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod <span class="token function">install</span>
 Analyzing dependencies
 Downloading dependencies
 Removing TangramKit
 Generating Pods project
 Integrating client project
-Pod installation complete! There are 73 dependencies from the Podfile and 88 total pods installed.
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod install
+Pod installation complete<span class="token operator">!</span> There are <span class="token number">73</span> dependencies from the Podfile and <span class="token number">88</span> total pods installed.
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % pod <span class="token function">install</span>
 Analyzing dependencies
 Downloading dependencies
 Generating Pods project
 Integrating client project
-Pod installation complete! There are 73 dependencies from the Podfile and 88 total pods installed.
+Pod installation complete<span class="token operator">!</span> There are <span class="token number">73</span> dependencies from the Podfile and <span class="token number">88</span> total pods installed.
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Cloning CocoaDebug
 ^C
@@ -672,119 +672,119 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframewo
 ^C
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Cloning SQLite.swift
-*** Checking out SQLite.swift at "70fb7af324cb3170d921f135f0c84cbdb6487cc2"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.WCcwXI.log
-*** Building scheme "SQLite tvOS" in SQLite.xcodeproj
-*** Building scheme "SQLite Mac" in SQLite.xcodeproj
-*** Building scheme "SQLite watchOS" in SQLite.xcodeproj
-*** Building scheme "SQLite iOS" in SQLite.xcodeproj
+*** Checking out SQLite.swift at <span class="token string">"70fb7af324cb3170d921f135f0c84cbdb6487cc2"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.WCcwXI.log
+*** Building scheme <span class="token string">"SQLite tvOS"</span> <span class="token keyword">in</span> SQLite.xcodeproj
+*** Building scheme <span class="token string">"SQLite Mac"</span> <span class="token keyword">in</span> SQLite.xcodeproj
+*** Building scheme <span class="token string">"SQLite watchOS"</span> <span class="token keyword">in</span> SQLite.xcodeproj
+*** Building scheme <span class="token string">"SQLite iOS"</span> <span class="token keyword">in</span> SQLite.xcodeproj
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Cloning CocoaDebug
 ^C
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Cloning Surge
-*** Checking out Surge at "2.3.2"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.0VCdna.log
-*** Building scheme "Surge-tvOS" in Surge.xcworkspace
-*** Building scheme "Surge-watchOS" in Surge.xcworkspace
-*** Building scheme "Surge-iOS" in Surge.xcworkspace
-*** Building scheme "Surge-macOS" in Surge.xcworkspace
+*** Checking out Surge at <span class="token string">"2.3.2"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.0VCdna.log
+*** Building scheme <span class="token string">"Surge-tvOS"</span> <span class="token keyword">in</span> Surge.xcworkspace
+*** Building scheme <span class="token string">"Surge-watchOS"</span> <span class="token keyword">in</span> Surge.xcworkspace
+*** Building scheme <span class="token string">"Surge-iOS"</span> <span class="token keyword">in</span> Surge.xcworkspace
+*** Building scheme <span class="token string">"Surge-macOS"</span> <span class="token keyword">in</span> Surge.xcworkspace
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Cloning InterfaceKit
-*** Checking out InterfaceKit at "6c54d468ae1a5c45fc68d800c86e0edd728f913c"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.FScun9.log
-*** Building scheme "InterfaceKit" in InterfaceKit.xcworkspace
+*** Checking out InterfaceKit at <span class="token string">"6c54d468ae1a5c45fc68d800c86e0edd728f913c"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.FScun9.log
+*** Building scheme <span class="token string">"InterfaceKit"</span> <span class="token keyword">in</span> InterfaceKit.xcworkspace
 Build Failed
-    Task failed with exit code 1:
+    Task failed with <span class="token builtin class-name">exit</span> code <span class="token number">1</span>:
     /usr/bin/xcrun dsymutil /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/6c54d468ae1a5c45fc68d800c86e0edd728f913c/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework/InterfaceKit -o /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/6c54d468ae1a5c45fc68d800c86e0edd728f913c/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework.dSYM
 
-This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.FScun9.log
+This usually indicates that project itself failed to compile. Please check the xcodebuild log <span class="token keyword">for</span> <span class="token function">more</span> details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.FScun9.log
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Fetching InterfaceKit
-*** Checking out InterfaceKit at "6c54d468ae1a5c45fc68d800c86e0edd728f913c"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.QqfIWe.log
-*** Building scheme "InterfaceKit" in InterfaceKit.xcworkspace
+*** Checking out InterfaceKit at <span class="token string">"6c54d468ae1a5c45fc68d800c86e0edd728f913c"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.QqfIWe.log
+*** Building scheme <span class="token string">"InterfaceKit"</span> <span class="token keyword">in</span> InterfaceKit.xcworkspace
 Build Failed
-    Task failed with exit code 1:
+    Task failed with <span class="token builtin class-name">exit</span> code <span class="token number">1</span>:
     /usr/bin/xcrun dsymutil /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/6c54d468ae1a5c45fc68d800c86e0edd728f913c/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework/InterfaceKit -o /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/6c54d468ae1a5c45fc68d800c86e0edd728f913c/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework.dSYM
 
-This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.QqfIWe.log
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % open /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/
+This usually indicates that project itself failed to compile. Please check the xcodebuild log <span class="token keyword">for</span> <span class="token function">more</span> details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.QqfIWe.log
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % <span class="token function">open</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Fetching InterfaceKit
-*** Checking out InterfaceKit at "4c1d617d73bd40393e71741b39c9e2ead3c7572d"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.dM9GjZ.log
-*** Building scheme "InterfaceKit" in InterfaceKit.xcworkspace
+*** Checking out InterfaceKit at <span class="token string">"4c1d617d73bd40393e71741b39c9e2ead3c7572d"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.dM9GjZ.log
+*** Building scheme <span class="token string">"InterfaceKit"</span> <span class="token keyword">in</span> InterfaceKit.xcworkspace
 Build Failed
-    Task failed with exit code 1:
+    Task failed with <span class="token builtin class-name">exit</span> code <span class="token number">1</span>:
     /usr/bin/xcrun dsymutil /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework/InterfaceKit -o /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework.dSYM
 
-This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.dM9GjZ.log
+This usually indicates that project itself failed to compile. Please check the xcodebuild log <span class="token keyword">for</span> <span class="token function">more</span> details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.dM9GjZ.log
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks
 *** Fetching InterfaceKit
-*** Checking out InterfaceKit at "4c1d617d73bd40393e71741b39c9e2ead3c7572d"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.XFquCD.log
-*** Building scheme "InterfaceKit" in InterfaceKit.xcworkspace
+*** Checking out InterfaceKit at <span class="token string">"4c1d617d73bd40393e71741b39c9e2ead3c7572d"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.XFquCD.log
+*** Building scheme <span class="token string">"InterfaceKit"</span> <span class="token keyword">in</span> InterfaceKit.xcworkspace
 Build Failed
-    Task failed with exit code 1:
+    Task failed with <span class="token builtin class-name">exit</span> code <span class="token number">1</span>:
     /usr/bin/xcrun dsymutil /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework/InterfaceKit -o /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework.dSYM
 
-This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.XFquCD.log
+This usually indicates that project itself failed to compile. Please check the xcodebuild log <span class="token keyword">for</span> <span class="token function">more</span> details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.XFquCD.log
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --no-use-binaries
 *** Fetching InterfaceKit
 ^C
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --no-use-binaries
 *** Fetching InterfaceKit
-*** Checking out InterfaceKit at "4c1d617d73bd40393e71741b39c9e2ead3c7572d"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.KPX9mF.log
-*** Building scheme "InterfaceKit" in InterfaceKit.xcworkspace
-A shell task (/usr/bin/xcrun lipo -create /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/InterfaceKit.framework/InterfaceKit /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Products/Release-iphonesimulator/InterfaceKit.framework/InterfaceKit -output /Users/zhangsaidong/Desktop/project/CommonlyUsed/RunInto-Apple/RunInto/Carthage/Build/iOS/InterfaceKit.framework/InterfaceKit) failed with exit code 1:
-fatal error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo: /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/InterfaceKit.framework/InterfaceKit and /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Products/Release-iphonesimulator/InterfaceKit.framework/InterfaceKit have the same architectures (arm64) and can't be in the same fat output file
+*** Checking out InterfaceKit at <span class="token string">"4c1d617d73bd40393e71741b39c9e2ead3c7572d"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.KPX9mF.log
+*** Building scheme <span class="token string">"InterfaceKit"</span> <span class="token keyword">in</span> InterfaceKit.xcworkspace
+A shell task <span class="token punctuation">(</span>/usr/bin/xcrun lipo -create /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/InterfaceKit.framework/InterfaceKit /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Products/Release-iphonesimulator/InterfaceKit.framework/InterfaceKit -output /Users/zhangsaidong/Desktop/project/CommonlyUsed/RunInto-Apple/RunInto/Carthage/Build/iOS/InterfaceKit.framework/InterfaceKit<span class="token punctuation">)</span> failed with <span class="token builtin class-name">exit</span> code <span class="token number">1</span>:
+fatal error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo: /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/InterfaceKit.framework/InterfaceKit and /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Products/Release-iphonesimulator/InterfaceKit.framework/InterfaceKit have the same architectures <span class="token punctuation">(</span>arm64<span class="token punctuation">)</span> and can't be <span class="token keyword">in</span> the same fat output <span class="token function">file</span>
 
-Building universal frameworks with common architectures is not possible. The device and simulator slices for "InterfaceKit" both build for: arm64
+Building universal frameworks with common architectures is not possible. The device and simulator slices <span class="token keyword">for</span> <span class="token string">"InterfaceKit"</span> both build for: arm64
 Rebuild with --use-xcframeworks to create an xcframework bundle instead.
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --no-use-binaries --use-xcframeworks
 *** Fetching InterfaceKit
-*** Checking out InterfaceKit at "4c1d617d73bd40393e71741b39c9e2ead3c7572d"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.SrsXrV.log
-*** Building scheme "InterfaceKit" in InterfaceKit.xcworkspace
+*** Checking out InterfaceKit at <span class="token string">"4c1d617d73bd40393e71741b39c9e2ead3c7572d"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.SrsXrV.log
+*** Building scheme <span class="token string">"InterfaceKit"</span> <span class="token keyword">in</span> InterfaceKit.xcworkspace
 Build Failed
-    Task failed with exit code 1:
+    Task failed with <span class="token builtin class-name">exit</span> code <span class="token number">1</span>:
     /usr/bin/xcrun dsymutil /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework/InterfaceKit -o /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/4c1d617d73bd40393e71741b39c9e2ead3c7572d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework.dSYM
 
-This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.SrsXrV.log
+This usually indicates that project itself failed to compile. Please check the xcodebuild log <span class="token keyword">for</span> <span class="token function">more</span> details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.SrsXrV.log
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --no-use-binaries --use-xcframeworks
 *** Fetching InterfaceKit
-*** Checking out InterfaceKit at "6fbe972cef5ec57adf09e90fb18abf178279f05d"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.ztpFGs.log
-*** Building scheme "InterfaceKit" in InterfaceKit.xcworkspace
+*** Checking out InterfaceKit at <span class="token string">"6fbe972cef5ec57adf09e90fb18abf178279f05d"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.ztpFGs.log
+*** Building scheme <span class="token string">"InterfaceKit"</span> <span class="token keyword">in</span> InterfaceKit.xcworkspace
 Build Failed
-    Task failed with exit code 1:
+    Task failed with <span class="token builtin class-name">exit</span> code <span class="token number">1</span>:
     /usr/bin/xcrun dsymutil /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/6fbe972cef5ec57adf09e90fb18abf178279f05d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework/InterfaceKit -o /Users/zhangsaidong/Library/Caches/org.carthage.CarthageKit/DerivedData/12.4_12D4e/InterfaceKit/6fbe972cef5ec57adf09e90fb18abf178279f05d/Build/Intermediates.noindex/ArchiveIntermediates/InterfaceKit/BuildProductsPath/Release-iphoneos/InterfaceKit.framework.dSYM
 
-This usually indicates that project itself failed to compile. Please check the xcodebuild log for more details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.ztpFGs.log
+This usually indicates that project itself failed to compile. Please check the xcodebuild log <span class="token keyword">for</span> <span class="token function">more</span> details: /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.ztpFGs.log
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % carthage update --use-xcframeworks                  
 *** Fetching InterfaceKit
-*** Checking out InterfaceKit at "55b358119d90ce36475caaefb052d0a83dc7e404"
-*** xcodebuild output can be found in /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.5gb46Q.log
-*** Building scheme "InterfaceKit" in InterfaceKit.xcworkspace
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % cd ..
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % git add .
-g%                                                                                                                                            zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % git commit -m "fix"
-[master 64157fda] fix
- 9 files changed, 430 insertions(+), 419 deletions(-)
- rewrite RunInto/RunInto/SwiftUI/Home/child/Setting/interface/InterfaceView.swift (98%)
- rewrite RunInto/RunInto/SwiftUI/Home/child/Setting/interface/WCInterfaceView.swift (98%)
-zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % git push
-Enumerating objects: 53, done.
-Counting objects: 100% (53/53), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (27/27), done.
-Writing objects: 100% (28/28), 364.31 KiB | 3.72 MiB/s, done.
-Total 28 (delta 17), reused 0 (delta 0)
-remote: Resolving deltas: 100% (17/17), completed with 16 local objects.
+*** Checking out InterfaceKit at <span class="token string">"55b358119d90ce36475caaefb052d0a83dc7e404"</span>
+*** xcodebuild output can be found <span class="token keyword">in</span> /var/folders/6l/1l7ck2ln26l__7d011xpj3q00000gn/T/carthage-xcodebuild.5gb46Q.log
+*** Building scheme <span class="token string">"InterfaceKit"</span> <span class="token keyword">in</span> InterfaceKit.xcworkspace
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto % <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+g%                                                                                                                                            zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % <span class="token function">git</span> commit -m <span class="token string">"fix"</span>
+<span class="token punctuation">[</span>master 64157fda<span class="token punctuation">]</span> fix
+ <span class="token number">9</span> files changed, <span class="token number">430</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">419</span> deletions<span class="token punctuation">(</span>-<span class="token punctuation">)</span>
+ rewrite RunInto/RunInto/SwiftUI/Home/child/Setting/interface/InterfaceView.swift <span class="token punctuation">(</span><span class="token number">98</span>%<span class="token punctuation">)</span>
+ rewrite RunInto/RunInto/SwiftUI/Home/child/Setting/interface/WCInterfaceView.swift <span class="token punctuation">(</span><span class="token number">98</span>%<span class="token punctuation">)</span>
+zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % <span class="token function">git</span> push
+Enumerating objects: <span class="token number">53</span>, done.
+Counting objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">53</span>/53<span class="token punctuation">)</span>, done.
+Delta compression using up to <span class="token number">16</span> threads
+Compressing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">27</span>/27<span class="token punctuation">)</span>, done.
+Writing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">28</span>/28<span class="token punctuation">)</span>, <span class="token number">364.31</span> KiB <span class="token operator">|</span> <span class="token number">3.72</span> MiB/s, done.
+Total <span class="token number">28</span> <span class="token punctuation">(</span>delta <span class="token number">17</span><span class="token punctuation">)</span>, reused <span class="token number">0</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>
+remote: Resolving deltas: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">17</span>/17<span class="token punctuation">)</span>, completed with <span class="token number">16</span> <span class="token builtin class-name">local</span> objects.
 To https://github.com/adong666666/RunInto-Apple.git
-   5dc30f04..64157fda  master -&gt; master
+   5dc30f04<span class="token punctuation">..</span>64157fda  master -<span class="token operator">&gt;</span> master
 zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
@@ -1408,7 +1408,7 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % <span aria-hidden="true" 
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">56k</span>
+                        class="white-color">56.8k</span>
             
             
             
