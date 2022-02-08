@@ -549,7 +549,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    603
+                    609
                 </div>
                 
 
@@ -629,8 +629,9 @@ n == grid[i].length
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
 <li>时间复杂度：O(mn)。</li>
-<li>空间复杂度：O(mn)，即为存储所有状态需要的空间。注意到 f(i, j)仅与第 i 行和第 i-1 行的状态有关，因此我们可以使用滚动数组代替代码中的二维数组，使空间复杂度降低为 O(n)。此外，由于我们交换行列的值并不会对答案产生影响，因此我们总可以通过交换 m 和 n 使得 m≤n，这样空间复杂度降低至 O(min(m,n))。</li>
+<li>空间复杂度：O(mn)，其中 m 和 n 分别是网格的行数和列数。创建一个二维数组dp，和网格大小相同。<br>空间复杂度可以优化，例如每次只存储上一行的dp 值，则可以将空间复杂度优化到 O(n)。</li>
 </ul>
+<p>作者：LeetCode-Solution<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-path-sum/solution/zui-xiao-lu-jing-he-by-leetcode-solution/">https://leetcode-cn.com/problems/minimum-path-sum/solution/zui-xiao-lu-jing-he-by-leetcode-solution/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p><code>心得： 这是一道比较经典的动规题，难度偏简单，和第62题有着异曲同工之妙，主要是找到初始条件，找到dp[i][j] = min(dp[i][j-1] + grid[i][j], dp[i-1][j] + grid[i][j])这么一个关系，如果求最大，则用max。这个解法和官方思路是一样的。</code></p>
 <p>我看到一种别人写的Python解法，思路是一样，代码却是简洁不少，但它的用时和内存都超过C++代码。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
