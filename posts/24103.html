@@ -1123,7 +1123,8 @@ n == grid[i].length
 
 
 
-<!-- 这里我改了BBtalk app body 中显示消息为61.8% -->
+<!-- 这里我改了BBtalk app body 中显示消息为61.8%  -->
+<!-- <p v-html='item.attributes.content' style= "color: #777777"></p>  这一段我加了这个颜色#777777-->
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
@@ -1451,7 +1452,7 @@ var _hmt = _hmt || [];
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+            <input type="search" style="color: #777777" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
@@ -1549,6 +1550,8 @@ $(function () {
     searchFunc('../search.xml', 'searchInput', 'searchResult');
 });
 </script>
+
+
 
     
     
