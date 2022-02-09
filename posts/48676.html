@@ -4,13 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Moya使用, 张赛东">
-    <meta name="description" content="Moya使用========================我觉得看这代码就知道怎么用了，其实就是一个整理。
-代码示例//
-//  IntroductionAPI.swift
-//  RunInto
-//
-//  Created by 张赛">
+    <meta name="keywords" content="LeetCode第72题（动态规划）：编辑距离, 张赛东">
+    <meta name="description" content="LeetCode第72题（动态规划）：编辑距离========================
+题目如下：
+72. 编辑距离
+Given two strings word1 and word2, return the minimum num">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Moya使用 | 张赛东</title>
+    <title>LeetCode第72题（动态规划）：编辑距离 | 张赛东</title>
     <link rel="icon" type="image/jpeg" href="../favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.min.css">
@@ -375,12 +373,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Moya使用</h1>
+                    <h1 class="description center-align post-title">LeetCode第72题（动态规划）：编辑距离</h1>
                 </div>
             </div>
         </div>
@@ -496,16 +494,24 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../tags/iOS/">
-                                <span class="chip bg-color">iOS</span>
+                            <a href="../tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="../tags/framework/">
-                                <span class="chip bg-color">framework</span>
+                            <a href="../tags/C/">
+                                <span class="chip bg-color">C++</span>
                             </a>
                         
-                            <a href="../tags/network/">
-                                <span class="chip bg-color">network</span>
+                            <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                <span class="chip bg-color">动态规划</span>
+                            </a>
+                        
+                            <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                                <span class="chip bg-color">记忆化</span>
+                            </a>
+                        
+                            <a href="../tags/LeetCode/">
+                                <span class="chip bg-color">LeetCode</span>
                             </a>
                         
                     </div>
@@ -516,8 +522,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="post-category">
-                                移动开发
+                            <a href="../categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                数据结构与算法
                             </a>
                         
                     </div>
@@ -529,28 +535,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-31
+                    2022-02-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-31
+                    2022-02-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    364
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -573,117 +579,137 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Moya使用"><a href="#Moya使用" class="headerlink" title="Moya使用"></a>Moya使用</h1><p>========================<br>我觉得看这代码就知道怎么用了，其实就是一个整理。</p>
-<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">//</span>
-<span class="token comment">//  IntroductionAPI.swift</span>
-<span class="token comment">//  RunInto</span>
-<span class="token comment">//</span>
-<span class="token comment">//  Created by 张赛东（手机：15674119605） on 2021/3/30.</span>
-<span class="token comment">//  Copyright © 2021 adong666666. All rights reserved.</span>
-<span class="token comment">//</span>
-<span class="token comment">// swiftlint:disable identifier_name</span>
-<span class="token keyword">import</span> <span class="token builtin">Foundation</span>
-<span class="token keyword">import</span> <span class="token builtin">Moya</span>
-<span class="token keyword">import</span> <span class="token builtin">HandyJSON</span>
+                <h1 id="LeetCode第72题（动态规划）：编辑距离"><a href="#LeetCode第72题（动态规划）：编辑距离" class="headerlink" title="LeetCode第72题（动态规划）：编辑距离"></a>LeetCode第72题（动态规划）：编辑距离</h1><p>========================</p>
+<p>题目如下：<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220209LeetCode%E7%AC%AC72%E9%A2%98%EF%BC%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89%EF%BC%9A%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/1.png"></p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">72. 编辑距离
+Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
 
-<span class="token keyword">let</span> ip <span class="token operator">=</span> <span class="token string">"http://47.119.162.99"</span>
+You have the following three operations permitted on a word:
 
-<span class="token keyword">let</span> culturalRelicsDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/culturalRelicsData"</span>
-<span class="token keyword">let</span> models3DDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span>  <span class="token string">"/runinto/models3DData"</span>
-<span class="token keyword">let</span> introductionDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/introductionData"</span>
-<span class="token keyword">let</span> paintingModeslDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/paintingModelsData"</span>
-<span class="token keyword">let</span> paintinggRomanceDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/paintingRomanceData"</span>
-<span class="token keyword">let</span> stylePredictDataUrl <span class="token operator">=</span> ip <span class="token operator">+</span> <span class="token string">"/runinto/stylePredictData"</span>
-<span class="token comment">/// 介绍接口</span>
-<span class="token keyword">let</span> introductionPovider <span class="token operator">=</span> <span class="token builtin">MoyaProvider</span><span class="token operator">&lt;</span><span class="token builtin">IntroductionAPI</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+Insert a character
+Delete a character
+Replace a character
+ 
 
-<span class="token keyword">enum</span> <span class="token builtin">IntroductionAPI</span> <span class="token punctuation">{</span>
-    <span class="token keyword">case</span> culturalRelicsData
-    <span class="token keyword">case</span> models3DData
-    <span class="token keyword">case</span> introductionData
-    <span class="token keyword">case</span> paintingModeslData
-    <span class="token keyword">case</span> paintinggRomanceData
-    <span class="token keyword">case</span> stylePredictData
-<span class="token punctuation">}</span>
+Example 1:
 
-<span class="token keyword">extension</span> <span class="token builtin">IntroductionAPI</span><span class="token punctuation">:</span> <span class="token builtin">TargetType</span> <span class="token punctuation">{</span>
-    <span class="token comment">//服务器地址</span>
-    <span class="token keyword">public</span> <span class="token keyword">var</span> baseURL<span class="token punctuation">:</span> <span class="token constant">URL</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> ip<span class="token punctuation">)</span><span class="token operator">!</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">var</span> path<span class="token punctuation">:</span> <span class="token builtin">String</span> <span class="token punctuation">{</span>
-        <span class="token keyword">switch</span> <span class="token keyword">self</span> <span class="token punctuation">{</span>
-        <span class="token keyword">case</span> <span class="token punctuation">.</span>culturalRelicsData<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token string">"/runinto/culturalRelicsData"</span>
-        <span class="token keyword">case</span> <span class="token punctuation">.</span>models3DData<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token string">"/runinto/models3DData"</span>
-        <span class="token keyword">case</span> <span class="token punctuation">.</span>introductionData<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token string">"/runinto/introductionData"</span>
-        <span class="token keyword">case</span> <span class="token punctuation">.</span>paintingModeslData<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token string">"/runinto/paintingModelsData"</span>
-        <span class="token keyword">case</span> <span class="token punctuation">.</span>paintinggRomanceData<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token string">"/runinto/paintingRomanceData"</span>
-        <span class="token keyword">case</span> <span class="token punctuation">.</span>stylePredictData<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token string">"/runinto/stylePredictData"</span>
+Input: word1 = "horse", word2 = "ros"
+Output: 3
+Explanation: 
+horse -&gt; rorse (replace 'h' with 'r')
+rorse -&gt; rose (remove 'r')
+rose -&gt; ros (remove 'e')
+Example 2:
+
+Input: word1 = "intention", word2 = "execution"
+Output: 5
+Explanation: 
+intention -&gt; inention (remove 't')
+inention -&gt; enention (replace 'i' with 'e')
+enention -&gt; exention (replace 'n' with 'x')
+exention -&gt; exection (replace 'n' with 'c')
+exection -&gt; execution (insert 'u')
+ 
+
+Constraints:
+
+0 &lt;= word1.length, word2.length &lt;= 500
+word1 and word2 consist of lowercase English letters.
+
+
+给你两个单词&nbsp;word1 和&nbsp;word2， 请返回将&nbsp;word1&nbsp;转换成&nbsp;word2 所使用的最少操作数 &nbsp;。
+
+你可以对一个单词进行如下三种操作：
+
+插入一个字符
+删除一个字符
+替换一个字符
+&nbsp;
+
+示例&nbsp;1：
+
+输入：word1 = "horse", word2 = "ros"
+输出：3
+解释：
+horse -&gt; rorse (将 'h' 替换为 'r')
+rorse -&gt; rose (删除 'r')
+rose -&gt; ros (删除 'e')
+示例&nbsp;2：
+
+输入：word1 = "intention", word2 = "execution"
+输出：5
+解释：
+intention -&gt; inention (删除 't')
+inention -&gt; enention (将 'i' 替换为 'e')
+enention -&gt; exention (将 'n' 替换为 'x')
+exention -&gt; exection (将 'n' 替换为 'c')
+exection -&gt; execution (插入 'u')
+&nbsp;
+
+提示：
+
+0 &lt;= word1.length, word2.length &lt;= 500
+word1 和 word2 由小写英文字母组成<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">minDistance</span><span class="token punctuation">(</span>string word1<span class="token punctuation">,</span> string word2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> m <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> word1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> word2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span> <span class="token function">dp</span><span class="token punctuation">(</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//int dp[m+1][n+1];</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">var</span> method<span class="token punctuation">:</span> <span class="token builtin">Moya</span><span class="token punctuation">.</span><span class="token builtin">Method</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token punctuation">.</span><span class="token keyword">get</span> <span class="token punctuation">}</span>
-    <span class="token keyword">var</span> task<span class="token punctuation">:</span> <span class="token builtin">Task</span> <span class="token punctuation">{</span>
-        <span class="token keyword">let</span> parameters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">String</span><span class="token punctuation">:</span> <span class="token builtin">Any</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
-        <span class="token keyword">return</span> <span class="token punctuation">.</span><span class="token function">requestParameters</span><span class="token punctuation">(</span>parameters<span class="token punctuation">:</span> parameters<span class="token punctuation">,</span> encoding<span class="token punctuation">:</span> <span class="token builtin">URLEncoding</span><span class="token punctuation">.</span><span class="token keyword">default</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">var</span> sampleData<span class="token punctuation">:</span> <span class="token builtin">Data</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span>using<span class="token punctuation">:</span> <span class="token punctuation">.</span>utf8<span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">}</span>
-    <span class="token keyword">var</span> headers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">String</span><span class="token punctuation">:</span> <span class="token builtin">String</span><span class="token punctuation">]</span><span class="token operator">?</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token constant">nil</span> <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><p>在合适的地方调用，<code>mapJSON()</code>也是Moya里的函数。<code>JSON()</code>则是SwiftyJSON里的常用函数</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token comment">//</span>
-<span class="token comment">//  NetworkTool.swift</span>
-<span class="token comment">//  RunInto</span>
-<span class="token comment">//</span>
-<span class="token comment">//  Created by 张赛东（手机：15674119605） on 2021/3/30.</span>
-<span class="token comment">//  Copyright © 2021 adong666666. All rights reserved.</span>
-<span class="token comment">//</span>
-<span class="token comment">//swiftlint:disable void_return</span>
-<span class="token keyword">import</span> <span class="token builtin">Foundation</span>
-<span class="token keyword">import</span> <span class="token builtin">Alamofire</span>
-<span class="token keyword">import</span> <span class="token builtin">SwiftyJSON</span>
-<span class="token keyword">import</span> <span class="token builtin">HandyJSON</span>
-
-<span class="token keyword">protocol</span> <span class="token builtin">NetworkToolProtocol</span> <span class="token punctuation">{</span>
-    <span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token function">loadCulturalRelicsData</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token builtin">IntroductionAPI</span><span class="token punctuation">,</span> completionHandler<span class="token punctuation">:</span> @escaping <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token builtin">Introduction</span><span class="token operator">?</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">extension</span> <span class="token builtin">NetworkToolProtocol</span> <span class="token punctuation">{</span>
-    <span class="token keyword">static</span> <span class="token keyword">func</span> <span class="token function">loadCulturalRelicsData</span><span class="token punctuation">(</span>input<span class="token punctuation">:</span> <span class="token builtin">IntroductionAPI</span><span class="token punctuation">,</span> completionHandler<span class="token punctuation">:</span> @escaping <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token builtin">Introduction</span><span class="token operator">?</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">//        AF.request(culturalRelicsDataUrl, method: .get, parameters: [:]).responseJSON(completionHandler: { (response) in</span>
-        <span class="token comment">//            let value = response.value</span>
-        <span class="token comment">//            let json = JSON(value as Any)</span>
-        <span class="token comment">//            log(json)</span>
-        <span class="token comment">//        })</span>
-        introductionPovider<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token keyword">in</span>
-            <span class="token keyword">if</span> <span class="token keyword">case</span> <span class="token keyword">let</span> <span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token operator">=</span> result <span class="token punctuation">{</span>
-                <span class="token comment">//解析数据</span>
-                <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token keyword">try</span><span class="token operator">?</span> response<span class="token punctuation">.</span><span class="token function">mapJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-                <span class="token keyword">let</span> json <span class="token operator">=</span> <span class="token function">JSON</span><span class="token punctuation">(</span>data<span class="token operator">!</span><span class="token punctuation">)</span>
-                <span class="token keyword">let</span> culturalRelicsData <span class="token operator">=</span> json<span class="token punctuation">[</span><span class="token string">"data"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"culturalRelicsData"</span><span class="token punctuation">]</span>
-                <span class="token comment">//log(json)</span>
-                <span class="token comment">//log(culturalRelicsData)</span>
-                <span class="token keyword">if</span> <span class="token keyword">let</span> mappedObject <span class="token operator">=</span> <span class="token builtin">JSONDeserializer</span><span class="token operator">&lt;</span><span class="token builtin">Introduction</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token function">deserializeModelArrayFrom</span><span class="token punctuation">(</span>json<span class="token punctuation">:</span> culturalRelicsData<span class="token punctuation">.</span>description<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token comment">//log(mappedObject)</span>
-                    <span class="token comment">//log(mappedObject.count)</span>
-                    <span class="token function">completionHandler</span><span class="token punctuation">(</span>mappedObject<span class="token punctuation">)</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>word1<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> word2<span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span><span class="token function">min</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> dp<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>心得： 这是一道比较经典的动规题，难度偏中等，主要是找到初始条件，找到dp[i][j] = dp[i-1][j-1]和dp[i][j] = min(min(dp[i-1][j-1], dp[i-1][j]),dp[i][j-1])+1这两个状态转移方程，下面是我摘取的别人的思路。</code></p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">步骤一、定义数组元素的含义
+由于我们的目的求将 word1 转换成 word2 所使用的最少操作数 。那我们就定义 dp[i] [j]的含义为：当字符串 word1 的长度为 i，字符串 word2 的长度为 j 时，将 word1 转化为 word2 所使用的最少操作次数为 dp[i] [j]。
 
-<span class="token keyword">struct</span> <span class="token builtin">NetworkTool</span><span class="token punctuation">:</span> <span class="token builtin">NetworkToolProtocol</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+有时候，数组的含义并不容易找，所以还是那句话，我给你们一个套路，剩下的还得看你们去领悟。
+
+步骤二：找出关系数组元素间的关系式
+接下来我们就要找 dp[i] [j] 元素之间的关系了，比起其他题，这道题相对比较难找一点，但是，不管多难找，大部分情况下，dp[i] [j] 和 dp[i-1] [j]、dp[i] [j-1]、dp[i-1] [j-1] 肯定存在某种关系。因为我们的目标就是，从规模小的，通过一些操作，推导出规模大的。对于这道题，我们可以对 word1 进行三种操作
+
+插入一个字符
+删除一个字符
+替换一个字符
+
+由于我们是要让操作的次数最小，所以我们要寻找最佳操作。那么有如下关系式：
+
+一、如果我们 word1[i] 与 word2 [j] 相等，这个时候不需要进行任何操作，显然有 dp[i] [j] = dp[i-1] [j-1]。（别忘了 dp[i] [j] 的含义哈）。
+
+二、如果我们 word1[i] 与 word2 [j] 不相等，这个时候我们就必须进行调整，而调整的操作有 3 种，我们要选择一种。三种操作对应的关系试如下（注意字符串与字符的区别）：
+
+（1）、如果把字符 word1[i] 替换成与 word2[j] 相等，则有 dp[i] [j] = dp[i-1] [j-1] + 1;
+
+（2）、如果在字符串 word1末尾插入一个与 word2[j] 相等的字符，则有 dp[i] [j] = dp[i] [j-1] + 1;
+
+（3）、如果把字符 word1[i] 删除，则有 dp[i] [j] = dp[i-1] [j] + 1;
+
+那么我们应该选择一种操作，使得 dp[i] [j] 的值最小，显然有
+
+dp[i] [j] = min(dp[i-1] [j-1]，dp[i] [j-1]，dp[[i-1] [j]]) + 1;
+
+于是，我们的关系式就推出来了，
+
+步骤三、找出初始值
+显然，当 dp[i] [j] 中，如果 i 或者 j 有一个为 0，那么还能使用关系式吗？答是不能的，因为这个时候把 i - 1 或者 j - 1，就变成负数了，数组就会出问题了，所以我们的初始值是计算出所有的 dp[0] [0….n] 和所有的 dp[0….m] [0]。这个还是非常容易计算的，因为当有一个字符串的长度为 0 时，转化为另外一个字符串，那就只能一直进行插入或者删除操作了。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode.com/problems/edit-distance/">https://leetcode.com/problems/edit-distance/</a></p>
 
                 
             </div>
@@ -748,16 +774,24 @@
                     
                         <div class="article-tag">
                             
-                                <a href="../tags/iOS/">
-                                    <span class="chip bg-color">iOS</span>
+                                <a href="../tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
-                                <a href="../tags/framework/">
-                                    <span class="chip bg-color">framework</span>
+                                <a href="../tags/C/">
+                                    <span class="chip bg-color">C++</span>
                                 </a>
                             
-                                <a href="../tags/network/">
-                                    <span class="chip bg-color">network</span>
+                                <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                    <span class="chip bg-color">动态规划</span>
+                                </a>
+                            
+                                <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                                    <span class="chip bg-color">记忆化</span>
+                                </a>
+                            
+                                <a href="../tags/LeetCode/">
+                                    <span class="chip bg-color">LeetCode</span>
                                 </a>
                             
                         </div>
@@ -962,17 +996,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="47851.html">
+                <a href="">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/11.jpg" class="responsive-img" alt="HandyJSON使用">
+                        <img src="../medias/featureimages/11.jpg" class="responsive-img" alt="LeetCode第72题（动态规划）：编辑距离">
                         
-                        <span class="card-title">HandyJSON使用</span>
+                        <span class="card-title">LeetCode第72题（动态规划）：编辑距离</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -982,34 +1017,43 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="post-category">
-                                    移动开发
+                            <a href="../categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/iOS/">
-                        <span class="chip bg-color">iOS</span>
+                    <a href="../tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
-                    <a href="../tags/framework/">
-                        <span class="chip bg-color">framework</span>
+                    <a href="../tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
-                    <a href="../tags/network/">
-                        <span class="chip bg-color">network</span>
+                    <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                    <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                        <span class="chip bg-color">记忆化</span>
+                    </a>
+                    
+                    <a href="../tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
                     </a>
                     
                 </div>
@@ -1023,13 +1067,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="1671.html">
+                <a href="24103.html">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/4.jpg" class="responsive-img" alt="iOS开发之真机和模拟器查看本地沙盒数据摘录">
+                        <img src="../medias/featureimages/21.jpg" class="responsive-img" alt="LeetCode第64题（动态规划）：最小路径和">
                         
-                        <span class="card-title">iOS开发之真机和模拟器查看本地沙盒数据摘录</span>
+                        <span class="card-title">LeetCode第64题（动态规划）：最小路径和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1040,14 +1084,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="post-category">
-                                    移动开发
+                            <a href="../categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
                                 </a>
                             
                             
@@ -1057,12 +1101,24 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/iOS/">
-                        <span class="chip bg-color">iOS</span>
+                    <a href="../tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
-                    <a href="../tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">
-                        <span class="chip bg-color">软件测试</span>
+                    <a href="../tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                    <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                        <span class="chip bg-color">记忆化</span>
+                    </a>
+                    
+                    <a href="../tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
                     </a>
                     
                 </div>
