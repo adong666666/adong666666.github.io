@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://zsd.name/posts/22809.html</loc>
+    
+    <lastmod>2022-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zsd.name/posts/47700.html</loc>
     
     <lastmod>2022-02-18</lastmod>
@@ -1043,6 +1052,13 @@
   
   <url>
     <loc>https://zsd.name/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</loc>
+    <lastmod>2022-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/tags/POJ/</loc>
     <lastmod>2022-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

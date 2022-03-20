@@ -4,9 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="iOS之制作xcframework摘录, 张赛东">
-    <meta name="description" content="iOS之制作xcframework摘录========================
-最近RxSwift 6开始需要xcframework拖到工程中（感觉有点麻烦，直接让我们pod就能用，他不香吗），然后我就去搜了网上的教程制作xcfra">
+    <meta name="keywords" content="POJ3254（状态压缩dp）：玉米地, 张赛东">
+    <meta name="description" content="POJ3254（状态压缩dp）：玉米地========================
+题目如下：
+Corn Fields
+Time Limit: 2000MS        Memory Limit: 65536K
+Total Submi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>iOS之制作xcframework摘录 | 张赛东</title>
+    <title>POJ3254（状态压缩dp）：玉米地 | 张赛东</title>
     <link rel="icon" type="image/jpeg" href="../favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.min.css">
@@ -371,12 +374,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">iOS之制作xcframework摘录</h1>
+                    <h1 class="description center-align post-title">POJ3254（状态压缩dp）：玉米地</h1>
                 </div>
             </div>
         </div>
@@ -492,12 +495,28 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../tags/iOS/">
-                                <span class="chip bg-color">iOS</span>
+                            <a href="../tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="../tags/framework/">
-                                <span class="chip bg-color">framework</span>
+                            <a href="../tags/C/">
+                                <span class="chip bg-color">C++</span>
+                            </a>
+                        
+                            <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                <span class="chip bg-color">动态规划</span>
+                            </a>
+                        
+                            <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                                <span class="chip bg-color">记忆化</span>
+                            </a>
+                        
+                            <a href="../tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
+                                <span class="chip bg-color">状态压缩</span>
+                            </a>
+                        
+                            <a href="../tags/POJ/">
+                                <span class="chip bg-color">POJ</span>
                             </a>
                         
                     </div>
@@ -508,8 +527,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="post-category">
-                                移动开发
+                            <a href="../categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                数据结构与算法
                             </a>
                         
                     </div>
@@ -521,28 +540,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-22
+                    2022-03-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2022-03-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    5 分
                 </div>
                 
 
@@ -565,72 +584,177 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="iOS之制作xcframework摘录"><a href="#iOS之制作xcframework摘录" class="headerlink" title="iOS之制作xcframework摘录"></a>iOS之制作xcframework摘录</h1><p>========================</p>
-<p>最近RxSwift 6开始需要xcframework拖到工程中（感觉有点麻烦，直接让我们pod就能用，他不香吗），然后我就去搜了网上的教程制作xcframework，真是很麻烦，幸好结合下面两篇教程最后还是搞定了。</p>
-<p>附网址：<a target="_blank" rel="noopener" href="https://www.shareintelli.com/1087/">https://www.shareintelli.com/1087/</a><br> 附网址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zr_csdn/article/details/112298965">https://blog.csdn.net/zr_csdn/article/details/112298965</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210322iOS%E4%B9%8B%E5%88%B6%E4%BD%9Cxcframework%E6%91%98%E5%BD%95/1.png"><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20210322iOS%E4%B9%8B%E5%88%B6%E4%BD%9Cxcframework%E6%91%98%E5%BD%95/2.png"></p>
-<h2 id="截图看不到的命令行"><a href="#截图看不到的命令行" class="headerlink" title="截图看不到的命令行"></a>截图看不到的命令行</h2><pre class="line-numbers language-none"><code class="language-none">xcodebuild -create-xcframework -framework &lt;第一个库的路径&gt; -framework &lt;第二个库的路径&gt; -output &lt;输出路径/库名称.xcframework&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-none"><code class="language-none">xcodebuild -create-xcframework -framework /Users/admin/Library/Developer/Xcode/DerivedData/MyTools-ciyqnqacjemhpfbqswwhrlyvstsb/Build/Products/Release-iphoneos/MyTools.framework -framework /Users/admin/Library/Developer/Xcode/DerivedData/MyTools-ciyqnqacjemhpfbqswwhrlyvstsb/Build/Products/Release-iphonesimulator/MyTools.framework -output ~/Desktop/MyToolsOutput/MyTools.xcframework
+                <h1 id="POJ3254（状态压缩dp）：玉米地"><a href="#POJ3254（状态压缩dp）：玉米地" class="headerlink" title="POJ3254（状态压缩dp）：玉米地"></a>POJ3254（状态压缩dp）：玉米地</h1><p>========================</p>
+<p>题目如下：<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220320POJ3254%EF%BC%88%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp%EF%BC%89%EF%BC%9A%E7%8E%89%E7%B1%B3%E5%9C%B0/1.png"></p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">Corn Fields
+Time Limit: 2000MS        Memory Limit: 65536K
+Total Submissions: 26638        Accepted: 13894
+Description
 
-// 成功后的日志
-xcframework successfully written out to: /Users/admin/Desktop/MyToolsOutput/MyTools.xcframework
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="工作记录"><a href="#工作记录" class="headerlink" title="工作记录"></a>工作记录</h2><p>这里因为在博客就直接给内容哈：</p>
-<pre class="line-numbers language-none"><code class="language-none">Last login: Sun Mar 21 16:16:57 on ttys000
-zhangsaidong@zhangsaidongs-MacBook-Pro ~ % cd /Users/zhangsaidong/Desktop/project2/iOS/someProject
-zhangsaidong@zhangsaidongs-MacBook-Pro someProject % 
-zhangsaidong@zhangsaidongs-MacBook-Pro someProject % git clone https://github.com/ReactiveX/RxSwift.git
-Cloning into 'RxSwift'...
-remote: Enumerating objects: 36, done.
-remote: Counting objects: 100% (36/36), done.
-remote: Compressing objects: 100% (33/33), done.
-remote: Total 39525 (delta 9), reused 9 (delta 3), pack-reused 39489
-Receiving objects: 100% (39525/39525), 15.15 MiB | 1.85 MiB/s, done.
-Resolving deltas: 100% (29174/29174), done.
-zhangsaidong@zhangsaidongs-MacBook-Pro someProject % xcodebuild
-Command line invocation:
-    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
+Farmer John has purchased a lush new rectangular pasture composed of M by N (1 ≤ M ≤ 12; 1 ≤ N ≤ 12) square parcels. He wants to grow some yummy corn for the cows on a number of squares. Regrettably, some of the squares are infertile and can't be planted. Canny FJ knows that the cows dislike eating close to each other, so when choosing which squares to plant, he avoids choosing squares that are adjacent; no two chosen squares share an edge. He has not yet made the final choice as to which squares to plant.
 
-xcodebuild: error: The directory /Users/zhangsaidong/Desktop/project2/iOS/someProject does not contain an Xcode project.
+Being a very open-minded man, Farmer John wants to consider all possible options for how to choose the squares for planting. He is so open-minded that he considers choosing no squares as a valid option! Please help Farmer John determine the number of ways he can choose the squares to plant.
 
-zhangsaidong@zhangsaidongs-MacBook-Pro someProject % cd /Users/zhangsaidong/Desktop/project2/iOS/someProject/RxSwift/RxExample/RxExample.xcodeproj
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample.xcodeproj % cd ..
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcode build
-zsh: command not found: xcode
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild
-Command line invocation:
-    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
+Input
 
-note: Using new build system
-note: Planning build
-note: Constructing build description
-warning: ONLY_ACTIVE_ARCH=YES requested with multiple ARCHS and no run destination to provide an active architecture; building for all applicable architectures (in target 'RxCocoa' from project 'Rx')
-error: No profiles for 'io.rx.example.4.3.0' were found: Xcode couldn't find any iOS App Development provisioning profiles matching 'io.rx.example.4.3.0'. Automatic signing is disabled and unable to generate a profile. To enable automatic signing, pass -allowProvisioningUpdates to xcodebuild. (in target 'RxExample-iOS' from project 'RxExample')
-error: Building for iOS, but the linked framework 'RxSwift.framework' is building for macOS. You may need to configure 'RxSwift.framework' to build for iOS. (in target 'RxExample-iOS' from project 'RxExample')
-error: Building for iOS, but the linked framework 'RxCocoa.framework' is building for macOS. You may need to configure 'RxCocoa.framework' to build for iOS. (in target 'RxExample-iOS' from project 'RxExample')
+Line 1: Two space-separated integers: M and N
+Lines 2..M+1: Line i+1 describes row i of the pasture with N space-separated integers indicating whether a square is fertile (1 for fertile, 0 for infertile)
+Output
 
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxCocoa.framework  -framework/Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphonesimulator/RxCocoa.framework
-error: invalid argument '-framework/Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxCocoa.framework'.
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxCocoa.framework  -framework/Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphonesimulator/RxCocoa.framework -output ~/Desktop/RxCocoa.xcframework
-error: invalid argument '-framework/Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxCocoa.framework'.
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxCocoa.framework  -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphonesimulator/RxCocoa.framework -output ~/Desktop/RxCocoa.xcframework
-xcframework successfully written out to: /Users/zhangsaidong/Desktop/RxCocoa.xcframework
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxRelay.framework
-error: no output was specified.
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxRelay.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxRelay.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphonesimulator/RxRelay.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-appletvos/RxRelay.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-watchos/RxRelay.framework output ~/Desktop/RxRelay.xcframework
-error: invalid argument 'output'.
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxRelay.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxRelay.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphonesimulator/RxRelay.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-appletvos/RxRelay.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-watchos/RxRelay.framework -output ~/Desktop/RxRelay.xcframework
-xcframework successfully written out to: /Users/zhangsaidong/Desktop/RxRelay.xcframework
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-appletvos/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxCocoa.framework
-error: no output was specified.
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-appletvos/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphonesimulator/RxCocoa.framework
-error: no output was specified.
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-appletvos/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphonesimulator/RxCocoa.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-watchos/RxCocoa.framework -output ~/Desktop/RxCocoa.xcframework
-xcframework successfully written out to: /Users/zhangsaidong/Desktop/RxCocoa.xcframework
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % xcodebuild -create-xcframework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release/RxSwift.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-appletvos/RxSwift.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphoneos/RxSwift.framework  -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-iphonesimulator/RxSwift.framework -framework /Users/zhangsaidong/Library/Developer/Xcode/DerivedData/RxExample-dzmpynlazvvqfffzdantespvadrq/Build/Products/Release-watchos/RxSwift.framework  -output ~/Desktop/RxSwift.xcframework
-xcframework successfully written out to: /Users/zhangsaidong/Desktop/RxSwift.xcframework
-zhangsaidong@zhangsaidongs-MacBook-Pro RxExample % 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Line 1: One integer: the number of ways that FJ can choose the squares modulo 100,000,000.
+Sample Input
+
+2 3
+1 1 1
+0 1 0
+Sample Output
+
+9
+Hint
+
+Number the squares as follows:
+1 2 3
+  4  
+
+There are four ways to plant only on one squares (1, 2, 3, or 4), three ways to plant on two squares (13, 14, or 34), 1 way to plant on three squares (134), and one way to plant on no squares. 4+3+1+1=9.
+Source
+
+USACO 2006 November Gold<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//没写出来</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>心得： 这是一道比较经典的状态压缩动规题，难度高。</code></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">可以发现这个题有如下特征，规模较小，每个方格只有两种状态，可以种玉米和不可以种玉米；
+
+仍然考虑用状压dp；
+
+定义状态：
+
+定义状态dp[i][state]表示能到达第i行，且第i行的所有的种玉米和不种玉米的情况为state时的所有状态数。
+
+种玉米代表1，不种玉米代表0；
+
+分析这个状态定义，发现这个状态定义把整个问题分成了n个阶段(代表行数)，并且这n个阶段遵循无后效性；
+
+状态转移：
+
+当前阶段只受前一阶段的影响，当前阶段只能影响到后一阶段。所以状态转移就是把握住当前状态是如何影响后一
+
+阶段的。在这个题中，我们会发现：
+
+如果当前阶段的某列土地种了玉米，那么下个阶段的这列土地就不能种玉米。
+
+另外，如果当前阶段某列土地的前一列土地种了玉米，那么这一列就不能再种玉米了。
+
+需要注意的是，如果当前阶段的某一列可以种玉米，你可以有两种选择，种或不种。
+
+按一个方向求解：
+
+可以看出这个状态定义是按行数分了n个阶段，所以我们应该按照行数来进行求解，根据状态定义，结果是把最后
+
+一行的所有可达到的状态的方法数加和即可。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;string.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">mmset</span><span class="token expression"><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token function">memset</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span></span></span>
+ 
+<span class="token keyword">const</span> <span class="token keyword">int</span> INF <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">12</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span>   dp<span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">[</span>INF<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> data<span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>        <span class="token comment">//行列 </span>
+ 
+<span class="token comment">/*
+2 3
+1 1 1
+0 1 0
+Sample Output
+9
+*/</span>
+ 
+ 
+<span class="token comment">/*
+i代表当前行 
+j代表当前列
+state代表当前行(阶段)的状态 
+next代表下一行(阶段)的可到达状态
+flag代表是上一列是否种了玉米，如果种了玉米，flag =  1,否则等于0； 
+*/</span> 
+<span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span><span class="token keyword">int</span> j<span class="token punctuation">,</span><span class="token keyword">int</span> state<span class="token punctuation">,</span><span class="token keyword">int</span> next<span class="token punctuation">,</span><span class="token keyword">int</span> flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">~</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>m<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">mmset</span><span class="token punctuation">(</span>dp<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">//初始化 </span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>    
+        
+        <span class="token comment">/*
+            遍历每个阶段的所有可达到状态，并搜索这种状态所能到达所有状态 。
+            这是状态转移的过程 
+        */</span> 
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>    
+        <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> state <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> state <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span> state<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>state<span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    <span class="token function">dfs</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>state<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment">/*
+            求解，对最后一行所有可达到的状态的方法数加和，并存在变量ans中; 
+        */</span> 
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> state <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> state <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span> state<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>state<span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                ans<span class="token operator">=</span><span class="token punctuation">(</span>ans<span class="token operator">+</span>dp<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>state<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">100000000</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>    
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span><span class="token keyword">int</span> j<span class="token punctuation">,</span><span class="token keyword">int</span> state<span class="token punctuation">,</span><span class="token keyword">int</span> next<span class="token punctuation">,</span><span class="token keyword">int</span> flag<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>j <span class="token operator">==</span> m<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        dp<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>next<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>next<span class="token punctuation">]</span> <span class="token operator">+</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>state<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">100000000</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/*
+    下面这段代码有点绕，可以种玉米是指客观条件,
+    但种不种玉米是主观意愿。 
+    */</span> 
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">//表示可以种玉米 </span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>state <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> flag<span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>flag <span class="token operator">==</span> <span class="token number">0</span><span class="token operator">||</span>flag <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>    <span class="token comment">//不种玉米 </span>
+            <span class="token punctuation">{</span>
+                 <span class="token function">dfs</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>state<span class="token punctuation">,</span>next<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>flag <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>    <span class="token comment">//种玉米 </span>
+            <span class="token punctuation">{</span>
+                <span class="token function">dfs</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>state<span class="token punctuation">,</span>next <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>j<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//不可以种玉米 </span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">dfs</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>state<span class="token punctuation">,</span>next<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>题目链接：<a target="_blank" rel="noopener" href="http://poj.org/problem?id=3254">http://poj.org/problem?id=3254</a></p>
 
                 
             </div>
@@ -695,12 +819,28 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RxExample %
                     
                         <div class="article-tag">
                             
-                                <a href="../tags/iOS/">
-                                    <span class="chip bg-color">iOS</span>
+                                <a href="../tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
-                                <a href="../tags/framework/">
-                                    <span class="chip bg-color">framework</span>
+                                <a href="../tags/C/">
+                                    <span class="chip bg-color">C++</span>
+                                </a>
+                            
+                                <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                    <span class="chip bg-color">动态规划</span>
+                                </a>
+                            
+                                <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                                    <span class="chip bg-color">记忆化</span>
+                                </a>
+                            
+                                <a href="../tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
+                                    <span class="chip bg-color">状态压缩</span>
+                                </a>
+                            
+                                <a href="../tags/POJ/">
+                                    <span class="chip bg-color">POJ</span>
                                 </a>
                             
                         </div>
@@ -905,17 +1045,18 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RxExample %
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="13006.html">
+                <a href="">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/12.jpg" class="responsive-img" alt="gitbook配置">
+                        <img src="../medias/featureimages/9.jpg" class="responsive-img" alt="POJ3254（状态压缩dp）：玉米地">
                         
-                        <span class="card-title">gitbook配置</span>
+                        <span class="card-title">POJ3254（状态压缩dp）：玉米地</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -925,34 +1066,47 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RxExample %
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/" class="post-category">
-                                    文档处理
+                            <a href="../categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/git/">
-                        <span class="chip bg-color">git</span>
+                    <a href="../tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
-                    <a href="../tags/github/">
-                        <span class="chip bg-color">github</span>
+                    <a href="../tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
-                    <a href="../tags/%E5%8D%9A%E6%96%87/">
-                        <span class="chip bg-color">博文</span>
+                    <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                    <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                        <span class="chip bg-color">记忆化</span>
+                    </a>
+                    
+                    <a href="../tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
+                        <span class="chip bg-color">状态压缩</span>
+                    </a>
+                    
+                    <a href="../tags/POJ/">
+                        <span class="chip bg-color">POJ</span>
                     </a>
                     
                 </div>
@@ -966,13 +1120,13 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RxExample %
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="48709.html">
+                <a href="37129.html">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/1.jpg" class="responsive-img" alt="Perfect部署到云服务器摘录">
+                        <img src="../medias/featureimages/12.jpg" class="responsive-img" alt="POJ2411（状态压缩dp）：方格覆盖">
                         
-                        <span class="card-title">Perfect部署到云服务器摘录</span>
+                        <span class="card-title">POJ2411（状态压缩dp）：方格覆盖</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -983,14 +1137,14 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RxExample %
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-category">
-                                    服务器
+                            <a href="../categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
                                 </a>
                             
                             
@@ -1000,8 +1154,28 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RxExample %
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/server/">
-                        <span class="chip bg-color">server</span>
+                    <a href="../tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="../tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                    <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                        <span class="chip bg-color">记忆化</span>
+                    </a>
+                    
+                    <a href="../tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
+                        <span class="chip bg-color">状态压缩</span>
+                    </a>
+                    
+                    <a href="../tags/POJ/">
+                        <span class="chip bg-color">POJ</span>
                     </a>
                     
                 </div>
