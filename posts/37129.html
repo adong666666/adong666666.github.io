@@ -554,14 +554,14 @@ Tota">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    706
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -627,7 +627,40 @@ Source
 Ulm Local 2000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//没写出来</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>心得： 这是一道比较经典的状态压缩动规题，难度高。</code></p>
-<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">这个题规模比较小，而且每个方格只有两种状态，分别是被覆盖和未被覆盖；
+
+所以我们考虑用状态压缩dp；
+
+定义状态：
+
+我们首先定义状态：dp[j][state]，表示能到达第j列，且第j列所有方格的覆盖情况为state时的所有方法数；
+
+这样我们通过这个状态把这个问题分为j个阶段(j代表列数),因为第j列放置的情况最多只能影响到j+1列。比如第j列放置
+
+一个或多个1*2的方格。这样一种情况就会影响到j+1列；但是他最多影响到第j+1列，之后就不能再影响了。
+
+这就是无后效性；无后效性是保证能动态规划的关键。
+
+状态转移：
+
+当第i列第j行状态为0时，表示没有覆盖；当为1时，说明被覆盖了；
+
+如果当前格没有被覆盖，说明我们至少可以放一个1*2的方格，如果当前列的下一行也没有被覆盖，那么我们可以放一个
+
+2*1的方格；如果被覆盖， 那么我们继续往当前列的下一行遍历 ，直到把这一列遍历完； 在这个过程中 ，我们能求出
+
+下一列的合法状态(也就是可以到达的状态)，这是一个搜索的过程，至于为什么要搜索，请看下面：
+
+我们把当前列每一种状态都进行搜索，看能不能找到从这种状态到其他状态的一种路径；如果存在，说明其他状态是
+
+可以到达的。所以我们其实并不需要对每一种状态进行搜索，只需要对可以到达的状态进行搜索即可；
+
+按一个方向求出该问题的解：
+
+当前阶段总是影响下一阶段，所以我们应该按照阶段的方向进行求解，在这个题中是按列的方向求解；题目要求全部填
+
+满，所以答案应该是dp[m+1][0];<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;string.h&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">mmset</span><span class="token expression"><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token function">memset</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span></span></span>
 <span class="token keyword">const</span> <span class="token keyword">int</span> INF <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">12</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
@@ -1381,7 +1414,7 @@ Sample Output
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">60.3k</span>
+                        class="white-color">60.8k</span>
             
             
             
