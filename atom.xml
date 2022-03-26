@@ -6,7 +6,7 @@
   <link href="https://zsd.name/atom.xml" rel="self"/>
   
   <link href="https://zsd.name/"/>
-  <updated>2022-03-26T10:39:06.746Z</updated>
+  <updated>2022-03-26T11:12:18.311Z</updated>
   <id>https://zsd.name/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SDUTOJ2080（动态规划）：最长公共子序列</title>
+    <link href="https://zsd.name/posts/11317.html"/>
+    <id>https://zsd.name/posts/11317.html</id>
+    <published>2022-03-26T11:09:00.000Z</published>
+    <updated>2022-03-26T11:12:18.311Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SDUTOJ2080（动态规划）：最长公共子序列&quot;&gt;&lt;a href=&quot;#SDUTOJ2080（动态规划）：最长公共子序列&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据结构与算法" scheme="https://zsd.name/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="https://zsd.name/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="C++" scheme="https://zsd.name/tags/C/"/>
+    
+    <category term="动态规划" scheme="https://zsd.name/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="SDUTOJ" scheme="https://zsd.name/tags/SDUTOJ/"/>
+    
+  </entry>
   
   <entry>
     <title>SDUTOJ1299（动态规划）：最长上升子序列</title>
@@ -637,35 +668,6 @@
     <category term="framework" scheme="https://zsd.name/tags/framework/"/>
     
     <category term="cocoapods" scheme="https://zsd.name/tags/cocoapods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Carthage使用工作记录</title>
-    <link href="https://zsd.name/posts/16458.html"/>
-    <id>https://zsd.name/posts/16458.html</id>
-    <published>2021-04-23T15:59:00.000Z</published>
-    <updated>2022-01-30T17:02:09.583Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Carthage使用工作记录&quot;&gt;&lt;a href=&quot;#Carthage使用工作记录&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="移动开发" scheme="https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
-    
-    <category term="framework" scheme="https://zsd.name/tags/framework/"/>
-    
-    <category term="carthage" scheme="https://zsd.name/tags/carthage/"/>
     
   </entry>
   

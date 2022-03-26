@@ -4,13 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode第62题（动态规划）：不同路径, 张赛东">
-    <meta name="description" content="LeetCode第62题（动态规划）：不同路径========================
+    <meta name="keywords" content="SDUTOJ2080（动态规划）：最长公共子序列, 张赛东">
+    <meta name="description" content="SDUTOJ2080（动态规划）：最长公共子序列========================
 题目如下：
-62. 不同路径
-一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。
-
-机器人每次只能向下或">
+最长公共子序列问题
+Description
+给定两个序列 X={x1,x2,…,xm} 和 Y={y1,y2,…,yn}，找出X和">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode第62题（动态规划）：不同路径 | 张赛东</title>
+    <title>SDUTOJ2080（动态规划）：最长公共子序列 | 张赛东</title>
     <link rel="icon" type="image/jpeg" href="../favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.min.css">
@@ -375,12 +374,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode第62题（动态规划）：不同路径</h1>
+                    <h1 class="description center-align post-title">SDUTOJ2080（动态规划）：最长公共子序列</h1>
                 </div>
             </div>
         </div>
@@ -508,12 +507,8 @@
                                 <span class="chip bg-color">动态规划</span>
                             </a>
                         
-                            <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                                <span class="chip bg-color">记忆化</span>
-                            </a>
-                        
-                            <a href="../tags/LeetCode/">
-                                <span class="chip bg-color">LeetCode</span>
+                            <a href="../tags/SDUTOJ/">
+                                <span class="chip bg-color">SDUTOJ</span>
                             </a>
                         
                     </div>
@@ -537,28 +532,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-30
+                    2022-03-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-31
+                    2022-03-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    821
+                    627
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -581,110 +576,66 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="LeetCode第62题（动态规划）：不同路径"><a href="#LeetCode第62题（动态规划）：不同路径" class="headerlink" title="LeetCode第62题（动态规划）：不同路径"></a>LeetCode第62题（动态规划）：不同路径</h1><p>========================</p>
-<p>题目如下：<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220130LeetCode%E7%AC%AC62%E9%A2%98%EF%BC%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89%EF%BC%9A%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/1.png"></p>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">62. 不同路径
-一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。
+                <h1 id="SDUTOJ2080（动态规划）：最长公共子序列"><a href="#SDUTOJ2080（动态规划）：最长公共子序列" class="headerlink" title="SDUTOJ2080（动态规划）：最长公共子序列"></a>SDUTOJ2080（动态规划）：最长公共子序列</h1><p>========================</p>
+<p>题目如下：<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220326SDUTOJ2080%EF%BC%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89%EF%BC%9A%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/1.png"></p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">最长公共子序列问题
+Description
+给定两个序列 X={x1,x2,…,xm} 和 Y={y1,y2,…,yn}，找出X和Y的最长公共子序列。
 
-机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。
+Input
+输入数据有多组，每组有两行 ，每行为一个长度不超过500的字符串（输入全是大写英文字母（A,Z）），表示序列X和Y。
 
-问总共有多少条不同的路径？
+Output
+每组输出一行，表示所求得的最长公共子序列的长度，若不存在公共子序列，则输出0。
 
- 
+Sample
+Input 
+ABCBDAB
+BDCABA
+Output 
+4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//比较简单，这里做记录即可</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>心得： 这是一道比较经典的动规题，难度低。</code></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">状态表示：我们用dp[i][j]表示数字A[1,i]与B[1,j] 的最长公共子序列长度。
+分析：
+当s1[i]=s2[j]时 dp[i][j]=d[i-1][j-1]+1; 因为相同时肯定是最长公共子序列长度+1；
+当s1[i]!=s2[j]时 dp[i][j]=max(dp[i][j-1],dp[i-1][j]) 举个例子：
+ABC A
+ABD C
+可得dp[4][4]=dp[3][4];
+有一点小问题：有一些人认为不用考虑s1[i]==s2[j]的这种情况，因为dp[i-1][j]=dp[i-2][j]+dp[i-1][j-1] 也就是说else后面的这一种情况全部都可以包括，但我不这么认为，原因如下：如果只有else后面的语句得出的结果是0，我们建立表格时发现整个表格全部为零，我结合if里的语句简单的分析了一下，else语句的dp数组建立的表格确实能包括dp[i][j]但是从问题的角度来分析，s1[i]=s2[j]这种情况并没有被包括，就和贪心一样指一种情况对结果有一定的贡献所以不能舍弃（一点小的见解，仅供参考）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">505</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> dp<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">char</span> s1<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span>s2<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-示例 1：
-
-
-输入：m = 3, n = 7
-输出：28
-示例 2：
-
-输入：m = 3, n = 2
-输出：3
-解释：
-从左上角开始，总共有 3 条路径可以到达右下角。
-1. 向右 -&gt; 向下 -&gt; 向下
-2. 向下 -&gt; 向下 -&gt; 向右
-3. 向下 -&gt; 向右 -&gt; 向下
-示例 3：
-
-输入：m = 7, n = 3
-输出：28
-示例 4：
-
-输入：m = 3, n = 3
-输出：6
- 
-
-提示：
-
-1 &lt;= m, n &lt;= 100
-题目数据保证答案小于等于 2 * 109
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> dp<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token comment">//dp[0][0] = 1;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-                <span class="token comment">//cout&lt;&lt; i &lt;&lt;"  "&lt;&lt; j &lt;&lt;"  "&lt;&lt;dp[i-1][j]&lt;&lt;" "&lt;&lt;dp[i][j-1]&lt;&lt;"  "&lt;&lt;dp[i][j]&lt;&lt;endl;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">~</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s %s"</span><span class="token punctuation">,</span>s1<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>s2<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        n<span class="token operator">=</span><span class="token function">strlen</span><span class="token punctuation">(</span>s1<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        m<span class="token operator">=</span><span class="token function">strlen</span><span class="token punctuation">(</span>s2<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//数组统一往后移动一位是考虑到边界问题</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span> dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>m<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>s1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>s2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>   
+                 <span class="token punctuation">{</span>
+                     dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+                 <span class="token punctuation">}</span>
+                 <span class="token keyword">else</span> 
+                 <span class="token punctuation">{</span>
+                     dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-<span class="token comment">//        for(int i=0;i&lt;m;i++){</span>
-<span class="token comment">//            for(int j=0;j&lt;n;j++){</span>
-<span class="token comment">//                //cout&lt;&lt; i &lt;&lt;"  "&lt;&lt; j &lt;&lt;"  "&lt;&lt;dp[i-1][j]&lt;&lt;" "&lt;&lt;dp[i][j-1]&lt;&lt;"  "&lt;&lt;dp[i][j]&lt;&lt;endl;</span>
-<span class="token comment">//            }</span>
-<span class="token comment">//        }</span>
-        <span class="token comment">//cout &lt;&lt; dp[m-1][n-1];</span>
-        <span class="token keyword">return</span> dp<span class="token punctuation">[</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
-<li>时间复杂度：O(mn)。</li>
-<li>空间复杂度：O(mn)，即为存储所有状态需要的空间。注意到 f(i, j)仅与第 i 行和第 i-1 行的状态有关，因此我们可以使用滚动数组代替代码中的二维数组，使空间复杂度降低为 O(n)。此外，由于我们交换行列的值并不会对答案产生影响，因此我们总可以通过交换 m 和 n 使得 m≤n，这样空间复杂度降低至 O(min(m,n))。</li>
-</ul>
-<p><code>心得： 这是一道比较经典的动规题，难度偏简单，主要是找到dp[i][j] = dp[i-1][j] + dp[i][j-1]这样一个关系，那么问题便能迎刃而解。我的解法用了双循环，应该是可以进一步优化的，虽然代码AC了，但还未达到最优时间复杂度。</code></p>
-<h2 id="官方方法二：组合数学"><a href="#官方方法二：组合数学" class="headerlink" title="官方方法二：组合数学"></a>官方方法二：组合数学</h2><h3 id="思路与算法"><a href="#思路与算法" class="headerlink" title="思路与算法"></a>思路与算法</h3><p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220130LeetCode%E7%AC%AC62%E9%A2%98%EF%BC%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89%EF%BC%9A%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/2.png"></p>
-<h5 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h5><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">long</span> <span class="token keyword">long</span> ans <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> x <span class="token operator">=</span> n<span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> y <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> <span class="token operator">++</span>x<span class="token punctuation">,</span> <span class="token operator">++</span>y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            ans <span class="token operator">=</span> ans <span class="token operator">*</span> x <span class="token operator">/</span> y<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h5><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">long</span> ans <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> x <span class="token operator">=</span> n<span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> y <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> <span class="token operator">++</span>x<span class="token punctuation">,</span> <span class="token operator">++</span>y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            ans <span class="token operator">=</span> ans <span class="token operator">*</span> x <span class="token operator">/</span> y<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> ans<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="Python3代码"><a href="#Python3代码" class="headerlink" title="Python3代码"></a>Python3代码</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> m<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> comb<span class="token punctuation">(</span>m <span class="token operator">+</span> n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">,</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
-<li><p>时间复杂度：O(min(m,n))。由于我们交换行列的值并不会对答案产生影响，因此我们总可以通过交换 m 和 n 使得 m≤n，这样空间复杂度降低至 O(min(m,n))。</p>
-</li>
-<li><p>空间复杂度：O(1)。</p>
-</li>
-</ul>
-<p><code>心得： 官方这种解法就离谱，，，，，用Python简直就是秒解。</code><br>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-paths/">https://leetcode-cn.com/problems/unique-paths/</a></p>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>题目链接：<a target="_blank" rel="noopener" href="https://acm.sdut.edu.cn/onlinejudge3/problems/2080">https://acm.sdut.edu.cn/onlinejudge3/problems/2080</a></p>
 
                 
             </div>
@@ -761,12 +712,8 @@
                                     <span class="chip bg-color">动态规划</span>
                                 </a>
                             
-                                <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                                    <span class="chip bg-color">记忆化</span>
-                                </a>
-                            
-                                <a href="../tags/LeetCode/">
-                                    <span class="chip bg-color">LeetCode</span>
+                                <a href="../tags/SDUTOJ/">
+                                    <span class="chip bg-color">SDUTOJ</span>
                                 </a>
                             
                         </div>
@@ -971,17 +918,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="24103.html">
+                <a href="">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/21.jpg" class="responsive-img" alt="LeetCode第64题（动态规划）：最小路径和">
+                        <img src="../medias/featureimages/3.jpg" class="responsive-img" alt="SDUTOJ2080（动态规划）：最长公共子序列">
                         
-                        <span class="card-title">LeetCode第64题（动态规划）：最小路径和</span>
+                        <span class="card-title">SDUTOJ2080（动态规划）：最长公共子序列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -991,9 +939,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1006,6 +954,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1021,12 +970,8 @@
                         <span class="chip bg-color">动态规划</span>
                     </a>
                     
-                    <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                        <span class="chip bg-color">记忆化</span>
-                    </a>
-                    
-                    <a href="../tags/LeetCode/">
-                        <span class="chip bg-color">LeetCode</span>
+                    <a href="../tags/SDUTOJ/">
+                        <span class="chip bg-color">SDUTOJ</span>
                     </a>
                     
                 </div>
@@ -1040,13 +985,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="7211.html">
+                <a href="48626.html">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/18.jpg" class="responsive-img" alt="解决动态规划问题的思考过程摘录">
+                        <img src="../medias/featureimages/8.jpg" class="responsive-img" alt="SDUTOJ1299（动态规划）：最长上升子序列">
                         
-                        <span class="card-title">解决动态规划问题的思考过程摘录</span>
+                        <span class="card-title">SDUTOJ1299（动态规划）：最长上升子序列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1057,7 +1002,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
                             </span>
                         <span class="publish-author">
                             
@@ -1086,8 +1031,8 @@
                         <span class="chip bg-color">动态规划</span>
                     </a>
                     
-                    <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                        <span class="chip bg-color">记忆化</span>
+                    <a href="../tags/SDUTOJ/">
+                        <span class="chip bg-color">SDUTOJ</span>
                     </a>
                     
                 </div>
