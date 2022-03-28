@@ -1005,6 +1005,41 @@
   </url>
   
   <url>
+    <loc>https://zsd.name/tags/POJ/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/tags/SDUTOJ/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/tags/DFS/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/tags/Memory-Search/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zsd.name/tags/carthage/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1090,41 +1125,6 @@
   
   <url>
     <loc>https://zsd.name/tags/swift-package-manager/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zsd.name/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zsd.name/tags/POJ/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zsd.name/tags/SDUTOJ/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zsd.name/tags/DFS/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zsd.name/tags/Memory-Search/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
