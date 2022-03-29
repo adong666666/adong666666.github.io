@@ -740,7 +740,7 @@
 <div class="card-content">
 
 
-<div style="width: 720px;margin: 90px auto 5px;clear:both">
+<div id="resumeContent" style="width: 720px;margin: 90px auto 5px;clear:both">
     <div class="head_line"></div>
     <div style="float: left; width: 100%;clear:both">
         <div style="float: inherit;">
@@ -1224,7 +1224,75 @@
     window.onload = window.onresize = function () {
     var devicewidth = document.documentElement.clientWidth;
     var scale = devicewidth / 1440;  // 分母——设计稿的尺寸
-    document.getElementById("contact").style.zoom = scale;
+    if (devicewidth<850) {
+        //document.getElementById("contact").style.zoom = scale;
+        var getDom = document.getElementsByClassName("content");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = scale;
+        }
+        document.getElementById("basicInformation").style.zoom = scale;
+        var getDom = document.getElementsByClassName("work0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = scale;
+        }
+        var getDom = document.getElementsByClassName("person0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = scale;
+        }
+        var getDom = document.getElementsByClassName("title0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = scale;
+        }
+        var getDom = document.getElementsByClassName("detail");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = scale;
+        }
+        var getDom = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = scale;
+        }
+        var getDom = document.getElementsByClassName("only");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = scale;
+        }
+    } else {
+        //document.getElementById("contact").style.zoom = 1;
+        var getDom = document.getElementsByClassName("content");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+        document.getElementById("basicInformation").style.zoom = 1;
+        var getDom = document.getElementsByClassName("work0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+        var getDom = document.getElementsByClassName("person0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+        var getDom = document.getElementsByClassName("title0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+        var getDom = document.getElementsByClassName("detail");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+        var getDom = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+        var getDom = document.getElementsByClassName("only");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+    }
+        //var getDom = document.getElementsByClassName("card-content");
+        //for(var i=0;i<getDom.length;i++){
+        //    getDom[i].style.zoom = scale;
+        //}
+    //document.getElementById("resumeContent").style.zoom = scale;
+    //document.getElementById("contact").style.zoom = scale;
     //document.body.style.zoom = scale;
     //document.getElementById("tidio-chat-iframe").style.zoom = (1 / scale);
     //document.getElementById("tidio-chat-iframe").style.transform.scale(scale, scale);
