@@ -1223,7 +1223,7 @@ $(function () {
     /* 模式判断 */
     if (localStorage.getItem('isDark') === '1') {
         document.getElementById("basicInformation").style.color = "#163e3e";
-        ["only", "brief", "detail", "right", "person0", "resumeLink"].map(function(item){
+        ["only", "brief", "detail", "right0", "person0", "resumeLink"].map(function(item){
             var getDom = document.getElementsByClassName(item);
             for(var i=0;i<getDom.length;i++){
                 getDom[i].style.color = "#111";
@@ -1250,7 +1250,7 @@ $(function () {
         }
     } else {
         document.getElementById("basicInformation").style.color = "#bcf0f5";
-        ["only", "brief", "detail", "right", "person0", "resumeLink"].map(function(item){
+        ["only", "brief", "detail", "right0", "person0", "resumeLink"].map(function(item){
             var getDom = document.getElementsByClassName(item);
             for(var i=0;i<getDom.length;i++){
                 getDom[i].style.color = "#c0c0c0";
