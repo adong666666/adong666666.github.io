@@ -1326,7 +1326,63 @@ import Object">
 
 
 
-    <footer class="page-footer bg-color">
+    <style>
+    .github-badge {
+        display:inline-block;
+        border-radius:4px;
+        text-shadow:none;
+        font-size:13px;
+        color:#fff;
+        line-height:15px;
+        background-color:#ABBAC3;
+        margin-bottom:5px;
+    }
+    .github-badge .badge-subject {
+        display:inline-block;
+        background-color:#4D4D4D;
+        padding:4px 4px 4px 6px;
+        border-top-left-radius:4px;
+        border-bottom-left-radius:4px;
+    }
+    .github-badge .badge-value {
+        display:inline-block;
+        padding:4px 6px 4px 4px;
+        border-top-right-radius:4px;
+        border-bottom-right-radius:4px;
+    }
+    .github-badge .bg-brightgreen {
+        background-color:#4DC820 !important;
+    }
+    .github-badge .bg-orange {
+        background-color:#FFA500 !important;
+    }
+    .github-badge .bg-yellow {
+        background-color:#D8B024 !important;
+    }
+    .github-badge .bg-blueviolet {
+        background-color:#8833D7 !important;
+    }
+    .github-badge .bg-pink {
+        background-color:#F26BAE !important;
+    }
+    .github-badge .bg-red {
+        background-color:#e05d44 !important;
+    }
+    .github-badge .bg-blue {
+        background-color:#007EC6 !important;
+    }
+    .github-badge .bg-lightgrey {
+        background-color:#9F9F9F !important;
+    }
+    .github-badge .bg-grey, .github-badge .bg-gray {
+        background-color:#555 !important;
+    }
+    .github-badge .bg-lightgrey, .github-badge .bg-lightgray {
+        background-color:#9f9f9f !important;
+    }
+</style>
+
+<footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="../libs/aplayer/APlayer.min.css">
 <style>
@@ -1386,13 +1442,34 @@ import Object">
             
                 <span id="year">2019-2022</span>
             
-            <a href="../about" target="_blank">张赛东</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <a href="../resume" target="_blank">张赛东</a>
+            <br>
+            <div class="github-badge">
+            <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+            <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+          </div>
+            |&nbsp;<div class="github-badge">
+              <a style="color: #fff" rel="license" href="https://blinkfox.github.io/" target="_blank" title="站点使用 Matery主题">
+            <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Matery</span></a>
+          </div>
+            |&nbsp;<div class="github-badge">
+            <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages">
+            <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span></a>
+          </div>
+            |&nbsp;<div class="github-badge">
+            <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+            <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+          </div>
+          
+            |&nbsp; <div class="github-badge">
+            <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+            <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+          </div>
             <br>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">64.5k</span>
+                &nbsp; <div class="github-badge">
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">64.5k</span>
+          </div>
             
             
             
@@ -1400,15 +1477,27 @@ import Object">
             
             
                 <span id="busuanzi_container_site_pv"  style='display:none'>
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
+                &nbsp;|&nbsp;          <div class="github-badge">
+            <span class="badge-subject">总访问量</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
+                        </span>
+          </div>
             
             
                 <span id="busuanzi_container_site_uv" style='display:none'>
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
+                &nbsp;|&nbsp;          <div class="github-badge">
+            <span class="badge-subject">总访问人数</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>
+          </div>
+                      </span>
+            
+            
+            &nbsp;|&nbsp;          <div class="github-badge">
+            <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+            <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+          </div>
+            &nbsp;|&nbsp; <div class="github-badge">
+            <a style="color: #fff" rel="license" href="https://cloud.tencent.com/" target="_blank" title="腾讯云提供域名相关服务">
+            <span class="badge-subject">DNS</span><span class="badge-value bg-blueviolet">Tencent</span></a>
+          </div>
             
             <br>
             <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/certificate/zsd.name.certificate.jpg">本站</a>
