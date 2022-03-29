@@ -1642,6 +1642,150 @@ $(function () {
     </a>
 </div>
 
+    <!-- 弹奏欢乐颂 -->
+<div class="girl-fixed">
+      <a class="btn-floating btn-large waves-effect waves-light" title="弹奏欢乐颂">
+          <i class="fas fa-music" ></i>
+      </a>
+</div>
+
+<script>
+// Powered by wuxianucw
+console.log('PartiallyPassword is enabled.');
+</script><script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('body').click(function(e) {
+    var n = Math.round(Math.random() * 100); // 随机数
+    var $i = $("<b/>").text("." ); // 添加到页面的元素
+    var x = e.pageX, y = e.pageY; // 鼠标点击的位置
+    $i.css({
+        "z-index":99999,
+        "top":y - 20,
+        "left":x,
+        "position":"absolute",
+        "color":"#E94F06",
+                "opacity": 0
+    });
+    $('body').append($i);
+    $i.animate(
+        { "top": y - 180, "opacity": 0 },
+        1500,
+        function() { $i.remove(); }
+    );
+
+    if (document.getElementById("evanyou")) {
+        var n, i = function () {
+                for (a.clearRect(0, 0, u, c), n = [{
+                        x: 0,
+                        y: .7 * c + h
+                    }, {
+                        x: 0,
+                        y: .7 * c - h
+                    }]; n[1].x < u + h;) r(n[0], n[1])
+            },
+            r = function (t, e) {
+                a.beginPath(), a.moveTo(t.x, t.y), a.lineTo(e.x, e.y);
+                var i = e.x + (2 * v() - .25) * h,
+                    r = o(e.y);
+                a.lineTo(i, r), a.closePath(), f -= p / -50, a.fillStyle = "#" + (127 * m(f) + 128 << 16 | 127 * m(f + p / 3) + 128 << 8 | 127 * m(f + p / 3 * 2) + 128).toString(16), a.fill(), n[0] = n[1], n[1] = {
+                    x: i,
+                    y: r
+                }
+            },
+            o = function t(e) {
+                var n = e + (2 * v() - 1.1) * h;
+                return n > c || n < 0 ? t(e) : n
+            },
+            s = document.getElementById("evanyou"),
+            a = s.getContext("2d"),
+            l = window.devicePixelRatio || 1,
+            u = window.innerWidth,
+            c = window.innerHeight,
+            h = 90,
+            d = Math,
+            f = 0,
+            p = 2 * d.PI,
+            m = d.cos,
+            v = d.random;
+        s.width = u * l, s.height = c * l, a.scale(l, l), a.globalAlpha = .6, document.onclick = i, document.ontouchstart = i, i()
+    }
+    e.stopPropagation();
+})
+
+window.AudioContext = window.AudioContext || window.webkitAudioContext;
+(function () {
+    if (!window.AudioContext) {
+        // alert('当前浏览器不支持Web Audio API');
+        return;
+    }
+    
+    var audioCtx = new AudioContext();
+    // 发出的声音频率数据，表现为音调的高低
+    // var arrFrequency = [196.00, 220.00, 246.94, 261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50];
+    // 欢乐颂
+    var arrFrequency = '329.628 329.628 349.228 391.995 391.995 349.228 329.628 293.665 261.626 261.626 293.665 329.628 329.628 293.665 293.665 329.628 329.628 349.228 391.995 391.995 349.228 329.628 293.665 261.626 261.626 293.665 329.628 293.665 261.626 261.626 293.665 293.665 329.628 261.626 293.665 329.628 349.228 329.628 261.626 293.665 329.628 349.228 329.628 293.665 261.626 293.665 195.998 329.628 329.628 349.228 391.995 391.995 349.228 329.628 293.665 261.626 261.626 293.665 329.628 293.665 261.626 261.626'.split(' ')
+    
+    var start = 0, direction = 1;
+
+    var musicFont = '♩ ♪ ♫ ♬ ♭ ♮ ♯'.split(' ')
+
+    var play = false;
+    $('.girl-fixed').mouseenter(function(e) {
+        var frequency = arrFrequency[start];
+        if (!frequency) {
+            // direction = -1 * direction;
+            // start = start + 2 * direction;
+            start = 0;
+            frequency = arrFrequency[start];
+        }
+        start = start + direction;
+        
+        // 创建一个OscillatorNode, 它表示一个周期性波形（振荡），基本上来说创造了一个音调
+        var oscillator = audioCtx.createOscillator();
+        // 创建一个GainNode,它可以控制音频的总音量
+        var gainNode = audioCtx.createGain();
+        // 把音量，音调和终节点进行关联
+        oscillator.connect(gainNode);
+        // audioCtx.destination返回AudioDestinationNode对象，表示当前audio context中所有节点的最终节点，一般表示音频渲染设备
+        gainNode.connect(audioCtx.destination);
+        // 指定音调的类型，其他还有square|triangle|sawtooth
+        oscillator.type = 'sine';
+        // 设置当前播放声音的频率，也就是最终播放声音的调调
+        oscillator.frequency.value = frequency;
+        // 当前时间设置音量为0
+        gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+        // 0.01秒后音量为1
+        gainNode.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 0.01);
+        // 音调从当前时间开始播放
+        oscillator.start(audioCtx.currentTime);
+        // 1秒内声音慢慢降低，模拟钢琴回响的音色
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1);
+        // 1秒后完全停止声音
+        oscillator.stop(audioCtx.currentTime + 1);
+        play = true;
+        if (play) {
+            var n = Math.round(Math.random() * 7);
+            var $i = $("<b/>").text(musicFont[n]);
+            var x = e.pageX, y = e.pageY - 5;
+            $i.css({
+                "z-index":99999,
+                "top":y - 20,
+                "left":x,
+                "position":"absolute",
+                "color":"#E94F06"
+            });
+            $('body').append($i);
+            $i.animate(
+                { "top": y - 180, "opacity": 0 },
+                1500,
+                function() { $i.remove(); }
+            );
+            e.stopPropagation();
+        }
+        play = false;
+    })
+})();
+</script>
 <!-- 冒泡 -->
 
     <script type="text/javascript">
@@ -1729,7 +1873,7 @@ $(function () {
                 function change_Tidio() {
                     var tidio=$("#tidio-chat iframe");
                     if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-10px" : ($("div.toc-title").length&&$(window).width()>977)>0?"250px":"52px";
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-10px" : ($("div.toc-title").length&&$(window).width()>977)>0?"233px":"52px";
                         document.getElementById("tidio-chat-iframe").style.right="-6.5px";
                         document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
                         document.getElementById("tidio-chat-iframe").style.zIndex="999";
@@ -1747,6 +1891,7 @@ $(function () {
                     if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
                         document.getElementById("tidio-chat-iframe").style.zIndex="999";
                     }
+                    document.getElementById("tidio-chat-iframe").style.transform = "scale(0.815,0.815)";
                 }
             });
         </script>
@@ -1843,6 +1988,7 @@ console.log(`
         </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i+240*i||document.documentElement.clientHeight*i+240*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
+
 
 
 
