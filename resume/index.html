@@ -1228,7 +1228,7 @@
         //<div id="resumeContent" style="width: 720px;margin: 90px auto 5px;clear:both">
         document.getElementById("resumeContent").style.margin = "90px 5px 5px";
         document.getElementById("resumeContent").style.width = "100%";
-        document.getElementById("changeWidth").style.width = "120%";
+        document.getElementById("changeWidth").style.width = "130%";
         document.getElementById("headChanged").style.zoom = scale;
         ["content", "person0", "title0", "detail", "only", "needChanged", "resumeLink", "mid0"].map(function(item){
             var getDom = document.getElementsByClassName(item);
@@ -1241,6 +1241,7 @@
             getDom[i].style.width = "85%";
         }
         document.getElementById("basicInformation").style.zoom = scale;
+        document.getElementById("basicInformation").style.margin-right = "50px";
         var getDom = document.getElementsByClassName("otherChange");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = 4;
@@ -1261,6 +1262,7 @@
             getDom[i].style.width = "508px";
         }
         document.getElementById("basicInformation").style.zoom = 1;
+        document.getElementById("basicInformation").style.margin-right = "0";
     }
     //document.getElementById("resumeContent").style.zoom = scale;
     //document.getElementById("contact").style.zoom = scale;
