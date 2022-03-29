@@ -2407,6 +2407,24 @@ window.AudioContext = window.AudioContext || window.webkitAudioContext;
         return;
     }
     
+    //JS判断当前设备类型
+var os = function (){
+　　var ua = navigator.userAgent,
+　　isWindowsPhone = /(?:Windows Phone)/.test(ua),
+　　isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+　　isAndroid = /(?:Android)/.test(ua),
+　　isFireFox = /(?:Firefox)/.test(ua),
+　　isChrome = /(?:Chrome|CriOS)/.test(ua),
+　　isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+ 　　isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+ 　　isPc = !isPhone && !isAndroid && !isSymbian;
+ 　　return {
+ 　　　　isTablet: isTablet,
+ 　　　　isPhone: isPhone,
+ 　　　　isAndroid: isAndroid,
+ 　　　　isPc: isPc
+ 　　};
+ }();
     var audioCtx = new AudioContext();
     // 发出的声音频率数据，表现为音调的高低
     // var arrFrequency = [196.00, 220.00, 246.94, 261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50];
@@ -2419,6 +2437,12 @@ window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
     var play = false;
     $('.girl-fixed').mouseenter(function(e) {
+    
+        if(!os.isPc){
+        alert('该功能需电脑才能使用哦！');
+        return;
+        }
+        
         var frequency = arrFrequency[start];
         if (!frequency) {
             // direction = -1 * direction;
