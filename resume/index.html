@@ -753,7 +753,7 @@
                 <div style="margin-top: 10px; float: none;">
                     <div class="person0">
                         <div class="needChanged">手机: 15674119605</div>
-                        <div class="needChanged">邮箱: 3440217568@qq.com</div>
+                        <div id="needLonger" class="needChanged">邮箱: 3440217568@qq.com</div>
                     </div>
                     <div class="person0">
                         <div class="needChanged">微信: adongenjoylife</div>
@@ -1228,46 +1228,19 @@
         //<div id="resumeContent" style="width: 720px;margin: 90px auto 5px;clear:both">
         document.getElementById("resumeContent").style.margin = "90px 5px 5px";
         document.getElementById("resumeContent").style.width = "100%";
-        document.getElementById("changeWidth").style.width = "150%";
+        document.getElementById("changeWidth").style.width = "140%";
         document.getElementById("headChanged").style.zoom = scale;
-        var getDom = document.getElementsByClassName("content");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = scale;
-        }
+        ["content", "person0", "title0", "detail", "only", "needChanged", "resumeLink", "mid0"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.zoom = scale;
+            }
+        });
         var getDom = document.getElementsByClassName("right0");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.width = "85%";
-            //getDom[i].style.margin = "1px 1px 1px";
         }
         document.getElementById("basicInformation").style.zoom = scale;
-        var getDom = document.getElementsByClassName("person0");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = scale;
-        }
-        var getDom = document.getElementsByClassName("title0");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = scale;
-        }
-        var getDom = document.getElementsByClassName("detail");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = scale;
-        }
-        var getDom = document.getElementsByClassName("only");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = scale;
-        }
-        var getDom = document.getElementsByClassName("needChanged");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = scale;
-        }
-        var getDom = document.getElementsByClassName("resumeLink");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = scale;
-        }
-        var getDom = document.getElementsByClassName("mid0");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = scale;
-        }
         var getDom = document.getElementsByClassName("otherChange");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = 4;
@@ -1277,52 +1250,18 @@
         document.getElementById("resumeContent").style.width = "720px";
         document.getElementById("changeWidth").style.width = "500px";
         document.getElementById("headChanged").style.zoom = 1;
-        var getDom = document.getElementsByClassName("content");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
+        ["content", "person0", "title0", "detail", "only", "needChanged", "resumeLink", "mid0", "otherChange"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.zoom = 1;
+            }
+        });
         var getDom = document.getElementsByClassName("right0");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.width = "508px";
         }
         document.getElementById("basicInformation").style.zoom = 1;
-        var getDom = document.getElementsByClassName("person0");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
-        var getDom = document.getElementsByClassName("title0");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
-        var getDom = document.getElementsByClassName("detail");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
-        var getDom = document.getElementsByClassName("only");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
-        var getDom = document.getElementsByClassName("needChanged");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
-        var getDom = document.getElementsByClassName("resumeLink");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
-        var getDom = document.getElementsByClassName("mid0");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
-        var getDom = document.getElementsByClassName("otherChange");
-        for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 1;
-        }
     }
-        //var getDom = document.getElementsByClassName("card-content");
-        //for(var i=0;i<getDom.length;i++){
-        //    getDom[i].style.zoom = scale;
-        //}
     //document.getElementById("resumeContent").style.zoom = scale;
     //document.getElementById("contact").style.zoom = scale;
     //document.body.style.zoom = scale;
