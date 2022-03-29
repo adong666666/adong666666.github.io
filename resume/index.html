@@ -775,8 +775,8 @@
     <div style="clear: both;"></div>
     <div>
         <div class="title0">
-            <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/教育经历.png">
-            <span>教育经历</span>
+            <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/教育经历.png">
+            <span class="needChanged">教育经历</span>
         </div>
         <div class="line"></div>
         <div style="clear:both">
@@ -807,8 +807,8 @@
     </div>
     <div>
         <div class="title0" style="clear:both">
-            <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/求职意向.png">
-            <span>求职意向</span>
+            <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/求职意向.png">
+            <span class="needChanged">求职意向</span>
         </div>
         <div class="line"></div>
         <div  style="clear:both">
@@ -827,8 +827,8 @@
 
     <div>
         <div class="title0" style="clear:both">
-            <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/工作经历.png">
-            <span>工作经历</span>
+            <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/工作经历.png">
+            <span class="needChanged">工作经历</span>
         </div>
         <div class="line"></div>
         <div style="clear:both">
@@ -848,8 +848,8 @@
 
     <div style="clear:both">
         <div class="title0" style="clear:both">
-            <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/专业技能.png">
-            <span>专业技能</span>
+            <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/专业技能.png">
+            <span class="needChanged">专业技能</span>
         </div>
         <div class="line"></div>
         <div style="clear:both">
@@ -979,8 +979,8 @@
 
     <div>
         <div class="title0">
-            <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/项目经历.png">
-            <span>项目经历</span>
+            <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/项目经历.png">
+            <span class="needChanged">项目经历</span>
         </div>
         <div class="line"></div>
         <div class="work0">
@@ -1055,7 +1055,7 @@
 
     <div>
         <div class="title0">
-            <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/自我评价.png">
+            <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/自我评价.png">
             <span>自我评价</span>
         </div>
         <div class="line"></div>
@@ -1071,7 +1071,7 @@
 
     <div>
         <div class="title0">
-            <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/未来规划.png">
+            <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/未来规划.png">
             <span>未来规划</span>
         </div>
         <div class="line"></div>
@@ -1093,7 +1093,7 @@
     
     <div>
         <div class="title0">
-            <img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/个人项目.png">
+            <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/个人项目.png">
             <span>个人项目</span>
         </div>
         <div class="line"></div>
@@ -1254,7 +1254,19 @@
         }
         var getDom = document.getElementsByClassName("needChanged");
         for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 0.5 * scale;
+        }
+        var getDom = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = scale;
+        }
+        var getDom = document.getElementsByClassName("mid0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = scale;
+        }
+        var getDom = document.getElementsByClassName("otherChange");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
         }
     } else {
         //document.getElementById("contact").style.zoom = 1;
@@ -1285,6 +1297,14 @@
             getDom[i].style.zoom = 1;
         }
         var getDom = document.getElementsByClassName("needChanged");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+        var getDom = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 1;
+        }
+        var getDom = document.getElementsByClassName("mid0");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = 1;
         }
