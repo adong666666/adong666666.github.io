@@ -748,7 +748,7 @@
                  style="border-radius:5%;  width:192px;"/>
         </div>
         <div style="float: inherit;margin-left:25px; margin-top:20px; clear:none">
-            <div style="float: none;width: 500px;">
+            <div id="changeWidth" style="float: none;width: 500px;">
                 <div id= "basicInformation" style="color:#003f3f;font-size:24pt;text-align: center;">张赛东/男/22岁</div>
                 <div style="margin-top: 10px; float: none;">
                     <div class="person0">
@@ -1228,6 +1228,7 @@
         //<div id="resumeContent" style="width: 720px;margin: 90px auto 5px;clear:both">
         document.getElementById("resumeContent").style.margin = "90px 5px 5px";
         document.getElementById("resumeContent").style.width = "100%";
+        document.getElementById("changeWidth").style.width = "100%";
         document.getElementById("headChanged").style.zoom = scale;
         var getDom = document.getElementsByClassName("content");
         for(var i=0;i<getDom.length;i++){
@@ -1274,6 +1275,7 @@
     } else {
         document.getElementById("resumeContent").style.margin = "90px auto 5px";
         document.getElementById("resumeContent").style.width = "720px";
+        document.getElementById("changeWidth").style.width = "500px";
         document.getElementById("headChanged").style.zoom = 1;
         var getDom = document.getElementsByClassName("content");
         for(var i=0;i<getDom.length;i++){
