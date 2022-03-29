@@ -1225,6 +1225,9 @@
     var devicewidth = document.documentElement.clientWidth;
     var scale = devicewidth / 1440;  // 分母——设计稿的尺寸
     if (devicewidth<850) {
+        //<div id="resumeContent" style="width: 720px;margin: 90px auto 5px;clear:both">
+        document.getElementById("resumeContent").style.margin = "5px 5px 5px 5px";
+        document.getElementById("resumeContent").style.width = "100%";
         //document.getElementById("contact").style.zoom = scale;
         document.getElementById("headChanged").style.zoom = scale;
         var getDom = document.getElementsByClassName("content");
@@ -1262,9 +1265,11 @@
         }
         var getDom = document.getElementsByClassName("otherChange");
         for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 2;
+            getDom[i].style.zoom = 4;
         }
     } else {
+        document.getElementById("resumeContent").style.margin = "90px auto 5px";
+        document.getElementById("resumeContent").style.width = "720px";
         //document.getElementById("contact").style.zoom = 1;
         document.getElementById("headChanged").style.zoom = 1;
         var getDom = document.getElementsByClassName("content");
