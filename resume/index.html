@@ -1056,7 +1056,7 @@
     <div>
         <div class="title0">
             <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/自我评价.png">
-            <span>自我评价</span>
+            <span class="needChanged">自我评价</span>
         </div>
         <div class="line"></div>
         <div class="work0">
@@ -1072,7 +1072,7 @@
     <div>
         <div class="title0">
             <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/未来规划.png">
-            <span>未来规划</span>
+            <span class="needChanged">未来规划</span>
         </div>
         <div class="line"></div>
         <div class="work0">
@@ -1094,7 +1094,7 @@
     <div>
         <div class="title0">
             <img class="otherChange" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/about/个人项目.png">
-            <span>个人项目</span>
+            <span class="needChanged">个人项目</span>
         </div>
         <div class="line"></div>
         <div class="work0">
@@ -1232,7 +1232,7 @@
             getDom[i].style.zoom = scale;
         }
         document.getElementById("basicInformation").style.zoom = scale;
-        var getDom = document.getElementsByClassName("work0");
+        var getDom = document.getElementsByClassName("right");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = scale;
         }
@@ -1254,7 +1254,7 @@
         }
         var getDom = document.getElementsByClassName("needChanged");
         for(var i=0;i<getDom.length;i++){
-            getDom[i].style.zoom = 0.5 * scale;
+            getDom[i].style.zoom = scale;
         }
         var getDom = document.getElementsByClassName("resumeLink");
         for(var i=0;i<getDom.length;i++){
@@ -1276,7 +1276,7 @@
             getDom[i].style.zoom = 1;
         }
         document.getElementById("basicInformation").style.zoom = 1;
-        var getDom = document.getElementsByClassName("work0");
+        var getDom = document.getElementsByClassName("right");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = 1;
         }
