@@ -1677,7 +1677,7 @@ $('body').click(function(e) {
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 (function () {
     if (!window.AudioContext) {
-        // alert('当前浏览器不支持Web Audio API');
+        alert('当前浏览器不支持该功能');
         return;
     }
     
