@@ -752,20 +752,20 @@
                 <div id= "basicInformation" style="color:#003f3f;font-size:24pt;text-align: center;">张赛东/男/22岁</div>
                 <div style="margin-top: 10px; float: none;">
                     <div class="person0">
-                        <div>手机: 15674119605</div>
-                        <div>邮箱: 3440217568@qq.com</div>
+                        <div class="needChanged">手机: 15674119605</div>
+                        <div class="needChanged">邮箱: 3440217568@qq.com</div>
                     </div>
                     <div class="person0">
-                        <div>微信: adongenjoylife</div>
-                        <div>QQ: 3440217568</div>
+                        <div class="needChanged">微信: adongenjoylife</div>
+                        <div class="needChanged">QQ: 3440217568</div>
                     </div>
                     <div class="person0">
-                        <div><a class="resumeLink"  target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/certificate/undergraduate/学士学位证书.jpg"  style="font-size:14pt;">学历: 工学学士</a></div>
-                        <div><a class="resumeLink"  target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/certificate/undergraduate/本科毕业证书.jpg"  style="font-size:14pt;">专业: 软件工程</a></div>
+                        <div class="needChanged"><a class="resumeLink"  target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/certificate/undergraduate/学士学位证书.jpg"  style="font-size:14pt;">学历: 工学学士</a></div>
+                        <div class="needChanged"><a class="resumeLink"  target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/certificate/undergraduate/本科毕业证书.jpg"  style="font-size:14pt;">专业: 软件工程</a></div>
                     </div>
                     <div class="person0">
-                        <div><a class="resumeLink" target="_blank" rel="noopener" href="http://www.hut.edu.cn/"  style="font-size:14pt;">毕业学校: 湖南工业大学</a></div>
-                        <div><a class="resumeLink" target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%80%92%E9%98%B3/235119?fr=aladdin"  style="font-size:14pt;">籍贯: 湖南耒阳</a></div>
+                        <div class="needChanged"><a class="resumeLink" target="_blank" rel="noopener" href="http://www.hut.edu.cn/"  style="font-size:14pt;">毕业学校: 湖南工业大学</a></div>
+                        <div class="needChanged"><a class="resumeLink" target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%80%92%E9%98%B3/235119?fr=aladdin"  style="font-size:14pt;">籍贯: 湖南耒阳</a></div>
                     </div>
                 </div>
             </div>
@@ -836,7 +836,7 @@
                 <div class="left" style="clear: none;float: inherit;">2017/09 - 至今</div>
                 <div class="mid0" style="clear: none;float: inherit;"></div>
                 <div class="right" style="clear: none;float: inherit;">
-                    <div class="head0" style="clear: both;float: none;">公司: 敬请期待</div>
+                    <div id = "headChanged" class="head0" style="clear: both;float: none;">公司: 敬请期待</div>
                     <div class="brief" style="clear: both;float: none;">职位: iOS开发工程师 | 工作性质: 实习 | 地点: 敬请期待</div>
                     <div class="detail" style="clear: both;float: none;">
                         敬请期待！
@@ -1226,6 +1226,7 @@
     var scale = devicewidth / 1440;  // 分母——设计稿的尺寸
     if (devicewidth<850) {
         //document.getElementById("contact").style.zoom = scale;
+        document.getElementById("headChanged").style.zoom = scale;
         var getDom = document.getElementsByClassName("content");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = scale;
@@ -1247,16 +1248,17 @@
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = scale;
         }
-        var getDom = document.getElementsByClassName("resumeLink");
+        var getDom = document.getElementsByClassName("only");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = scale;
         }
-        var getDom = document.getElementsByClassName("only");
+        var getDom = document.getElementsByClassName("needChanged");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = scale;
         }
     } else {
         //document.getElementById("contact").style.zoom = 1;
+        document.getElementById("headChanged").style.zoom = 1;
         var getDom = document.getElementsByClassName("content");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = 1;
@@ -1278,11 +1280,11 @@
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = 1;
         }
-        var getDom = document.getElementsByClassName("resumeLink");
+        var getDom = document.getElementsByClassName("only");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = 1;
         }
-        var getDom = document.getElementsByClassName("only");
+        var getDom = document.getElementsByClassName("needChanged");
         for(var i=0;i<getDom.length;i++){
             getDom[i].style.zoom = 1;
         }
