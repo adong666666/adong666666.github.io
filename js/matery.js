@@ -172,4 +172,11 @@ $(document).find('img[data-original]').each(function(){
 
     // 初始化加载 tooltipped.
     $('.tooltipped').tooltip();
+    
+            ["bangumi-tab", "bangumi-button bangumi-firstpage", "bangumi-button bangumi-previouspage", "bangumi-button bangumi-nextpage", "bangumi-button bangumi-lastpage"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].target = "_self";
+            }
+            });
 });
