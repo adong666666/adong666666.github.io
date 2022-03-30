@@ -759,9 +759,9 @@ end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <li>Create your feature branch: <code>git checkout -b my-new-feature</code></li>
 <li>Commit your changes: <code>git commit -am 'Add some feature'</code></li>
 <li>Push to the branch: <code>git push origin my-new-feature</code></li>
-<li>Submit a pull request<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2>PodfileKit is released under the MIT license. <a target="_blank" rel="noopener" href="https://github.com/adong666666/PodfileKit/blob/master/LICENSE">See LICENSE</a> for details.<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">source <span class="token string">'https://github.com/CocoaPods/Specs.git'</span>
+<li>Submit a pull request<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2>PodfileKit is released under the MIT license. <a target="_blank" rel="noopener" href="https://github.com/adong666666/PodfileKit/blob/master/LICENSE">See LICENSE</a> for details.<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">source <span class="token string-literal"><span class="token string">'https://github.com/CocoaPods/Specs.git'</span></span>
 <span class="token comment"># Minimum supported iOS system version</span>
-platform<span class="token symbol">:ios</span><span class="token punctuation">,</span><span class="token string">'13.0'</span>
+<span class="token symbol">platform</span><span class="token symbol">:ios</span><span class="token punctuation">,</span><span class="token string-literal"><span class="token string">'13.0'</span></span>
 use_frameworks<span class="token operator">!</span>
 <span class="token comment"># Inhibit the warning of the third party library</span>
 inhibit_all_warnings<span class="token operator">!</span>
@@ -1085,7 +1085,7 @@ inhibit_all_warnings<span class="token operator">!</span>
   <span class="token comment"># pod 'XCGLogger'</span>
 <span class="token keyword">end</span>
   <span class="token comment"># Replace your project name here</span>
-target <span class="token string">"ProjectName"</span> <span class="token keyword">do</span>
+target <span class="token string-literal"><span class="token string">"ProjectName"</span></span> <span class="token keyword">do</span>
   thirdParty
   project
   debug
@@ -1095,7 +1095,7 @@ post_install <span class="token keyword">do</span> <span class="token operator">
   installer_representation<span class="token punctuation">.</span>pods_project<span class="token punctuation">.</span>targets<span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token keyword">do</span> <span class="token operator">|</span>target<span class="token operator">|</span>
     target<span class="token punctuation">.</span>build_configurations<span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token keyword">do</span> <span class="token operator">|</span>config<span class="token operator">|</span>
       <span class="token comment"># Minimum supported iOS system version</span>
-      config<span class="token punctuation">.</span>build_settings<span class="token punctuation">[</span><span class="token string">'IPHONEOS_DEPLOYMENT_TARGET'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'13.0'</span>
+      config<span class="token punctuation">.</span>build_settings<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'IPHONEOS_DEPLOYMENT_TARGET'</span></span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'13.0'</span></span>
     <span class="token keyword">end</span>
   <span class="token keyword">end</span>
 <span class="token keyword">end</span>

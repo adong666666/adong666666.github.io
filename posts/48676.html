@@ -776,16 +776,16 @@ Constraints:
 word1 and word2 consist of lowercase English letters.
 
 
-给你两个单词&nbsp;word1 和&nbsp;word2， 请返回将&nbsp;word1&nbsp;转换成&nbsp;word2 所使用的最少操作数 &nbsp;。
+给你两个单词 word1 和 word2， 请返回将 word1 转换成 word2 所使用的最少操作数  。
 
 你可以对一个单词进行如下三种操作：
 
 插入一个字符
 删除一个字符
 替换一个字符
-&nbsp;
+ 
 
-示例&nbsp;1：
+示例 1：
 
 输入：word1 = "horse", word2 = "ros"
 输出：3
@@ -793,7 +793,7 @@ word1 and word2 consist of lowercase English letters.
 horse -&gt; rorse (将 'h' 替换为 'r')
 rorse -&gt; rose (删除 'r')
 rose -&gt; ros (删除 'e')
-示例&nbsp;2：
+示例 2：
 
 输入：word1 = "intention", word2 = "execution"
 输出：5
@@ -803,7 +803,7 @@ inention -&gt; enention (将 'i' 替换为 'e')
 enention -&gt; exention (将 'n' 替换为 'x')
 exention -&gt; exection (将 'n' 替换为 'c')
 exection -&gt; execution (插入 'u')
-&nbsp;
+ 
 
 提示：
 
@@ -814,7 +814,7 @@ word1 和 word2 由小写英文字母组成<span aria-hidden="true" class="line-
     <span class="token keyword">int</span> <span class="token function">minDistance</span><span class="token punctuation">(</span>string word1<span class="token punctuation">,</span> string word2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> m <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> word1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> word2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span> <span class="token function">dp</span><span class="token punctuation">(</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span> <span class="token function">dp</span><span class="token punctuation">(</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token generic-function"><span class="token function">vector</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token comment">//int dp[m+1][n+1];</span>
         dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>

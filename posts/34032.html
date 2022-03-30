@@ -739,7 +739,7 @@
 <span class="token comment">#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/</span>
 <span class="token comment">#</span>
 
-<span class="token constant">Pod</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">Spec</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token keyword">do</span> <span class="token operator">|</span>s<span class="token operator">|</span>
+Pod<span class="token double-colon punctuation">::</span><span class="token class-name">Spec</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token keyword">do</span> <span class="token operator">|</span>s<span class="token operator">|</span>
 
   <span class="token comment"># ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #</span>
   <span class="token comment">#</span>
@@ -748,20 +748,20 @@
   <span class="token comment">#  summary should be tweet-length, and the description more in depth.</span>
   <span class="token comment">#</span>
 
-  s<span class="token punctuation">.</span>name         <span class="token operator">=</span> <span class="token string">"CommonUse"</span>
-  s<span class="token punctuation">.</span>version      <span class="token operator">=</span> <span class="token string">"0.0.3"</span>
-  s<span class="token punctuation">.</span>summary      <span class="token operator">=</span> <span class="token string">"I am now testing my first framwork"</span>
+  s<span class="token punctuation">.</span>name         <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"CommonUse"</span></span>
+  s<span class="token punctuation">.</span>version      <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"0.0.3"</span></span>
+  s<span class="token punctuation">.</span>summary      <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"I am now testing my first framwork"</span></span>
 
   <span class="token comment"># This description is used to generate tags and improve search results.</span>
   <span class="token comment">#   * Think: What does it do? Why did you write it? What is the focus?</span>
   <span class="token comment">#   * Try to keep it short, snappy and to the point.</span>
   <span class="token comment">#   * Write the description between the DESC delimiters below.</span>
   <span class="token comment">#   * Finally, don't worry about the indent, CocoaPods strips it!</span>
-  s<span class="token punctuation">.</span>description  <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">-</span><span class="token constant">DESC</span>
-                   <span class="token constant">I</span> am testing my framwork<span class="token punctuation">.</span><span class="token constant">Hope</span> to create a perfect one soon <span class="token punctuation">.</span>
-                   <span class="token constant">DESC</span>
+  s<span class="token punctuation">.</span>description  <span class="token operator">=</span> <span class="token string-literal heredoc-string"><span class="token delimiter"><span class="token punctuation">&lt;&lt;-</span><span class="token symbol">DESC</span></span><span class="token string">
+                   I am testing my framwork.Hope to create a perfect one soon .
+                   </span><span class="token delimiter"><span class="token symbol">DESC</span></span></span>
 
-  s<span class="token punctuation">.</span>homepage     <span class="token operator">=</span> <span class="token string">"https://github.com/adong666666/CommonUse"</span>
+  s<span class="token punctuation">.</span>homepage     <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"https://github.com/adong666666/CommonUse"</span></span>
   <span class="token comment"># s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"</span>
 
 
@@ -773,7 +773,7 @@
   <span class="token comment">#</span>
 
   <span class="token comment"># s.license      = "MIT (example)"</span>
-  s<span class="token punctuation">.</span>license      <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token symbol">:type</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"MIT"</span><span class="token punctuation">,</span> <span class="token symbol">:file</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"FILE_LICENSE"</span> <span class="token punctuation">}</span>
+  s<span class="token punctuation">.</span>license      <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token symbol">:type</span> <span class="token operator">=&gt;</span> <span class="token string-literal"><span class="token string">"MIT"</span></span><span class="token punctuation">,</span> <span class="token symbol">:file</span> <span class="token operator">=&gt;</span> <span class="token string-literal"><span class="token string">"FILE_LICENSE"</span></span> <span class="token punctuation">}</span>
 
 
   <span class="token comment"># ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #</span>
@@ -786,7 +786,7 @@
   <span class="token comment">#  profile URL.</span>
   <span class="token comment">#</span>
 
-  s<span class="token punctuation">.</span>author             <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"Zhangsaidong"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"3440217568@qq.com"</span> <span class="token punctuation">}</span>
+  s<span class="token punctuation">.</span>author             <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string-literal"><span class="token string">"Zhangsaidong"</span></span> <span class="token operator">=&gt;</span> <span class="token string-literal"><span class="token string">"3440217568@qq.com"</span></span> <span class="token punctuation">}</span>
   <span class="token comment"># Or just: s.author    = "Zhangsaidong"</span>
   <span class="token comment"># s.authors            = { "Zhangsaidong" =&gt; "3440217568@qq.com" }</span>
   <span class="token comment"># s.social_media_url   = "http://twitter.com/Zhangsaidong"</span>
@@ -798,10 +798,10 @@
   <span class="token comment">#</span>
 
   <span class="token comment"># s.platform     = :ios</span>
-   s<span class="token punctuation">.</span>platform     <span class="token operator">=</span> <span class="token symbol">:ios</span><span class="token punctuation">,</span> <span class="token string">"8.0"</span>
+   s<span class="token punctuation">.</span>platform     <span class="token operator">=</span> <span class="token symbol">:ios</span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"8.0"</span></span>
 
   <span class="token comment">#  When using multiple platforms</span>
-   s<span class="token punctuation">.</span>ios<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string">"8.0"</span>
+   s<span class="token punctuation">.</span>ios<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"8.0"</span></span>
   <span class="token comment"># s.osx.deployment_target = "10.7"</span>
   <span class="token comment"># s.watchos.deployment_target = "2.0"</span>
   <span class="token comment"># s.tvos.deployment_target = "9.0"</span>
@@ -813,7 +813,7 @@
   <span class="token comment">#  Supports git, hg, bzr, svn and HTTP.</span>
   <span class="token comment">#</span>
 
-  s<span class="token punctuation">.</span>source       <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token symbol">:git</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"https://github.com/adong666666/CommonUse.git"</span><span class="token punctuation">,</span> <span class="token symbol">:tag</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"<span class="token interpolation"><span class="token delimiter tag">#{</span>s<span class="token punctuation">.</span>version<span class="token delimiter tag">}</span></span>"</span> <span class="token punctuation">}</span>
+  s<span class="token punctuation">.</span>source       <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token symbol">:git</span> <span class="token operator">=&gt;</span> <span class="token string-literal"><span class="token string">"https://github.com/adong666666/CommonUse.git"</span></span><span class="token punctuation">,</span> <span class="token symbol">:tag</span> <span class="token operator">=&gt;</span> <span class="token string-literal"><span class="token string">"</span><span class="token interpolation"><span class="token delimiter punctuation">#{</span><span class="token content">s<span class="token punctuation">.</span>version</span><span class="token delimiter punctuation">}</span></span><span class="token string">"</span></span> <span class="token punctuation">}</span>
 
 
   <span class="token comment"># ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #</span>
@@ -824,7 +824,7 @@
   <span class="token comment">#  Not including the public_header_files will make all headers public.</span>
   <span class="token comment">#</span>
 
-  s<span class="token punctuation">.</span>source_files  <span class="token operator">=</span> <span class="token string">"*.{h,m,swift}"</span>
+  s<span class="token punctuation">.</span>source_files  <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"*.{h,m,swift}"</span></span>
 
   <span class="token comment"># s.public_header_files = "Classes/**/*.h"</span>
 
@@ -868,80 +868,80 @@
   <span class="token comment"># s.dependency "JSONKit", "~&gt; 1.4"</span>
 
   <span class="token comment"># ――― Swift Version ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #</span>
-  s<span class="token punctuation">.</span>swift_version <span class="token operator">=</span> <span class="token string">'4.2'</span>
+  s<span class="token punctuation">.</span>swift_version <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'4.2'</span></span>
    
 <span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token constant">Pod</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token constant">Spec</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token keyword">do</span> <span class="token operator">|</span>s<span class="token operator">|</span>
-  s<span class="token punctuation">.</span>name             <span class="token operator">=</span> <span class="token string">"InterfaceKit"</span>
-  s<span class="token punctuation">.</span>version          <span class="token operator">=</span> <span class="token string">"5.4.0"</span>
-  s<span class="token punctuation">.</span>summary          <span class="token operator">=</span> <span class="token string">"InterfaceKit helps you use interface of UIKit, AppKit and WatchKit in SwiftUI interface easily"</span>
-  s<span class="token punctuation">.</span>description      <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">-</span><span class="token constant">DESC</span>
-<span class="token constant">This</span> is supported by <span class="token punctuation">[</span><span class="token constant">Saidong</span> <span class="token constant">Zhang</span><span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>zsd<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby">Pod<span class="token double-colon punctuation">::</span><span class="token class-name">Spec</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token keyword">do</span> <span class="token operator">|</span>s<span class="token operator">|</span>
+  s<span class="token punctuation">.</span>name             <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"InterfaceKit"</span></span>
+  s<span class="token punctuation">.</span>version          <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"5.4.0"</span></span>
+  s<span class="token punctuation">.</span>summary          <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"InterfaceKit helps you use interface of UIKit, AppKit and WatchKit in SwiftUI interface easily"</span></span>
+  s<span class="token punctuation">.</span>description      <span class="token operator">=</span> <span class="token string-literal heredoc-string"><span class="token delimiter"><span class="token punctuation">&lt;&lt;-</span><span class="token symbol">DESC</span></span><span class="token string">
+This is supported by [Saidong Zhang](https://zsd.name)
 
-its intention is to help people use interface of <span class="token constant">UIKit</span><span class="token punctuation">,</span> <span class="token constant">AppKit</span> <span class="token keyword">and</span> <span class="token constant">WatchKit</span> <span class="token keyword">in</span> <span class="token constant">SwiftUI</span> interface easily<span class="token punctuation">.</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> <span class="token constant">You</span> create custom views by declaring types that conform to the ``<span class="token constant">View</span>``
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> protocol<span class="token punctuation">.</span> <span class="token constant">Implement</span> the required ``<span class="token constant">View</span><span class="token operator">/</span>body<span class="token operator">-</span>swift<span class="token punctuation">.</span>property`` computed
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> property to provide the content <span class="token keyword">for</span> your custom view<span class="token punctuation">.</span> <span class="token constant">Then</span> you can present your <span class="token constant">UIKit</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> <span class="token constant">ViewController</span> <span class="token constant">View</span> by using `<span class="token constant">InterfaceView</span><span class="token punctuation">(</span><span class="token constant">MyView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>` <span class="token punctuation">,</span> as follows<span class="token punctuation">.</span>
+its intention is to help people use interface of UIKit, AppKit and WatchKit in SwiftUI interface easily.
+/// You create custom views by declaring types that conform to the ``View``
+/// protocol. Implement the required ``View/body-swift.property`` computed
+/// property to provide the content for your custom view. Then you can present your UIKit
+/// ViewController View by using `InterfaceView(MyView())` , as follows.
 ```swift
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>     struct <span class="token constant">MyView</span><span class="token punctuation">:</span> <span class="token constant">View</span> <span class="token punctuation">{</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>         var body<span class="token punctuation">:</span> some <span class="token constant">View</span> <span class="token punctuation">{</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>             <span class="token constant">InterfaceView</span><span class="token punctuation">(</span><span class="token constant">MyView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>         <span class="token punctuation">}</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>     <span class="token punctuation">}</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>
+///
+///     struct MyView: View {
+///         var body: some View {
+///             InterfaceView(MyView())
+///         }
+///     }
+///
 ```
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> <span class="token constant">The</span> ``<span class="token constant">View</span>`` protocol provides a large set of modifiers<span class="token punctuation">,</span> <span class="token keyword">defined</span> as protocol
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> methods with default implementations<span class="token punctuation">,</span> that you use to position <span class="token keyword">and</span> configure
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> views <span class="token keyword">in</span> the layout of your app<span class="token punctuation">.</span> <span class="token constant">Modifiers</span> typically work by wrapping the
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> view instance on which you call them <span class="token keyword">in</span> another view with the specified
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> characteristics<span class="token punctuation">.</span> <span class="token constant">For</span> example<span class="token punctuation">,</span> adding the ``<span class="token constant">View</span><span class="token operator">/</span>opacity<span class="token punctuation">(</span>_<span class="token punctuation">:</span><span class="token punctuation">)</span>`` modifier to a
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> interface view returns a <span class="token keyword">new</span> view with some amount of transparency<span class="token punctuation">:</span>
+/// The ``View`` protocol provides a large set of modifiers, defined as protocol
+/// methods with default implementations, that you use to position and configure
+/// views in the layout of your app. Modifiers typically work by wrapping the
+/// view instance on which you call them in another view with the specified
+/// characteristics. For example, adding the ``View/opacity(_:)`` modifier to a
+/// interface view returns a new view with some amount of transparency:
 ```swift
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>     <span class="token constant">InterfaceView</span><span class="token punctuation">(</span><span class="token constant">MyView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>         <span class="token punctuation">.</span>opacity<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span> <span class="token operator">/</span><span class="token operator">/</span> <span class="token constant">Display</span> partially transparent interface view<span class="token punctuation">.</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>
+///
+///     InterfaceView(MyView())
+///         .opacity(0.5) // Display partially transparent interface view.
+///
 ```
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span> <span class="token constant">It</span> is recommended to use `<span class="token constant">ZStack</span>` with `<span class="token constant">InterfaceView</span>` <span class="token punctuation">,</span> as follows<span class="token punctuation">.</span>
+/// It is recommended to use `ZStack` with `InterfaceView` , as follows.
 ```swift
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>     <span class="token constant">ZStack</span> <span class="token punctuation">{</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>         <span class="token constant">InterfaceView</span><span class="token punctuation">(</span><span class="token constant">MyView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>         <span class="token constant">MySwiftUIView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>     <span class="token punctuation">}</span>
-<span class="token operator">/</span><span class="token operator">/</span><span class="token operator">/</span>
+///
+///     ZStack {
+///         InterfaceView(MyView())
+///         MySwiftUIView()
+///     }
+///
 ```
-                        <span class="token constant">DESC</span>
-  s<span class="token punctuation">.</span>homepage         <span class="token operator">=</span> <span class="token string">"https://github.com/adong666666/InterfaceKit"</span>
-  s<span class="token punctuation">.</span>license          <span class="token operator">=</span> <span class="token string">'MIT'</span>
-  s<span class="token punctuation">.</span>author           <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"Saidong Zhang"</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"3440217568@qq.com"</span> <span class="token punctuation">}</span>
-  s<span class="token punctuation">.</span>source           <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token symbol">:git</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">"https://github.com/adong666666/InterfaceKit.git"</span><span class="token punctuation">,</span> <span class="token symbol">:tag</span> <span class="token operator">=</span><span class="token operator">&gt;</span> s<span class="token punctuation">.</span>version<span class="token punctuation">.</span>to_s <span class="token punctuation">}</span>
+                        </span><span class="token delimiter"><span class="token symbol">DESC</span></span></span>
+  s<span class="token punctuation">.</span>homepage         <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"https://github.com/adong666666/InterfaceKit"</span></span>
+  s<span class="token punctuation">.</span>license          <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'MIT'</span></span>
+  s<span class="token punctuation">.</span>author           <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string-literal"><span class="token string">"Saidong Zhang"</span></span> <span class="token operator">=&gt;</span> <span class="token string-literal"><span class="token string">"3440217568@qq.com"</span></span> <span class="token punctuation">}</span>
+  s<span class="token punctuation">.</span>source           <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token symbol">:git</span> <span class="token operator">=&gt;</span> <span class="token string-literal"><span class="token string">"https://github.com/adong666666/InterfaceKit.git"</span></span><span class="token punctuation">,</span> <span class="token symbol">:tag</span> <span class="token operator">=&gt;</span> s<span class="token punctuation">.</span>version<span class="token punctuation">.</span>to_s <span class="token punctuation">}</span>
 
   s<span class="token punctuation">.</span>requires_arc          <span class="token operator">=</span> <span class="token boolean">true</span>
 
-  s<span class="token punctuation">.</span>ios<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string">'13.0'</span>
-  s<span class="token punctuation">.</span>osx<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string">'10.15'</span>
-  s<span class="token punctuation">.</span>watchos<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string">'6.0'</span>
-  s<span class="token punctuation">.</span>tvos<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string">'13.0'</span>
+  s<span class="token punctuation">.</span>ios<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'13.0'</span></span>
+  s<span class="token punctuation">.</span>osx<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'10.15'</span></span>
+  s<span class="token punctuation">.</span>watchos<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'6.0'</span></span>
+  s<span class="token punctuation">.</span>tvos<span class="token punctuation">.</span>deployment_target <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'13.0'</span></span>
 
-  s<span class="token punctuation">.</span>source_files          <span class="token operator">=</span> <span class="token string">'Sources/InterfaceKit/*.swift'</span>
-  s<span class="token punctuation">.</span>exclude_files         <span class="token operator">=</span> <span class="token string">''</span>
+  s<span class="token punctuation">.</span>source_files          <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Sources/InterfaceKit/*.swift'</span></span>
+  s<span class="token punctuation">.</span>exclude_files         <span class="token operator">=</span> <span class="token string-literal"><span class="token string">''</span></span>
 
-  s<span class="token punctuation">.</span>frameworks <span class="token operator">=</span> <span class="token string">'SwiftUI'</span>
-  s<span class="token punctuation">.</span>swift_version <span class="token operator">=</span> <span class="token string">'5.4'</span>
+  s<span class="token punctuation">.</span>frameworks <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'SwiftUI'</span></span>
+  s<span class="token punctuation">.</span>swift_version <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'5.4'</span></span>
   <span class="token comment"># UIKit</span>
-  s<span class="token punctuation">.</span>subspec <span class="token string">'UIKit'</span> <span class="token keyword">do</span> <span class="token operator">|</span>sp<span class="token operator">|</span>
-    sp<span class="token punctuation">.</span>source_files  <span class="token operator">=</span> <span class="token string">'Sources/InterfaceKit/UIInterface.swift'</span>
+  s<span class="token punctuation">.</span>subspec <span class="token string-literal"><span class="token string">'UIKit'</span></span> <span class="token keyword">do</span> <span class="token operator">|</span>sp<span class="token operator">|</span>
+    sp<span class="token punctuation">.</span>source_files  <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Sources/InterfaceKit/UIInterface.swift'</span></span>
   <span class="token keyword">end</span>
   <span class="token comment"># AppKit</span>
-  s<span class="token punctuation">.</span>subspec <span class="token string">'AppKit'</span> <span class="token keyword">do</span> <span class="token operator">|</span>sp<span class="token operator">|</span>
-    sp<span class="token punctuation">.</span>source_files  <span class="token operator">=</span> <span class="token string">'Sources/InterfaceKit/NSInterface.swift'</span>
+  s<span class="token punctuation">.</span>subspec <span class="token string-literal"><span class="token string">'AppKit'</span></span> <span class="token keyword">do</span> <span class="token operator">|</span>sp<span class="token operator">|</span>
+    sp<span class="token punctuation">.</span>source_files  <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Sources/InterfaceKit/NSInterface.swift'</span></span>
   <span class="token keyword">end</span>
   <span class="token comment"># WatchKit</span>
-  s<span class="token punctuation">.</span>subspec <span class="token string">'WatchKit'</span> <span class="token keyword">do</span> <span class="token operator">|</span>sp<span class="token operator">|</span>
-    sp<span class="token punctuation">.</span>source_files  <span class="token operator">=</span> <span class="token string">'Sources/InterfaceKit/WKInterface.swift'</span>
+  s<span class="token punctuation">.</span>subspec <span class="token string-literal"><span class="token string">'WatchKit'</span></span> <span class="token keyword">do</span> <span class="token operator">|</span>sp<span class="token operator">|</span>
+    sp<span class="token punctuation">.</span>source_files  <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Sources/InterfaceKit/WKInterface.swift'</span></span>
   <span class="token keyword">end</span>
 <span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
