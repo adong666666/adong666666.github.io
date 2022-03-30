@@ -2411,7 +2411,7 @@ body.DarkMode #stars3:after {
 }
 
 /*弹奏欢乐颂按钮样式*/
-.girl-fixed {
+.music-play {
     position: fixed;
     right: 15px;
     bottom: 135px;
@@ -2420,13 +2420,13 @@ body.DarkMode #stars3:after {
     z-index: 997;
 }
 
-.girl-fixed .btn-floating {
+.music-play .btn-floating {
     background: linear-gradient(to bottom right, #FF9999 0%, #ff6666 100%);
     width: 48px;
     height: 48px;
 }
 
-.girl-fixed .btn-floating i {
+.music-play .btn-floating i {
     line-height: 48px;
     font-size: 1.8rem;
 }
