@@ -2520,8 +2520,47 @@ console.log(`
 
     window.onload = window.onresize = function () {
     var devicewidth = document.documentElement.clientWidth;
+    var scale = devicewidth / 1440;  // 分母——设计稿的尺寸
     if (devicewidth<850) {
         document.body.style.backgroundImage = "none";
+        
+        document.getElementById("resumeContent").style.margin = "30px 10px 5px 5px";
+        document.getElementById("resumeContent").style.width = "100%";
+        document.getElementById("changeWidth").style.width = "130%";
+        document.getElementById("headChanged").style.zoom = scale;
+        ["content", "person0", "title0", "detail", "only", "needChanged", "resumeLink", "mid0"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.zoom = scale;
+            }
+        });
+        var getDom = document.getElementsByClassName("right0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.width = "85%";
+        }
+        document.getElementById("basicInformation").style.zoom = scale;
+        document.getElementById("basicInformation").style.margin = "0px 200px 0px 0px";
+        var getDom = document.getElementsByClassName("otherChange");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.zoom = 4;
+        }
+    } else {
+        document.getElementById("resumeContent").style.margin = "90px auto 5px";
+        document.getElementById("resumeContent").style.width = "720px";
+        document.getElementById("changeWidth").style.width = "500px";
+        document.getElementById("headChanged").style.zoom = 1;
+        ["content", "person0", "title0", "detail", "only", "needChanged", "resumeLink", "mid0", "otherChange"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.zoom = 1;
+            }
+        });
+        var getDom = document.getElementsByClassName("right0");
+        for(var i=0;i<getDom.length;i++){
+            getDom[i].style.width = "508px";
+        }
+        document.getElementById("basicInformation").style.zoom = 1;
+        document.getElementById("basicInformation").style.margin = "0px 0px 0px 0px";
     }
     };
 
