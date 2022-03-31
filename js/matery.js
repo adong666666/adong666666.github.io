@@ -74,7 +74,8 @@ $(function () {
 
         $('#articleContent img').each(function () {
             let imgPath = $(this).attr('src');
-            $(this).wrap('<div class="img-item" data-src="' + imgPath + '" data-sub-html=".caption"></div>');
+            //$(this).wrap('<div class="img-item" data-src="' + imgPath + '" data-sub-html=".caption"></div>');
+            $(this).wrap('<div class="img-item" data-src="' + imgPath + '" data-sub-html=".caption" data-fancybox="images"></div>');
             // 图片添加阴影
             $(this).addClass("img-shadow img-margin");
             // 图片添加字幕
