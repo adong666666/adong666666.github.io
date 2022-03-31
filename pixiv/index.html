@@ -730,11 +730,25 @@
     <div id="contact" class="container chip-container">
         <div class="card">
             <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-image"></i>&nbsp;&nbsp;每日图片
-                </div>
-                <iframe src="https://cloud.mokeyjay.com/pixiv" frameborder="0" style="width:100%;height:380px;margin:0;"></iframe>
+                <div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;每日图片</div>
+<iframe src="https://cloud.mokeyjay.com/pixiv" frameborder="0" style="width:100%;height:500px;margin:0;"></iframe>
 
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机壁纸</div>
+<iframe id="theWallPaper" src="https://api.luvying.com/acgimg" frameborder="0" style="width:100%;height:500px;margin:0;"></iframe>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg2()"></div>
+
+<p><br><br><br></p>
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机图片</div>
+<div id="img"><p><img style="height:auto;max-width:100%;vertical-align: middle" src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://api.luvying.com/acgimg?t=" alt="img"></p> 
+<br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg()"></div>
+
+  <script>
+  function changeImg(){document.getElementById("img").children[0].children[0].src = "https://api.luvying.com/acgimg?t=" + new Date().getTime();}
+  function changeImg2(){document.getElementById("theWallPaper").src = "https://api.luvying.com/acgimg?t=" + new Date().getTime();}
+  </script>
+</div>
             </div>
             <!--valine评论弹幕-->
             
