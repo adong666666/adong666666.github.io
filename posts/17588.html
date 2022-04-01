@@ -698,6 +698,14 @@ do {
     </div>
 </div>
 
+<script>
+        if (localStorage.getItem('isDark') === '1') {
+            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+        } else {
+            $('.post-cover').css('background-image', 'none');
+        }
+</script>
+
 
 
 

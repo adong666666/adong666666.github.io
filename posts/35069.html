@@ -696,6 +696,14 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
     </div>
 </div>
 
+<script>
+        if (localStorage.getItem('isDark') === '1') {
+            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+        } else {
+            $('.post-cover').css('background-image', 'none');
+        }
+</script>
+
 
 
 
@@ -873,7 +881,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-18
+                    2022-04-01
                 </div>
                 
 
@@ -912,7 +920,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
             <div id="articleContent">
                 <h1 id="InterfaceKit"><a href="#InterfaceKit" class="headerlink" title="InterfaceKit"></a>InterfaceKit</h1><p>========================</p>
 <p><code>One line of code</code> to implement interfaces of <code>UIKit,AppKit,and WatchKit</code> in <code>SwiftUI</code> interface!</p>
-<h5 id="Chinese-Simplified-中文文档"><a href="#Chinese-Simplified-中文文档" class="headerlink" title=" Chinese (Simplified): 中文文档"></a><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/China.png" alt="cn"> Chinese (Simplified): <a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit/blob/master/README.zh-Hans.md">中文文档</a></h5><h5 id="Code-interpretation-document-https-github-com-adong666666-InterfaceKitDoc-or-this-repository’s-Docs"><a href="#Code-interpretation-document-https-github-com-adong666666-InterfaceKitDoc-or-this-repository’s-Docs" class="headerlink" title="Code interpretation document: https://github.com/adong666666/InterfaceKitDoc(or this repository’s Docs)"></a>Code interpretation document: <a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKitDoc">https://github.com/adong666666/InterfaceKitDoc</a>(or this repository’s <code>Docs</code>)</h5><p>The basic idea of InterfaceKit is that we want some user interface abstraction layer that sufficiently encapsulates actually calling UIKit,AppKit,and WatchKit directly. It should be simple enough that common things are easy, but comprehensive enough that complicated things are also easy.</p>
+<h5 id="Chinese-Simplified-中文文档"><a href="#Chinese-Simplified-中文文档" class="headerlink" title="Chinese (Simplified): 中文文档"></a>Chinese (Simplified): <a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit/blob/master/README.zh-Hans.md">中文文档</a></h5><h5 id="Code-interpretation-document-https-github-com-adong666666-InterfaceKitDoc-or-this-repository’s-Docs"><a href="#Code-interpretation-document-https-github-com-adong666666-InterfaceKitDoc-or-this-repository’s-Docs" class="headerlink" title="Code interpretation document: https://github.com/adong666666/InterfaceKitDoc(or this repository’s Docs)"></a>Code interpretation document: <a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKitDoc">https://github.com/adong666666/InterfaceKitDoc</a>(or this repository’s <code>Docs</code>)</h5><p>The basic idea of InterfaceKit is that we want some user interface abstraction layer that sufficiently encapsulates actually calling UIKit,AppKit,and WatchKit directly. It should be simple enough that common things are easy, but comprehensive enough that complicated things are also easy.</p>
 <p>You can check out more about the project direction in the <a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit/blob/master/Vision.md">vision document</a>.</p>
 <pre class="line-numbers language-none"><code class="language-none">                    ┌──────────────┐
                     │   SwiftUI    │
@@ -1105,7 +1113,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
 <pre class="line-numbers language-none"><code class="language-none">git clone https://github.com/adong666666/InterfaceKit.git --depth=1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>Copy the Swift files in <code>InterfaceKit</code> folder to your project.</p>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/copy_files.png" alt="Copy files"></div>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/copy_files.png" alt=""></div>
 
 <ul>
 <li>If for iOS or tvOS project, you can copy the file <code>UIInterface.swift</code>.</li>
@@ -1157,7 +1165,7 @@ target <span class="token string-literal"><span class="token string">'YOUR_TARGE
 <p>Then, in the <code>Podfile</code> directory(Make sure that your Podfile and your xcodeproj file are in the same directory), run the following command:</p>
 <pre class="line-numbers language-none"><code class="language-none">$ pod install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/PodfileLocation.png" alt="Podfile Location"></div>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/PodfileLocation.png" alt=""></div>
 
 <h3 id="Carthage"><a href="#Carthage" class="headerlink" title="Carthage"></a>Carthage</h3><p><a target="_blank" rel="noopener" href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
 <ol>
@@ -1168,7 +1176,7 @@ target <span class="token string-literal"><span class="token string">'YOUR_TARGE
 <li>For iOS project, Run <code>carthage update --platform iOS</code>.</li>
 <li>For macOS project, Run <code>carthage update --platform macOS</code>.</li>
 <li>For tvOS project, Run <code>carthage update --platform tvOS</code>.</li>
-<li>For watchOS project, Run <code>carthage update --platform watchOS</code>. <div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/CartfileLocation.png" alt="Cartfile Location"></div></li>
+<li>For watchOS project, Run <code>carthage update --platform watchOS</code>. <div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/CartfileLocation.png" alt=""></div></li>
 </ul>
 </li>
 <li><p>On your application targets’ <code>"General"</code> settings tab, in the <code>"Frameworks,Libraries,and Embedded Content"</code> section, drag and drop <code>InterfaceKit</code> xcframework (or just select the appropriate framework from xcframework) from the Carthage/Build folder on disk.</p>
@@ -1191,7 +1199,7 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
 <p>OR</p>
 <ol>
 <li>In Xcode, select File &gt; Swift Packages &gt; Add Package Dependency.</li>
-<li>Follow the prompts using the URL(“<a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit.git&quot;">https://github.com/adong666666/InterfaceKit.git"</a>) for this repository.<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/SwiftPackageManager.png" alt="Swift Package Manager Configuration"></div></li>
+<li>Follow the prompts using the URL(“<a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit.git&quot;">https://github.com/adong666666/InterfaceKit.git"</a>) for this repository.<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/SwiftPackageManager.png" alt=""></div></li>
 </ol>
 <h3 id="Manually"><a href="#Manually" class="headerlink" title="Manually"></a>Manually</h3><p>If you prefer not to use any of the aforementioned dependency managers, you can integrate InterfaceKit into your project manually.</p>
 <h4 id="Embedded-Framework"><a href="#Embedded-Framework" class="headerlink" title="Embedded Framework"></a>Embedded Framework</h4><ul>
@@ -1211,7 +1219,7 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
 </blockquote>
 </li>
 </ul>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/drag_framework.png" alt="Drag and drop xcodeproj"></div>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/drag_framework.png" alt=""></div>
 
 <ul>
 <li><p>Select the <code>InterfaceKit.xcodeproj</code> in the Project Navigator and verify the deployment target matches that of your application target.</p>
@@ -1228,7 +1236,7 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
 </blockquote>
 </li>
 </ul>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/add_framework.png" alt="Add framework"></div>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/add_framework.png" alt=""></div>
 
 <ul>
 <li><p>And that’s it!</p>
@@ -1239,15 +1247,15 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
 </ul>
 <h3 id="Unzip-drag-and-drop"><a href="#Unzip-drag-and-drop" class="headerlink" title="Unzip,drag and drop"></a>Unzip,drag and drop</h3><ol>
 <li><p>Unzip the <code>InterfaceKit.xcframework.zip</code> file provided by the repository.</p>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/unzip.png" alt="Unzip"></div></li>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/unzip.png" alt=""></div></li>
 <li><p>On your application targets’ <code>“General”</code> settings tab, in the <code>"Frameworks,Libraries,and Embedded Content"</code> section, drag and drop the unzipped file <code>InterfaceKit.xcframework</code> (or just select the appropriate framework from InterfaceKit.xcframework).</p>
 </li>
 </ol>
 <ul>
 <li><p>If you use <code>xcfameworks</code>, just drag and drop <code>InterfaceKit.xcframework</code>. <code>InterfaceKit.xcframework</code> supports all four platforms(<code>iOS, macOS, tvOS, watchOS</code>).</p>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/use_xcframeworks.png" alt="Use xcframeworks"></div></li>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/use_xcframeworks.png" alt=""></div></li>
 <li><p>If you use <code>frameworks</code>, select the appropriate framework from InterfaceKit.xcframework according to the folder name and the platform of your project.</p>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/use_frameworks.png" alt="Use frameworks"></div></li>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/use_frameworks.png" alt=""></div></li>
 </ul>
 <h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="Why-use-InterfaceKit"><a href="#Why-use-InterfaceKit" class="headerlink" title="Why use InterfaceKit?"></a>Why use InterfaceKit?</h3><p><code>One line of code</code> to implement interfaces of <code>UIKit,AppKit,and WatchKit</code> in <code>SwiftUI</code> interface! InterfaceKit supports for all four platforms(<code>iOS, macOS, tvOS, watchOS</code>). InterfaceKit is <code>constantly</code> updated.</p>
 <h2 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h2><p>InterfaceKit is owned and maintained by <a href="https://zsd.name/">Saidong Zhang</a>. You can follow him on github at <a target="_blank" rel="noopener" href="https://github.com/adong666666">@Github</a> for project updates and releases. </p>

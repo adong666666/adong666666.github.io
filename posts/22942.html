@@ -697,6 +697,14 @@ let results = [1, 2, 3, 4, 5, 6, 7, 8, 9]">
     </div>
 </div>
 
+<script>
+        if (localStorage.getItem('isDark') === '1') {
+            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+        } else {
+            $('.post-cover').css('background-image', 'none');
+        }
+</script>
+
 
 
 

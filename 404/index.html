@@ -709,11 +709,17 @@
 </div>
 
 
-    <script>
-        // 每天切换 banner 图.  Switch banner image every day.
-        var bannerUrl = "../medias/banner/" + new Date().getDay() + '.jpg';
-        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-    </script>
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "../medias/banner/" + new Date().getDay() + '.jpg';
+        if (localStorage.getItem('isDark') === '1') {
+            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+        } else {
+            $('.bg-cover').css('background-image', 'none');
+        }
+        
+
+</script>
 
 
 <script src="https://volunteer.cdn-go.cn/404/latest/404.js" maincolor="#F00" jumptime="-1" jumptarget="/" tips="404" error="" charset="utf-8"></script>
