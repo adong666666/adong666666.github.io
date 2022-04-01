@@ -698,7 +698,26 @@ let results = [1, 2, 3, 4, 5, 6, 7, 8, 9]">
 </div>
 
 <script>
+ var os = function (){
+　　var ua = navigator.userAgent,
+　　isWindowsPhone = /(?:Windows Phone)/.test(ua),
+　　isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+　　isAndroid = /(?:Android)/.test(ua),
+　　isFireFox = /(?:Firefox)/.test(ua),
+　　isChrome = /(?:Chrome|CriOS)/.test(ua),
+　　isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+ 　　isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+ 　　isPc = !isPhone && !isAndroid && !isSymbian;
+ 　　return {
+ 　　　　isTablet: isTablet,
+ 　　　　isPhone: isPhone,
+ 　　　　isAndroid: isAndroid,
+ 　　　　isPc: isPc
+ 　　};
+ }();
         if (localStorage.getItem('isDark') === '1') {
+            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+        } else if (!os.isPc){
             $('.post-cover').css('background-image', 'url(' + featureimg + ')');
         } else {
             $('.post-cover').css('background-image', 'none');

@@ -698,7 +698,26 @@ github举例只需新建仓库或使用已有仓库或使用博客仓库等，�
 </div>
 
 <script>
+ var os = function (){
+　　var ua = navigator.userAgent,
+　　isWindowsPhone = /(?:Windows Phone)/.test(ua),
+　　isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+　　isAndroid = /(?:Android)/.test(ua),
+　　isFireFox = /(?:Firefox)/.test(ua),
+　　isChrome = /(?:Chrome|CriOS)/.test(ua),
+　　isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+ 　　isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+ 　　isPc = !isPhone && !isAndroid && !isSymbian;
+ 　　return {
+ 　　　　isTablet: isTablet,
+ 　　　　isPhone: isPhone,
+ 　　　　isAndroid: isAndroid,
+ 　　　　isPc: isPc
+ 　　};
+ }();
         if (localStorage.getItem('isDark') === '1') {
+            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+        } else if (!os.isPc){
             $('.post-cover').css('background-image', 'url(' + featureimg + ')');
         } else {
             $('.post-cover').css('background-image', 'none');

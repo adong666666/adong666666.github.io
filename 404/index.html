@@ -712,12 +712,30 @@
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
     var bannerUrl = "../medias/banner/" + new Date().getDay() + '.jpg';
+var os = function (){
+　　var ua = navigator.userAgent,
+　　isWindowsPhone = /(?:Windows Phone)/.test(ua),
+　　isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+　　isAndroid = /(?:Android)/.test(ua),
+　　isFireFox = /(?:Firefox)/.test(ua),
+　　isChrome = /(?:Chrome|CriOS)/.test(ua),
+　　isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+ 　　isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+ 　　isPc = !isPhone && !isAndroid && !isSymbian;
+ 　　return {
+ 　　　　isTablet: isTablet,
+ 　　　　isPhone: isPhone,
+ 　　　　isAndroid: isAndroid,
+ 　　　　isPc: isPc
+ 　　};
+ }();
         if (localStorage.getItem('isDark') === '1') {
+            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+        } else if (!os.isPc){
             $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
         } else {
             $('.bg-cover').css('background-image', 'none');
         }
-        
 
 </script>
 
