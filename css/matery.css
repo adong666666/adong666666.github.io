@@ -551,8 +551,12 @@ header .go-back i {
 }
 
 .bg-cover:after {
+    -webkit-animation: 60s infinite;
+    animation: 60s infinite;
+    /* 我把rainbow删了
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
+    */
 }
 
 .bg-cover:before,

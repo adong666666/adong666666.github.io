@@ -43,7 +43,7 @@
 
    <style>
     body{
-       background-image: url(https://api.luvying.com/acgimg);
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -51,7 +51,17 @@
 </style>
 
 
+<!--PPT背景切换特效-->
+    <div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+        <script>
+            //window.addEventListener("load", function(e) {
+                document.getElementById("dynamic-background").innerHTML = '<iframe src="https://tuapi.eees.cc/acgPicPPTShow/" width="100%" height="100%" style="border: 0;"></iframe>';
+            //});
+        </script>
+    </div>
+
 <body>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -307,6 +317,13 @@
         <a href="/magicCube">
           
           <span>转转魔方</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://zsd.name/htmlPages/壁纸ppt.html">
+          
+          <span>壁纸PPT</span>
         </a>
       </li>
       
@@ -604,6 +621,14 @@
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="https://zsd.name/htmlPages/壁纸ppt.html " style="margin-left:75px">
+				  
+		          <span>壁纸PPT</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -700,7 +725,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('../https:/cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/41.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -731,9 +756,11 @@
  　　};
  }();
         if (localStorage.getItem('isDark') === '1') {
-            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+            //$('.post-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.post-cover').css('background-image', 'none');
         } else if (!os.isPc){
-            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+            //$('.post-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.post-cover').css('background-image', 'none');
         } else {
             $('.post-cover').css('background-image', 'none');
         }
@@ -1213,7 +1240,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/5.jpg" class="responsive-img" alt="从网络下载文件到App">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/34.jpg" class="responsive-img" alt="从网络下载文件到App">
                         
                         <span class="card-title">从网络下载文件到App</span>
                     </div>
@@ -1274,7 +1301,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/18.jpg" class="responsive-img" alt="Kingfisher简单使用">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/53.jpg" class="responsive-img" alt="Kingfisher简单使用">
                         
                         <span class="card-title">Kingfisher简单使用</span>
                     </div>

@@ -41,7 +41,7 @@
 
    <style>
     body{
-       background-image: url(https://api.luvying.com/acgimg);
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -49,7 +49,17 @@
 </style>
 
 
+<!--PPT背景切换特效-->
+    <div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+        <script>
+            //window.addEventListener("load", function(e) {
+                document.getElementById("dynamic-background").innerHTML = '<iframe src="https://tuapi.eees.cc/acgPicPPTShow/" width="100%" height="100%" style="border: 0;"></iframe>';
+            //});
+        </script>
+    </div>
+
 <body>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -305,6 +315,13 @@
         <a href="/magicCube">
           
           <span>转转魔方</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://zsd.name/htmlPages/壁纸ppt.html">
+          
+          <span>壁纸PPT</span>
         </a>
       </li>
       
@@ -599,6 +616,14 @@
                   <a href="/magicCube " style="margin-left:75px">
 				  
 		          <span>转转魔方</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="https://zsd.name/htmlPages/壁纸ppt.html " style="margin-left:75px">
+				  
+		          <span>壁纸PPT</span>
                   </a>
                 </li>
               
@@ -905,9 +930,11 @@ var os = function (){
  　　};
  }();
         if (localStorage.getItem('isDark') === '1') {
-            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+            //$('.bg-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.bg-cover').css('background-image', 'none');
         } else if (!os.isPc){
-            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+            //$('.bg-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.bg-cover').css('background-image', 'none');
         } else {
             $('.bg-cover').css('background-image', 'none');
         }
@@ -988,30 +1015,7 @@ var os = function (){
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://zsd.name/medias/banner/3.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</div>
-                            <div class="description center-align">
-                                
-                                    第一个正式发布的第三方框架
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="posts/47700.html" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://zsd.name/medias/banner/1.jpg');">
+                 style="background-image: url('https://tuapi.eees.cc/api.php?category=dongman&type=302&t=37');">
                 <div class="container">
                     <div class="row">
                         <div class="col s10 offset-s1">
@@ -1029,6 +1033,125 @@ var os = function (){
                             </div>
                         </div>
                     </div>
+<div class="cover-social-link">
+    <a href="https://github.com/adong666666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:3440217568@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/profile.php?id=100077856845077" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/profile.php?id=100077856845077" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://twitter.com/ZhangSaidong" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/ZhangSaidong" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3440217568" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3440217568" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/adong666666" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/adong666666" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('https://tuapi.eees.cc/api.php?category=dongman&type=302&t=99');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</div>
+                            <div class="description center-align">
+                                
+                                    第一个正式发布的第三方框架
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="posts/47700.html" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+<div class="cover-social-link">
+    <a href="https://github.com/adong666666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:3440217568@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/profile.php?id=100077856845077" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/profile.php?id=100077856845077" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://twitter.com/ZhangSaidong" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/ZhangSaidong" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3440217568" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3440217568" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/6607189957?refer_flag=0000015010_&amp;from=feed&amp;loc=avatar&amp;is_all=1" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/adong666666" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/adong666666" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
                 </div>
             </div>
         
@@ -1087,22 +1210,6 @@ var os = function (){
 </script>
 
 
-
-
-<style>
-    #index-video { z-index: -1; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; object-fit: cover;}
-    @media only screen and (max-width: 760px) { #index-video { display: none;}}
-    @media only screen and (min-width: 760px) { .bg-cover { background-image: none!important;}}
-</style>
-<video id="index-video" autoplay loop muted>
-
-    <source src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/medias/videos/1.mp4">
-
-    <source src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/medias/videos/2.mp4">
-
-    <source src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/medias/videos/3.mp4">
-
-</video>
 
 
 
@@ -1188,35 +1295,7 @@ var os = function (){
     
     <div class="col s12 m6" >
         
-            <div class="post-card" style="background-image: url('/medias/featureimages/9.jpg')">
-            
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="category">移动开发</a>
-                        
-                    
-                </div>
-                <a href="posts/47700.html">
-                    <h3 class="post-title">InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</h3>
-                </a>
-                <p class="post-description">
-                    
-                        第一个正式发布的第三方框架
-                    
-                </p>
-                <a href="posts/47700.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" >
-        
-            <div class="post-card" style="background-image: url('/medias/featureimages/19.jpg')">
+            <div class="post-card" style="background-image: url('https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/88.jpg')">
             
             <div class="post-body">
                 <div class="post-categories">
@@ -1234,7 +1313,35 @@ var os = function (){
                         第一篇正式发表的学术论文
                     
                 </p>
-                <a href="posts/57105.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                <a href="posts/57105.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" >
+        
+            <div class="post-card" style="background-image: url('https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/44.jpg')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="category">移动开发</a>
+                        
+                    
+                </div>
+                <a href="posts/47700.html">
+                    <h3 class="post-title">InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</h3>
+                </a>
+                <p class="post-description">
+                    
+                        第一个正式发布的第三方框架
+                    
+                </p>
+                <a href="posts/47700.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1259,6 +1366,1201 @@ var os = function (){
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/49201.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/120.jpg" class="responsive-img" alt="SDUTOJ1730（记忆化搜索）：数字三角形"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/120.jpg" class="responsive-img" alt="SDUTOJ1730（记忆化搜索）：数字三角形"><!--我加的-->
+                            
+                            <span class="card-title">SDUTOJ1730（记忆化搜索）：数字三角形</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                SDUTOJ1730（记忆化搜索）：数字三角形========================
+题目如下：
+数字三角形问题
+Description
+给定一个由n行数字组成的数字三角形如下图所示。试设计一个算法，计算出从三角形的顶至底的一条路
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/SDUTOJ/">
+                            <span class="chip bg-color">SDUTOJ</span>
+                        </a>
+                        
+                        <a href="tags/DFS/">
+                            <span class="chip bg-color">DFS</span>
+                        </a>
+                        
+                        <a href="tags/Memory-Search/">
+                            <span class="chip bg-color">Memory Search</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/11317.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/38.jpg" class="responsive-img" alt="SDUTOJ2080（动态规划）：最长公共子序列"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/38.jpg" class="responsive-img" alt="SDUTOJ2080（动态规划）：最长公共子序列"><!--我加的-->
+                            
+                            <span class="card-title">SDUTOJ2080（动态规划）：最长公共子序列</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                SDUTOJ2080（动态规划）：最长公共子序列========================
+题目如下：
+最长公共子序列问题
+Description
+给定两个序列 X={x1,x2,…,xm} 和 Y={y1,y2,…,yn}，找出X和
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/SDUTOJ/">
+                            <span class="chip bg-color">SDUTOJ</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/48626.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/116.jpg" class="responsive-img" alt="SDUTOJ1299（动态规划）：最长上升子序列"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/116.jpg" class="responsive-img" alt="SDUTOJ1299（动态规划）：最长上升子序列"><!--我加的-->
+                            
+                            <span class="card-title">SDUTOJ1299（动态规划）：最长上升子序列</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                SDUTOJ1299（动态规划）：最长上升子序列========================
+题目如下：
+最长上升子序列
+Description
+一个数的序列bi，当b1 &lt; b2 &lt; ... &lt; bS的时候，我们称这
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/SDUTOJ/">
+                            <span class="chip bg-color">SDUTOJ</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/22809.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/51.jpg" class="responsive-img" alt="POJ3254（状态压缩dp）：玉米地"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/51.jpg" class="responsive-img" alt="POJ3254（状态压缩dp）：玉米地"><!--我加的-->
+                            
+                            <span class="card-title">POJ3254（状态压缩dp）：玉米地</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                POJ3254（状态压缩dp）：玉米地========================
+题目如下：
+Corn Fields
+Time Limit: 2000MS        Memory Limit: 65536K
+Total Submi
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-20
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                            <span class="chip bg-color">记忆化</span>
+                        </a>
+                        
+                        <a href="tags/POJ/">
+                            <span class="chip bg-color">POJ</span>
+                        </a>
+                        
+                        <a href="tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
+                            <span class="chip bg-color">状态压缩</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/37129.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/120.jpg" class="responsive-img" alt="POJ2411（状态压缩dp）：方格覆盖"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/120.jpg" class="responsive-img" alt="POJ2411（状态压缩dp）：方格覆盖"><!--我加的-->
+                            
+                            <span class="card-title">POJ2411（状态压缩dp）：方格覆盖</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                POJ2411（状态压缩dp）：方格覆盖========================
+题目如下：
+Mondriaan's Dream
+Time Limit: 3000MS        Memory Limit: 65536K
+Tota
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-20
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                            <span class="chip bg-color">记忆化</span>
+                        </a>
+                        
+                        <a href="tags/POJ/">
+                            <span class="chip bg-color">POJ</span>
+                        </a>
+                        
+                        <a href="tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
+                            <span class="chip bg-color">状态压缩</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/15584.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/99.jpg" class="responsive-img" alt="LeetCode第887题（动态规划）：鸡蛋掉落"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/99.jpg" class="responsive-img" alt="LeetCode第887题（动态规划）：鸡蛋掉落"><!--我加的-->
+                            
+                            <span class="card-title">LeetCode第887题（动态规划）：鸡蛋掉落</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                LeetCode第887题（动态规划）：鸡蛋掉落========================
+题目如下：
+LeetCode第887题（动态规划）：鸡蛋掉落
+You are given k identical eggs and you h
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                            <span class="chip bg-color">记忆化</span>
+                        </a>
+                        
+                        <a href="tags/LeetCode/">
+                            <span class="chip bg-color">LeetCode</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/48676.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/29.jpg" class="responsive-img" alt="LeetCode第72题（动态规划）：编辑距离"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/29.jpg" class="responsive-img" alt="LeetCode第72题（动态规划）：编辑距离"><!--我加的-->
+                            
+                            <span class="card-title">LeetCode第72题（动态规划）：编辑距离</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                LeetCode第72题（动态规划）：编辑距离========================
+题目如下：
+72. 编辑距离
+Given two strings word1 and word2, return the minimum num
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                            <span class="chip bg-color">记忆化</span>
+                        </a>
+                        
+                        <a href="tags/LeetCode/">
+                            <span class="chip bg-color">LeetCode</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/24103.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/101.jpg" class="responsive-img" alt="LeetCode第64题（动态规划）：最小路径和"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/101.jpg" class="responsive-img" alt="LeetCode第64题（动态规划）：最小路径和"><!--我加的-->
+                            
+                            <span class="card-title">LeetCode第64题（动态规划）：最小路径和</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                LeetCode第64题（动态规划）：最小路径和========================
+题目如下：
+64. 最小路径和
+给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                            <span class="chip bg-color">记忆化</span>
+                        </a>
+                        
+                        <a href="tags/LeetCode/">
+                            <span class="chip bg-color">LeetCode</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/22189.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/36.jpg" class="responsive-img" alt="LeetCode第62题（动态规划）：不同路径"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/36.jpg" class="responsive-img" alt="LeetCode第62题（动态规划）：不同路径"><!--我加的-->
+                            
+                            <span class="card-title">LeetCode第62题（动态规划）：不同路径</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                LeetCode第62题（动态规划）：不同路径========================
+题目如下：
+62. 不同路径
+一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。
+
+机器人每次只能向下或
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                            <span class="chip bg-color">记忆化</span>
+                        </a>
+                        
+                        <a href="tags/LeetCode/">
+                            <span class="chip bg-color">LeetCode</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/7211.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/15.jpg" class="responsive-img" alt="解决动态规划问题的思考过程摘录"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/15.jpg" class="responsive-img" alt="解决动态规划问题的思考过程摘录"><!--我加的-->
+                            
+                            <span class="card-title">解决动态规划问题的思考过程摘录</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                解决动态规划问题的思考过程摘录========================
+心得： 这里的记忆化颇有意思，dp[i]如果之前计算过，且不为-1，则直接返回dp[i]。如未计算过则计算且只计算一次dp[i]，也就是说，本来递归需要大量重复
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
+                            <span class="chip bg-color">记忆化</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/36046.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/55.jpg" class="responsive-img" alt="Hexo进阶之各种优化摘录"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/55.jpg" class="responsive-img" alt="Hexo进阶之各种优化摘录"><!--我加的-->
+                            
+                            <span class="card-title">Hexo进阶之各种优化摘录</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Hexo进阶之各种优化摘录========================
+
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    脚本语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/git/">
+                            <span class="chip bg-color">git</span>
+                        </a>
+                        
+                        <a href="tags/github/">
+                            <span class="chip bg-color">github</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8D%9A%E6%96%87/">
+                            <span class="chip bg-color">博文</span>
+                        </a>
+                        
+                        <a href="tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                        <a href="tags/ejs/">
+                            <span class="chip bg-color">ejs</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/46171.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/26.jpg" class="responsive-img" alt="基于Hexo的matery主题搭建博客并深度优化摘录"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/26.jpg" class="responsive-img" alt="基于Hexo的matery主题搭建博客并深度优化摘录"><!--我加的-->
+                            
+                            <span class="card-title">基于Hexo的matery主题搭建博客并深度优化摘录</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                基于Hexo的matery主题搭建博客并深度优化摘录========================
+
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-20
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    脚本语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/git/">
+                            <span class="chip bg-color">git</span>
+                        </a>
+                        
+                        <a href="tags/github/">
+                            <span class="chip bg-color">github</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8D%9A%E6%96%87/">
+                            <span class="chip bg-color">博文</span>
+                        </a>
+                        
+                        <a href="tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                        <a href="tags/ejs/">
+                            <span class="chip bg-color">ejs</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/55425.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/113.jpg" class="responsive-img" alt="git Large File Storage摘录"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/113.jpg" class="responsive-img" alt="git Large File Storage摘录"><!--我加的-->
+                            
+                            <span class="card-title">git Large File Storage摘录</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                git Large File Storage摘录========================
+
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-20
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6git/" class="post-category">
+                                    版本控制git
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/git/">
+                            <span class="chip bg-color">git</span>
+                        </a>
+                        
+                        <a href="tags/github/">
+                            <span class="chip bg-color">github</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/12645.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/80.jpg" class="responsive-img" alt="Hexo文件名大小写问题摘录"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/80.jpg" class="responsive-img" alt="Hexo文件名大小写问题摘录"><!--我加的-->
+                            
+                            <span class="card-title">Hexo文件名大小写问题摘录</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Hexo文件名大小写问题摘录========================
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-19
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" class="post-category">
+                                    脚本语言
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/git/">
+                            <span class="chip bg-color">git</span>
+                        </a>
+                        
+                        <a href="tags/github/">
+                            <span class="chip bg-color">github</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8D%9A%E6%96%87/">
+                            <span class="chip bg-color">博文</span>
+                        </a>
+                        
+                        <a href="tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                        <a href="tags/ejs/">
+                            <span class="chip bg-color">ejs</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/49630.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/42.jpg" class="responsive-img" alt="动态规划之状态压缩"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/42.jpg" class="responsive-img" alt="动态规划之状态压缩"><!--我加的-->
+                            
+                            <span class="card-title">动态规划之状态压缩</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                动态规划之状态压缩摘录========================
+一、概述1.状态压缩状态压缩就是使用某种方法，简明扼要地以最小代价来表示某种状态，通常是用一串01数字（二进制数）来表示各个点的状态。这就要求使用状态压缩的对象的点的状
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/44130.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/60.jpg" class="responsive-img" alt="C++标准库使用"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/60.jpg" class="responsive-img" alt="C++标准库使用"><!--我加的-->
+                            
+                            <span class="card-title">C++标准库使用</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                C++标准库使用========================
+测试了一些标准库提供的数据结构和函数等值得一提的是那个自动推导auto用着非常舒服,可自动推导容器内的变量类型、函数的返回值类型等。模板就不用说了，一行胜百行。需要大量重复的
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                            <span class="chip bg-color">数据结构</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/33854.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/40.jpg" class="responsive-img" alt="Mac上使用C++万能头文件"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/40.jpg" class="responsive-img" alt="Mac上使用C++万能头文件"><!--我加的-->
+                            
+                            <span class="card-title">Mac上使用C++万能头文件</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Mac上使用C++万能头文件========================
+下述代码相当于#include&lt;bits/stdc++.h&gt;直接将下列文件拷贝或移入工程，引用时，使用#include "stdc++.hpp",当然
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-01
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="tags/C/">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -1295,7 +2597,8 @@ var os = function (){
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/121.jpg" class="responsive-img" alt="InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/121.jpg" class="responsive-img" alt="InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！"><!--我加的-->
                             
                             <span class="card-title">InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</span>
                         </div>
@@ -1379,1267 +2682,13 @@ var os = function (){
                 
          <!-- 推荐文章置顶模块效果开始 -->
           
-          <div class="placetop">推荐文章</div>
-          <style>
-            .placetop {
-              z-index: 99;
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 80px;
-              height: 30px;
-              line-height: 30px;
-              border-bottom-right-radius: 8px;
-              background: linear-gradient(to right, #2c8eef 0%, #3cd0fe 100%);;
-              text-align: center;
-              font-size: 15px;
-              color: #fff;
-              font-weight: 400 !important;
-              opacity: 0.95;
-            }
-
-            body.dark .placetop {
-              opacity: 0.75;
-            }
-          </style>
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/57105.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="学术论文——基于ARKit技术的文物交互式相机App的设计与实现">
-                            
-                            <span class="card-title">学术论文——基于ARKit技术的文物交互式相机App的设计与实现</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                第一篇正式发表的学术论文
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-30
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E8%AE%BA%E6%96%87/" class="post-category">
-                                    论文
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E8%AE%BA%E6%96%87/">
-                            <span class="chip bg-color">论文</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/49201.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SDUTOJ1730（记忆化搜索）：数字三角形">
-                            
-                            <span class="card-title">SDUTOJ1730（记忆化搜索）：数字三角形</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                SDUTOJ1730（记忆化搜索）：数字三角形========================
-题目如下：
-数字三角形问题
-Description
-给定一个由n行数字组成的数字三角形如下图所示。试设计一个算法，计算出从三角形的顶至底的一条路
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-27
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/SDUTOJ/">
-                            <span class="chip bg-color">SDUTOJ</span>
-                        </a>
-                        
-                        <a href="tags/DFS/">
-                            <span class="chip bg-color">DFS</span>
-                        </a>
-                        
-                        <a href="tags/Memory-Search/">
-                            <span class="chip bg-color">Memory Search</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/11317.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="SDUTOJ2080（动态规划）：最长公共子序列">
-                            
-                            <span class="card-title">SDUTOJ2080（动态规划）：最长公共子序列</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                SDUTOJ2080（动态规划）：最长公共子序列========================
-题目如下：
-最长公共子序列问题
-Description
-给定两个序列 X={x1,x2,…,xm} 和 Y={y1,y2,…,yn}，找出X和
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/SDUTOJ/">
-                            <span class="chip bg-color">SDUTOJ</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/48626.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="SDUTOJ1299（动态规划）：最长上升子序列">
-                            
-                            <span class="card-title">SDUTOJ1299（动态规划）：最长上升子序列</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                SDUTOJ1299（动态规划）：最长上升子序列========================
-题目如下：
-最长上升子序列
-Description
-一个数的序列bi，当b1 &lt; b2 &lt; ... &lt; bS的时候，我们称这
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/SDUTOJ/">
-                            <span class="chip bg-color">SDUTOJ</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/22809.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="POJ3254（状态压缩dp）：玉米地">
-                            
-                            <span class="card-title">POJ3254（状态压缩dp）：玉米地</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                POJ3254（状态压缩dp）：玉米地========================
-题目如下：
-Corn Fields
-Time Limit: 2000MS        Memory Limit: 65536K
-Total Submi
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                            <span class="chip bg-color">记忆化</span>
-                        </a>
-                        
-                        <a href="tags/POJ/">
-                            <span class="chip bg-color">POJ</span>
-                        </a>
-                        
-                        <a href="tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
-                            <span class="chip bg-color">状态压缩</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/37129.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="POJ2411（状态压缩dp）：方格覆盖">
-                            
-                            <span class="card-title">POJ2411（状态压缩dp）：方格覆盖</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                POJ2411（状态压缩dp）：方格覆盖========================
-题目如下：
-Mondriaan's Dream
-Time Limit: 3000MS        Memory Limit: 65536K
-Tota
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                            <span class="chip bg-color">记忆化</span>
-                        </a>
-                        
-                        <a href="tags/POJ/">
-                            <span class="chip bg-color">POJ</span>
-                        </a>
-                        
-                        <a href="tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
-                            <span class="chip bg-color">状态压缩</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/15584.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="LeetCode第887题（动态规划）：鸡蛋掉落">
-                            
-                            <span class="card-title">LeetCode第887题（动态规划）：鸡蛋掉落</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                LeetCode第887题（动态规划）：鸡蛋掉落========================
-题目如下：
-LeetCode第887题（动态规划）：鸡蛋掉落
-You are given k identical eggs and you h
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-17
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                            <span class="chip bg-color">记忆化</span>
-                        </a>
-                        
-                        <a href="tags/LeetCode/">
-                            <span class="chip bg-color">LeetCode</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/48676.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="LeetCode第72题（动态规划）：编辑距离">
-                            
-                            <span class="card-title">LeetCode第72题（动态规划）：编辑距离</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                LeetCode第72题（动态规划）：编辑距离========================
-题目如下：
-72. 编辑距离
-Given two strings word1 and word2, return the minimum num
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                            <span class="chip bg-color">记忆化</span>
-                        </a>
-                        
-                        <a href="tags/LeetCode/">
-                            <span class="chip bg-color">LeetCode</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/24103.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="LeetCode第64题（动态规划）：最小路径和">
-                            
-                            <span class="card-title">LeetCode第64题（动态规划）：最小路径和</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                LeetCode第64题（动态规划）：最小路径和========================
-题目如下：
-64. 最小路径和
-给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                            <span class="chip bg-color">记忆化</span>
-                        </a>
-                        
-                        <a href="tags/LeetCode/">
-                            <span class="chip bg-color">LeetCode</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/22189.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="LeetCode第62题（动态规划）：不同路径">
-                            
-                            <span class="card-title">LeetCode第62题（动态规划）：不同路径</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                LeetCode第62题（动态规划）：不同路径========================
-题目如下：
-62. 不同路径
-一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。
-
-机器人每次只能向下或
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-30
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                            <span class="chip bg-color">记忆化</span>
-                        </a>
-                        
-                        <a href="tags/LeetCode/">
-                            <span class="chip bg-color">LeetCode</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/7211.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="解决动态规划问题的思考过程摘录">
-                            
-                            <span class="card-title">解决动态规划问题的思考过程摘录</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                解决动态规划问题的思考过程摘录========================
-心得： 这里的记忆化颇有意思，dp[i]如果之前计算过，且不为-1，则直接返回dp[i]。如未计算过则计算且只计算一次dp[i]，也就是说，本来递归需要大量重复
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-28
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="tags/%E8%AE%B0%E5%BF%86%E5%8C%96/">
-                            <span class="chip bg-color">记忆化</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/36046.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Hexo进阶之各种优化摘录">
-                            
-                            <span class="card-title">Hexo进阶之各种优化摘录</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Hexo进阶之各种优化摘录========================
-
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    脚本语言
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/git/">
-                            <span class="chip bg-color">git</span>
-                        </a>
-                        
-                        <a href="tags/github/">
-                            <span class="chip bg-color">github</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8D%9A%E6%96%87/">
-                            <span class="chip bg-color">博文</span>
-                        </a>
-                        
-                        <a href="tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                        <a href="tags/ejs/">
-                            <span class="chip bg-color">ejs</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/46171.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="基于Hexo的matery主题搭建博客并深度优化摘录">
-                            
-                            <span class="card-title">基于Hexo的matery主题搭建博客并深度优化摘录</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                基于Hexo的matery主题搭建博客并深度优化摘录========================
-
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    脚本语言
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/git/">
-                            <span class="chip bg-color">git</span>
-                        </a>
-                        
-                        <a href="tags/github/">
-                            <span class="chip bg-color">github</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8D%9A%E6%96%87/">
-                            <span class="chip bg-color">博文</span>
-                        </a>
-                        
-                        <a href="tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                        <a href="tags/ejs/">
-                            <span class="chip bg-color">ejs</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/55425.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="git Large File Storage摘录">
-                            
-                            <span class="card-title">git Large File Storage摘录</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                git Large File Storage摘录========================
-
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6git/" class="post-category">
-                                    版本控制git
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/git/">
-                            <span class="chip bg-color">git</span>
-                        </a>
-                        
-                        <a href="tags/github/">
-                            <span class="chip bg-color">github</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/12645.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Hexo文件名大小写问题摘录">
-                            
-                            <span class="card-title">Hexo文件名大小写问题摘录</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Hexo文件名大小写问题摘录========================
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-19
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    脚本语言
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/git/">
-                            <span class="chip bg-color">git</span>
-                        </a>
-                        
-                        <a href="tags/github/">
-                            <span class="chip bg-color">github</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8D%9A%E6%96%87/">
-                            <span class="chip bg-color">博文</span>
-                        </a>
-                        
-                        <a href="tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                        <a href="tags/ejs/">
-                            <span class="chip bg-color">ejs</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/49630.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="动态规划之状态压缩">
-                            
-                            <span class="card-title">动态规划之状态压缩</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                动态规划之状态压缩摘录========================
-一、概述1.状态压缩状态压缩就是使用某种方法，简明扼要地以最小代价来表示某种状态，通常是用一串01数字（二进制数）来表示各个点的状态。这就要求使用状态压缩的对象的点的状
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-16
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/44130.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="C++标准库使用">
-                            
-                            <span class="card-title">C++标准库使用</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                C++标准库使用========================
-测试了一些标准库提供的数据结构和函数等值得一提的是那个自动推导auto用着非常舒服,可自动推导容器内的变量类型、函数的返回值类型等。模板就不用说了，一行胜百行。需要大量重复的
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                            <span class="chip bg-color">数据结构</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
-          <!-- 推荐文章置顶模块效果结束 -->
-                    <a href="posts/33854.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Mac上使用C++万能头文件">
-                            
-                            <span class="card-title">Mac上使用C++万能头文件</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Mac上使用C++万能头文件========================
-下述代码相当于#include&lt;bits/stdc++.h&gt;直接将下列文件拷贝或移入工程，引用时，使用#include "stdc++.hpp",当然
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-01
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                        <a href="tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                
-         <!-- 推荐文章置顶模块效果开始 -->
-          
           <!-- 推荐文章置顶模块效果结束 -->
                     <a href="posts/35069.html">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/3.jpg" class="responsive-img" alt="InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/3.jpg" class="responsive-img" alt="InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!"><!--我加的-->
                             
                             <span class="card-title">InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!</span>
                         </div>
@@ -2729,7 +2778,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="jazzy生成代码解释文档">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/113.jpg" class="responsive-img" alt="jazzy生成代码解释文档"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/113.jpg" class="responsive-img" alt="jazzy生成代码解释文档"><!--我加的-->
                             
                             <span class="card-title">jazzy生成代码解释文档</span>
                         </div>
@@ -2796,7 +2846,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="podspec示例">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/102.jpg" class="responsive-img" alt="podspec示例"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/102.jpg" class="responsive-img" alt="podspec示例"><!--我加的-->
                             
                             <span class="card-title">podspec示例</span>
                         </div>
@@ -2860,7 +2911,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Carthage使用工作记录">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/117.jpg" class="responsive-img" alt="Carthage使用工作记录"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/117.jpg" class="responsive-img" alt="Carthage使用工作记录"><!--我加的-->
                             
                             <span class="card-title">Carthage使用工作记录</span>
                         </div>
@@ -2924,7 +2976,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Carthage使用摘录">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/66.jpg" class="responsive-img" alt="Carthage使用摘录"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/66.jpg" class="responsive-img" alt="Carthage使用摘录"><!--我加的-->
                             
                             <span class="card-title">Carthage使用摘录</span>
                         </div>
@@ -2985,7 +3038,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Carthage库制作摘录">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/46.jpg" class="responsive-img" alt="Carthage库制作摘录"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/46.jpg" class="responsive-img" alt="Carthage库制作摘录"><!--我加的-->
                             
                             <span class="card-title">Carthage库制作摘录</span>
                         </div>
@@ -3047,7 +3101,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="制作多平台的framework">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/97.jpg" class="responsive-img" alt="制作多平台的framework"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/97.jpg" class="responsive-img" alt="制作多平台的framework"><!--我加的-->
                             
                             <span class="card-title">制作多平台的framework</span>
                         </div>
@@ -3105,7 +3160,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="去除 GLKit API 弃用警告">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/46.jpg" class="responsive-img" alt="去除 GLKit API 弃用警告"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/46.jpg" class="responsive-img" alt="去除 GLKit API 弃用警告"><!--我加的-->
                             
                             <span class="card-title">去除 GLKit API 弃用警告</span>
                         </div>
@@ -3163,7 +3219,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="使用R.swift检查各种string文件的问题">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/84.jpg" class="responsive-img" alt="使用R.swift检查各种string文件的问题"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/84.jpg" class="responsive-img" alt="使用R.swift检查各种string文件的问题"><!--我加的-->
                             
                             <span class="card-title">使用R.swift检查各种string文件的问题</span>
                         </div>
@@ -3220,7 +3277,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="iOS日志框架CocoaLumberjack">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/116.jpg" class="responsive-img" alt="iOS日志框架CocoaLumberjack"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/116.jpg" class="responsive-img" alt="iOS日志框架CocoaLumberjack"><!--我加的-->
                             
                             <span class="card-title">iOS日志框架CocoaLumberjack</span>
                         </div>
@@ -3278,7 +3336,8 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="查看cocoapods中各个库的版本">
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/115.jpg" class="responsive-img" alt="查看cocoapods中各个库的版本"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/115.jpg" class="responsive-img" alt="查看cocoapods中各个库的版本"><!--我加的-->
                             
                             <span class="card-title">查看cocoapods中各个库的版本</span>
                         </div>
@@ -3325,6 +3384,71 @@ zhangsaidon
                         
                         <a href="tags/cocoapods/">
                             <span class="chip bg-color">cocoapods</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                
+         <!-- 推荐文章置顶模块效果开始 -->
+          
+          <!-- 推荐文章置顶模块效果结束 -->
+                    <a href="posts/17588.html">
+                        <div class="card-image">
+                            
+                            
+                             <!-- <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/6.jpg" class="responsive-img" alt="Zip使用"> -->
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/6.jpg" class="responsive-img" alt="Zip使用"><!--我加的-->
+                            
+                            <span class="card-title">Zip使用</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Zip使用========================
+感觉官方写得挺明白的
+do {
+    let filePath = Bundle.main.url(forResource: "file", withExtension: "zi
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/" class="post-category">
+                                    移动开发
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="tags/iOS/">
+                            <span class="chip bg-color">iOS</span>
+                        </a>
+                        
+                        <a href="tags/framework/">
+                            <span class="chip bg-color">framework</span>
+                        </a>
+                        
+                        <a href="tags/zip/">
+                            <span class="chip bg-color">zip</span>
                         </a>
                         
                     </div>

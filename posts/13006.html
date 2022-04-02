@@ -43,7 +43,7 @@ gitbook网址：https://3440217568.gitbook.io/rxswift">
 
    <style>
     body{
-       background-image: url(https://api.luvying.com/acgimg);
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -51,7 +51,17 @@ gitbook网址：https://3440217568.gitbook.io/rxswift">
 </style>
 
 
+<!--PPT背景切换特效-->
+    <div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+        <script>
+            //window.addEventListener("load", function(e) {
+                document.getElementById("dynamic-background").innerHTML = '<iframe src="https://tuapi.eees.cc/acgPicPPTShow/" width="100%" height="100%" style="border: 0;"></iframe>';
+            //});
+        </script>
+    </div>
+
 <body>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -307,6 +317,13 @@ gitbook网址：https://3440217568.gitbook.io/rxswift">
         <a href="/magicCube">
           
           <span>转转魔方</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://zsd.name/htmlPages/壁纸ppt.html">
+          
+          <span>壁纸PPT</span>
         </a>
       </li>
       
@@ -604,6 +621,14 @@ gitbook网址：https://3440217568.gitbook.io/rxswift">
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="https://zsd.name/htmlPages/壁纸ppt.html " style="margin-left:75px">
+				  
+		          <span>壁纸PPT</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -700,7 +725,7 @@ gitbook网址：https://3440217568.gitbook.io/rxswift">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('../https:/cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/71.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -731,9 +756,11 @@ gitbook网址：https://3440217568.gitbook.io/rxswift">
  　　};
  }();
         if (localStorage.getItem('isDark') === '1') {
-            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+            //$('.post-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.post-cover').css('background-image', 'none');
         } else if (!os.isPc){
-            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+            //$('.post-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.post-cover').css('background-image', 'none');
         } else {
             $('.post-cover').css('background-image', 'none');
         }
@@ -2037,7 +2064,7 @@ README.md        assets            gitbook            publish_gitbook.sh<span ar
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/4.jpg" class="responsive-img" alt="iOS开发之真机和模拟器查看本地沙盒数据摘录">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/5.jpg" class="responsive-img" alt="iOS开发之真机和模拟器查看本地沙盒数据摘录">
                         
                         <span class="card-title">iOS开发之真机和模拟器查看本地沙盒数据摘录</span>
                     </div>
@@ -2090,7 +2117,7 @@ README.md        assets            gitbook            publish_gitbook.sh<span ar
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/4.jpg" class="responsive-img" alt="iOS之制作xcframework摘录">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/93.jpg" class="responsive-img" alt="iOS之制作xcframework摘录">
                         
                         <span class="card-title">iOS之制作xcframework摘录</span>
                     </div>

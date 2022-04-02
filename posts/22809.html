@@ -45,7 +45,7 @@ Total Submi">
 
    <style>
     body{
-       background-image: url(https://api.luvying.com/acgimg);
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -53,7 +53,17 @@ Total Submi">
 </style>
 
 
+<!--PPT背景切换特效-->
+    <div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+        <script>
+            //window.addEventListener("load", function(e) {
+                document.getElementById("dynamic-background").innerHTML = '<iframe src="https://tuapi.eees.cc/acgPicPPTShow/" width="100%" height="100%" style="border: 0;"></iframe>';
+            //});
+        </script>
+    </div>
+
 <body>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -309,6 +319,13 @@ Total Submi">
         <a href="/magicCube">
           
           <span>转转魔方</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://zsd.name/htmlPages/壁纸ppt.html">
+          
+          <span>壁纸PPT</span>
         </a>
       </li>
       
@@ -606,6 +623,14 @@ Total Submi">
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="https://zsd.name/htmlPages/壁纸ppt.html " style="margin-left:75px">
+				  
+		          <span>壁纸PPT</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -702,7 +727,7 @@ Total Submi">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('../https:/cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/74.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -733,9 +758,11 @@ Total Submi">
  　　};
  }();
         if (localStorage.getItem('isDark') === '1') {
-            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+            //$('.post-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.post-cover').css('background-image', 'none');
         } else if (!os.isPc){
-            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+            //$('.post-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.post-cover').css('background-image', 'none');
         } else {
             $('.post-cover').css('background-image', 'none');
         }
@@ -1408,7 +1435,7 @@ flag代表是上一列是否种了玉米，如果种了玉米，flag =  1,否则
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/8.jpg" class="responsive-img" alt="SDUTOJ1299（动态规划）：最长上升子序列">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/109.jpg" class="responsive-img" alt="SDUTOJ1299（动态规划）：最长上升子序列">
                         
                         <span class="card-title">SDUTOJ1299（动态规划）：最长上升子序列</span>
                     </div>
@@ -1469,7 +1496,7 @@ flag代表是上一列是否种了玉米，如果种了玉米，flag =  1,否则
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/12.jpg" class="responsive-img" alt="POJ2411（状态压缩dp）：方格覆盖">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/119.jpg" class="responsive-img" alt="POJ2411（状态压缩dp）：方格覆盖">
                         
                         <span class="card-title">POJ2411（状态压缩dp）：方格覆盖</span>
                     </div>

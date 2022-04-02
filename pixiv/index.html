@@ -41,7 +41,7 @@
 
    <style>
     body{
-       background-image: url(https://api.luvying.com/acgimg);
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -49,7 +49,17 @@
 </style>
 
 
+<!--PPT背景切换特效-->
+    <div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+        <script>
+            //window.addEventListener("load", function(e) {
+                document.getElementById("dynamic-background").innerHTML = '<iframe src="https://tuapi.eees.cc/acgPicPPTShow/" width="100%" height="100%" style="border: 0;"></iframe>';
+            //});
+        </script>
+    </div>
+
 <body>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -305,6 +315,13 @@
         <a href="/magicCube">
           
           <span>转转魔方</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://zsd.name/htmlPages/壁纸ppt.html">
+          
+          <span>壁纸PPT</span>
         </a>
       </li>
       
@@ -602,6 +619,14 @@
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="https://zsd.name/htmlPages/壁纸ppt.html " style="margin-left:75px">
+				  
+		          <span>壁纸PPT</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -862,9 +887,11 @@ var os = function (){
  　　};
  }();
         if (localStorage.getItem('isDark') === '1') {
-            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+            //$('.bg-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.bg-cover').css('background-image', 'none');
         } else if (!os.isPc){
-            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+            //$('.bg-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.bg-cover').css('background-image', 'none');
         } else {
             $('.bg-cover').css('background-image', 'none');
         }
@@ -878,6 +905,7 @@ var os = function (){
 
     </div>
 </div>
+
 
 <style>
     #send{
@@ -902,15 +930,165 @@ var os = function (){
 <iframe src="https://cloud.mokeyjay.com/pixiv" frameborder="0" style="width:100%;height:500px;margin:0;"></iframe>
 
 
-<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机壁纸</div>
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机动漫壁纸</div>
 <img id="image" style= "height:auto;max-width:100%;vertical-align: middle" src="https://api.luvying.com/acgimg?t=" alt="img" class="responsive-img"/>
 <br><br>
 <div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg()" /></div>
+<br><br>
 
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机动漫壁纸二</div>
+<img id="image2" style= "height:auto;max-width:100%;vertical-align: middle" src="https://tuapi.eees.cc/api.php?category=dongman&type=302" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg2()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机动漫壁纸三</div>
+<img id="image01" style= "height:auto;max-width:100%;vertical-align: middle" src="https://cdn.seovx.com/d/?mom=302" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg01()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机动漫壁纸四</div>
+<img id="image02" style= "height:auto;max-width:100%;vertical-align: middle" src="https://www.dmoe.cc/random.php" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg02()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机动漫壁纸五</div>
+<img id="image03" style= "height:auto;max-width:100%;vertical-align: middle" src="https://acg.toubiec.cn/random.php" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg03()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机风景壁纸</div>
+<img id="image3" style= "height:auto;max-width:100%;vertical-align: middle" src="https://tuapi.eees.cc/api.php?category=fengjing&type=302" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg3()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机必应壁纸</div>
+<img id="image4" style= "height:auto;max-width:100%;vertical-align: middle" src="https://tuapi.eees.cc/api.php?category=biying&type=302" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg4()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机现代化壁纸</div>
+<img id="image001" style= "height:auto;max-width:100%;vertical-align: middle" src="https://source.unsplash.com/user/erondu/1600x900" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg001()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机美女壁纸</div>
+<img id="image5" style= "height:auto;max-width:100%;vertical-align: middle" src="https://tuapi.eees.cc/api.php?category=meinv&type=302" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg5()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机美女壁纸二</div>
+<img id="image6" style= "height:auto;max-width:100%;vertical-align: middle" src="https://cdn.seovx.com/?mom=302" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg6()" /></div>
+<br><br>
+
+<div class="tag-title center-align"><i class="fas fa-image"></i>&nbsp;&nbsp;随机古装美女壁纸</div>
+<img id="image7" style= "height:auto;max-width:100%;vertical-align: middle" src="https://cdn.seovx.com/ha/?mom=302" alt="img" class="responsive-img"/>
+<br><br>
+<div style="text-align:center"><input type="button" name="button" value="换一张" onclick="changeImg7()" /></div>
   <script>
   function changeImg(){document.getElementById("image").src = "https://api.luvying.com/acgimg?t=" + new Date().getTime();}
-  function changeImg2(){document.getElementById("theWallPaper").src = "https://api.luvying.com/acgimg?t=" + new Date().getTime();}
+  function changeImg2(){document.getElementById("image2").src = "https://tuapi.eees.cc/api.php?category=dongman&type=302&t=" + new Date().getTime();}
+  function changeImg01(){document.getElementById("image01").src = "https://cdn.seovx.com/d/?mom=302&t=" + new Date().getTime();}
+  function changeImg02(){document.getElementById("image02").src = "https://www.dmoe.cc/random.php?t=" + new Date().getTime();}
+  function changeImg03(){document.getElementById("image03").src = "https://acg.toubiec.cn/random.php?t=" + new Date().getTime();}
+  function changeImg3(){document.getElementById("image3").src = "https://tuapi.eees.cc/api.php?category=fengjing&type=302&t=" + new Date().getTime();}
+  function changeImg4(){document.getElementById("image4").src = "https://tuapi.eees.cc/api.php?category=biying&type=302&t=" + new Date().getTime();}
+  function changeImg001(){document.getElementById("image001").src = "https://source.unsplash.com/user/erondu/1600x900?t=" + new Date().getTime();}
+  function changeImg5(){document.getElementById("image5").src = "https://tuapi.eees.cc/api.php?category=meinv&type=302&t=" + new Date().getTime();}
+  function changeImg6(){document.getElementById("image6").src = "https://cdn.seovx.com/?mom=302&t=" + new Date().getTime();}
+  function changeImg7(){document.getElementById("image7").src = "https://cdn.seovx.com/ha/?mom=302&t=" + new Date().getTime();}
   var viewer = new Viewer(document.getElementById('image'));
+  var viewer2 = new Viewer(document.getElementById('image2'));
+  var viewer01 = new Viewer(document.getElementById('image01'));
+  var viewer02 = new Viewer(document.getElementById('image02'));
+  var viewer03 = new Viewer(document.getElementById('image03'));
+  var viewer3 = new Viewer(document.getElementById('image3'));
+  var viewer4 = new Viewer(document.getElementById('image4'));
+  var viewer001 = new Viewer(document.getElementById('image001'));
+  var viewer5 = new Viewer(document.getElementById('image5'));
+  var viewer6 = new Viewer(document.getElementById('image6'));
+  var viewer7 = new Viewer(document.getElementById('image7'));
+  
+  
+  //图片接口推荐
+//必应壁纸
+//来自于缙哥哥博客：
+//1366*768分辨率图片地址：
+//https://api.dujin.org/bing/1366.php
+//
+//1920*1080分辨率图片地址：
+//https://api.dujin.org/bing/1920.php
+//
+//手机标准分辨率1080*1920图片地址：
+//https://api.dujin.org/bing/m.php
+//
+//动漫图片
+//https://api.ixiaowai.cn/api/api.php
+//http://www.dmoe.cc/random.php
+//https://api.ixiaowai.cn/mcapi/mcapi.php
+//https://acg.yanwz.cn/wallpaper/api.php
+//https://acg.yanwz.cn/api.php
+//https://img.paulzzh.tech/touhou/random
+//https://i.xinger.ink:4443/images.php
+//https://api.lyiqk.cn/acg
+//https://api.lyiqk.cn/miku
+//https://random.52ecy.cn/randbg.php
+//https://img.catct.cn/mc.php
+//https://img.catct.cn
+//https://img.catct.cn/pixiv.php
+//https://img.xjh.me/random_img.php?return=302
+//风景类图片
+//https://api.ixiaowai.cn/gqapi/gqapi.php
+//https://api.lyiqk.cn/scenery
+//https://acg.yanwz.cn/scenery/api.php
+//现代化图片
+//https://source.unsplash.com/random
+//https://unsplash.it/1600/900?random
+//https://api.comzg.com/
+//https://source.unsplash.com/user/erondu/1600x900
+//https://source.unsplash.com/user/tkirkgoz/1600x900
+//https://unsplash.it/1600/900?random
+//美女写真
+//https://api.lyiqk.cn/purelady
+//https://uploadbeta.com/api/pictures/random/?key=二次元
+//https://uploadbeta.com/api/pictures/random/?key=动漫
+//api接口整合
+//樱花：https://www.dmoe.cc/random.php
+//晓晴博客：https://acg.toubiec.cn/random.php
+//Unsplash Source | API Documentation：详情请看官网介绍
+//夏沫博客：https://cdn.seovx.com/?mom=302
+//https://cdn.seovx.com/d/?mom=302
+//https://cdn.seovx.com/ha/?mom=302
+//二次元随机图：https://api.blogbig.cn/random/api.php
+//搏天api：https://api.btstu.cn/sjbz/api.php
+//姬长信API For Docker：
+//—-每日bing：https://api.isoyu.com/bing_images.php
+//—-美女图片壁纸：https://api.isoyu.com/mm_images.php
+//—-网红专栏壁纸：https://api.isoyu.com/beibei_images.php
+//—-动态IP签名图片：https://api.isoyu.com/ip_images.php?signature=早安
+//—-ARU(阿鲁)表情包：https://api.isoyu.com/ARU_GIF_S.php
+//樱道：https://api.r10086.com/动漫综合1.php （网站中有更多api接口）
+//小歪API：https://api.ixiaowai.cn/api/api.php（二次元动漫）
+//https://api.ixiaowai.cn/mcapi/mcapi.php（mc酱动漫）
+//https://api.ixiaowai.cn/gqapi/gqapi.php（高清壁纸）
+//保罗｜API：https://api.paugram.com/wallpaper/
+//墨天逸：https://api.mtyqx.cn/tapi/random.php
+//EEE.DOG：https://api.yimian.xyz/img
+//动漫星空：https://api.dongmanxingkong.com/suijitupian/acg/1080p/index.php
+//岁月小筑：#https调用https://img.xjh.me/random_img.php
+//#http调用http://img.xjh.me/random_img.php
+//东方Project：https://img.paulzzh.tech/touhou/random
+
+  
   </script>
             </div>
             <!--valine评论弹幕-->

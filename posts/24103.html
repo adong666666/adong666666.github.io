@@ -44,7 +44,7 @@
 
    <style>
     body{
-       background-image: url(https://api.luvying.com/acgimg);
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -52,7 +52,17 @@
 </style>
 
 
+<!--PPT背景切换特效-->
+    <div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+        <script>
+            //window.addEventListener("load", function(e) {
+                document.getElementById("dynamic-background").innerHTML = '<iframe src="https://tuapi.eees.cc/acgPicPPTShow/" width="100%" height="100%" style="border: 0;"></iframe>';
+            //});
+        </script>
+    </div>
+
 <body>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -308,6 +318,13 @@
         <a href="/magicCube">
           
           <span>转转魔方</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://zsd.name/htmlPages/壁纸ppt.html">
+          
+          <span>壁纸PPT</span>
         </a>
       </li>
       
@@ -605,6 +622,14 @@
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="https://zsd.name/htmlPages/壁纸ppt.html " style="margin-left:75px">
+				  
+		          <span>壁纸PPT</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -701,7 +726,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('../https:/cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/74.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -732,9 +757,11 @@
  　　};
  }();
         if (localStorage.getItem('isDark') === '1') {
-            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+            //$('.post-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.post-cover').css('background-image', 'none');
         } else if (!os.isPc){
-            $('.post-cover').css('background-image', 'url(' + featureimg + ')');
+            //$('.post-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.post-cover').css('background-image', 'none');
         } else {
             $('.post-cover').css('background-image', 'none');
         }
@@ -1292,7 +1319,7 @@ n == grid[i].length
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/11.jpg" class="responsive-img" alt="LeetCode第72题（动态规划）：编辑距离">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/124.jpg" class="responsive-img" alt="LeetCode第72题（动态规划）：编辑距离">
                         
                         <span class="card-title">LeetCode第72题（动态规划）：编辑距离</span>
                     </div>
@@ -1357,7 +1384,7 @@ n == grid[i].length
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/15.jpg" class="responsive-img" alt="LeetCode第62题（动态规划）：不同路径">
+                        <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/50.jpg" class="responsive-img" alt="LeetCode第62题（动态规划）：不同路径">
                         
                         <span class="card-title">LeetCode第62题（动态规划）：不同路径</span>
                     </div>

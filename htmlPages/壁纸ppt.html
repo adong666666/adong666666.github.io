@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<style>
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+    <script>
+        window.addEventListener("load", function(e){
+            document.getElementById("dynamic-background").innerHTML = '<iframe src="https://tuapi.eees.cc/acgPicPPTShow/" width="100%" height="100%" style="border: 0;"></iframe>';
+               });
+</script>
+</div>
+</body>
+</html>

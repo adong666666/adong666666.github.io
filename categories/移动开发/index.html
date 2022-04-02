@@ -41,7 +41,7 @@
 
    <style>
     body{
-       background-image: url(https://api.luvying.com/acgimg);
+       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
        background-repeat:no-repeat;
        background-size: 100% 100%;
        background-attachment:fixed;
@@ -49,7 +49,17 @@
 </style>
 
 
+<!--PPT背景切换特效-->
+    <div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+        <script>
+            //window.addEventListener("load", function(e) {
+                document.getElementById("dynamic-background").innerHTML = '<iframe src="https://tuapi.eees.cc/acgPicPPTShow/" width="100%" height="100%" style="border: 0;"></iframe>';
+            //});
+        </script>
+    </div>
+
 <body>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -305,6 +315,13 @@
         <a href="/magicCube">
           
           <span>转转魔方</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://zsd.name/htmlPages/壁纸ppt.html">
+          
+          <span>壁纸PPT</span>
         </a>
       </li>
       
@@ -602,6 +619,14 @@
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="https://zsd.name/htmlPages/壁纸ppt.html " style="margin-left:75px">
+				  
+		          <span>壁纸PPT</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -851,9 +876,11 @@ var os = function (){
  　　};
  }();
         if (localStorage.getItem('isDark') === '1') {
-            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+            //$('.bg-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.bg-cover').css('background-image', 'none');
         } else if (!os.isPc){
-            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+            //$('.bg-cover').css('background-image', 'url("https://tuapi.eees.cc/api.php?category=biying&type=302")');
+            $('.bg-cover').css('background-image', 'none');
         } else {
             $('.bg-cover').css('background-image', 'none');
         }
@@ -867,6 +894,7 @@ var os = function (){
 
     </div>
 </div>
+
 
 <main class="content">
 
@@ -1171,7 +1199,7 @@ var os = function (){
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/9.jpg" class="responsive-img" alt="InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/110.jpg" class="responsive-img" alt="InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！">
                             
                             <span class="card-title">InterfaceKit：一行代码实现在SwiftUI界面使用UIKit、AppKit和WatchKit的接口！</span>
                         </div>
@@ -1253,7 +1281,7 @@ var os = function (){
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/19.jpg" class="responsive-img" alt="InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/78.jpg" class="responsive-img" alt="InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!">
                             
                             <span class="card-title">InterfaceKit--One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI interface!</span>
                         </div>
@@ -1336,7 +1364,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/17.jpg" class="responsive-img" alt="podspec示例">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/76.jpg" class="responsive-img" alt="podspec示例">
                             
                             <span class="card-title">podspec示例</span>
                         </div>
@@ -1393,7 +1421,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/12.jpg" class="responsive-img" alt="Carthage使用工作记录">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/65.jpg" class="responsive-img" alt="Carthage使用工作记录">
                             
                             <span class="card-title">Carthage使用工作记录</span>
                         </div>
@@ -1450,7 +1478,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/13.jpg" class="responsive-img" alt="Carthage使用摘录">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/48.jpg" class="responsive-img" alt="Carthage使用摘录">
                             
                             <span class="card-title">Carthage使用摘录</span>
                         </div>
@@ -1504,7 +1532,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/23.jpg" class="responsive-img" alt="Carthage库制作摘录">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/124.jpg" class="responsive-img" alt="Carthage库制作摘录">
                             
                             <span class="card-title">Carthage库制作摘录</span>
                         </div>
@@ -1559,7 +1587,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/21.jpg" class="responsive-img" alt="制作多平台的framework">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/74.jpg" class="responsive-img" alt="制作多平台的framework">
                             
                             <span class="card-title">制作多平台的framework</span>
                         </div>
@@ -1610,7 +1638,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/13.jpg" class="responsive-img" alt="去除 GLKit API 弃用警告">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/78.jpg" class="responsive-img" alt="去除 GLKit API 弃用警告">
                             
                             <span class="card-title">去除 GLKit API 弃用警告</span>
                         </div>
@@ -1661,7 +1689,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/22.jpg" class="responsive-img" alt="使用R.swift检查各种string文件的问题">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/75.jpg" class="responsive-img" alt="使用R.swift检查各种string文件的问题">
                             
                             <span class="card-title">使用R.swift检查各种string文件的问题</span>
                         </div>
@@ -1711,7 +1739,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/12.jpg" class="responsive-img" alt="iOS日志框架CocoaLumberjack">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/65.jpg" class="responsive-img" alt="iOS日志框架CocoaLumberjack">
                             
                             <span class="card-title">iOS日志框架CocoaLumberjack</span>
                         </div>
@@ -1762,7 +1790,7 @@ One line of code to implement interfaces of UIKit,AppKit,and WatchKit in SwiftUI
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/9.jpg" class="responsive-img" alt="查看cocoapods中各个库的版本">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/104.jpg" class="responsive-img" alt="查看cocoapods中各个库的版本">
                             
                             <span class="card-title">查看cocoapods中各个库的版本</span>
                         </div>
@@ -1821,7 +1849,7 @@ zhangsaidon
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/10.jpg" class="responsive-img" alt="Zip使用">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/111.jpg" class="responsive-img" alt="Zip使用">
                             
                             <span class="card-title">Zip使用</span>
                         </div>
@@ -1878,7 +1906,7 @@ do {
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/8.jpg" class="responsive-img" alt="iOS mlmodelc内部文件格式规范">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/43.jpg" class="responsive-img" alt="iOS mlmodelc内部文件格式规范">
                             
                             <span class="card-title">iOS mlmodelc内部文件格式规范</span>
                         </div>
@@ -1933,7 +1961,7 @@ do {
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/21.jpg" class="responsive-img" alt="iOS延时">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/50.jpg" class="responsive-img" alt="iOS延时">
                             
                             <span class="card-title">iOS延时</span>
                         </div>
@@ -1990,7 +2018,7 @@ while true {
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/4.jpg" class="responsive-img" alt="iOS调试摘录">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/87.jpg" class="responsive-img" alt="iOS调试摘录">
                             
                             <span class="card-title">iOS调试摘录</span>
                         </div>
@@ -2042,7 +2070,7 @@ while true {
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/7.jpg" class="responsive-img" alt="iOS_Swift文件夹和文件操作">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/108.jpg" class="responsive-img" alt="iOS_Swift文件夹和文件操作">
                             
                             <span class="card-title">iOS_Swift文件夹和文件操作</span>
                         </div>
@@ -2099,7 +2127,7 @@ let urls:
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/9.jpg" class="responsive-img" alt="Swift字符串截取摘录">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/10.jpg" class="responsive-img" alt="Swift字符串截取摘录">
                             
                             <span class="card-title">Swift字符串截取摘录</span>
                         </div>
@@ -2151,7 +2179,7 @@ let urls:
                         <div class="card-image tag-image">
                             
                             
-                            <img src="../../medias/featureimages/17.jpg" class="responsive-img" alt="Swift 解决URL或参数中含有中文（Swift URL编码）">
+                            <img src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/18.jpg" class="responsive-img" alt="Swift 解决URL或参数中含有中文（Swift URL编码）">
                             
                             <span class="card-title">Swift 解决URL或参数中含有中文（Swift URL编码）</span>
                         </div>
