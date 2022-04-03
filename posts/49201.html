@@ -22,6 +22,17 @@ Description
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
+    
+    <style>
+        body{
+            background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
     <title>SDUTOJ1730（记忆化搜索）：数字三角形 | 张赛东</title>
     <link rel="icon" type="image/jpeg" href="../favicon.jpg">
 
@@ -41,17 +52,6 @@ Description
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/black.png);
-       background-repeat:no-repeat;
-       background-size: 100% 100%;
-       background-attachment:fixed;
-    }
-</style>
-
 
 <!--PPT背景切换特效-->
     <div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
@@ -213,6 +213,13 @@ Description
         <a href="/friends">
           
           <span>友情链接</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/videos">
+          
+          <span>推荐视频</span>
         </a>
       </li>
       
@@ -514,6 +521,14 @@ Description
                   <a href="/friends " style="margin-left:75px">
 				  
 		          <span>友情链接</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/videos " style="margin-left:75px">
+				  
+		          <span>推荐视频</span>
                   </a>
                 </li>
               
@@ -1642,19 +1657,19 @@ Output
             collapseDepth: Number('0'),
             headingSelector: 'h2, h3, h4'
         });
-
+         //修复中文目录支持，把这里都注释了
         // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
+        //let i = 0;
+        //let tocHeading = 'toc-heading-';
+        //$('#toc-content a').each(function () {
+        //    $(this).attr('href', '#' + tocHeading + (++i));
+        //});
 
         // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
+        //i = 0;
+        //$('#articleContent').children('h2, h3, h4').each(function () {
+        //    $(this).attr('id', tocHeading + (++i));
+        //});
 
         // Set scroll toc fixed.
         let tocHeight = parseInt($(window).height() * 0.4 - 64);
@@ -1806,7 +1821,7 @@ Output
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="tencent"
                    type="playlist"
-                   id="8324097649#503838841"
+                   id="8324097649"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
@@ -1819,6 +1834,7 @@ Output
         </meting-js>
     </div>
 </div>
+
 
 <script src="../libs/aplayer/APlayer.min.js"></script>
 <script src="../libs/aplayer/Meting.min.js"></script>
@@ -2013,10 +2029,10 @@ Output
 
 </div>
         <div style="margin-top:20px">
-        <a href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="https://img.foreverblog.cn/wormhole_2_tp.gif" alt="" style="width:auto;height:24px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+        <a href="https://www.foreverblog.cn/go.html" target="_blank"> <img src="https://img.foreverblog.cn/wormhole_2.gif" alt="" style="width:auto;height:23px;" title="穿梭虫洞-随机访问十年之约友链博客"></a>
                         
         <a href="https://travellings.link/" target="_blank" rel="noopener" title="开往-友链接力">
-            <img style="width:auto;height:22px;" src="https://travellings.link/assets/logo.gif" alt="开往-友链接力" width="120">
+            <img style="width:auto;height:23px;" src="https://travellings.link/assets/logo.gif" alt="开往-友链接力" width="120">
         </a>
         </div>
     </div>
