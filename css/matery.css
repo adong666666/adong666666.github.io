@@ -2511,3 +2511,60 @@ body.DarkMode #stars3:after {
         display: none;
     }
 }
+
+/* 增加每日一言模块 */
+.poem-wrap {
+    position: relative;
+    width: 730px;
+    max-width: 80%;
+    border: 2px solid #797979;
+    border-top: 0;
+    text-align: center;
+    margin: 58px auto 38px;
+}
+.poem-left {
+    left: 0;
+}
+.poem-border {
+    position: absolute;
+    height: 2px;
+    width: 27%;
+    background-color: #797979;
+}
+.poem-right {
+    right: 0;
+}
+.poem-wrap h1 {
+    position: relative;
+    margin-top: -20px;
+    display: inline-block;
+    letter-spacing: 4px;
+    color: #797979;
+}
+.poem-wrap p:nth-of-type(1) {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 华文行楷;
+}
+.poem-wrap p {
+    width: 70%;
+    margin: auto;
+    line-height: 30px;
+    color: #797979;
+    font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+.poem-wrap p:nth-of-type(2) {
+    font-size: 18px;
+    margin: 15px auto;
+    font-family: 华文行楷;
+}
+.poem-wrap p#poem2 {
+    font-size: 22px;
+    margin: 15px auto;
+}
+ 
+.poem-wrap p#info2 {
+    font-size: 15px;
+    margin: 15px auto;
+}

@@ -137,6 +137,15 @@
         </a>
       </li>
       
+      <li>
+        <a href="/randomArticle">
+          
+          <i class="fas fa-book-reader" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>随机</span>
+        </a>
+      </li>
+      
     </ul>
     
   </li>
@@ -439,6 +448,16 @@
 				   <i class="fa fas fa-book-open" style="position: absolute;left:50px" ></i>
 			      
 		          <span>日志</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/randomArticle " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book-reader" style="position: absolute;left:50px" ></i>
+			      
+		          <span>随机</span>
                   </a>
                 </li>
               
@@ -968,11 +987,32 @@ var os = function (){
     jinrishici.load(function(result) {
       poem.innerHTML = result.data.content
       info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-      document.getElementById("poem").value(poem);
-      document.getElementById("info").value(info);  
   });
   </script>
 </p></div>
+<br>
+ <!-- 加入网易云音乐热门评论，实时更新 -->
+        <div class="poem-wrap">
+          <div class="poem-border poem-left"></div>
+          <div class="poem-border poem-right"></div>
+          <h>音乐热评</h>
+          <p id="poem2">挑选中...</p>
+          <p id="info2"></p>
+        </div>
+        <script>
+          $.get("https://v1.hitokoto.cn?c=d&c=h&c=j", function (data, status) {
+            if (status == 'success') {
+              $('#poem2').html(data.hitokoto);
+              if (data.from_who != null) {
+                $('#info2').html(data.from_who + " · " + "《 " + data.from + " 》");
+              } else {
+                $('#info2').html(" “ " + data.from + " ” ");
+              }
+            } else {
+              $('#poem2').html("获取出错啦");
+            }
+          });
+        </script>
 
             </div>
             <!--valine评论弹幕-->
