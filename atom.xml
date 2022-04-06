@@ -6,7 +6,7 @@
   <link href="https://zsd.name/atom.xml" rel="self"/>
   
   <link href="https://zsd.name/"/>
-  <updated>2022-03-27T03:36:50.635Z</updated>
+  <updated>2022-04-06T05:51:50.415Z</updated>
   <id>https://zsd.name/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日60秒读懂世界</title>
+    <link href="https://zsd.name/posts/19234.html"/>
+    <id>https://zsd.name/posts/19234.html</id>
+    <published>2022-04-06T05:23:00.000Z</published>
+    <updated>2022-04-06T05:51:50.415Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="新闻" scheme="https://zsd.name/categories/%E6%96%B0%E9%97%BB/"/>
+    
+    
+    <category term="新闻" scheme="https://zsd.name/tags/%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>SDUTOJ1730（记忆化搜索）：数字三角形</title>
@@ -642,37 +667,6 @@
     <category term="watchOS" scheme="https://zsd.name/tags/watchOS/"/>
     
     <category term="swift package manager" scheme="https://zsd.name/tags/swift-package-manager/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jazzy生成代码解释文档</title>
-    <link href="https://zsd.name/posts/31013.html"/>
-    <id>https://zsd.name/posts/31013.html</id>
-    <published>2021-04-30T05:47:00.000Z</published>
-    <updated>2022-01-21T09:36:09.910Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;jazzy生成代码解释文档&quot;&gt;&lt;a href=&quot;#jazzy生成代码解释文档&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="文档处理" scheme="https://zsd.name/categories/%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/"/>
-    
-    
-    <category term="iOS" scheme="https://zsd.name/tags/iOS/"/>
-    
-    <category term="Swift" scheme="https://zsd.name/tags/Swift/"/>
-    
-    <category term="Objective-C" scheme="https://zsd.name/tags/Objective-C/"/>
-    
-    <category term="doc" scheme="https://zsd.name/tags/doc/"/>
     
   </entry>
   
