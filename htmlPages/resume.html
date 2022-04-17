@@ -577,6 +577,7 @@
 <script>
     /* 模式判断 */
     if (localStorage.getItem('isDark') === '1') {
+        document.body.style.backgroundColor="#000";
         document.getElementById("basicInformation").style.color = "#bcf0f5";
         ["only", "brief", "detail", "right0", "person0", "resumeLink"].map(function(item){
             var getDom = document.getElementsByClassName(item);
@@ -604,6 +605,7 @@
             getDom3[i].style.color = "#666666";
         }
     } else {
+        document.body.style.backgroundColor="#fff";
         document.getElementById("basicInformation").style.color = "#163e3e";
         ["only", "brief", "detail", "right0", "person0", "resumeLink"].map(function(item){
             var getDom = document.getElementsByClassName(item);
