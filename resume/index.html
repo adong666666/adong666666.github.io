@@ -1341,7 +1341,9 @@ var os = function (){
         </div>
         <div style="float: inherit;margin-left:25px; margin-top:20px; clear:none">
             <div id="changeWidth" style="float: none;width: 500px;">
-                <div id= "basicInformation" style="color:#003f3f;font-size:24pt;text-align: center;">张赛东/男/22岁</div>
+                <div id= "basicInformation" style="color:#003f3f;font-size:24pt;text-align: center;">张赛东/男/<script>
+                                document.write(new Date().getFullYear()-2000);
+                            </script>岁</div>
                 <div style="margin-top: 10px; float: none;">
                     <div class="person0">
                         <div class="needChanged">手机: 15674119605</div>
