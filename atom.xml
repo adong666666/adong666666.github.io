@@ -92,7 +92,7 @@
       
         
         
-    <summary type="html">&lt;img src=&quot;https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif&quot;</summary>
+    <summary type="html">&lt;img src=&quot;https://v2.alapi.cn/api/zaobao?token=bqYVMcni4hTa7tCL&amp;amp;format=image&quot; width=&quot;85%&quot;&gt;</summary>
         
       
     
@@ -269,6 +269,35 @@
     <category term="POJ" scheme="https://zsd.name/tags/POJ/"/>
     
     <category term="状态压缩" scheme="https://zsd.name/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-matery配置指南</title>
+    <link href="https://zsd.name/posts/63715.html"/>
+    <id>https://zsd.name/posts/63715.html</id>
+    <published>2022-03-01T04:24:00.000Z</published>
+    <updated>2022-04-21T13:24:16.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hexo-theme-matery配置指南&quot;&gt;&lt;a href=&quot;#hexo-theme-matery配置指南&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="脚本语言" scheme="https://zsd.name/categories/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="博文" scheme="https://zsd.name/tags/%E5%8D%9A%E6%96%87/"/>
+    
+    <category term="hexo" scheme="https://zsd.name/tags/hexo/"/>
+    
+    <category term="配置指南" scheme="https://zsd.name/tags/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"/>
     
   </entry>
   
@@ -618,33 +647,6 @@
     <category term="C++" scheme="https://zsd.name/tags/C/"/>
     
     <category term="数据结构" scheme="https://zsd.name/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac上使用C++万能头文件</title>
-    <link href="https://zsd.name/posts/33854.html"/>
-    <id>https://zsd.name/posts/33854.html</id>
-    <published>2022-01-01T06:52:00.000Z</published>
-    <updated>2022-01-30T16:50:34.323Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Mac上使用C-万能头文件&quot;&gt;&lt;a href=&quot;#Mac上使用C-万能头文件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="数据结构与算法" scheme="https://zsd.name/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="算法" scheme="https://zsd.name/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="C++" scheme="https://zsd.name/tags/C/"/>
     
   </entry>
   

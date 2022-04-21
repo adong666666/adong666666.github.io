@@ -102,6 +102,15 @@ PodfileKit summarizes the common iOS (Swift) third-party frameworks on">
       </li>
       
       <li>
+        <a target="_blank" rel="noopener" href="https://a.zsd.name">
+          
+          <i class="fas fa-pager" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文苑</span>
+        </a>
+      </li>
+      
+      <li>
         <a target="_blank" rel="noopener" href="https://blog.zsd.name">
           
           <i class="fas fa-school" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -613,6 +622,16 @@ PodfileKit summarizes the common iOS (Swift) third-party frameworks on">
 				   <i class="fa fas fa-home" style="position: absolute;left:50px" ></i>
 			      
 		          <span>首页</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://a.zsd.name " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-pager" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文苑</span>
                   </a>
                 </li>
               
@@ -1442,17 +1461,17 @@ PodfileKit summarizes the common iOS (Swift) third-party frameworks on">
 <li><a href="#contributing">Contributing</a></li>
 <li><a href="#license">License</a><h2 id="Set-up-Platform"><a href="#Set-up-Platform" class="headerlink" title="Set up Platform"></a>Set up Platform</h2><code>platform:ios '13.0'</code>. The <code>'13.0'</code>here is the lowest iOS system version that the app can support. You can replace it with <code>'11.0', '12.3' , '14.0'</code>and so on.</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/SetUpPlatform.png" alt="SetUpPlatform"></p>
-<h2 id="Designated-Third-Party-framework"><a href="#Designated-Third-Party-framework" class="headerlink" title="Designated Third Party framework"></a>Designated Third Party framework</h2><p><code>Pod 'ARVideoKit'</code> specifies a framework named <code>'ARVideoKit'</code> to download. You can replace <code>'ARVideoKit'</code> with <code>'name of the framework you want to install'</code>. Specify the corresponding URL by <code>: git = &gt;</code>, specify the corresponding branch by <code>: Branch = &gt;</code>, specify the submitted version by <code>commit:</code>, specify the marked submitted version by <code>: tag = &gt;</code>, and specify the submitted version by <code>: inhibit'_ Warnings = &gt; true </code> to avoid warnings from a single framework. Of course, the relevant specifications after <code>pod' ARVideoKit</code> can be omitted. In this way, you will download the default version of the framework, which is generally the latest version suitable for your project.<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/Example.png" alt="Example"></p>
-<h2 id="Framework-Classification"><a href="#Framework-Classification" class="headerlink" title="Framework Classification"></a>Framework Classification</h2><p>The frameworks are classified, you can also classify according to your own preferences.<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/FrameworkClassification.png" alt="FrameworkClassification"><br>When there is a framework you need to use in the classification, you can delete “#“.<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/FrameworkSelection.png" alt="FrameworkSelection"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/SetUpPlatform.png" alt="SetUpPlatform"></p>
+<h2 id="Designated-Third-Party-framework"><a href="#Designated-Third-Party-framework" class="headerlink" title="Designated Third Party framework"></a>Designated Third Party framework</h2><p><code>Pod 'ARVideoKit'</code> specifies a framework named <code>'ARVideoKit'</code> to download. You can replace <code>'ARVideoKit'</code> with <code>'name of the framework you want to install'</code>. Specify the corresponding URL by <code>: git = &gt;</code>, specify the corresponding branch by <code>: Branch = &gt;</code>, specify the submitted version by <code>commit:</code>, specify the marked submitted version by <code>: tag = &gt;</code>, and specify the submitted version by <code>: inhibit'_ Warnings = &gt; true </code> to avoid warnings from a single framework. Of course, the relevant specifications after <code>pod' ARVideoKit</code> can be omitted. In this way, you will download the default version of the framework, which is generally the latest version suitable for your project.<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/Example.png" alt="Example"></p>
+<h2 id="Framework-Classification"><a href="#Framework-Classification" class="headerlink" title="Framework Classification"></a>Framework Classification</h2><p>The frameworks are classified, you can also classify according to your own preferences.<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/FrameworkClassification.png" alt="FrameworkClassification"><br>When there is a framework you need to use in the classification, you can delete “#“.<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/FrameworkSelection.png" alt="FrameworkSelection"></p>
 <h2 id="Subframework"><a href="#Subframework" class="headerlink" title="Subframework"></a>Subframework</h2><p>For some frameworks, if only some of the functions in the framework are used, it is not necessary to download the whole framework, only its sub frameworks.</p>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/Subframework.png" alt="Subframework"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/Subframework.png" alt="Subframework"></p>
 <h2 id="Set-up-groups"><a href="#Set-up-groups" class="headerlink" title="Set up groups"></a>Set up groups</h2><p>You can use</p>
 <pre class="line-numbers language-none"><code class="language-none">def groupName 
  pod ...
  ...
 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>to set up groups, for example, some frameworks are used for debugging, some frameworks are used for app publishing, and some frameworks are special. After <code>target</code>, you need to replace <code>ProjectName</code> with the name of your project.<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/SetUpGroups.png" alt="SetUpGroups"></p>
+<p>to set up groups, for example, some frameworks are used for debugging, some frameworks are used for app publishing, and some frameworks are special. After <code>target</code>, you need to replace <code>ProjectName</code> with the name of your project.<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/README.en/SetUpGroups.png" alt="SetUpGroups"></p>
 <h2 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h2><ul>
 <li>Clone the repository to get the <code>PodFile</code> file in the repository</li>
 <li>Directly download the <code>PodFile</code> in the repository and put it under the directory of the project folder</li>
@@ -2576,7 +2595,7 @@ post_install <span class="token keyword">do</span> <span class="token operator">
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">65.2k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
           </div>
             
             
@@ -3322,13 +3341,7 @@ console.log(`
     };
 
 </script>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 1,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i+240*i||document.documentElement.clientHeight*i+240*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>
 

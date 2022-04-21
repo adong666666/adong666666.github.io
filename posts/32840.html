@@ -101,6 +101,15 @@
       </li>
       
       <li>
+        <a target="_blank" rel="noopener" href="https://a.zsd.name">
+          
+          <i class="fas fa-pager" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文苑</span>
+        </a>
+      </li>
+      
+      <li>
         <a target="_blank" rel="noopener" href="https://blog.zsd.name">
           
           <i class="fas fa-school" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -612,6 +621,16 @@
 				   <i class="fa fas fa-home" style="position: absolute;left:50px" ></i>
 			      
 		          <span>首页</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://a.zsd.name " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-pager" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文苑</span>
                   </a>
                 </li>
               
@@ -1435,7 +1454,7 @@
                 <h1 id="iOS-mlmodelc内部文件格式规范"><a href="#iOS-mlmodelc内部文件格式规范" class="headerlink" title="iOS mlmodelc内部文件格式规范"></a>iOS mlmodelc内部文件格式规范</h1><p>========================<br>尽量本地编译Core ML mlmodel，则得到的mlmodelc可以直接使用</p>
 <p>通过网络加载的Core ML mlmodel所编译而出的mlmodelc虽说内容一致，但格式不方便直接使用，而且……最重要的是，网络加载的mlmodel至少还要再编译一次，相当于在App内占用了两个模型的体量。而且有可能需要重复编译多次，即占用多个模型的体量，如果还不注重清理的话，App的体量会越来越大，而且内部数据还大量重复，因为编译出来mlmodec不能直接使用(你可以在代码里调整模型的内部格式，但是这也太麻烦了，对不同模型还得不同处理)</p>
 <p>所以建议使用mlmodel本地编译出来后的mlmodelc，你可以在Products中的.app文件夹中右键显示包内容找到编译后的mlmodelc文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/1.png"><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/2.png"><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/3.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/1.png"><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/2.png"><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/3.png"></p>
 
                 
             </div>
@@ -2215,7 +2234,7 @@
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">65.2k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
           </div>
             
             
@@ -2961,13 +2980,7 @@ console.log(`
     };
 
 </script>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 1,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i+240*i||document.documentElement.clientHeight*i+240*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>
 

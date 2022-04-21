@@ -100,6 +100,15 @@
       </li>
       
       <li>
+        <a target="_blank" rel="noopener" href="https://a.zsd.name">
+          
+          <i class="fas fa-pager" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文苑</span>
+        </a>
+      </li>
+      
+      <li>
         <a target="_blank" rel="noopener" href="https://blog.zsd.name">
           
           <i class="fas fa-school" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -611,6 +620,16 @@
 				   <i class="fa fas fa-home" style="position: absolute;left:50px" ></i>
 			      
 		          <span>首页</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://a.zsd.name " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-pager" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文苑</span>
                   </a>
                 </li>
               
@@ -1654,7 +1673,7 @@
 <pre class="line-numbers language-none"><code class="language-none">git clone https://github.com/adong666666/InterfaceKit.git --depth=1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>将github工程中的<code>InterfaceKit</code>文件夹下的Swift文件复制到您的工程中。</p>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/copy_files.png" alt=""></div>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/copy_files.png" alt=""></div>
 
 <ul>
 <li>如果是iOS或tvOS项目，您可以复制文件<code>UIInterface.swift</code>。</li>
@@ -1706,7 +1725,7 @@ target <span class="token string-literal"><span class="token string">'YOUR_TARGE
 <p>然后，在<code>Podfile</code>所在的目录中（确保Podfile和xcodeproj文件位于同一目录中），运行以下命令：</p>
 <pre class="line-numbers language-none"><code class="language-none">$ pod install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/PodfileLocation.png" alt=""></div>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/PodfileLocation.png" alt=""></div>
 
 <h3 id="Carthage"><a href="#Carthage" class="headerlink" title="Carthage"></a>Carthage</h3><p><a target="_blank" rel="noopener" href="https://github.com/Carthage/Carthage">Carthage</a>是一个分散的依赖关系管理器，它构建依赖关系并为您提供二进制框架。</p>
 <ol>
@@ -1717,7 +1736,7 @@ target <span class="token string-literal"><span class="token string">'YOUR_TARGE
 <li>对于iOS工程, 运行<code>carthage update --platform iOS</code>。</li>
 <li>对于macOS工程, 运行<code>carthage update --platform macOS</code>。</li>
 <li>对于tvOS工程, 运行<code>carthage update --platform tvOS</code>。</li>
-<li>对于watchOS工程, 运行<code>carthage update --platform watchOS</code>。 <div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/CartfileLocation.png" alt=""></div></li>
+<li>对于watchOS工程, 运行<code>carthage update --platform watchOS</code>。 <div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/CartfileLocation.png" alt=""></div></li>
 </ul>
 </li>
 <li><p>在您的应用程序目标<code>“General”</code>设置选项卡的<code>“Frameworks,Libraries,and Embedded Content”</code>部分中，从磁盘上的Carthage/Build文件夹拖放<code>InterfaceKit</code>xcframework（或从xcframework中选择合适的framework）。</p>
@@ -1740,7 +1759,7 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
 <p>或者</p>
 <ol>
 <li>在Xcode中，选择File &gt; Swift Packages &gt; Add Package Dependency。</li>
-<li>安装提示操作使用这个URL(“<a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit.git%E2%80%9D)%E6%9D%A5%E9%9B%86%E6%88%90%E6%AD%A4%E6%A1%86%E6%9E%B6">https://github.com/adong666666/InterfaceKit.git”)来集成此框架</a>.<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/SwiftPackageManager.png" alt=""></div></li>
+<li>安装提示操作使用这个URL(“<a target="_blank" rel="noopener" href="https://github.com/adong666666/InterfaceKit.git%E2%80%9D)%E6%9D%A5%E9%9B%86%E6%88%90%E6%AD%A4%E6%A1%86%E6%9E%B6">https://github.com/adong666666/InterfaceKit.git”)来集成此框架</a>.<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/SwiftPackageManager.png" alt=""></div></li>
 </ol>
 <h3 id="手动设置"><a href="#手动设置" class="headerlink" title="手动设置"></a>手动设置</h3><p>如果您不想使用上述任何依赖关系管理器，可以手动将InterfaceKit集成到项目中。</p>
 <h4 id="嵌入式框架"><a href="#嵌入式框架" class="headerlink" title="嵌入式框架"></a>嵌入式框架</h4><ul>
@@ -1760,7 +1779,7 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
 </blockquote>
 </li>
 </ul>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/drag_framework.png" alt=""></div>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/drag_framework.png" alt=""></div>
 
 <ul>
 <li><p>在项目导航器中选择<code>InterfaceKit.xcodeproj</code>，并验证部署目标是否与应用程序目标匹配。</p>
@@ -1777,7 +1796,7 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
 </blockquote>
 </li>
 </ul>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/add_framework.png" alt=""></div>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/add_framework.png" alt=""></div>
 
 <ul>
 <li><p>就这样！</p>
@@ -1788,15 +1807,15 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
 </ul>
 <h3 id="解压，拖拽"><a href="#解压，拖拽" class="headerlink" title="解压，拖拽"></a>解压，拖拽</h3><ol>
 <li><p>解压此存储库提供的<code>InterfaceKit.xcframework.zip</code>文件。</p>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/unzip.png" alt=""></div></li>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/unzip.png" alt=""></div></li>
 <li><p>在应用程序目标的<code>“General”</code>设置选项卡上，在<code>“Frameworks,Libraries,and Embedded Content”</code>部分，拖放解压缩后的文件<code>InterfaceKit.xcframework</code>（或从InterfaceKit.xcframework中选择合适的framework）。</p>
 </li>
 </ol>
 <ul>
 <li><p>如果您使用<code>xcfamework</code>，只需拖放<code>InterfaceKit.xcframework</code>。<code>InterfaceKit.xcframework</code>支持所有四种平台（<code>iOS、macOS、tvOS、watchOS</code>）。</p>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/use_xcframeworks.png" alt=""></div></li>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/use_xcframeworks.png" alt=""></div></li>
 <li><p>如果您使用<code>framework</code>，请根据文件夹名称和项目平台从InterfaceKit.xcframework中选择合适的框架。</p>
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/images/China_flag.gif" data-original="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/use_frameworks.png" alt=""></div></li>
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/adong666666/InterfaceKit/Pictures/use_frameworks.png" alt=""></div></li>
 </ul>
 <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="为什么使用-InterfaceKit"><a href="#为什么使用-InterfaceKit" class="headerlink" title="为什么使用 InterfaceKit?"></a>为什么使用 InterfaceKit?</h3><p><code>一行代码</code>实现在<code>SwiftUI</code>界面使用<code>UIKit、AppKit和WatchKit</code>的接口！ InterfaceKit 同时支持全部四个平台(<code>iOS, macOS, tvOS, watchOS</code>)。InterfaceKit<code>持续</code>更新。</p>
 <h2 id="信用"><a href="#信用" class="headerlink" title="信用"></a>信用</h2><p>InterfaceKit 由<a href="https://zsd.name/">张赛东</a>持续更新。 您可以关注他 <a target="_blank" rel="noopener" href="https://github.com/adong666666">@Github</a> 以及时了解工程的更新与发布。</p>
@@ -2665,7 +2684,7 @@ carthage build InterfaceKit --platform iOS<span aria-hidden="true" class="line-n
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">65.2k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
           </div>
             
             
@@ -3411,13 +3430,7 @@ console.log(`
     };
 
 </script>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 1,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i+240*i||document.documentElement.clientHeight*i+240*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>
 
