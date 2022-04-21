@@ -6,9 +6,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="默写图DFS算法, 张赛东, 湖南张赛东, 衡阳张赛东, 耒阳张赛东, 正源张赛东, 花桥张赛东, 张赛东湖南, 张赛东耒阳, 张赛东正源, 湖南工业大学张赛东, 张赛东湖南工业大学, 张赛东衡阳, 张赛东计算机, 计算机张赛东, 张赛东花桥, IT张赛东, 张赛东IT, 碧云斜, 张赛东的艺苑, 张赛东博客, 张赛东的博客, 博客张赛东, 软件工程张赛东, 张赛东软件工程">
-    <meta name="description" content="默写图DFS算法========================
+    <meta name="description" content=" 默写图DFS算法
+========================
 所谓默写，就是合上书本，不依靠浏览器、编译器、记事本等外物，仅凭记忆去写下所要求的知识、文字等。本不必如此麻烦，我也不想如此，不过他们太卷了，那就来吧。
-int visit[">
+int visi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -44,9 +45,9 @@ int visit[">
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
@@ -1460,7 +1461,8 @@ int visit[">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="默写图DFS算法"><a href="#默写图DFS算法" class="headerlink" title="默写图DFS算法"></a>默写图DFS算法</h1><p>========================</p>
+                <h1 id="默写图dfs算法"><a class="markdownIt-Anchor" href="#默写图dfs算法"></a> 默写图DFS算法</h1>
+<p>========================</p>
 <p>所谓默写，就是合上书本，不依靠浏览器、编译器、记事本等外物，仅凭记忆去写下所要求的知识、文字等。本不必如此麻烦，我也不想如此，不过他们太卷了，那就来吧。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> visit<span class="token punctuation">[</span>maxSize<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//全局数组，记录结点是否被访问，maxSize为事先定义的数组上限。</span>
 <span class="token keyword">void</span> <span class="token function">DFS</span><span class="token punctuation">(</span>AGraph <span class="token operator">*</span>G<span class="token punctuation">,</span> <span class="token keyword">int</span> v<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">// 图G，顶点v</span>
@@ -1475,8 +1477,11 @@ int visit[">
         p<span class="token operator">=</span>p<span class="token operator">-&gt;</span>nextArc<span class="token punctuation">;</span><span class="token comment">//p指向v的下一条边</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="默写结果"><a href="#默写结果" class="headerlink" title="默写结果"></a>默写结果</h2><p><code>完全正确</code></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><code>DFS</code>属于核心且简单的内容，而且也很多变，所以还是需要领悟其真正的奥义才能灵活运用。另外，<code>图的DFS遍历</code>与<code>二叉树的先序遍历</code>类似，可以理理二者之间的相似与不同之处。<br>上述算法主要针对<code>连通图</code>，针对<code>非连通图</code>可以写一个循环，遍历未被访问的顶点，然后对该点进行上述的DFS算法,相当于是将<code>非连通图</code>拆成若干个<code>连通图</code>，然后一一进行DFS算法。</p>
+<h2 id="默写结果"><a class="markdownIt-Anchor" href="#默写结果"></a> 默写结果</h2>
+<p><code>完全正确</code></p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<p><code>DFS</code>属于核心且简单的内容，而且也很多变，所以还是需要领悟其真正的奥义才能灵活运用。另外，<code>图的DFS遍历</code>与<code>二叉树的先序遍历</code>类似，可以理理二者之间的相似与不同之处。<br>
+上述算法主要针对<code>连通图</code>，针对<code>非连通图</code>可以写一个循环，遍历未被访问的顶点，然后对该点进行上述的DFS算法,相当于是将<code>非连通图</code>拆成若干个<code>连通图</code>，然后一一进行DFS算法。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span>Agraph <span class="token operator">*</span>g<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>g<span class="token operator">-&gt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>visit<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -2528,7 +2533,7 @@ int visit[">
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">80.1k</span>
           </div>
             
             

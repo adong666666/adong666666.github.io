@@ -6,10 +6,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Carthage使用工作记录, 张赛东, 湖南张赛东, 衡阳张赛东, 耒阳张赛东, 正源张赛东, 花桥张赛东, 张赛东湖南, 张赛东耒阳, 张赛东正源, 湖南工业大学张赛东, 张赛东湖南工业大学, 张赛东衡阳, 张赛东计算机, 计算机张赛东, 张赛东花桥, IT张赛东, 张赛东IT, 碧云斜, 张赛东的艺苑, 张赛东博客, 张赛东的博客, 博客张赛东, 软件工程张赛东, 张赛东软件工程">
-    <meta name="description" content="Carthage使用工作记录========================主要是三点
-1、写Cartfilegithub &#34;SnapKit/SnapKit&#34;                    ~&amp;gt; 5.0
+    <meta name="description" content=" Carthage使用工作记录
+========================
+主要是三点
+ 1、写Cartfile
+github &#34;SnapKit/SnapKit&#34;                    ~&amp;gt; 5.0
 ...
-2、工程目录下">
+ 2">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -45,9 +48,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
@@ -1453,14 +1456,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Carthage使用工作记录"><a href="#Carthage使用工作记录" class="headerlink" title="Carthage使用工作记录"></a>Carthage使用工作记录</h1><p>========================<br>主要是三点</p>
-<h2 id="1、写Cartfile"><a href="#1、写Cartfile" class="headerlink" title="1、写Cartfile"></a>1、写Cartfile</h2><pre class="line-numbers language-none"><code class="language-none">github "SnapKit/SnapKit"                    ~&gt; 5.0
+                <h1 id="carthage使用工作记录"><a class="markdownIt-Anchor" href="#carthage使用工作记录"></a> Carthage使用工作记录</h1>
+<p>========================<br>
+主要是三点</p>
+<h2 id="1-写cartfile"><a class="markdownIt-Anchor" href="#1-写cartfile"></a> 1、写Cartfile</h2>
+<pre class="line-numbers language-none"><code class="language-none">github "SnapKit/SnapKit"                    ~&gt; 5.0
 ...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="2、工程目录下命令行"><a href="#2、工程目录下命令行" class="headerlink" title="2、工程目录下命令行"></a>2、工程目录下命令行</h2><h3 id="生成framework"><a href="#生成framework" class="headerlink" title="生成framework"></a>生成framework</h3><pre class="line-numbers language-none"><code class="language-none">carthage update --platform iOS<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="生成xcframework"><a href="#生成xcframework" class="headerlink" title="生成xcframework"></a>生成xcframework</h3><pre class="line-numbers language-none"><code class="language-none">carthage update --platform iOS --use-xcframeworks<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="多平台"><a href="#多平台" class="headerlink" title="多平台"></a>多平台</h3><pre class="line-numbers language-none"><code class="language-none">carthage update --use-xcframeworks<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="3、拖入工程"><a href="#3、拖入工程" class="headerlink" title="3、拖入工程"></a>3、拖入工程</h2><p>在工程目录下会生成一个Carthage文件，里面有个Build文件，其中可以找到生成的库</p>
-<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token builtin class-name">cd</span> /Users/zhangsaidong/Desktop/test
+<h2 id="2-工程目录下命令行"><a class="markdownIt-Anchor" href="#2-工程目录下命令行"></a> 2、工程目录下命令行</h2>
+<h3 id="生成framework"><a class="markdownIt-Anchor" href="#生成framework"></a> 生成framework</h3>
+<pre class="line-numbers language-none"><code class="language-none">carthage update --platform iOS<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="生成xcframework"><a class="markdownIt-Anchor" href="#生成xcframework"></a> 生成xcframework</h3>
+<pre class="line-numbers language-none"><code class="language-none">carthage update --platform iOS --use-xcframeworks<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="多平台"><a class="markdownIt-Anchor" href="#多平台"></a> 多平台</h3>
+<pre class="line-numbers language-none"><code class="language-none">carthage update --use-xcframeworks<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="3-拖入工程"><a class="markdownIt-Anchor" href="#3-拖入工程"></a> 3、拖入工程</h2>
+<p>在工程目录下会生成一个Carthage文件，里面有个Build文件，其中可以找到生成的库</p>
+<h2 id="记录"><a class="markdownIt-Anchor" href="#记录"></a> 记录</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zhangsaidong@zhangsaidongs-MacBook-Pro InterfaceKit % <span class="token builtin class-name">cd</span> /Users/zhangsaidong/Desktop/test
 zhangsaidong@zhangsaidongs-MacBook-Pro <span class="token builtin class-name">test</span> % $ carthage update --platform iOS
 zsh: <span class="token builtin class-name">command</span> not found: $
 zhangsaidong@zhangsaidongs-MacBook-Pro <span class="token builtin class-name">test</span> % carthage update --platform iOS 
@@ -2690,7 +2702,7 @@ zhangsaidong@zhangsaidongs-MacBook-Pro RunInto-Apple % <span aria-hidden="true" 
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">80.1k</span>
           </div>
             
             

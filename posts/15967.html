@@ -6,8 +6,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Mac命令行关闭端口, 张赛东, 湖南张赛东, 衡阳张赛东, 耒阳张赛东, 正源张赛东, 花桥张赛东, 张赛东湖南, 张赛东耒阳, 张赛东正源, 湖南工业大学张赛东, 张赛东湖南工业大学, 张赛东衡阳, 张赛东计算机, 计算机张赛东, 张赛东花桥, IT张赛东, 张赛东IT, 碧云斜, 张赛东的艺苑, 张赛东博客, 张赛东的博客, 博客张赛东, 软件工程张赛东, 张赛东软件工程">
-    <meta name="description" content="Mac命令行关闭端口========================
-lsof -i:端口号这里项目PefectTemplate占用了8181端口号，因此我输入的是lsof -i:8181，可以看到PerfectTemplate的进程ID为">
+    <meta name="description" content=" Mac命令行关闭端口
+========================
+ lsof -i:端口号
+这里项目PefectTemplate占用了8181端口号，因此我输入的是lsof -i:8181，可以看到PerfectTemplate的进">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -43,9 +45,9 @@ lsof -i:端口号这里项目PefectTemplate占用了8181端口号，因此我输
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
@@ -1413,7 +1415,7 @@ lsof -i:端口号这里项目PefectTemplate占用了8181端口号，因此我输
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    173
+                    174
                 </div>
                 
 
@@ -1443,9 +1445,13 @@ lsof -i:端口号这里项目PefectTemplate占用了8181端口号，因此我输
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Mac命令行关闭端口"><a href="#Mac命令行关闭端口" class="headerlink" title="Mac命令行关闭端口"></a>Mac命令行关闭端口</h1><p>========================</p>
-<h2 id="lsof-i-端口号"><a href="#lsof-i-端口号" class="headerlink" title="lsof -i:端口号"></a>lsof -i:端口号</h2><p>这里项目PefectTemplate占用了8181端口号，因此我输入的是<code>lsof -i:8181</code>，可以看到PerfectTemplate的进程ID为1869。<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/lsof.png" alt="查看端口号"></p>
-<h2 id="kill-PID"><a href="#kill-PID" class="headerlink" title="kill PID"></a>kill PID</h2><p>得到PID为1869后，我需要关闭端口，只需要使用<code>kill 1869</code>即可。</p>
+                <h1 id="mac命令行关闭端口"><a class="markdownIt-Anchor" href="#mac命令行关闭端口"></a> Mac命令行关闭端口</h1>
+<p>========================</p>
+<h2 id="lsof-i端口号"><a class="markdownIt-Anchor" href="#lsof-i端口号"></a> lsof -i:端口号</h2>
+<p>这里项目PefectTemplate占用了8181端口号，因此我输入的是<code>lsof -i:8181</code>，可以看到PerfectTemplate的进程ID为1869。<br>
+<img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/lsof.png" alt="查看端口号"></p>
+<h2 id="kill-pid"><a class="markdownIt-Anchor" href="#kill-pid"></a> kill PID</h2>
+<p>得到PID为1869后，我需要关闭端口，只需要使用<code>kill 1869</code>即可。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zhangsaidong@zhangsaidongs-MacBook-Pro PerfectTemplate % <span class="token function">lsof</span> -i:8181
 COMMAND    PID         <span class="token environment constant">USER</span>   FD   TYPE            DEVICE SIZE/OFF NODE NAME
 Google     <span class="token number">574</span> zhangsaidong   38u  IPv4 0xe91302581543067      0t0  TCP localhost:56525-<span class="token operator">&gt;</span>localhost:8181 <span class="token punctuation">(</span>ESTABLISHED<span class="token punctuation">)</span>
@@ -1454,8 +1460,12 @@ PerfectTe <span class="token number">1869</span> zhangsaidong    3u  IPv4 0xe913
 PerfectTe <span class="token number">1869</span> zhangsaidong    4u  IPv4 0xe91302582798067      0t0  TCP localhost:8181-<span class="token operator">&gt;</span>localhost:56525 <span class="token punctuation">(</span>ESTABLISHED<span class="token punctuation">)</span>
 PerfectTe <span class="token number">1869</span> zhangsaidong    5u  IPv4 0xe91302579eaa807      0t0  TCP localhost:8181-<span class="token operator">&gt;</span>localhost:56526 <span class="token punctuation">(</span>ESTABLISHED<span class="token punctuation">)</span>
 zhangsaidong@zhangsaidongs-MacBook-Pro PerfectTemplate % <span class="token function">kill</span> <span class="token number">1869</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h2><h3 id="关闭前"><a href="#关闭前" class="headerlink" title="关闭前"></a>关闭前</h3><p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/%E5%85%B3%E9%97%AD%E5%89%8D.png" alt="关闭前"></p>
-<h3 id="关闭后"><a href="#关闭后" class="headerlink" title="关闭后"></a>关闭后</h3><p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/%E5%85%B3%E9%97%AD%E5%90%8E.png" alt="关闭后"><br>至此端口被成功关闭。</p>
+<h2 id="检查"><a class="markdownIt-Anchor" href="#检查"></a> 检查</h2>
+<h3 id="关闭前"><a class="markdownIt-Anchor" href="#关闭前"></a> 关闭前</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/%E5%85%B3%E9%97%AD%E5%89%8D.png" alt="关闭前"></p>
+<h3 id="关闭后"><a class="markdownIt-Anchor" href="#关闭后"></a> 关闭后</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/%E5%85%B3%E9%97%AD%E5%90%8E.png" alt="关闭后"><br>
+至此端口被成功关闭。</p>
 
                 
             </div>
@@ -2462,7 +2472,7 @@ zhangsaidong@zhangsaidongs-MacBook-Pro PerfectTemplate % <span class="token func
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">80.1k</span>
           </div>
             
             

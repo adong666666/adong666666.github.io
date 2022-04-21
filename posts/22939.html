@@ -6,8 +6,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="闭包循环引用, 张赛东, 湖南张赛东, 衡阳张赛东, 耒阳张赛东, 正源张赛东, 花桥张赛东, 张赛东湖南, 张赛东耒阳, 张赛东正源, 湖南工业大学张赛东, 张赛东湖南工业大学, 张赛东衡阳, 张赛东计算机, 计算机张赛东, 张赛东花桥, IT张赛东, 张赛东IT, 碧云斜, 张赛东的艺苑, 张赛东博客, 张赛东的博客, 博客张赛东, 软件工程张赛东, 张赛东软件工程">
-    <meta name="description" content="闭包循环引用========================我们在闭包的基础概念中讲到闭包是引用类型的，因此，与Objective-C的block一样，可能导致循环引用的问题。
-问题的产生当我们给一个类指定一个闭包属性时，这个类的实例便包含">
+    <meta name="description" content=" 闭包循环引用
+========================
+我们在闭包的基础概念中讲到闭包是引用类型的，因此，与Objective-C的block一样，可能导致循环引用的问题。
+ 问题的产生
+当我们给一个类指定一个闭包属性时，这个类的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -43,9 +46,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
@@ -1447,10 +1450,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="闭包循环引用"><a href="#闭包循环引用" class="headerlink" title="闭包循环引用"></a>闭包循环引用</h1><p>========================<br>我们在闭包的基础概念中讲到闭包是引用类型的，因此，与Objective-C的block一样，可能导致循环引用的问题。</p>
-<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><p>当我们给一个类指定一个闭包属性时，这个类的实例便包含了闭包的一个引用。如果在这个闭包中，又引用了类实例本身，这时闭包便创建了一个指向类实例的强引用，这种情况下，又产生了循环引用。</p>
+                <h1 id="闭包循环引用"><a class="markdownIt-Anchor" href="#闭包循环引用"></a> 闭包循环引用</h1>
+<p>========================<br>
+我们在闭包的基础概念中讲到闭包是引用类型的，因此，与Objective-C的block一样，可能导致循环引用的问题。</p>
+<h2 id="问题的产生"><a class="markdownIt-Anchor" href="#问题的产生"></a> 问题的产生</h2>
+<p>当我们给一个类指定一个闭包属性时，这个类的实例便包含了闭包的一个引用。如果在这个闭包中，又引用了类实例本身，这时闭包便创建了一个指向类实例的强引用，这种情况下，又产生了循环引用。</p>
 <p>如代码清单1所示：HTMLElement类定义了一个闭包属性asHTML。在这个闭包中引用了self，即闭包捕获了self，这就意味着闭包维护了一个指向HTMLElement实例的强引用。这样就在两者间创建了一个强引用循环。</p>
-<h4 id="代码清单1：闭包循环引用"><a href="#代码清单1：闭包循环引用" class="headerlink" title="代码清单1：闭包循环引用"></a>代码清单1：闭包循环引用</h4><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">class</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span>
+<h4 id="代码清单1闭包循环引用"><a class="markdownIt-Anchor" href="#代码清单1闭包循环引用"></a> 代码清单1：闭包循环引用</h4>
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">class</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span>
     
     <span class="token keyword">let</span> name<span class="token punctuation">:</span><span class="token class-name">String</span>
     <span class="token keyword">let</span> text<span class="token punctuation">:</span><span class="token class-name">String</span><span class="token operator">?</span>
@@ -1472,11 +1479,13 @@
         <span class="token function">println</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">name</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string"> is being deinitialized"</span></span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>我们可以通过“捕获列表”来解决这种循环引用问题。“捕获列表”定义了在闭包内部捕获的引用类型的使用规则。与两个类之间的强引用循环一样，我们声明每一个捕获引用为weak或者unowned引用。选择weak或者unowned依赖于两者之间的关系。</p>
+<h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案"></a> 解决方案</h2>
+<p>我们可以通过“捕获列表”来解决这种循环引用问题。“捕获列表”定义了在闭包内部捕获的引用类型的使用规则。与两个类之间的强引用循环一样，我们声明每一个捕获引用为weak或者unowned引用。选择weak或者unowned依赖于两者之间的关系。</p>
 <p>一个“捕获列表项”是一个weak(unowned)—类实例引用对。它们放在[]中，项与项之间使用“,”号隔开。</p>
 <p>当闭包和捕获实例总是相互引用，且两者同时释放时，我们将“捕获引用”设置为unowned。如果“捕获引用”可能在某个点被设置成nil，则将其设置为weak。weak引用通常都是optional类型，当引用的实例被释放时，被设置成nil。</p>
 <p>在代码清单1中，我们可以用unowned来处理这种循环引用问题。如代码清单2所示：</p>
-<h4 id="代码清单2：unowned引用"><a href="#代码清单2：unowned引用" class="headerlink" title="代码清单2：unowned引用"></a>代码清单2：unowned引用</h4><pre class="line-numbers language-swift" data-language="swift"><code class="language-swift">
+<h4 id="代码清单2unowned引用"><a class="markdownIt-Anchor" href="#代码清单2unowned引用"></a> 代码清单2：unowned引用</h4>
+<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift">
 <span class="token keyword">class</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span>
     
     <span class="token keyword">let</span> name<span class="token punctuation">:</span><span class="token class-name">String</span>
@@ -2512,7 +2521,7 @@
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">80.1k</span>
           </div>
             
             

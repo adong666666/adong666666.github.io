@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://zsd.name/posts/63716.html</loc>
+    
+    <lastmod>2022-04-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zsd.name/posts/55425.html</loc>
     
     <lastmod>2022-04-12</lastmod>
@@ -974,6 +983,13 @@
 
   
   <url>
+    <loc>https://zsd.name/tags/server/</loc>
+    <lastmod>2022-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zsd.name/tags/iOS/</loc>
     <lastmod>2022-04-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -989,13 +1005,6 @@
   
   <url>
     <loc>https://zsd.name/tags/Swift/</loc>
-    <lastmod>2022-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zsd.name/tags/server/</loc>
     <lastmod>2022-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1261,6 +1270,13 @@
   </url>
   
   <url>
+    <loc>https://zsd.name/tags/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2022-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zsd.name/tags/macOS/</loc>
     <lastmod>2022-04-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -1288,24 +1304,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://zsd.name/tags/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2022-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://zsd.name/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2022-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zsd.name/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://zsd.name/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2022-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

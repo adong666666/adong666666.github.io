@@ -6,10 +6,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="LeetCode第64题（动态规划）：最小路径和, 张赛东, 湖南张赛东, 衡阳张赛东, 耒阳张赛东, 正源张赛东, 花桥张赛东, 张赛东湖南, 张赛东耒阳, 张赛东正源, 湖南工业大学张赛东, 张赛东湖南工业大学, 张赛东衡阳, 张赛东计算机, 计算机张赛东, 张赛东花桥, IT张赛东, 张赛东IT, 碧云斜, 张赛东的艺苑, 张赛东博客, 张赛东的博客, 博客张赛东, 软件工程张赛东, 张赛东软件工程">
-    <meta name="description" content="LeetCode第64题（动态规划）：最小路径和========================
+    <meta name="description" content=" LeetCode第64题（动态规划）：最小路径和
+========================
 题目如下：
+
 64. 最小路径和
-给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为">
+给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -45,9 +47,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
@@ -1461,8 +1463,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="LeetCode第64题（动态规划）：最小路径和"><a href="#LeetCode第64题（动态规划）：最小路径和" class="headerlink" title="LeetCode第64题（动态规划）：最小路径和"></a>LeetCode第64题（动态规划）：最小路径和</h1><p>========================</p>
-<p>题目如下：<br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220130LeetCode%E7%AC%AC64%E9%A2%98%EF%BC%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89%EF%BC%9A%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C/1.png"></p>
+                <h1 id="leetcode第64题动态规划最小路径和"><a class="markdownIt-Anchor" href="#leetcode第64题动态规划最小路径和"></a> LeetCode第64题（动态规划）：最小路径和</h1>
+<p>========================</p>
+<p>题目如下：<br>
+<img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220130LeetCode%E7%AC%AC64%E9%A2%98%EF%BC%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89%EF%BC%9A%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C/1.png" alt=""></p>
 <pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">64. 最小路径和
 给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
 
@@ -1488,7 +1492,8 @@ m == grid.length
 n == grid[i].length
 1 &lt;= m, n &lt;= 200
 0 &lt;= grid[i][j] &lt;= 100<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h2 id="我的代码"><a class="markdownIt-Anchor" href="#我的代码"></a> 我的代码</h2>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
 <span class="token keyword">public</span><span class="token operator">:</span>
     <span class="token keyword">int</span> <span class="token function">minPathSum</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span><span class="token operator">&amp;</span> grid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> m <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> grid<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1509,9 +1514,11 @@ n == grid[i].length
         <span class="token keyword">return</span> dp<span class="token punctuation">[</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
+<h3 id="复杂度分析"><a class="markdownIt-Anchor" href="#复杂度分析"></a> 复杂度分析</h3>
+<ul>
 <li>时间复杂度：O(mn)。</li>
-<li>空间复杂度：O(mn)，其中 m 和 n 分别是网格的行数和列数。创建一个二维数组dp，和网格大小相同。<br>空间复杂度可以优化，例如每次只存储上一行的dp 值，则可以将空间复杂度优化到 O(n)。</li>
+<li>空间复杂度：O(mn)，其中 m 和 n 分别是网格的行数和列数。创建一个二维数组dp，和网格大小相同。<br>
+空间复杂度可以优化，例如每次只存储上一行的dp 值，则可以将空间复杂度优化到 O(n)。</li>
 </ul>
 <p><code>心得： 这是一道比较经典的动规题，难度偏简单，和第62题有着异曲同工之妙，主要是找到初始条件，找到dp[i][j] = min(dp[i][j-1] + grid[i][j], dp[i-1][j] + grid[i][j])这么一个关系，如果求最大，则用max。这个解法和官方思路是一样的。</code></p>
 <p>我看到一种别人写的Python解法，思路是一样，代码却是简洁不少，但它的用时和内存都超过C++代码。</p>
@@ -1523,7 +1530,6 @@ n == grid[i].length
             <span class="token keyword">for</span> idx<span class="token punctuation">,</span> num <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">:</span>
                 dp<span class="token punctuation">[</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">,</span> dp<span class="token punctuation">[</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> num
         <span class="token keyword">return</span> dp<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-path-sum/">https://leetcode-cn.com/problems/minimum-path-sum/</a></p>
 
                 
@@ -2571,7 +2577,7 @@ n == grid[i].length
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">80.1k</span>
           </div>
             
             

@@ -6,8 +6,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="iOS mlmodelc内部文件格式规范, 张赛东, 湖南张赛东, 衡阳张赛东, 耒阳张赛东, 正源张赛东, 花桥张赛东, 张赛东湖南, 张赛东耒阳, 张赛东正源, 湖南工业大学张赛东, 张赛东湖南工业大学, 张赛东衡阳, 张赛东计算机, 计算机张赛东, 张赛东花桥, IT张赛东, 张赛东IT, 碧云斜, 张赛东的艺苑, 张赛东博客, 张赛东的博客, 博客张赛东, 软件工程张赛东, 张赛东软件工程">
-    <meta name="description" content="iOS mlmodelc内部文件格式规范========================尽量本地编译Core ML mlmodel，则得到的mlmodelc可以直接使用
-通过网络加载的Core ML mlmodel所编译而出的mlmodel">
+    <meta name="description" content=" iOS mlmodelc内部文件格式规范
+========================
+尽量本地编译Core ML mlmodel，则得到的mlmodelc可以直接使用
+通过网络加载的Core ML mlmodel所编译而出的mlmo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -43,9 +45,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
@@ -1451,10 +1453,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="iOS-mlmodelc内部文件格式规范"><a href="#iOS-mlmodelc内部文件格式规范" class="headerlink" title="iOS mlmodelc内部文件格式规范"></a>iOS mlmodelc内部文件格式规范</h1><p>========================<br>尽量本地编译Core ML mlmodel，则得到的mlmodelc可以直接使用</p>
-<p>通过网络加载的Core ML mlmodel所编译而出的mlmodelc虽说内容一致，但格式不方便直接使用，而且……最重要的是，网络加载的mlmodel至少还要再编译一次，相当于在App内占用了两个模型的体量。而且有可能需要重复编译多次，即占用多个模型的体量，如果还不注重清理的话，App的体量会越来越大，而且内部数据还大量重复，因为编译出来mlmodec不能直接使用(你可以在代码里调整模型的内部格式，但是这也太麻烦了，对不同模型还得不同处理)</p>
+                <h1 id="ios-mlmodelc内部文件格式规范"><a class="markdownIt-Anchor" href="#ios-mlmodelc内部文件格式规范"></a> iOS mlmodelc内部文件格式规范</h1>
+<p>========================<br>
+尽量本地编译Core ML mlmodel，则得到的mlmodelc可以直接使用</p>
+<p>通过网络加载的Core ML mlmodel所编译而出的mlmodelc虽说内容一致，但格式不方便直接使用，而且…最重要的是，网络加载的mlmodel至少还要再编译一次，相当于在App内占用了两个模型的体量。而且有可能需要重复编译多次，即占用多个模型的体量，如果还不注重清理的话，App的体量会越来越大，而且内部数据还大量重复，因为编译出来mlmodec不能直接使用(你可以在代码里调整模型的内部格式，但是这也太麻烦了，对不同模型还得不同处理)</p>
 <p>所以建议使用mlmodel本地编译出来后的mlmodelc，你可以在Products中的.app文件夹中右键显示包内容找到编译后的mlmodelc文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/1.png"><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/2.png"><br><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/3.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/1.png" alt=""><br>
+<img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/2.png" alt=""><br>
+<img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/iOSmlmodelc%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/3.png" alt=""></p>
 
                 
             </div>
@@ -2477,7 +2483,7 @@
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">80.1k</span>
           </div>
             
             

@@ -6,8 +6,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="动态规划之状态压缩, 张赛东, 湖南张赛东, 衡阳张赛东, 耒阳张赛东, 正源张赛东, 花桥张赛东, 张赛东湖南, 张赛东耒阳, 张赛东正源, 湖南工业大学张赛东, 张赛东湖南工业大学, 张赛东衡阳, 张赛东计算机, 计算机张赛东, 张赛东花桥, IT张赛东, 张赛东IT, 碧云斜, 张赛东的艺苑, 张赛东博客, 张赛东的博客, 博客张赛东, 软件工程张赛东, 张赛东软件工程">
-    <meta name="description" content="动态规划之状态压缩摘录========================
-一、概述1.状态压缩状态压缩就是使用某种方法，简明扼要地以最小代价来表示某种状态，通常是用一串01数字（二进制数）来表示各个点的状态。这就要求使用状态压缩的对象的点的状">
+    <meta name="description" content=" 动态规划之状态压缩摘录
+========================
+ 一、概述
+ 1.状态压缩
+状态压缩就是使用某种方法，简明扼要地以最小代价来表示某种状态，通常是用一串01数字（二进制数）来表示各个点的状态。这就要求使用状态压缩的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -43,9 +46,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
@@ -1451,16 +1454,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="动态规划之状态压缩摘录"><a href="#动态规划之状态压缩摘录" class="headerlink" title="动态规划之状态压缩摘录"></a>动态规划之状态压缩摘录</h1><p>========================</p>
-<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><h4 id="1-状态压缩"><a href="#1-状态压缩" class="headerlink" title="1.状态压缩"></a>1.状态压缩</h4><p><code>状态压缩</code>就是使用某种方法，简明扼要地以最小代价来表示某种状态，通常是用一串01数字（二进制数）来表示各个点的状态。这就要求使用状态压缩的对象的点的状态必须只有两种，0 或 1；当然如果有三种状态用三进制来表示也未尝不可。</p>
-<h4 id="2-使用条件"><a href="#2-使用条件" class="headerlink" title="2.使用条件"></a>2.使用条件</h4><p>从状态压缩的特点来看，这个算法适用的题目符合以下的条件：</p>
+                <h1 id="动态规划之状态压缩摘录"><a class="markdownIt-Anchor" href="#动态规划之状态压缩摘录"></a> 动态规划之状态压缩摘录</h1>
+<p>========================</p>
+<h2 id="一-概述"><a class="markdownIt-Anchor" href="#一-概述"></a> 一、概述</h2>
+<h4 id="1状态压缩"><a class="markdownIt-Anchor" href="#1状态压缩"></a> 1.状态压缩</h4>
+<p><code>状态压缩</code>就是使用某种方法，简明扼要地以最小代价来表示某种状态，通常是用一串01数字（二进制数）来表示各个点的状态。这就要求使用状态压缩的对象的点的状态必须只有两种，0 或 1；当然如果有三种状态用三进制来表示也未尝不可。</p>
+<h4 id="2使用条件"><a class="markdownIt-Anchor" href="#2使用条件"></a> 2.使用条件</h4>
+<p>从状态压缩的特点来看，这个算法适用的题目符合以下的条件：</p>
 <ul>
 <li><code>解法需要保存一定的状态数据</code>（表示一种状态的一个数据值），每个状态数据通常情况下是可以通过2进制来表示的。这就要求状态数据的每个单元只有两种状态，比如说棋盘上的格子，放棋子或者不放，或者是硬币的正反两面。这样用0或者1来表示状态数据的每个单元，而<code>整个状态数据就是一个一串0和1组成的二进制数</code>。</li>
 <li>解法需要将状态数据实现为一个基本数据类型，比如int，long等等，即所谓的状态压缩。状态压缩的目的一方面是<code>缩小了数据存储的空间</code>，另一方面是在<code>状态对比和状态整体处理时能够提高效率</code>。这样就要求状态数据中的单元个数不能太大，比如用int来表示一个状态的时候，状态的单元个数不能超过32（32位的机器），所以题目一般都是至少有一维的数据范围很小。</li>
 </ul>
-<h4 id="3-状压DP"><a href="#3-状压DP" class="headerlink" title="3.状压DP"></a>3.状压DP</h4><p>状压DP，顾名思义，就是使用状态压缩的动态规划。</p>
+<h4 id="3状压dp"><a class="markdownIt-Anchor" href="#3状压dp"></a> 3.状压DP</h4>
+<p>状压DP，顾名思义，就是使用状态压缩的动态规划。</p>
 <p>动态规划问题通常有两种，一种是对递归问题的记忆化求解，另一种是把大问题看作是多阶段的决策求解。这里用的便是后一种，这带来一个需求，即存储之前的状态，再由状态及状态对应的值推演出状态转移方程最终得到最优解。</p>
-<h2 id="二、位运算"><a href="#二、位运算" class="headerlink" title="二、位运算"></a>二、位运算</h2><p>一般基础的状压就是将一行的状态压成一个数，这个数的二进制形式反映了这一行的情况。由于使用二进制数来保存被压缩的状态，所以要用到神奇的二进制位运算操作，将一个十进制数转成二进制进行位运算操作再转回十进制数。包括：</p>
+<h2 id="二-位运算"><a class="markdownIt-Anchor" href="#二-位运算"></a> 二、位运算</h2>
+<p>一般基础的状压就是将一行的状态压成一个数，这个数的二进制形式反映了这一行的情况。由于使用二进制数来保存被压缩的状态，所以要用到神奇的二进制位运算操作，将一个十进制数转成二进制进行位运算操作再转回十进制数。包括：</p>
 <ul>
 <li>按位与&amp;（有0为0，其实就是且）</li>
 <li>按位或|（有1为1，其实就是或）</li>
@@ -1475,7 +1484,7 @@
 <li>x乘以一个2的n次方的数：x&lt;&lt;n</li>
 <li>x除以一个2的n次方的数：x&gt;&gt;n</li>
 <li>消去x最后一位的1：x&amp;(x-1)</li>
-<li>求x的相反数： <del>(x-1)或者</del>x+1</li>
+<li>求x的相反数： <sub>(x-1)或者</sub>x+1</li>
 <li>x的异或操作：~x = -x-1</li>
 <li>把x从右边数第n位变1：x|(1&lt;&lt;(n-1))（n从1开始）</li>
 <li>把x从右边数第n位变0：x&amp;(~(1&lt;&lt;(n-1)))（n从1开始）</li>
@@ -1487,29 +1496,35 @@
 <li>求两个数的最大数：(x &amp; ((y - x) &gt;&gt; 31)) | (y &amp; (~(y - x) &gt;&gt; 31))</li>
 <li>返回x的符号：(i &gt;&gt; 31) | (-i &gt;&gt;&gt; 31)（正数为1，负数为-1）</li>
 <li>两数相加：(x | y) + (x &amp; y) 或 (x ^ y) + ((x &amp; y) &lt;&lt; 1)</li>
-<li>两数相减：(x &amp; <del>y) - (</del>x &amp; y)</li>
+<li>两数相减：(x &amp; ~y) - (~x &amp; y)</li>
 <li>求两数的平均数：(x &amp; y) + ((x ^ y) &gt;&gt; 1) 或 (x + y) &gt;&gt; 1</li>
 <li>判断一个数是不是2的次幂：(x != 0) &amp;&amp; (x &amp; (x - 1)) == 0</li>
 <li>x对2的n次方求余：x &amp; (2^n - 1)（这里的^是幂的次方）</li>
 <li>判断x和y的符号是否相同：(a ^ b) &gt;= 0</li>
 <li>if(x == a) x = b; if(x == b) x = a：用异或运算符：x = a ^ b ^ x</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220116%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/1.png"></p>
-<p>初试化状态的时候要看清条件，什么要，什么不要。<br>一般情况下要预处理前k行（k由题目定）。<br>Dp时题目给的条件和fit函数、state数组都要检查。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220116%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/1.png" alt=""></p>
+<p>初试化状态的时候要看清条件，什么要，什么不要。<br>
+一般情况下要预处理前k行（k由题目定）。<br>
+Dp时题目给的条件和fit函数、state数组都要检查。</p>
 <p>最最重要的一点：</p>
 <blockquote>
-<p>位反（~ )  &gt;  算术  &gt;  位左移、位右移  &gt;  关系运算<br>&gt;位与  &gt;  位或  &gt;  位异或  &gt;  逻辑运算</p>
+<p>位反（~ )  &gt;  算术  &gt;  位左移、位右移  &gt;  关系运算<br>
+&gt;位与  &gt;  位或  &gt;  位异或  &gt;  逻辑运算</p>
 </blockquote>
 <p>所以一般位运算最好打括号。</p>
-<h2 id="三、例题引入"><a href="#三、例题引入" class="headerlink" title="三、例题引入"></a>三、例题引入</h2><h4 id="【例1】填满棋盘"><a href="#【例1】填满棋盘" class="headerlink" title="【例1】填满棋盘"></a>【例1】填满棋盘</h4><p>有一个NM(N&lt;=5,M&lt;=1000)的棋盘，现在有12及2*1的小木块无数个，要盖满整个棋盘，有多少种方式？答案只需要mod1,000,000,007即可。</p>
+<h2 id="三-例题引入"><a class="markdownIt-Anchor" href="#三-例题引入"></a> 三、例题引入</h2>
+<h4 id="例1填满棋盘"><a class="markdownIt-Anchor" href="#例1填满棋盘"></a> 【例1】填满棋盘</h4>
+<p>有一个NM(N&lt;=5,M&lt;=1000)的棋盘，现在有12及2*1的小木块无数个，要盖满整个棋盘，有多少种方式？答案只需要mod1,000,000,007即可。</p>
 <p>例如：对于一个22的棋盘，有两种方法，一种是使用2个12的，一种是使用2个2*1的。</p>
 <p><code>【算法分析】</code></p>
 <p>在这道题目中,N和M的范围本应该是一样的，但实际上，N和M的范围却差别甚远，对于这种题目，首先应该想到的就是，正确算法与这两个范围有关！N的范围特别小，因此可以考虑使用状态压缩动态规划的思想，请看下面的图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220116%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/2.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/20220116%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/2.png" alt=""></p>
 <p>本思路来自博客，不过原博没有图，我帮他补个图，再优化一下内容。</p>
 <p>假设第一列已经填满，则第二列的摆设方式，只与第一列对第二列的影响有关。同理，第三列的摆设方式也只与第二列对它的影响有关。那么，使用一个长度为NN的二进制数statestate来表示这个影响，例如：4(00100)就表示了图上第二列的状态。</p>
 <p>因此，本题的状态可以这样表示：</p>
-<p>dp[i][state]表示该填充第 ii 列，第 i-1i−1 列对它的影响是 statestate 的时候的方法数。i&lt;=M,0&lt;=state&lt;2^Ni&lt;=M,0&lt;=state&lt;2<br>N</p>
+<p>dp[i][state]表示该填充第 ii 列，第 i-1i−1 列对它的影响是 statestate 的时候的方法数。i&lt;=M,0&lt;=state&lt;2^Ni&lt;=M,0&lt;=state&lt;2<br>
+N</p>
 <p>对于每一列，情况数也有很多，但由于 NN 很小，所以可以采取搜索的办法去处理。对于每一列，搜索所有可能的放木块的情况，并记录它对下一列的影响，之后更新状态。状态转移方程如下：</p>
 <p>dp[i][state]=∑dp[i-1][pre] 每一个prepre可以通过填放成为statestate</p>
 <p>对于每一列的深度优先搜索，写法如下：</p>
@@ -1533,7 +1548,8 @@
         <span class="token function">dfs</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">,</span>state<span class="token punctuation">,</span>nex<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>最终，答案就是dp[M+1][0]。<br>完整代码</p>
+<p>最终，答案就是dp[M+1][0]。<br>
+完整代码</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 <span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
@@ -1592,7 +1608,8 @@ ll dp<span class="token punctuation">[</span>N<span class="token punctuation">]<
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>要注意多加几个括号，能加就加，以免因为位运算的优先级问题而导致出bug。</p>
-<h4 id="【例2】最小总代价（Vijos-1456）"><a href="#【例2】最小总代价（Vijos-1456）" class="headerlink" title="【例2】最小总代价（Vijos-1456）"></a>【例2】最小总代价（Vijos-1456）</h4><p>题目描述：</p>
+<h4 id="例2最小总代价vijos-1456"><a class="markdownIt-Anchor" href="#例2最小总代价vijos-1456"></a> 【例2】最小总代价（Vijos-1456）</h4>
+<p>题目描述：</p>
 <p>n个人在做传递物品的游戏,编号为1-n。</p>
 <p>游戏规则是这样的：开始时物品可以在任意一人手上，他可把物品传递给其他人中的任意一位；下一个人可以传递给未接过物品的任意一人。</p>
 <p>即物品只能经过同一个人一次，而且每次传递过程都有一个代价；不同的人传给不同的人的代价值之间没有联系；</p>
@@ -1685,7 +1702,8 @@ LANG:c++
  
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="【例3】胜利大逃亡-续-Hdoj-1429"><a href="#【例3】胜利大逃亡-续-Hdoj-1429" class="headerlink" title="【例3】胜利大逃亡(续)(Hdoj-1429)"></a>【例3】胜利大逃亡(续)(Hdoj-1429)</h4><p>题目描述：</p>
+<h4 id="例3胜利大逃亡续hdoj-1429"><a class="markdownIt-Anchor" href="#例3胜利大逃亡续hdoj-1429"></a> 【例3】胜利大逃亡(续)(Hdoj-1429)</h4>
+<p>题目描述：</p>
 <p>Ignatius再次被魔王抓走了(搞不懂他咋这么讨魔王喜欢)……</p>
 <p>这次魔王汲取了上次的教训，把Ignatius关在一个n*m的地牢里，并在地牢的某些地方安装了带锁的门，钥匙藏在地牢另外的某些地方。刚开始Ignatius被关在(sx,sy)的位置，离开地牢的门在(ex,ey)的位置。Ignatius每分钟只能从一个坐标走到相邻四个坐标中的其中一个。魔王每t分钟回地牢视察一次，若发现Ignatius不在原位置便把他拎回去。经过若干次的尝试，Ignatius已画出整个地牢的地图。现在请你帮他计算能否再次成功逃亡。只要在魔王下次视察之前走到出口就算离开地牢，如果魔王回来的时候刚好走到出口或还未到出口都算逃亡失败。</p>
 <p>输入格式：</p>
@@ -1705,8 +1723,8 @@ LANG:c++
 <p>4 5 17</p>
 <p>@A.B.</p>
 <p>a*.*.</p>
-<p>*..*^</p>
-<p>c..b*</p>
+<p><em>…</em>^</p>
+<p>c…b*</p>
 <p>输出样例：</p>
 <p>16</p>
 <p><code>【算法分析】</code></p>
@@ -2837,7 +2855,7 @@ LANG:c++
           </div>
             
                  <div class="github-badge">
-            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">69.9k</span>
+            <span class="badge-subject">总字数</span><span class="badge-value bg-blueviolet">80.1k</span>
           </div>
             
             
