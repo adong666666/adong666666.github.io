@@ -16,3 +16,4 @@ Allow: /tags/
 Allow: /video/
 Allow: /works/
 Disallow: /contact/
+Sitemap: https://zsd.name/sitemap.xml
