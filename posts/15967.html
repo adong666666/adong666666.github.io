@@ -364,6 +364,13 @@
       </li>
       
       <li>
+        <a href="/ads">
+          
+          <span>每日惊喜</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/htmlPages/resume.html">
           
           <span>打印简历</span>
@@ -910,6 +917,14 @@
               
                 <li>
 
+                  <a href="/ads " style="margin-left:75px">
+				  
+		          <span>每日惊喜</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/htmlPages/resume.html " style="margin-left:75px">
 				  
 		          <span>打印简历</span>
@@ -1419,7 +1434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-31
+                    2022-04-22
                 </div>
                 
 
@@ -1460,7 +1475,7 @@
 <p>========================</p>
 <h2 id="lsof-i端口号"><a class="markdownIt-Anchor" href="#lsof-i端口号"></a> lsof -i:端口号</h2>
 <p>这里项目PefectTemplate占用了8181端口号，因此我输入的是<code>lsof -i:8181</code>，可以看到PerfectTemplate的进程ID为1869。<br>
-<img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/lsof.png" alt="查看端口号"></p>
+<img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/lsof.png" alt=""></p>
 <h2 id="kill-pid"><a class="markdownIt-Anchor" href="#kill-pid"></a> kill PID</h2>
 <p>得到PID为1869后，我需要关闭端口，只需要使用<code>kill 1869</code>即可。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zhangsaidong@zhangsaidongs-MacBook-Pro PerfectTemplate % <span class="token function">lsof</span> -i:8181
@@ -1473,9 +1488,9 @@ PerfectTe <span class="token number">1869</span> zhangsaidong    5u  IPv4 0xe913
 zhangsaidong@zhangsaidongs-MacBook-Pro PerfectTemplate % <span class="token function">kill</span> <span class="token number">1869</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="检查"><a class="markdownIt-Anchor" href="#检查"></a> 检查</h2>
 <h3 id="关闭前"><a class="markdownIt-Anchor" href="#关闭前"></a> 关闭前</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/%E5%85%B3%E9%97%AD%E5%89%8D.png" alt="关闭前"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/%E5%85%B3%E9%97%AD%E5%89%8D.png" alt=""></p>
 <h3 id="关闭后"><a class="markdownIt-Anchor" href="#关闭后"></a> 关闭后</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/%E5%85%B3%E9%97%AD%E5%90%8E.png" alt="关闭后"><br>
+<p><img src="https://cdn.jsdelivr.net/gh/adong666666/source_cdn/_posts/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/%E5%85%B3%E9%97%AD%E5%90%8E.png" alt=""><br>
 至此端口被成功关闭。</p>
 
                 

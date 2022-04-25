@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zsd.name/posts/63715.html</loc>
+    <loc>https://zsd.name/ads/index.html</loc>
     
-    <lastmod>2022-04-21</lastmod>
+    <lastmod>2022-04-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,6 +12,24 @@
   
   <url>
     <loc>https://zsd.name/posts/63716.html</loc>
+    
+    <lastmod>2022-04-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/posts/15967.html</loc>
+    
+    <lastmod>2022-04-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/posts/63715.html</loc>
     
     <lastmod>2022-04-21</lastmod>
     
@@ -489,15 +507,6 @@
   
   <url>
     <loc>https://zsd.name/posts/50921.html</loc>
-    
-    <lastmod>2022-01-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zsd.name/posts/15967.html</loc>
     
     <lastmod>2022-01-30</lastmod>
     
@@ -1235,13 +1244,6 @@
   </url>
   
   <url>
-    <loc>https://zsd.name/tags/cocoapods/</loc>
-    <lastmod>2022-04-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zsd.name/tags/Objective-C/</loc>
     <lastmod>2022-04-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -1250,6 +1252,13 @@
   
   <url>
     <loc>https://zsd.name/tags/doc/</loc>
+    <lastmod>2022-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/tags/cocoapods/</loc>
     <lastmod>2022-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

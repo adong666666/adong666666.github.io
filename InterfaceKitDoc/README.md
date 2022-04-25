@@ -1,3 +1,0 @@
-# InterfaceKitDoc
-
-Doc for InterfaceKit
