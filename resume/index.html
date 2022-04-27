@@ -53,9 +53,9 @@
 
     <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="atom.xml" title="张赛东" type="application/atom+xml">
 </head>
 
 <link href="/libs/mouse/style.min.css" rel="stylesheet">
@@ -1994,6 +1994,24 @@ var os = function (){
     <div class="head_line"></div>
     
 <script>
+    /* 若浏览器禁止cookie，则本地存储一般会失效，如下代码可确保url链接颜色正常 */
+        ["resumeLink"].map(function(item){
+            var getDom = document.getElementsByClassName(item);
+            for(var i=0;i<getDom.length;i++){
+                getDom[i].style.color = "#111";
+            }
+        });
+        var getDom2 = document.getElementsByClassName("resumeLink");
+        for(var i=0;i<getDom2.length;i++){
+            getDom2[i].onmouseover=function(){
+                this.style.textDecoration = "underline";
+                this.style.color = "#1bd1a5";
+            }
+            getDom2[i].onmouseout=function(){
+                this.style.textDecoration = "none";
+                this.style.color = "#111";
+            }
+        }
     /* 模式判断 */
     if (localStorage.getItem('isDark') === '1') {
         document.getElementById("basicInformation").style.color = "#bcf0f5";
