@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zsd.name/posts/61735.html</loc>
+    
+    <lastmod>2023-01-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zsd.name/posts/32416.html</loc>
     
     <lastmod>2022-10-12</lastmod>
@@ -1354,6 +1363,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://zsd.name/tags/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2023-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1421,6 +1437,13 @@
   
   <url>
     <loc>https://zsd.name/categories/%E8%AF%97%E6%AD%8C/</loc>
+    <lastmod>2023-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zsd.name/categories/%E8%AF%97%E8%AF%8D/</loc>
     <lastmod>2023-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
