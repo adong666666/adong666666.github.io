@@ -1812,8 +1812,8 @@ var os = function (){
             preload: 'auto',
             volume: Number('0.7'),
             video: {
-                url: 'https://cdn.jsdelivr.net/gh/adong666666/source_cdn/medias/videos/RunInto.mp4#%20url%E5%92%8CiframeUrl%E5%85%B6%E4%B8%AD%E4%B8%80%E4%B8%AA%E5%BF%85%E5%A1%AB',
-                pic: 'https://cdn.jsdelivr.net/gh/adong666666/source_cdn/medias/videos/RunInto.jpg',
+                url: '/medias/videos/RunInto.mp4',
+                pic: '/medias/videos/RunInto.jpg',
                 thumbnails: ''
             }
         });
@@ -1895,7 +1895,8 @@ var os = function (){
                             <script>
             var getDom = document.getElementsByClassName("post-card");
             for(var i=0;i<getDom.length;i++){
-                getDom[i].style.backgroundImage="url('https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/" + (Math.round(Math.random()*123 + 1)).toString() + ".jpg')" ;
+                getDom[i].style.backgroundImage="url('/medias/cdn-wallpaper/" + (Math.round(Math.random()*123 + 1)).toString() + ".jpg')" ;
+            <!-- getDom[i].style.backgroundImage="url('https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/" + (Math.round(Math.random()*123 + 1)).toString() + ".jpg')" ; -->
             }
                             </script>
 </div>
@@ -3233,7 +3234,8 @@ Given two strings word1 and word2, return the minimum
                             <script>
             var getDom = document.getElementsByClassName("randomImg");
             for(var i=0;i<getDom.length;i++){
-                getDom[i].src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/" + (Math.round(Math.random()*123 + 1)).toString() + ".jpg";
+                <!-- getDom[i].src="https://cdn.jsdelivr.net/gh/adong666666/cdn-wallpaper/" + (Math.round(Math.random()*123 + 1)).toString() + ".jpg"; -->
+                getDom[i].src="/medias/cdn-wallpaper/" + (Math.round(Math.random()*123 + 1)).toString() + ".jpg";
             }
                             </script>
         </div>
