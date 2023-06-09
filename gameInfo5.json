@@ -1,0 +1,53 @@
+{
+    "lastPage":"",
+    "transactionGroupChat": {
+        "msgList": [{
+            "avatar": "https://image.x7sy.com/uploads/20170720/77119728376353287.png",
+            "msgContent": "现在玩什么族得了？零氪或首充玩家"
+        }, {
+            "avatar": "https://image.x7sy.com/user/avatar/20190904/62359695364853472.jpg",
+            "msgContent": "IOS 出一个青法 V8号"
+        }, {
+            "avatar": "https://image.x7sy.com/user/avatar/20211228/75333159967701094.jpg",
+            "msgContent": "[可爱]"
+        }],
+    },
+    "buy_role_data": {
+        "price": "80.00",
+        "info": "资源多 幻彩法",
+        "gameServer": "所有区服总充值",
+        "role_id": "3870532",
+        "game_area": "2498",
+        "one_desc": "",
+        "role_atlas": [{
+            "source_image": "https://image.x7sy.com/buy/app/20230314/3-1678764651e85d83e1.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/3-1678764651e85d83e1_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/0-1678764650e85d83e1.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/0-1678764650e85d83e1_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/1-1678764651e85d83e1.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/1-1678764651e85d83e1_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/2-1678764651e85d83e1.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/2-1678764651e85d83e1_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/4-1678764651e85d83e1.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/4-1678764651e85d83e1_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/5-1678764651e85d83e1.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/5-1678764651e85d83e1_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/6-1678764652e85d83e1.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/6-1678764652e85d83e1_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/7-1678764652e85d83e1.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/7-1678764652e85d83e1_213x213.jpg"
+        }],
+        "up_time": "2023-03-14 11:37",
+        "game_price": "721.00",
+        "game_logo": "https://image.x7sy.com/uploads/game_img/20220701/55923842067167647_thumb.png",
+        "game_name": "道友请留步-紫虚凌云",
+        "game_description": "，，，，。"
+    }
+}
