@@ -1,0 +1,68 @@
+{
+    "lastPage":"1",
+    "transactionGroupChat": {
+        "msgList": [{
+            "avatar": "https://image.x7sy.com/user/avatar/20200129/34429884390780539.jpg",
+            "msgContent": "百八十的号买回去，一到2个月的月卡都回来你那多的百来块钱了"
+        }, {
+            "avatar": "https://image.x7sy.com/user/avatar/20200129/34429884390780539.jpg",
+            "msgContent": "买百八十的号不如收个能白漂的号。要v有v.起码战区里面的排名资源不会落下太多"
+        }, {
+            "avatar": "https://image.x7sy.com/uploads/20180201/55333257780454840.png",
+            "msgContent": "有没有百八十的号推荐个"
+        }],
+    },
+    "buy_role_data": {
+        "price": "199.00",
+        "info": "106级 看图",
+        "gameServer": "所有区服总充值",
+        "role_id": "3869821",
+        "game_area": "501",
+        "one_desc": "",
+        "role_atlas": [{
+            "source_image": "https://image.x7sy.com/buy/app/20230314/12-1678761988c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/12-1678761988c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/6-1678761987c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/6-1678761987c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/0-1678761986c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/0-1678761986c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/1-1678761986c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/1-1678761986c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/2-1678761986c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/2-1678761986c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/3-1678761986c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/3-1678761986c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/4-1678761987c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/4-1678761987c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/5-1678761987c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/5-1678761987c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/7-1678761987c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/7-1678761987c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/8-1678761988c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/8-1678761988c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/9-1678761988c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/9-1678761988c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/10-1678761988c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/10-1678761988c14c25a4_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/11-1678761988c14c25a4.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/11-1678761988c14c25a4_213x213.jpg"
+        }],
+        "up_time": "2023-03-14 10:55",
+        "game_price": "572.00",
+        "game_logo": "https://image.x7sy.com/uploads/game_img/20230112/65820329714711279_thumb.png",
+        "game_name": "少年三国志-新征程",
+        "game_description": "同一设备只能玩一个版本，玩家玩过其它版本或其它平台登陆过该游会限制登录。购买小号请提前下载游戏确认是否能够顺利登录!"
+    }
+}
