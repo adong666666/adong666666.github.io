@@ -1,0 +1,50 @@
+{
+    "lastPage":"",
+    "transactionGroupChat": {
+        "msgList": [{
+            "avatar": "https://image.x7sy.com/user/avatar/20230201/51495756817136523.jpg",
+            "msgContent": "喜欢什么玩什么"
+        }, {
+            "avatar": "https://image.x7sy.com/user/avatar/20211223/89877994522529451.jpg",
+            "msgContent": "微氪玩什么好呀"
+        }, {
+            "avatar": "https://image.x7sy.com/uploads/20221020/15426427861755497.png",
+            "msgContent": "道"
+        }],
+    },
+    "buy_role_data": {
+        "price": "31.00",
+        "info": "详情看图",
+        "gameServer": "所有区服总充值",
+        "role_id": "3848560",
+        "game_area": "2427",
+        "one_desc": "",
+        "role_atlas": [{
+            "source_image": "https://image.x7sy.com/buy/app/20230307/0-1678187649f8c45619.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230307/0-1678187649f8c45619_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230307/1-1678187649f8c45619.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230307/1-1678187649f8c45619_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230307/2-1678187649f8c45619.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230307/2-1678187649f8c45619_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230307/3-1678187649f8c45619.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230307/3-1678187649f8c45619_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230307/4-1678187650f8c45619.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230307/4-1678187650f8c45619_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230307/5-1678187650f8c45619.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230307/5-1678187650f8c45619_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230307/6-1678187650f8c45619.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230307/6-1678187650f8c45619_213x213.jpg"
+        }],
+        "up_time": "2023-03-13 20:30",
+        "game_price": "1004.00",
+        "game_logo": "https://image.x7sy.com/uploads/game_img/20220701/55923842067167647_thumb.png",
+        "game_name": "道友请留步-紫虚凌云",
+        "game_description": "，，，，。"
+    }
+}
