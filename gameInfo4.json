@@ -1,0 +1,59 @@
+{
+    "lastPage":"",
+    "transactionGroupChat": {
+        "msgList": [{
+            "avatar": "https://image.x7sy.com/user/avatar/20230112/45069262187238402.jpg",
+            "msgContent": "小雪心火先极限不如全12。"
+        }, {
+            "avatar": "https://image.x7sy.com/user/avatar/20230112/45069262187238402.jpg",
+            "msgContent": "火队还是要全员均衡"
+        }, {
+            "avatar": "https://image.x7sy.com/uploads/20170720/21222948111953423.png",
+            "msgContent": "就差派大星了"
+        }],
+    },
+    "buy_role_data": {
+        "price": "60.00",
+        "info": "超强底子号",
+        "gameServer": "所有区服总充值",
+        "role_id": "3870546",
+        "game_area": "琉璃宗55服",
+        "one_desc": "",
+        "role_atlas": [{
+            "source_image": "https://image.x7sy.com/buy/app/20230314/9-1678774813544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/9-1678774813544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/0-1678774811544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/0-1678774811544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/1-1678774812544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/1-1678774812544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/2-1678774812544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/2-1678774812544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/3-1678774812544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/3-1678774812544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/4-1678774812544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/4-1678774812544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/5-1678774813544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/5-1678774813544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/6-1678774813544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/6-1678774813544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/7-1678774813544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/7-1678774813544b8c23_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/8-1678774813544b8c23.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/8-1678774813544b8c23_213x213.jpg"
+        }],
+        "up_time": "2023-03-14 14:26",
+        "game_price": "1015.00",
+        "game_logo": "https://image.x7sy.com/uploads/game_img/20230116/30068746839457043_thumb.png",
+        "game_name": "斗罗大陆：武魂觉醒-新征程",
+        "game_description": "魂师列表存在借用魂师的情况，魂师右上角会带有好友标识，属于游戏正常玩法，购买前仔细查看。"
+    }
+}
