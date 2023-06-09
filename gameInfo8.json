@@ -1,0 +1,38 @@
+{
+    "lastPage":"",
+    "transactionGroupChat": {
+        "msgList": [{
+            "avatar": "https://image.x7sy.com/user/avatar/20230119/30461011792822745.jpg",
+            "msgContent": "没有人接也没人等活动都没买"
+        }, {
+            "avatar": "https://image.x7sy.com/user/avatar/20230119/30461011792822745.jpg",
+            "msgContent": "那个号一拉还是战区第一"
+        }, {
+            "avatar": "https://image.x7sy.com/user/avatar/20230119/30461011792822745.jpg",
+            "msgContent": "好像没一个新东西了"
+        }],
+    },
+    "buy_role_data": {
+        "price": "12.00",
+        "info": "详情看图",
+        "gameServer": "所有区服总充值",
+        "role_id": "3871337",
+        "game_area": "s541",
+        "one_desc": "",
+        "role_atlas": [{
+            "source_image": "https://image.x7sy.com/buy/app/20230314/7-16787769405e26b836.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/7-16787769405e26b836_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/0-16787769385e26b836.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/0-16787769385e26b836_213x213.jpg"
+        }, {
+            "source_image": "https://image.x7sy.com/buy/app/20230314/1-16787769385e26b836.jpg",
+            "thumb_image": "https://image.x7sy.com/buy/app/20230314/1-16787769385e26b836_213x213.jpg"
+        }],
+        "up_time": "2023-03-14 15:02",
+        "game_price": "24.00",
+        "game_logo": "https://image.x7sy.com/uploads/game_img/20230112/65820329714711279_thumb.png",
+        "game_name": "少年三国志-新征程",
+        "game_description": "同一设备只能玩一个版本，玩家玩过其它版本或其它平台登陆过该游会限制登录。购买小号请提前下载游戏确认是否能够顺利登录!"
+    }
+}
