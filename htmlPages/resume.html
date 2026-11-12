@@ -16,73 +16,80 @@
     </head>
 <body>
 <style>
+        * {
+            font-size: 15px;
+            box-sizing: border-box;
+        }
 
-    /*    div { */
-    /*        float: inherit; */
-    /*    } */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #ffffff;
+            color: #2d3748;
+            -webkit-font-smoothing: antialiased;
+        }
+
         a {
-            color: #111;
-            /*color: #9e9e9e; */
-        }
-        
-        a:link {
-           /* color: #111; */
-            color: #9e9e9e;
+            color: #2563eb;
             text-decoration: none;
-        }
-
-        a:visited {
-            text-decoration: none;
+            transition: color 0.2s ease;
         }
         a:hover {
-        text-decoration: underline;
-            color: #1bd1a5;
+            color: #0d9488;
+            text-decoration: underline;
         }
-        a:active {
-            text-decoration: none;
+
+        #resumeContent {
+            padding: 36px 44px;
         }
-        
+
         .person0 div {
-            padding-bottom: 2px;
+            padding-bottom: 8px;
             width: 48%;
             text-align: left;
             font-size: 14pt;
             display: inline-block;
+            color: #4a5568;
         }
 
         .title0 {
-            margin-top: 10px;
+            position: relative;
+            padding-left: 15px;
+            margin: 32px 0 14px;
         }
-
+        .title0::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background: #0d9488;
+            border-radius: 2px;
+        }
         .title0 * {
             vertical-align: middle;
-            font-size: 14pt;
+            font-size: 16pt;
+            font-weight: 700;
+            color: #1a202c;
         }
-
         .title0 img {
-            width: 32px;
+            width: 24px;
         }
 
         .work0 {
-            margin-left: 20px;
-            color: #b0b0b0;
-            margin-top: 5px;
-            margin-bottom: 5px;
+            margin: 0 0 18px 20px;
+            color: #718096;
             position: relative;
             overflow: hidden;
         }
 
         .line {
-            border: 1px solid #b0b0b0;
-            margin: 5px;
+            display: none;
         }
-        .head_line{
-            border: 2px solid #404040;
-            margin: 15px 0;
-        }
-
-        * {
-            font-size: 15px;
+        .head_line {
+            border: 1px solid #e2e8f0;
+            margin: 24px 0;
         }
 
         .work0 .left {
@@ -90,14 +97,17 @@
             display: inline-block;
             vertical-align: top;
             width: 150px;
-            color: #b0b0b0;
+            color: #0d9488;
+            font-weight: 600;
+            font-size: 13px;
         }
 
         .work0 .mid0 {
             height: 100%;
-            border: 2px solid #b0b0b0;
+            border: 2px solid #cbd5e1;
             display: inline-block;
-            position: absolute; /*自适应父标签高度使用*/
+            position: absolute;
+            background: #cbd5e1;
         }
 
         .work0 .middle {
@@ -105,7 +115,7 @@
             display: inline-block;
             vertical-align: top;
             width: 50px;
-            color: #b0b0b0;
+            color: #718096;
         }
 
         .work0 .right0 {
@@ -115,7 +125,7 @@
             margin-left: 20px;
             width: 508px;
             overflow: auto;
-            color: black;
+            color: #2d3748;
         }
 
         .work0 .only {
@@ -125,33 +135,37 @@
             margin: 0 10px;
             width: 95%;
             overflow: auto;
-            color: black;
-            /*color: 9e9e9e; */
+            color: #4a5568;
             word-wrap: break-word;
             text-indent: 2em;
-            font-weight: 300;
+            font-weight: 400;
+            line-height: 1.8;
         }
 
         .work0 .right0 .detail {
             word-wrap: break-word;
             text-indent: 2em;
-            font-weight: 300;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #4a5568;
         }
         .work0 .right0 .detail2 {
             word-wrap: break-word;
             text-indent: 0em;
-            font-weight: 300;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #4a5568;
         }
         .work0 .right0 .head0 {
-            font-size: 12pt;
-            font-weight: 500;
-            margin-bottom: 8px;
+            font-size: 14pt;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 6px;
         }
-
         .work0 .right0 .brief {
-            margin-bottom: 5px;
+            color: #4a5568;
+            margin-bottom: 6px;
         }
-
 </style>
 <div id ="resumeContentDiscard" style="width: 720px;margin: 0px auto 10px;clear:both">
     <div class="head_line"></div>
@@ -162,7 +176,7 @@
         </div>
         <div style="float: inherit;margin-left:25px; margin-top:20px; clear:none">
             <div id="changeWidth" style="float: none;width: 500px;">
-                <div id= "basicInformation" style="color:#003f3f;font-size:24pt;text-align: center;">张赛东/男/<script>
+                <div id= "basicInformation" style="color:#eaf0ff;font-size: 26pt;text-align: center;">张赛东/男/<script>
                                 document.write(new Date().getFullYear()-2000);
                             </script>岁</div>
                 <div style="margin-top: 10px; float: none;">
@@ -598,11 +612,11 @@
                 <a class="resumeLink" href="https://apps.apple.com/cn/app/id6796251282">啊咿呀嘿 AI智能快照</a>
             </div>
             <div class="only">
-                • https://apps.apple.com/cn/app/id6796251282
+                • <a class="resumeLink" href="https://apps.apple.com/cn/app/id6796251282" target="_blank">https://apps.apple.com/cn/app/id6796251282</a>
 
             </div>
             <div class="only">
-                • https://ayiyahei.com
+                • <a class="resumeLink" href="https://ayiyahei.com" target="_blank">https://ayiyahei.com</a>
 
             </div>
             <div class="only">
@@ -675,17 +689,17 @@
 <script>
     /* 模式判断 */
     if (localStorage.getItem('isDark') === '1') {
-        document.body.style.backgroundColor="#000";
-        document.getElementById("basicInformation").style.color = "#bcf0f5";
+        document.body.style.backgroundColor="#ffffff";
+        document.getElementById("basicInformation").style.color = "#1a202c";
         ["only", "brief", "detail", "right0", "person0", "resumeLink"].map(function(item){
             var getDom = document.getElementsByClassName(item);
             for(var i=0;i<getDom.length;i++){
-                getDom[i].style.color = "#c0c0c0";
+                getDom[i].style.color = "#2d3748";
             }
         });
         var getDom = document.getElementsByClassName("head_line");
         for(var i=0;i<getDom.length;i++){
-            getDom[i].style.borderColor = "#c0c0c0";
+            getDom[i].style.borderColor = "#e2e8f0";
         }
         var getDom2 = document.getElementsByClassName("resumeLink");
         for(var i=0;i<getDom2.length;i++){
@@ -695,25 +709,25 @@
             }
             getDom2[i].onmouseout=function(){
                 this.style.textDecoration = "none";
-                this.style.color = "#c0c0c0";
+                this.style.color = "#2563eb";
             }
         }
         var getDom3 = document.getElementsByClassName("title0");
         for(var i=0;i<getDom3.length;i++){
-            getDom3[i].style.color = "#666666";
+            getDom3[i].style.color = "#1a202c";
         }
     } else {
-        document.body.style.backgroundColor="#fff";
-        document.getElementById("basicInformation").style.color = "#163e3e";
+        document.body.style.backgroundColor="#ffffff";
+        document.getElementById("basicInformation").style.color = "#1a202c";
         ["only", "brief", "detail", "right0", "person0", "resumeLink"].map(function(item){
             var getDom = document.getElementsByClassName(item);
             for(var i=0;i<getDom.length;i++){
-                getDom[i].style.color = "#111";
+                getDom[i].style.color = "#2d3748";
             }
         });
         var getDom = document.getElementsByClassName("head_line");
         for(var i=0;i<getDom.length;i++){
-            getDom[i].style.borderColor = "#111";
+            getDom[i].style.borderColor = "#e2e8f0";
         }
         var getDom2 = document.getElementsByClassName("resumeLink");
         for(var i=0;i<getDom2.length;i++){
@@ -723,12 +737,12 @@
             }
             getDom2[i].onmouseout=function(){
                 this.style.textDecoration = "none";
-                this.style.color = "#111";
+                this.style.color = "#2563eb";
             }
         }
         var getDom3 = document.getElementsByClassName("title0");
         for(var i=0;i<getDom3.length;i++){
-            getDom3[i].style.color = "#38485c";
+            getDom3[i].style.color = "#1a202c";
         }
     }
     //缩放内容，适配
