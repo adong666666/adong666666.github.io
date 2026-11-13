@@ -1903,6 +1903,90 @@ var os = function (){
     </div>
     
 
+    <!-- 啊咿呀嘿 App 推广 -->
+    
+    <style>
+        .app-promo { margin: 22px auto; }
+        .app-promo-card {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            background: linear-gradient(135deg, #0e1729, #14203c);
+            border: 1px solid rgba(91, 141, 239, 0.28);
+            border-radius: 18px;
+            padding: 28px 32px;
+            box-shadow: 0 14px 44px rgba(0, 0, 0, 0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            color: #eef3ff;
+        }
+        .app-promo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.5), 0 0 32px rgba(91, 141, 239, 0.25);
+            border-color: rgba(94, 224, 255, 0.55);
+        }
+        .app-promo-info { flex: 1; }
+        .app-promo-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #5b8def, #5ee0ff);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 13px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+        }
+        .app-promo-info h2 {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 0 0 10px;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        .app-promo-info p {
+            color: #aeb9d6;
+            margin: 0 0 20px;
+            line-height: 1.65;
+            font-size: 15px;
+        }
+        .app-promo-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #5b8def, #5ee0ff);
+            color: #fff;
+            font-weight: 700;
+            padding: 11px 22px;
+            border-radius: 11px;
+            box-shadow: 0 6px 20px rgba(91, 141, 239, 0.4);
+            transition: box-shadow 0.2s ease;
+        }
+        .app-promo-card:hover .app-promo-cta { box-shadow: 0 8px 26px rgba(91, 141, 239, 0.6); }
+        .app-promo-img { flex: none; }
+        .app-promo-img img {
+            width: 290px;
+            border-radius: 12px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+        }
+        @media (max-width: 700px) {
+            .app-promo-card { flex-direction: column; text-align: center; }
+            .app-promo-img img { width: 100%; }
+        }
+    </style>
+    <div class="container app-promo" data-aos="fade-up">
+        <a href="https://apps.apple.com/cn/app/id6796251282" target="_blank" rel="noopener" class="app-promo-card">
+            <div class="app-promo-info">
+                <span class="app-promo-badge">🚀 推荐 · macOS 效率工具</span>
+                <h2>啊咿呀嘿 AI智能快照</h2>
+                <p>截图、录屏、OCR 文字识别、截图翻译，一个 App 全搞定。</p>
+                <span class="app-promo-cta"> App Store 免费下载</span>
+            </div>
+            <div class="app-promo-img">
+                <img src="https://cdn.jsdelivr.net/gh/adong666666/snapshot_source_cdn@main/macOS/preview/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%20Simplified%20Chinese/promo.png" alt="啊咿呀嘿 AI智能快照">
+            </div>
+        </a>
+    </div>
+    
+
     
 
     <!-- 所有文章卡片 -->
